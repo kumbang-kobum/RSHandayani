@@ -192,6 +192,14 @@ resep_obat.jam=detail_pemberian_obat.jam and kodesatuan.kode_sat=databarang.kode
 				</textElement>
 				<textFieldExpression><![CDATA[$F{nama_brng}]]></textFieldExpression>
 			</textField>
+			<textField>
+				<reportElement x="134" y="72" width="38" height="9" uuid="7fe44575-5bf5-4f4a-89ad-809f30c48d48"/>
+				<textElement textAlignment="Right">
+					<font fontName="Tahoma" size="7"/>
+					<paragraph lineSpacing="Single"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{jml}+" "+$F{satuan}]]></textFieldExpression>
+			</textField>
 			<componentElement>
 				<reportElement x="3" y="33" width="21" height="38" uuid="2dfdac85-ce75-4bda-8c31-cfb743e1af30">
 					<property name="com.jaspersoft.studio.unit.barHeight" value="px"/>
@@ -308,13 +316,6 @@ resep_obat.jam=detail_pemberian_obat.jam and kodesatuan.kode_sat=databarang.kode
 				</textElement>
 				<textFieldExpression><![CDATA[$F{jam}]]></textFieldExpression>
 			</textField>
-			<staticText>
-				<reportElement x="135" y="72" width="36" height="10" uuid="57b21bce-24dd-4fe4-b07b-ddb4c646e0c7"/>
-				<textElement>
-					<font fontName="Tahoma" size="7"/>
-				</textElement>
-				<text><![CDATA[Exp:]]></text>
-			</staticText>
 		</band>
 	</detail>
 	<summary>

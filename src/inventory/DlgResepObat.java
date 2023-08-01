@@ -1433,7 +1433,7 @@ private void ChkInputActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRS
 
     private void KdDokterKeyPressed(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_KdDokterKeyPressed
         if(evt.getKeyCode()==KeyEvent.VK_PAGE_DOWN){
-            Sequel.cariIsi("select dokter.nm_dokter from dokter where dokter.kd_dokter=?",NmDokter,KdDokter.getText());
+            NmDokter.setText(dokter.tampil3(KdDokter.getText()));
         }else if(evt.getKeyCode()==KeyEvent.VK_UP){
             btnDokterActionPerformed(null);
         }else{
@@ -1490,12 +1490,12 @@ private void ChkInputActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRS
                     "resep_obat.tgl_perawatan=aturan_pakai.tgl_perawatan and " +
                     "resep_obat.jam=aturan_pakai.jam where resep_obat.no_resep=? and aturan_pakai.aturan<>''",NoResep.getText())>0){
                 Valid.MyReportqry("rptItemResep.jasper","report","::[ Aturan Pakai Obat ]::",
-                    "select data_batch.tgl_kadaluarsa,resep_obat.no_resep,resep_obat.tgl_perawatan,resep_obat.jam,pasien.tgl_lahir, "+
+                    "select resep_obat.no_resep,resep_obat.tgl_perawatan,resep_obat.jam,pasien.tgl_lahir, "+
                     "resep_obat.no_rawat,pasien.no_rkm_medis,pasien.nm_pasien,databarang.nama_brng,"+
                     "aturan_pakai.aturan,detail_pemberian_obat.jml,kodesatuan.satuan,pasien.jk,reg_periksa.umurdaftar,reg_periksa.sttsumur "+
-                    "from data_batch inner join resep_obat inner join reg_periksa inner join pasien inner join "+
+                    "from resep_obat inner join reg_periksa inner join pasien inner join "+
                     "aturan_pakai inner join databarang inner join detail_pemberian_obat "+
-                    "inner join kodesatuan on data_batch.kode_brng=databarang.kode_brng and resep_obat.no_rawat=reg_periksa.no_rawat  "+
+                    "inner join kodesatuan on resep_obat.no_rawat=reg_periksa.no_rawat  "+
                     "and reg_periksa.no_rkm_medis=pasien.no_rkm_medis and "+
                     "databarang.kode_brng=aturan_pakai.kode_brng and "+
                     "detail_pemberian_obat.kode_brng=databarang.kode_brng " +
@@ -1769,7 +1769,7 @@ private void ChkInputActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRS
                     "aturan_pakai.aturan,detail_pemberian_obat.jml,kodesatuan.satuan,pasien.jk,reg_periksa.umurdaftar,reg_periksa.sttsumur "+
                     "from resep_obat inner join reg_periksa inner join pasien inner join "+
                     "aturan_pakai inner join databarang inner join detail_pemberian_obat "+
-                    "inner join kodesatuan on data_batch.kode_brng=databarang.kode_brng and resep_obat.no_rawat=reg_periksa.no_rawat  "+
+                    "inner join kodesatuan on resep_obat.no_rawat=reg_periksa.no_rawat  "+
                     "and reg_periksa.no_rkm_medis=pasien.no_rkm_medis and "+
                     "databarang.kode_brng=aturan_pakai.kode_brng and "+
                     "detail_pemberian_obat.kode_brng=databarang.kode_brng " +
@@ -2012,7 +2012,7 @@ private void ChkInputActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRS
             param.put("norm",TNoRm.getText());
             param.put("peresep",NmDokter.getText());
             param.put("noresep",NoResep.getText());
-            param.put("poli",Sequel.cariIsi("select poliklinik.nm_poli from poliklinik where poliklinik.kd_poli=?",Sequel.cariIsi("select kd_poli from reg_periksa where no_rawat=?",TNoRw.getText())));   
+            param.put("poli",Sequel.cariIsi("select poliklinik.nm_poli from poliklinik where poliklinik.kd_poli=?",Sequel.cariIsi("select reg_periksa.kd_poli from reg_periksa where reg_periksa.no_rawat=?",TNoRw.getText())));   
             param.put("jam",cmbJam.getSelectedItem()+":"+cmbMnt.getSelectedItem()+":"+cmbDtk.getSelectedItem());
             param.put("logo",Sequel.cariGambar("select setting.logo from setting")); 
             
@@ -2497,7 +2497,7 @@ private void ChkInputActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRS
                 Sequel.cariIsi("select reg_periksa.no_rkm_medis from reg_periksa where reg_periksa.no_rawat=? ",TNoRm,TNoRw.getText());
                 Sequel.cariIsi("select pasien.nm_pasien from pasien where pasien.no_rkm_medis=? ",TPasien,TNoRm.getText());
                 Sequel.cariIsi("select resep_obat.kd_dokter from resep_obat where resep_obat.no_resep=?",KdDokter,NoResep.getText());
-                Sequel.cariIsi("select dokter.nm_dokter from dokter where dokter.kd_dokter=?",NmDokter,KdDokter.getText());
+                NmDokter.setText(dokter.tampil3(KdDokter.getText()));
                 cmbJam.setSelectedItem(tbResep.getValueAt(tbResep.getSelectedRow(),1).toString().substring(11,13));
                 cmbMnt.setSelectedItem(tbResep.getValueAt(tbResep.getSelectedRow(),1).toString().substring(14,16));
                 cmbDtk.setSelectedItem(tbResep.getValueAt(tbResep.getSelectedRow(),1).toString().substring(17,19));
@@ -2545,7 +2545,7 @@ private void ChkInputActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRS
     
     public void setDokterRalan(){
         Sequel.cariIsi("select reg_periksa.kd_dokter from reg_periksa where reg_periksa.no_rawat=?",KdDokter,TNoRw.getText());
-        Sequel.cariIsi("select dokter.nm_dokter from dokter where dokter.kd_dokter=?",NmDokter,KdDokter.getText());
+        NmDokter.setText(dokter.tampil3(KdDokter.getText()));
     }
     
     private void isForm(){

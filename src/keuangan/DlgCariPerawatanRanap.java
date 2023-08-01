@@ -1072,7 +1072,7 @@ private void BtnSimpanActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIR
                             Sequel.menyimpan("tampjurnal","'"+Beban_Jasa_Menejemen_Tindakan_Ranap+"','Beban Jasa Menejemen Tindakan Ranap','"+ttlmenejemen+"','0'","debet=debet+'"+(ttlmenejemen)+"'","kd_rek='"+Beban_Jasa_Menejemen_Tindakan_Ranap+"'");       
                             Sequel.menyimpan("tampjurnal","'"+Utang_Jasa_Menejemen_Tindakan_Ranap+"','Utang Jasa Menejemen Tindakan Ranap','0','"+ttlmenejemen+"'","kredit=kredit+'"+(ttlmenejemen)+"'","kd_rek='"+Utang_Jasa_Menejemen_Tindakan_Ranap+"'");                            
                         }
-                        sukses=jur.simpanJurnal(TNoRw.getText(),"U","K065 TINDAKAN RAWAT INAP PASIEN "+TPasien.getText()+" DIPOSTING OLEH "+akses.getkode()); 
+                        sukses=jur.simpanJurnal(TNoRw.getText(),"U","TINDAKAN RAWAT INAP PASIEN "+TPasien.getText()+" DIPOSTING OLEH "+akses.getkode()); 
                     }
                                                                        
                     if(sukses==true){
@@ -1124,13 +1124,13 @@ private void kddokterKeyPressed(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_
         if(evt.getKeyCode()==KeyEvent.VK_ENTER){
             switch (pilihtable) {
                 case "rawat_inap_dr":
-                    Sequel.cariIsi("select dokter.nm_dokter from dokter where dokter.kd_dokter=?",nmdokter,kddokter.getText());
+                    nmdokter.setText(dokter.tampil3(kddokter.getText()));
                     break;
                 case "rawat_inap_pr":
-                    Sequel.cariIsi("select petugas.nama from petugas where petugas.nip=?",nmdokter,kddokter.getText());
+                    nmdokter.setText(petugas.tampil3(kddokter.getText()));
                     break;
                 case "rawat_inap_drpr":
-                    Sequel.cariIsi("select dokter.nm_dokter from dokter where dokter.kd_dokter=?",nmdokter,kddokter.getText());
+                    nmdokter.setText(dokter.tampil3(kddokter.getText()));
                     break;
             }
         }else if(evt.getKeyCode()==KeyEvent.VK_UP){
@@ -1201,7 +1201,7 @@ private void ppPetugasActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIR
 
     private void KdPtg2KeyPressed(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_KdPtg2KeyPressed
         if(evt.getKeyCode()==KeyEvent.VK_ENTER){
-            Sequel.cariIsi("select petugas.nama from petugas where petugas.nip=?",NmPtg2,KdPtg2.getText());
+            NmPtg2.setText(petugas.tampil3(KdPtg2.getText()));
         }else if(evt.getKeyCode()==KeyEvent.VK_UP){
             btnPetugasActionPerformed(null);
         }else if(evt.getKeyCode()==KeyEvent.VK_DOWN){

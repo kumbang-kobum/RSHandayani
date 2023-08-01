@@ -101,9 +101,9 @@ public final class RMSkriningMPPFormB extends javax.swing.JDialog {
         
         TNoRw.setDocument(new batasInput((byte)17).getKata(TNoRw));            
         TCari.setDocument(new batasInput((int)100).getKata(TCari));           
-        TMasalah.setDocument(new batasInput((int)1000).getKata(TMasalah));           
-        TTinjut.setDocument(new batasInput((int)1000).getKata(TTinjut));           
-        TEvaluasi.setDocument(new batasInput((int)1000).getKata(TEvaluasi));    
+        TMasalah.setDocument(new batasInput((int)500).getKata(TMasalah));           
+        TTinjut.setDocument(new batasInput((int)500).getKata(TTinjut));           
+        TEvaluasi.setDocument(new batasInput((int)500).getKata(TEvaluasi));    
         
         if(koneksiDB.CARICEPAT().equals("aktif")){
             TCari.getDocument().addDocumentListener(new javax.swing.event.DocumentListener(){
@@ -1210,7 +1210,7 @@ public final class RMSkriningMPPFormB extends javax.swing.JDialog {
             KdPetugas.setEditable(false);
             BtnPetugas.setEnabled(false);
             KdPetugas.setText(akses.getkode());
-            Sequel.cariIsi("select pegawai.nama from pegawai where pegawai.nik=?", NmPetugas,KdPetugas.getText());
+            NmPetugas.setText(petugas.tampil3(KdPetugas.getText()));
         } 
     }
 

@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<!-- Created with Jaspersoft Studio version 6.8.0.final using JasperReports Library version 6.8.0-2ed8dfabb690ff337a5797129f2cd92902b0c87b  -->
+<!-- Created with Jaspersoft Studio version 6.16.0.final using JasperReports Library version 6.5.1  -->
 <jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="null" language="groovy" pageWidth="595" pageHeight="842" columnWidth="557" leftMargin="19" rightMargin="19" topMargin="19" bottomMargin="19" uuid="34c13d5a-cd6b-451e-8001-9fd298d2274a">
 	<property name="ireport.zoom" value="2.0"/>
 	<property name="ireport.x" value="0"/>
@@ -25,7 +25,7 @@
 	<parameter name="emailrs" class="java.lang.String"/>
 	<parameter name="logo" class="java.io.InputStream"/>
 	<parameter name="diagnosa" class="java.lang.String"/>
-	<parameter name="lokalisortho" class="java.io.InputStream"/>
+	<parameter name="lokalis" class="java.io.InputStream"/>
 	<parameter name="masalah" class="java.lang.String"/>
 	<parameter name="finger" class="java.lang.String"/>
 	<queryString language="SQL">
@@ -885,7 +885,7 @@ inner join dokter on penilaian_medis_igd.kd_dokter=dokter.kd_dokter]]>
 			</line>
 			<image scaleImage="FillFrame" isUsingCache="true" onErrorType="Blank">
 				<reportElement x="3" y="367" width="551" height="123" uuid="43a069aa-7ac9-4c29-8f0c-67744ee02a73"/>
-				<imageExpression><![CDATA[$P{lokalisortho}]]></imageExpression>
+				<imageExpression><![CDATA[$P{lokalis}]]></imageExpression>
 			</image>
 			<line>
 				<reportElement x="0" y="493" width="557" height="1" uuid="4f5bcbd4-8701-445f-b59a-735c1f3ec668"/>
@@ -1149,10 +1149,6 @@ inner join dokter on penilaian_medis_igd.kd_dokter=dokter.kd_dokter]]>
 				</textElement>
 				<textFieldExpression><![CDATA[$F{thoraks}]]></textFieldExpression>
 			</textField>
-			<image scaleImage="FillFrame" isUsingCache="true" onErrorType="Blank">
-				<reportElement x="509" y="7" width="45" height="45" uuid="e1dc1748-f01a-4adf-a230-b1596940f10d"/>
-				<imageExpression><![CDATA["/naira/kars4bintang.png"]]></imageExpression>
-			</image>
 		</band>
 	</title>
 </jasperReport>

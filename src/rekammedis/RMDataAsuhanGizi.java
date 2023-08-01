@@ -49,8 +49,6 @@ public final class RMDataAsuhanGizi extends javax.swing.JDialog {
     private ResultSet rs;
     private int i=0,umur=0;    
     private DlgCariPetugas petugas=new DlgCariPetugas(null,false);
-    private RMCariHasilRadiologi cariradiologi=new RMCariHasilRadiologi(null,false);
-    private RMCariHasilLaborat carilaborat=new RMCariHasilLaborat(null,false);
     private String alergi_telur, alergi_susu_sapi, alergi_kacang, alergi_gluten, alergi_udang, alergi_ikan, alergi_hazelnut,sttsumur="";
     
     /** Creates new form DlgRujuk
@@ -385,8 +383,6 @@ public final class RMDataAsuhanGizi extends javax.swing.JDialog {
         IntervensiGizi = new widget.TextArea();
         scrollPane5 = new widget.ScrollPane();
         DiagnosisGizi = new widget.TextArea();
-        BtnDokter2 = new widget.Button();
-        BtnDokter3 = new widget.Button();
 
         jPopupMenu1.setName("jPopupMenu1"); // NOI18N
 
@@ -575,7 +571,7 @@ public final class RMDataAsuhanGizi extends javax.swing.JDialog {
         panelGlass9.add(jLabel19);
 
         DTPCari1.setForeground(new java.awt.Color(50, 70, 50));
-        DTPCari1.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "17-03-2023" }));
+        DTPCari1.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "03-11-2022" }));
         DTPCari1.setDisplayFormat("dd-MM-yyyy");
         DTPCari1.setName("DTPCari1"); // NOI18N
         DTPCari1.setOpaque(false);
@@ -589,7 +585,7 @@ public final class RMDataAsuhanGizi extends javax.swing.JDialog {
         panelGlass9.add(jLabel21);
 
         DTPCari2.setForeground(new java.awt.Color(50, 70, 50));
-        DTPCari2.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "17-03-2023" }));
+        DTPCari2.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "03-11-2022" }));
         DTPCari2.setDisplayFormat("dd-MM-yyyy");
         DTPCari2.setName("DTPCari2"); // NOI18N
         DTPCari2.setOpaque(false);
@@ -1323,34 +1319,6 @@ public final class RMDataAsuhanGizi extends javax.swing.JDialog {
         FormInput.add(scrollPane5);
         scrollPane5.setBounds(134, 510, 645, 63);
 
-        BtnDokter2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/picture/190.png"))); // NOI18N
-        BtnDokter2.setMnemonic('2');
-        BtnDokter2.setText("Intip Radiologi");
-        BtnDokter2.setToolTipText("Alt+2");
-        BtnDokter2.setName("BtnDokter2"); // NOI18N
-        BtnDokter2.setPreferredSize(new java.awt.Dimension(28, 23));
-        BtnDokter2.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                BtnDokter2ActionPerformed(evt);
-            }
-        });
-        FormInput.add(BtnDokter2);
-        BtnDokter2.setBounds(780, 190, 120, 23);
-
-        BtnDokter3.setIcon(new javax.swing.ImageIcon(getClass().getResource("/picture/190.png"))); // NOI18N
-        BtnDokter3.setMnemonic('2');
-        BtnDokter3.setText("Intip Laborat");
-        BtnDokter3.setToolTipText("Alt+2");
-        BtnDokter3.setName("BtnDokter3"); // NOI18N
-        BtnDokter3.setPreferredSize(new java.awt.Dimension(28, 23));
-        BtnDokter3.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                BtnDokter3ActionPerformed(evt);
-            }
-        });
-        FormInput.add(BtnDokter3);
-        BtnDokter3.setBounds(780, 220, 110, 23);
-
         scrollInput.setViewportView(FormInput);
 
         PanelInput.add(scrollInput, java.awt.BorderLayout.CENTER);
@@ -1452,7 +1420,14 @@ public final class RMDataAsuhanGizi extends javax.swing.JDialog {
                     alergi_ikan, alergi_hazelnut, PolaMakan.getText(),RiwayatPersonal.getText(),DiagnosisGizi.getText(),IntervensiGizi.getText(),
                     Monitoring.getText(),KdPetugas.getText()
                 })==true){
-                    tampil();
+                    tabMode.addRow(new String[]{
+                        TNoRw.getText(),TNoRM.getText(),TPasien.getText(),Jk.getText().substring(0,1),TglLahir.getText(),Valid.SetTgl(TglAsuhan.getSelectedItem()+""),
+                        BB.getText(),TB.getText(),IMT.getText(),LiLA.getText(),TL.getText(),ULNA.getText(),BBIdeal.getText(),BBPerU.getText(),TBPerU.getText(),BBPerTB.getText(),
+                        LiLAPerU.getText(),Biokimia.getText(),FisikKlinis.getText(),alergi_telur, alergi_susu_sapi, alergi_kacang, alergi_gluten, alergi_udang, 
+                        alergi_ikan, alergi_hazelnut, PolaMakan.getText(),RiwayatPersonal.getText(),DiagnosisGizi.getText(),IntervensiGizi.getText(),Monitoring.getText(),
+                        KdPetugas.getText(),NmPetugas.getText()
+                    });
+                    LCount.setText(""+tabMode.getRowCount());
                     emptTeks();
             }
         }
@@ -1462,7 +1437,7 @@ public final class RMDataAsuhanGizi extends javax.swing.JDialog {
         if(evt.getKeyCode()==KeyEvent.VK_SPACE){
             BtnSimpanActionPerformed(null);
         }else{
-            //Valid.pindah(evt,Obat2an,BtnBatal);
+            Valid.pindah(evt,Monitoring,BtnBatal);
         }
 }//GEN-LAST:event_BtnSimpanKeyPressed
 
@@ -1822,30 +1797,6 @@ public final class RMDataAsuhanGizi extends javax.swing.JDialog {
         Valid.pindah2(evt,RiwayatPersonal,IntervensiGizi);
     }//GEN-LAST:event_DiagnosisGiziKeyPressed
 
-    private void BtnDokter2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_BtnDokter2ActionPerformed
-        if(TNoRw.getText().equals("")&&TNoRM.getText().equals("")){
-            JOptionPane.showMessageDialog(null,"Pasien masih kosong...!!!");
-        }else{
-            cariradiologi.setNoRawat(TNoRw.getText());
-            cariradiologi.tampil();
-            cariradiologi.setSize(internalFrame1.getWidth()-20,internalFrame1.getHeight()-20);
-            cariradiologi.setLocationRelativeTo(internalFrame1);
-            cariradiologi.setVisible(true);
-        }
-    }//GEN-LAST:event_BtnDokter2ActionPerformed
-
-    private void BtnDokter3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_BtnDokter3ActionPerformed
-        if(TNoRw.getText().equals("")&&TNoRM.getText().equals("")){
-            JOptionPane.showMessageDialog(null,"Pasien masih kosong...!!!");
-        }else{
-            carilaborat.setNoRawat(TNoRw.getText());
-            carilaborat.tampil();
-            carilaborat.setSize(internalFrame1.getWidth()-20,internalFrame1.getHeight()-20);
-            carilaborat.setLocationRelativeTo(internalFrame1);
-            carilaborat.setVisible(true);
-        }
-    }//GEN-LAST:event_BtnDokter3ActionPerformed
-
     /**
     * @param args the command line arguments
     */
@@ -1872,8 +1823,6 @@ public final class RMDataAsuhanGizi extends javax.swing.JDialog {
     private widget.Button BtnBatal;
     private widget.Button BtnCari;
     private widget.Button BtnDokter;
-    private widget.Button BtnDokter2;
-    private widget.Button BtnDokter3;
     private widget.Button BtnEdit;
     private widget.Button BtnHapus;
     private widget.Button BtnKeluar;
@@ -2085,8 +2034,7 @@ public final class RMDataAsuhanGizi extends javax.swing.JDialog {
         }catch(Exception e){
             System.out.println("Notifikasi : "+e);
         }
-        int b=tabMode.getRowCount();
-        LCount.setText(""+b);
+        LCount.setText(""+tabMode.getRowCount());
     }
 
     public void emptTeks() {
@@ -2302,7 +2250,39 @@ public final class RMDataAsuhanGizi extends javax.swing.JDialog {
                 alergi_ikan, alergi_hazelnut, PolaMakan.getText(),RiwayatPersonal.getText(),DiagnosisGizi.getText(),IntervensiGizi.getText(),
                 Monitoring.getText(),KdPetugas.getText(),tbObat.getValueAt(tbObat.getSelectedRow(),0).toString(),tbObat.getValueAt(tbObat.getSelectedRow(),5).toString()
             })==true){
-                tampil();
+                tbObat.setValueAt(TNoRw.getText(),tbObat.getSelectedRow(),0);
+                tbObat.setValueAt(TNoRM.getText(),tbObat.getSelectedRow(),1);
+                tbObat.setValueAt(TPasien.getText(),tbObat.getSelectedRow(),2);
+                tbObat.setValueAt(Jk.getText().substring(0,1),tbObat.getSelectedRow(),3);
+                tbObat.setValueAt(TglLahir.getText(),tbObat.getSelectedRow(),4);
+                tbObat.setValueAt(Valid.SetTgl(TglAsuhan.getSelectedItem()+""),tbObat.getSelectedRow(),5);
+                tbObat.setValueAt(BB.getText(),tbObat.getSelectedRow(),6);
+                tbObat.setValueAt(TB.getText(),tbObat.getSelectedRow(),7);
+                tbObat.setValueAt(IMT.getText(),tbObat.getSelectedRow(),8);
+                tbObat.setValueAt(LiLA.getText(),tbObat.getSelectedRow(),9);
+                tbObat.setValueAt(TL.getText(),tbObat.getSelectedRow(),10);
+                tbObat.setValueAt(ULNA.getText(),tbObat.getSelectedRow(),11);
+                tbObat.setValueAt(BBIdeal.getText(),tbObat.getSelectedRow(),12);
+                tbObat.setValueAt(BBPerU.getText(),tbObat.getSelectedRow(),13);
+                tbObat.setValueAt(TBPerU.getText(),tbObat.getSelectedRow(),14);
+                tbObat.setValueAt(BBPerTB.getText(),tbObat.getSelectedRow(),15);
+                tbObat.setValueAt(LiLAPerU.getText(),tbObat.getSelectedRow(),16);
+                tbObat.setValueAt(Biokimia.getText(),tbObat.getSelectedRow(),17);
+                tbObat.setValueAt(FisikKlinis.getText(),tbObat.getSelectedRow(),18);
+                tbObat.setValueAt(alergi_telur,tbObat.getSelectedRow(),19);
+                tbObat.setValueAt(alergi_susu_sapi,tbObat.getSelectedRow(),20);
+                tbObat.setValueAt(alergi_kacang,tbObat.getSelectedRow(),21);
+                tbObat.setValueAt(alergi_gluten,tbObat.getSelectedRow(),22);
+                tbObat.setValueAt(alergi_udang,tbObat.getSelectedRow(),23);
+                tbObat.setValueAt(alergi_ikan,tbObat.getSelectedRow(),24);
+                tbObat.setValueAt(alergi_hazelnut,tbObat.getSelectedRow(),25);
+                tbObat.setValueAt(PolaMakan.getText(),tbObat.getSelectedRow(),26);
+                tbObat.setValueAt(RiwayatPersonal.getText(),tbObat.getSelectedRow(),27);
+                tbObat.setValueAt(DiagnosisGizi.getText(),tbObat.getSelectedRow(),28);
+                tbObat.setValueAt(IntervensiGizi.getText(),tbObat.getSelectedRow(),29);
+                tbObat.setValueAt(Monitoring.getText(),tbObat.getSelectedRow(),30);
+                tbObat.setValueAt(KdPetugas.getText(),tbObat.getSelectedRow(),31);
+                tbObat.setValueAt(NmPetugas.getText(),tbObat.getSelectedRow(),32);
                 emptTeks();
         }
     }

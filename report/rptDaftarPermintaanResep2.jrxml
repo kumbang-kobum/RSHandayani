@@ -225,10 +225,6 @@
 					<pen lineWidth="2.0" lineStyle="Double"/>
 				</graphicElement>
 			</line>
-			<image scaleImage="FillFrame" onErrorType="Blank">
-				<reportElement x="505" y="1" width="48" height="45" uuid="11b9661b-16cd-4a3c-a514-8862d878364a"/>
-				<imageExpression><![CDATA["/home/naira/JaspersoftWorkspace/MyReports/naira/kars4bintang.png"]]></imageExpression>
-			</image>
 		</band>
 	</title>
 	<pageHeader>

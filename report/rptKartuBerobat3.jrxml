@@ -1,6 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<!-- Created with Jaspersoft Studio version 6.8.0.final using JasperReports Library version 6.8.0-2ed8dfabb690ff337a5797129f2cd92902b0c87b  -->
-<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="null" pageWidth="268" pageHeight="210" orientation="Landscape" columnWidth="258" leftMargin="5" rightMargin="5" topMargin="5" bottomMargin="5" uuid="b09cefc4-5c61-4a2d-aa54-82a133bfacdc">
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="null" pageWidth="268" pageHeight="210" orientation="Landscape" columnWidth="258" leftMargin="5" rightMargin="5" topMargin="5" bottomMargin="5">
 	<property name="ireport.zoom" value="2.0"/>
 	<property name="ireport.x" value="0"/>
 	<property name="ireport.y" value="0"/>
@@ -64,15 +63,14 @@
 	<detail>
 		<band height="168" splitType="Stretch">
 			<textField>
-				<reportElement x="67" y="58" width="179" height="23" forecolor="#002800" uuid="2f3534f4-4156-447b-bee0-68b77363e57c"/>
-				<textElement>
+				<reportElement x="67" y="58" width="179" height="23" forecolor="#002800"/>
+				<textElement lineSpacing="Single">
 					<font fontName="Tahoma" size="10"/>
-					<paragraph lineSpacing="Single"/>
 				</textElement>
-				<textFieldExpression><![CDATA[$F{nm_pasien}]]></textFieldExpression>
+				<textFieldExpression class="java.lang.String"><![CDATA[$F{nm_pasien}]]></textFieldExpression>
 			</textField>
 			<componentElement>
-				<reportElement mode="Transparent" x="67" y="81" width="179" height="35" uuid="f84cbdc7-57c9-4979-ab4b-7f5597301c87"/>
+				<reportElement mode="Transparent" x="67" y="81" width="179" height="35"/>
 				<jr:barbecue xmlns:jr="http://jasperreports.sourceforge.net/jasperreports/components" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports/components http://jasperreports.sourceforge.net/xsd/components.xsd" type="Code128" drawText="true" checksumRequired="false" barWidth="1" barHeight="55">
 					<jr:codeExpression><![CDATA[$F{no_rkm_medis}]]></jr:codeExpression>
 				</jr:barbecue>

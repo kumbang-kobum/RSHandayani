@@ -735,7 +735,7 @@ private void KdKeyPressed(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_TKdKey
 
     private void kdptgcrossKeyPressed(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_kdptgcrossKeyPressed
         if(evt.getKeyCode()==KeyEvent.VK_PAGE_DOWN){
-            Sequel.cariIsi("select petugas.nama from petugas where petugas.nip=?",nmptgcross,kdptgcross.getText());
+            nmptgcross.setText(petugas.tampil3(kdptgcross.getText()));
         }else if(evt.getKeyCode()==KeyEvent.VK_UP){
             btnPetugasCrosActionPerformed(null);
         }else{
@@ -749,7 +749,7 @@ private void KdKeyPressed(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_TKdKey
 
     private void kdptgpjKeyPressed(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_kdptgpjKeyPressed
         if(evt.getKeyCode()==KeyEvent.VK_PAGE_DOWN){
-            Sequel.cariIsi("select petugas.nama from petugas where petugas.nip=?",nmptgpj,kdptgpj.getText());
+            nmptgpj.setText(petugas.tampil3(kdptgpj.getText()));
         }else if(evt.getKeyCode()==KeyEvent.VK_UP){
             btnPetugasPJActionPerformed(null);
         }else{
@@ -975,7 +975,7 @@ private void ppHapusActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST
                                 Sequel.queryu("delete from tampjurnal");                    
                                 Sequel.menyimpan("tampjurnal","'"+Sequel.cariIsi("select Penyerahan_Darah from set_akun")+"','PENJUALAN DARAH UTD','"+subtotalpendapatan+"','0'","Rekening");    
                                 Sequel.menyimpan("tampjurnal","'"+Sequel.cariIsi("select kd_rek from utd_penyerahan_darah where no_penyerahan=?",tbDokter.getValueAt(tbDokter.getSelectedRow(),0).toString())+"','CARA BAYAR','0','"+subtotalpendapatan+"'","Rekening"); 
-                                sukses=jur.simpanJurnal(nopenyerahan.getText(),"U","K156 PEMBATALAN PENJUALAN DARAH DI UTD"+", OLEH "+akses.getkode()); 
+                                sukses=jur.simpanJurnal(nopenyerahan.getText(),"U","PEMBATALAN PENJUALAN DARAH DI UTD"+", OLEH "+akses.getkode()); 
                             }
                         }
                     } catch (Exception e) {
@@ -1078,7 +1078,7 @@ private void ppHapusActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST
                             Sequel.queryu("delete from tampjurnal");                    
                             Sequel.menyimpan("tampjurnal","'"+Sequel.cariIsi("select Penyerahan_Darah from set_akun")+"','PENJUALAN DARAH UTD','0','"+subtotalpendapatan+"'","Rekening");    
                             Sequel.menyimpan("tampjurnal","'"+Sequel.cariIsi("select kd_rek from utd_penyerahan_darah where no_penyerahan=?",tbDokter.getValueAt(tbDokter.getSelectedRow(),0).toString())+"','CARA BAYAR','"+subtotalpendapatan+"','0'","Rekening"); 
-                            sukses=jur.simpanJurnal(nopenyerahan.getText(),"U","K157 PENJUALAN DARAH DI UTD"+", OLEH "+akses.getkode());  
+                            sukses=jur.simpanJurnal(nopenyerahan.getText(),"U","PENJUALAN DARAH DI UTD"+", OLEH "+akses.getkode());  
                         }
                           
                         if(sukses==true){
@@ -1397,10 +1397,10 @@ private void ppHapusActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST
                     //data penyerahan
                     tabMode.addRow(new Object[]{
                         rs.getString("no_penyerahan"),rs.getString("tanggal"),rs.getString("dinas"),
-                        Sequel.cariIsi("select petugas.nama from petugas where petugas.nip=?",rs.getString("nip_cross")),
+                        petugas.tampil3(rs.getString("nip_cross")),
                         rs.getString("keterangan"),rs.getString("status"),rs.getString("pengambil_darah"),
                         rs.getString("alamat_pengambil_darah"),
-                        Sequel.cariIsi("select petugas.nama from petugas where petugas.nip=?",rs.getString("nip_pj"))
+                        petugas.tampil3(rs.getString("nip_pj"))
                     });
                     //data darah
                     tabMode.addRow(new Object[]{

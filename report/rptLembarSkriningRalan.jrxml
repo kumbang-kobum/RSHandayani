@@ -557,10 +557,6 @@ and skrining_rawat_jalan.nip=petugas.nip]]>
 				</textElement>
 				<text><![CDATA[Petugas]]></text>
 			</staticText>
-			<image scaleImage="FillFrame" onErrorType="Blank">
-				<reportElement x="487" y="5" width="51" height="51" uuid="918021fd-e8b3-4c06-9e42-0ab913b4c060"/>
-				<imageExpression><![CDATA["/home/naira/JaspersoftWorkspace/MyReports/naira/kars4bintang.png"]]></imageExpression>
-			</image>
 		</band>
 	</title>
 </jasperReport>

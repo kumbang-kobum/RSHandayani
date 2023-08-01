@@ -669,7 +669,7 @@ public final class DlgBarcodeRalan extends javax.swing.JDialog {
                         Sequel.menyimpan("tampjurnal","'"+Beban_Jasa_Menejemen_Tindakan_Ralan+"','Beban Jasa Menejemen Tindakan Ralan','"+ttlmenejemen+"','0'","debet=debet+'"+(ttlmenejemen)+"'","kd_rek='"+Beban_Jasa_Menejemen_Tindakan_Ralan+"'");       
                         Sequel.menyimpan("tampjurnal","'"+Utang_Jasa_Menejemen_Tindakan_Ralan+"','Utang Jasa Menejemen Tindakan Ralan','0','"+ttlmenejemen+"'","kredit=kredit+'"+(ttlmenejemen)+"'","kd_rek='"+Utang_Jasa_Menejemen_Tindakan_Ralan+"'");                            
                     }
-                    sukses=jur.simpanJurnal(NoRawat.getText(),"U","K159 TINDAKAN RAWAT JALAN PASIEN "+NoRawat.getText()+" DIPOSTING OLEH "+akses.getkode());    
+                    sukses=jur.simpanJurnal(NoRawat.getText(),"U","TINDAKAN RAWAT JALAN PASIEN "+NoRawat.getText()+" DIPOSTING OLEH "+akses.getkode());    
                 }
 
                 if(sukses==true){
@@ -789,7 +789,7 @@ public final class DlgBarcodeRalan extends javax.swing.JDialog {
                         Sequel.menyimpan("tampjurnal","'"+HPP_Obat_Rawat_Jalan+"','HPP Persediaan Obat Rawat Jalan','"+ttlhpp+"','0'","Rekening");    
                         Sequel.menyimpan("tampjurnal","'"+Persediaan_Obat_Rawat_Jalan+"','Persediaan Obat Rawat Jalan','0','"+ttlhpp+"'","Rekening");                              
                     }
-                    sukses=jur.simpanJurnal(NoRawat.getText(),"U","K160 PEMBERIAN OBAT RAWAT JALAN PASIEN, DIPOSTING OLEH "+akses.getkode());     
+                    sukses=jur.simpanJurnal(NoRawat.getText(),"U","PEMBERIAN OBAT RAWAT JALAN PASIEN, DIPOSTING OLEH "+akses.getkode());     
                 }
 
                 if(sukses==true){
@@ -1194,7 +1194,7 @@ public final class DlgBarcodeRalan extends javax.swing.JDialog {
     
     public void setNoRm(String norwt) {
         this.kd_pj=Sequel.cariIsi("select reg_periksa.kd_pj from reg_periksa where reg_periksa.no_rawat=?",norwt);
-        this.kd_poli=Sequel.cariIsi("select kd_poli from reg_periksa where no_rawat=?",norwt);
+        this.kd_poli=Sequel.cariIsi("select reg_periksa.kd_poli from reg_periksa where reg_periksa.no_rawat=?",norwt);
         this.kd_dokter=Sequel.cariIsi("select reg_periksa.kd_dokter from reg_periksa where reg_periksa.no_rawat=?",norwt);
         this.norm=Sequel.cariIsi("select reg_periksa.no_rkm_medis from reg_periksa where reg_periksa.no_rawat=?",norwt);
         kenaikan=Sequel.cariIsiAngka("select (hargajual/100) from set_harga_obat_ralan where kd_pj=?",this.kd_pj);
@@ -1223,7 +1223,7 @@ public final class DlgBarcodeRalan extends javax.swing.JDialog {
         } catch (Exception e) {
             System.out.println(e);
         } 
-        bangsal=Sequel.cariIsi("select kd_bangsal from set_depo_ralan where kd_poli=?",Sequel.cariIsi("select kd_poli from reg_periksa where no_rawat=?",norwt));
+        bangsal=Sequel.cariIsi("select kd_bangsal from set_depo_ralan where kd_poli=?",Sequel.cariIsi("select reg_periksa.kd_poli from reg_periksa where reg_periksa.no_rawat=?",norwt));
         if(bangsal.equals("")){
             bangsal=Sequel.cariIsi("select set_lokasi.kd_bangsal from set_lokasi limit 1");
         }

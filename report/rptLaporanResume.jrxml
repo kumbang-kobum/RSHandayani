@@ -29,7 +29,7 @@
 	<parameter name="norawat" class="java.lang.String"/>
 	<parameter name="tanggalkeluar" class="java.lang.String"/>
 	<queryString>
-		<![CDATA[select reg_periksa.tgl_registrasi,reg_periksa.p_jawab,reg_periksa.no_rawat,reg_periksa.no_rkm_medis,pasien.nm_pasien,pasien.jk,pasien.tgl_lahir,
+		<![CDATA[select reg_periksa.tgl_registrasi,reg_periksa.no_rawat,reg_periksa.no_rkm_medis,pasien.nm_pasien,pasien.jk,pasien.tgl_lahir,
 reg_periksa.umurdaftar,reg_periksa.sttsumur,pasien.pekerjaan,concat(pasien.alamat,', ',kelurahan.nm_kel,', ',kecamatan.nm_kec,', ',kabupaten.nm_kab,', ',propinsi.nm_prop) as alamat, 
 resume_pasien.kd_dokter,dokter.nm_dokter,resume_pasien.kondisi_pulang,resume_pasien.keluhan_utama,resume_pasien.jalannya_penyakit, 
 resume_pasien.pemeriksaan_penunjang,resume_pasien.hasil_laborat,resume_pasien.diagnosa_utama,resume_pasien.kd_diagnosa_utama, 
@@ -45,10 +45,6 @@ where resume_pasien.no_rawat= $P{norawat}]]>
 	</queryString>
 	<field name="tgl_registrasi" class="java.sql.Date">
 		<property name="com.jaspersoft.studio.field.label" value="tgl_registrasi"/>
-		<property name="com.jaspersoft.studio.field.tree.path" value="reg_periksa"/>
-	</field>
-	<field name="p_jawab" class="java.lang.String">
-		<property name="com.jaspersoft.studio.field.label" value="p_jawab"/>
 		<property name="com.jaspersoft.studio.field.tree.path" value="reg_periksa"/>
 	</field>
 	<field name="no_rawat" class="java.lang.String">
@@ -1246,26 +1242,6 @@ where resume_pasien.no_rawat= $P{norawat}]]>
 				</textElement>
 				<text><![CDATA[Obat-obatan waktu pulang/nasihat :]]></text>
 			</staticText>
-			<image scaleImage="FillFrame" onErrorType="Blank">
-				<reportElement x="484" y="1" width="48" height="51" uuid="16d7f7f2-7f52-41f8-827f-25559ec10516"/>
-				<imageExpression><![CDATA["/naira/kars4bintang.png"]]></imageExpression>
-			</image>
-			<staticText>
-				<reportElement x="16" y="714" width="182" height="11" uuid="27a3d3a6-1f70-47c1-b916-9c960b7b5745"/>
-				<textElement textAlignment="Center">
-					<font fontName="Tahoma" size="8" isBold="false"/>
-					<paragraph lineSpacing="Single"/>
-				</textElement>
-				<text><![CDATA[Keluarga Pasien]]></text>
-			</staticText>
-			<textField isStretchWithOverflow="true">
-				<reportElement x="16" y="780" width="182" height="16" uuid="b1251c16-8955-419d-9f98-482e0cdb20da"/>
-				<textElement textAlignment="Center">
-					<font fontName="Tahoma" size="8" isBold="false" isItalic="false" isUnderline="false"/>
-					<paragraph lineSpacing="Single"/>
-				</textElement>
-				<textFieldExpression><![CDATA[$F{p_jawab}]]></textFieldExpression>
-			</textField>
 		</band>
 	</detail>
 	<columnFooter>

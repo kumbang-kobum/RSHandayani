@@ -680,6 +680,7 @@ public final class KeuanganBayarPesanToko extends javax.swing.JDialog {
         label19.setPreferredSize(new java.awt.Dimension(95, 23));
         panelisi5.add(label19);
 
+        kdsup.setEditable(false);
         kdsup.setName("kdsup"); // NOI18N
         kdsup.setPreferredSize(new java.awt.Dimension(75, 23));
         kdsup.addKeyListener(new java.awt.event.KeyAdapter() {
@@ -779,7 +780,7 @@ public final class KeuanganBayarPesanToko extends javax.swing.JDialog {
                     Sequel.menyimpan("tampjurnal","?,?,?,?","Rekening",4,new String[]{
                         koderekening,AkunBayar.getSelectedItem().toString(),"0",besar_bayar.getText()
                     });    
-                    sukses=jur.simpanJurnal(no_bukti.getText(),"U","K080 BAYAR PELUNASAN BARANG NON MEDIS NO.FAKTUR "+no_faktur.getText()+", OLEH "+akses.getkode());
+                    sukses=jur.simpanJurnal(no_bukti.getText(),"U","BAYAR PELUNASAN BARANG NON MEDIS NO.FAKTUR "+no_faktur.getText()+", OLEH "+akses.getkode());
                     
                     if(sukses==true){
                         if((sisahutang<=Double.parseDouble(besar_bayar.getText()))||(sisahutang<=-Double.parseDouble(besar_bayar.getText()))){
@@ -869,7 +870,7 @@ public final class KeuanganBayarPesanToko extends javax.swing.JDialog {
                 Sequel.menyimpan("tampjurnal","?,?,?,?","Rekening",4,new String[]{
                     akunhutang,"HUTANG USAHA","0",besar_bayar.getText()
                 }); 
-                sukses=jur.simpanJurnal(no_bukti.getText(),"U","K081 BATAL BAYAR PELUNASAN BARANG NON MEDIS NO.FAKTUR "+no_faktur.getText()+", OLEH "+akses.getkode());    
+                sukses=jur.simpanJurnal(no_bukti.getText(),"U","BATAL BAYAR PELUNASAN BARANG NON MEDIS NO.FAKTUR "+no_faktur.getText()+", OLEH "+akses.getkode());    
             }else{
                 sukses=false;
             }
@@ -1019,13 +1020,9 @@ public final class KeuanganBayarPesanToko extends javax.swing.JDialog {
     }//GEN-LAST:event_TglCari2KeyPressed
 
     private void kdsupKeyPressed(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_kdsupKeyPressed
-        if(evt.getKeyCode()==KeyEvent.VK_PAGE_DOWN){
-            Sequel.cariIsi("select penjab.png_jawab from penjab where penjab.kd_pj=?", nmsup,kdsup.getText());
-        }else if(evt.getKeyCode()==KeyEvent.VK_ENTER){
-            Sequel.cariIsi("select penjab.png_jawab from penjab where penjab.kd_pj=?", nmsup,kdsup.getText());
+        if(evt.getKeyCode()==KeyEvent.VK_ENTER){
             BtnAll.requestFocus();
         }else if(evt.getKeyCode()==KeyEvent.VK_PAGE_UP){
-            Sequel.cariIsi("select penjab.png_jawab from penjab where penjab.kd_pj=?", nmsup,kdsup.getText());
             TCari.requestFocus();
         }else if(evt.getKeyCode()==KeyEvent.VK_UP){
             BtnSeek2ActionPerformed(null);

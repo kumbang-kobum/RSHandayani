@@ -840,7 +840,7 @@ private void KdKeyPressed(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_TKdKey
             TCari.requestFocus();
         }else if(tabMode.getRowCount()!=0){
             
-            Sequel.queryu("truncate table temporary_toko");
+            Sequel.queryu("delete from temporary_toko");
             int row=tabMode.getRowCount();
             for(int i=0;i<row;i++){  
                 Sequel.menyimpan("temporary_toko","'0','"+
@@ -923,7 +923,7 @@ private void ppHapusActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST
                         Sequel.cariIsi("select Kontra_Retur_Jual_Toko from set_akun"),"KONTRA RETUR JUAL TOKO",rs.getString("total"),"0"
                     }); 
                     
-                    sukses=jur.simpanJurnal(rs.getString("no_retur_jual"),"U","K147 BATAL TRANSAKSI RETUR JUAL TOKO"+", OLEH "+akses.getkode());
+                    sukses=jur.simpanJurnal(rs.getString("no_retur_jual"),"U","BATAL TRANSAKSI RETUR JUAL TOKO"+", OLEH "+akses.getkode());
                     
                     if(sukses==true){
                         Sequel.queryu2("delete from tokoreturjual where no_retur_jual=?",1,new String[]{tbDokter.getValueAt(tbDokter.getSelectedRow(),0).toString()});

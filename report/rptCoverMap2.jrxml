@@ -1,6 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<!-- Created with Jaspersoft Studio version 6.8.0.final using JasperReports Library version 6.8.0-2ed8dfabb690ff337a5797129f2cd92902b0c87b  -->
-<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="null" language="groovy" pageWidth="297" pageHeight="467" columnWidth="269" leftMargin="14" rightMargin="14" topMargin="20" bottomMargin="20" uuid="fe4c4171-1e7f-4dca-8d5f-896797354703">
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="null" language="groovy" pageWidth="297" pageHeight="467" columnWidth="269" leftMargin="14" rightMargin="14" topMargin="20" bottomMargin="20">
 	<property name="ireport.zoom" value="1.0"/>
 	<property name="ireport.x" value="0"/>
 	<property name="ireport.y" value="0"/>
@@ -98,164 +97,144 @@
 	<title>
 		<band height="427">
 			<textField pattern="dd/MM/yyyy">
-				<reportElement mode="Opaque" x="143" y="22" width="126" height="20" uuid="958df0eb-6fc5-4924-a8d2-4680d8ab8162"/>
-				<textElement verticalAlignment="Middle">
+				<reportElement mode="Opaque" x="143" y="22" width="126" height="20"/>
+				<textElement verticalAlignment="Middle" lineSpacing="Single">
 					<font fontName="Tahoma" size="12" isBold="false"/>
-					<paragraph lineSpacing="Single"/>
 				</textElement>
-				<textFieldExpression><![CDATA[$F{tgl_lahir}]]></textFieldExpression>
+				<textFieldExpression class="java.lang.String"><![CDATA[$F{tgl_lahir}]]></textFieldExpression>
 			</textField>
 			<textField>
-				<reportElement x="171" y="67" width="98" height="19" uuid="79e59749-669c-42e4-8334-14bd28f93be9"/>
-				<textElement>
+				<reportElement x="171" y="67" width="98" height="19"/>
+				<textElement lineSpacing="Single">
 					<font fontName="Tahoma" size="10"/>
-					<paragraph lineSpacing="Single"/>
 				</textElement>
-				<textFieldExpression><![CDATA[$F{no_peserta}]]></textFieldExpression>
+				<textFieldExpression class="java.lang.String"><![CDATA[$F{no_peserta}]]></textFieldExpression>
 			</textField>
 			<textField>
-				<reportElement x="1" y="108" width="269" height="22" uuid="4a134a06-d644-4b85-be13-9d0b89fdbf94"/>
-				<textElement>
+				<reportElement x="1" y="108" width="269" height="22"/>
+				<textElement lineSpacing="Single">
 					<font fontName="Tahoma" size="12"/>
-					<paragraph lineSpacing="Single"/>
 				</textElement>
-				<textFieldExpression><![CDATA[$F{gol_darah}]]></textFieldExpression>
+				<textFieldExpression class="java.lang.String"><![CDATA[$F{gol_darah}]]></textFieldExpression>
 			</textField>
 			<textField>
-				<reportElement x="2" y="159" width="267" height="18" uuid="90c9169d-0628-4060-9769-40b29788f13e"/>
-				<textElement>
+				<reportElement x="2" y="159" width="267" height="18"/>
+				<textElement lineSpacing="Single">
 					<font fontName="Tahoma" size="12"/>
-					<paragraph lineSpacing="Single"/>
 				</textElement>
-				<textFieldExpression><![CDATA[$F{stts_nikah}]]></textFieldExpression>
+				<textFieldExpression class="java.lang.String"><![CDATA[$F{stts_nikah}]]></textFieldExpression>
 			</textField>
 			<textField>
-				<reportElement x="3" y="184" width="266" height="22" uuid="2e975df0-1b51-4319-b484-9593e1e079bf"/>
-				<textElement>
+				<reportElement x="3" y="184" width="266" height="22"/>
+				<textElement lineSpacing="Single">
 					<font fontName="Tahoma" size="12"/>
-					<paragraph lineSpacing="Single"/>
 				</textElement>
-				<textFieldExpression><![CDATA[$F{pnd}]]></textFieldExpression>
+				<textFieldExpression class="java.lang.String"><![CDATA[$F{pnd}]]></textFieldExpression>
 			</textField>
 			<textField>
-				<reportElement x="2" y="205" width="267" height="21" uuid="5d76af40-0804-4560-88f7-2bb4c914df63"/>
-				<textElement>
+				<reportElement x="2" y="205" width="267" height="21"/>
+				<textElement lineSpacing="Single">
 					<font fontName="Tahoma" size="12"/>
-					<paragraph lineSpacing="Single"/>
 				</textElement>
-				<textFieldExpression><![CDATA[$F{nama_suku_bangsa}]]></textFieldExpression>
+				<textFieldExpression class="java.lang.String"><![CDATA[$F{nama_suku_bangsa}]]></textFieldExpression>
 			</textField>
 			<textField>
-				<reportElement x="145" y="231" width="124" height="20" uuid="b35eca48-c258-4fa9-bb82-294a00d55049"/>
-				<textElement>
+				<reportElement x="145" y="231" width="124" height="20"/>
+				<textElement lineSpacing="Single">
 					<font fontName="Tahoma" size="12"/>
-					<paragraph lineSpacing="Single"/>
 				</textElement>
-				<textFieldExpression><![CDATA[$F{nm_ibu}]]></textFieldExpression>
+				<textFieldExpression class="java.lang.String"><![CDATA[$F{nm_ibu}]]></textFieldExpression>
 			</textField>
 			<textField>
-				<reportElement x="2" y="250" width="267" height="19" uuid="83bf9bde-c7fc-42de-a912-083cf45f5bdb"/>
-				<textElement>
+				<reportElement x="2" y="250" width="267" height="19"/>
+				<textElement lineSpacing="Single">
 					<font fontName="Tahoma" size="12"/>
-					<paragraph lineSpacing="Single"/>
 				</textElement>
-				<textFieldExpression><![CDATA[$F{alamat}]]></textFieldExpression>
+				<textFieldExpression class="java.lang.String"><![CDATA[$F{alamat}]]></textFieldExpression>
 			</textField>
 			<textField>
-				<reportElement x="0" y="276" width="269" height="22" uuid="1a8f86ce-af15-41a3-98f1-c9de6aa60c82"/>
-				<textElement>
+				<reportElement x="0" y="276" width="269" height="22"/>
+				<textElement lineSpacing="Single">
 					<font fontName="Tahoma" size="12"/>
-					<paragraph lineSpacing="Single"/>
 				</textElement>
-				<textFieldExpression><![CDATA[$F{nm_kel}]]></textFieldExpression>
+				<textFieldExpression class="java.lang.String"><![CDATA[$F{nm_kel}]]></textFieldExpression>
 			</textField>
 			<textField>
-				<reportElement x="2" y="297" width="267" height="22" uuid="1eb3a1a6-6d28-45cd-9665-0f6fb066797a"/>
-				<textElement>
+				<reportElement x="2" y="297" width="267" height="22"/>
+				<textElement lineSpacing="Single">
 					<font fontName="Tahoma" size="12"/>
-					<paragraph lineSpacing="Single"/>
 				</textElement>
-				<textFieldExpression><![CDATA[$F{nm_kec}]]></textFieldExpression>
+				<textFieldExpression class="java.lang.String"><![CDATA[$F{nm_kec}]]></textFieldExpression>
 			</textField>
 			<textField>
-				<reportElement x="1" y="321" width="267" height="21" uuid="6d92f1a5-fb01-48ae-bb4a-a56fd82c45ec"/>
-				<textElement>
+				<reportElement x="1" y="321" width="267" height="21"/>
+				<textElement lineSpacing="Single">
 					<font fontName="Tahoma" size="12"/>
-					<paragraph lineSpacing="Single"/>
 				</textElement>
-				<textFieldExpression><![CDATA[$F{nm_kab}]]></textFieldExpression>
+				<textFieldExpression class="java.lang.String"><![CDATA[$F{nm_kab}]]></textFieldExpression>
 			</textField>
 			<textField>
-				<reportElement x="0" y="347" width="270" height="20" uuid="713d0a92-240f-4046-83e8-6d9bf34392b7"/>
-				<textElement>
+				<reportElement x="0" y="347" width="270" height="20"/>
+				<textElement lineSpacing="Single">
 					<font fontName="Tahoma" size="12"/>
-					<paragraph lineSpacing="Single"/>
 				</textElement>
-				<textFieldExpression><![CDATA[$F{nm_prop}]]></textFieldExpression>
+				<textFieldExpression class="java.lang.String"><![CDATA[$F{nm_prop}]]></textFieldExpression>
 			</textField>
 			<textField>
-				<reportElement x="0" y="389" width="269" height="25" uuid="c8c41f60-3860-4db4-b6ef-e2c1b97c5ba5"/>
-				<textElement>
+				<reportElement x="0" y="389" width="269" height="25"/>
+				<textElement lineSpacing="Single">
 					<font fontName="Tahoma" size="12"/>
-					<paragraph lineSpacing="Single"/>
 				</textElement>
-				<textFieldExpression><![CDATA[$F{no_tlp}]]></textFieldExpression>
+				<textFieldExpression class="java.lang.String"><![CDATA[$F{no_tlp}]]></textFieldExpression>
 			</textField>
 			<textField>
-				<reportElement x="2" y="22" width="129" height="20" uuid="ffc7afcf-3786-43f9-9b4e-16ca45e242ef"/>
-				<textElement>
+				<reportElement x="2" y="22" width="129" height="20"/>
+				<textElement lineSpacing="Single">
 					<font fontName="Tahoma" size="12"/>
-					<paragraph lineSpacing="Single"/>
 				</textElement>
-				<textFieldExpression><![CDATA[$F{tmp_lahir}]]></textFieldExpression>
+				<textFieldExpression class="java.lang.String"><![CDATA[$F{tmp_lahir}]]></textFieldExpression>
 			</textField>
 			<textField>
-				<reportElement x="2" y="44" width="268" height="20" uuid="2c0f9943-91ac-4405-a3d9-6f20e3d57cfb"/>
-				<textElement>
+				<reportElement x="2" y="44" width="268" height="20"/>
+				<textElement lineSpacing="Single">
 					<font fontName="Tahoma" size="12"/>
-					<paragraph lineSpacing="Single"/>
 				</textElement>
-				<textFieldExpression><![CDATA[$F{png_jawab}]]></textFieldExpression>
+				<textFieldExpression class="java.lang.String"><![CDATA[$F{png_jawab}]]></textFieldExpression>
 			</textField>
 			<textField>
-				<reportElement x="1" y="135" width="269" height="25" uuid="1b6b1f95-7dd9-463f-bdd8-c733c481641f"/>
-				<textElement>
+				<reportElement x="1" y="135" width="269" height="25"/>
+				<textElement lineSpacing="Single">
 					<font fontName="Tahoma" size="12"/>
-					<paragraph lineSpacing="Single"/>
 				</textElement>
-				<textFieldExpression><![CDATA[$F{pekerjaan}]]></textFieldExpression>
+				<textFieldExpression class="java.lang.String"><![CDATA[$F{pekerjaan}]]></textFieldExpression>
 			</textField>
 			<textField>
-				<reportElement x="2" y="1" width="268" height="22" uuid="1d8e507d-b6c1-4645-a991-902e75c6de6e"/>
-				<textElement>
+				<reportElement x="2" y="1" width="268" height="22"/>
+				<textElement lineSpacing="Single">
 					<font fontName="Tahoma" size="12"/>
-					<paragraph lineSpacing="Single"/>
 				</textElement>
-				<textFieldExpression><![CDATA[$F{nm_pasien}]]></textFieldExpression>
+				<textFieldExpression class="java.lang.String"><![CDATA[$F{nm_pasien}]]></textFieldExpression>
 			</textField>
 			<textField>
-				<reportElement x="2" y="67" width="118" height="19" uuid="4d691e40-b148-4935-bd0d-b5ce2146f8b3"/>
-				<textElement>
+				<reportElement x="2" y="67" width="118" height="19"/>
+				<textElement lineSpacing="Single">
 					<font fontName="Tahoma"/>
-					<paragraph lineSpacing="Single"/>
 				</textElement>
-				<textFieldExpression><![CDATA[$F{no_ktp}]]></textFieldExpression>
+				<textFieldExpression class="java.lang.String"><![CDATA[$F{no_ktp}]]></textFieldExpression>
 			</textField>
 			<textField>
-				<reportElement x="2" y="87" width="268" height="22" uuid="9c61ab40-15a3-4429-8755-8aa2a37591c7"/>
-				<textElement>
+				<reportElement x="2" y="87" width="268" height="22"/>
+				<textElement lineSpacing="Single">
 					<font fontName="Tahoma" size="12"/>
-					<paragraph lineSpacing="Single"/>
 				</textElement>
-				<textFieldExpression><![CDATA[$F{agama}]]></textFieldExpression>
+				<textFieldExpression class="java.lang.String"><![CDATA[$F{agama}]]></textFieldExpression>
 			</textField>
 			<textField>
-				<reportElement x="2" y="231" width="129" height="20" uuid="2e65f91a-096f-4829-987e-1e0b80fcd25e"/>
-				<textElement>
+				<reportElement x="2" y="231" width="129" height="20"/>
+				<textElement lineSpacing="Single">
 					<font fontName="Tahoma" size="12"/>
-					<paragraph lineSpacing="Single"/>
 				</textElement>
-				<textFieldExpression><![CDATA[$F{namakeluarga}]]></textFieldExpression>
+				<textFieldExpression class="java.lang.String"><![CDATA[$F{namakeluarga}]]></textFieldExpression>
 			</textField>
 		</band>
 	</title>

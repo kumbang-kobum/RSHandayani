@@ -657,12 +657,12 @@ public final class RMPemantauanPEWS extends javax.swing.JDialog {
         TglLahir.setBounds(689, 10, 100, 23);
 
         jLabel14.setHorizontalAlignment(javax.swing.SwingConstants.LEFT);
-        jLabel14.setText("1.  Keadaan Umum");
+        jLabel14.setText("1.  Skor Perilaku");
         jLabel14.setName("jLabel14"); // NOI18N
         FormInput.add(jLabel14);
         jLabel14.setBounds(80, 80, 160, 23);
 
-        cmbSkor1.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "Interaksi Biasa", "Samnolen/Rewel dapat ditenagkan", "Iritable/Tidak dapat ditenagkan", "Letagri/Gelisah/Penurusan Respon terhadap nyeri" }));
+        cmbSkor1.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "Sadar / Bermain", "Tidur / Perubahan Perilaku", "Gelisah", "Tidak Merespon Terhadap Nyeri Penurunan Kesadaran" }));
         cmbSkor1.setName("cmbSkor1"); // NOI18N
         cmbSkor1.addItemListener(new java.awt.event.ItemListener() {
             public void itemStateChanged(java.awt.event.ItemEvent evt) {
@@ -678,12 +678,12 @@ public final class RMPemantauanPEWS extends javax.swing.JDialog {
         cmbSkor1.setBounds(270, 80, 380, 23);
 
         jLabel17.setHorizontalAlignment(javax.swing.SwingConstants.LEFT);
-        jLabel17.setText("2.  Kardiovaskuler");
+        jLabel17.setText("2.  Skor CRT / Warna Kulit");
         jLabel17.setName("jLabel17"); // NOI18N
         FormInput.add(jLabel17);
         jLabel17.setBounds(80, 110, 160, 23);
 
-        cmbSkor2.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "Tidak Sianosis/Pengisian kapiler <2 detik", "Tampak Pucat/Pengisian kapiler 2 detik", "Tampak Sianotik/Pengisian kapiler >2 detik/Takidari > 20x diatas RR Sesuai Usia", "Sianotik dan Motlet/Pengisian kapiler >5 detik/Takidaro >30x diatas RR sesuai Usia" }));
+        cmbSkor2.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "1 - 2 dtk / Pink", "3 dtk / Pucat", "4 dtk / Sianosis", ">=5 dtk / Mottle" }));
         cmbSkor2.setName("cmbSkor2"); // NOI18N
         cmbSkor2.addItemListener(new java.awt.event.ItemListener() {
             public void itemStateChanged(java.awt.event.ItemEvent evt) {
@@ -734,7 +734,7 @@ public final class RMPemantauanPEWS extends javax.swing.JDialog {
         FormInput.add(jLabel23);
         jLabel23.setBounds(80, 140, 160, 23);
 
-        cmbSkor3.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "Tidak Ada Retraksi", "Respirasi >10x Diatas RR seusia/Menggunakan FiO2 >30%", "Respirasi >20x Diatas RR seusia/Menggunakan FiO2 >40%", "Respirasi >30x Diatas RR seusia/Menggunakan FiO2>50%" }));
+        cmbSkor3.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "Tidak Ada Retraksi", "Cuping Hidung / O2 1-3 Lpm", "Retraksi Dada / O2 4-6 Lpm", "Stridor / O2 7-8 Lpm" }));
         cmbSkor3.setName("cmbSkor3"); // NOI18N
         cmbSkor3.addItemListener(new java.awt.event.ItemListener() {
             public void itemStateChanged(java.awt.event.ItemEvent evt) {
@@ -1381,8 +1381,10 @@ public final class RMPemantauanPEWS extends javax.swing.JDialog {
             ParameterSkor.setText("Monitor per 1 jam. Laporkan ke dokter jaga dan kemudian tindak lanjut lapor ke DPJP untuk advis selanjutnya. Kolaborasi langkah selanjutnya dengan seluruh tim perawatan. Jika masih di perlukan lapor ulang keperawat ketua tim dan DPJP");
         }else if(Integer.parseInt(TotalSkor.getText())>2){
             ParameterSkor.setText("Monitoring 1 sampai 2 jam. Pengkajian ulang dilakukan oleh PJ sift dan laporkan ke dokter jaga");
-        }else if(Integer.parseInt(TotalSkor.getText())>=0){
+        }else if(Integer.parseInt(TotalSkor.getText())>0){
             ParameterSkor.setText("Monitoring setiap 4 jam oleh perawat pelaksana dan di lanjutkan observasi atau monitoring secara rutin");
+        }else if(Integer.parseInt(TotalSkor.getText())==0){
+            ParameterSkor.setText("Beresiko rendah, ulangi setiap 7 jam");
         }
     }
     
@@ -1401,7 +1403,7 @@ public final class RMPemantauanPEWS extends javax.swing.JDialog {
         Skor3.setBackground(Color.GREEN);
         Skor3.setForeground(Color.WHITE);
         TotalSkor.setText("0");
-        ParameterSkor.setText("Beresiko rendah, ulangi 7 hari");
+        ParameterSkor.setText("Beresiko rendah, ulangi setiap 7 jam");
         cmbSkor1.requestFocus();
     } 
 

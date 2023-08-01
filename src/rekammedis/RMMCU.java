@@ -46,8 +46,6 @@ public final class RMMCU extends javax.swing.JDialog {
     private ResultSet rs;
     private int i=0;
     private DlgCariDokter dokter=new DlgCariDokter(null,false);
-    private RMCariHasilRadiologi cariradiologi=new RMCariHasilRadiologi(null,false);
-    private RMCariHasilLaborat carilaborat=new RMCariHasilLaborat(null,false);
     private String finger=""; 
     private StringBuilder htmlContent;
     
@@ -243,10 +241,10 @@ public final class RMMCU extends javax.swing.JDialog {
         tbObat.setDefaultRenderer(Object.class, new WarnaTable());
         
         TNoRw.setDocument(new batasInput((byte)17).getKata(TNoRw));
-        RiwayatPenyakitSekarang.setDocument(new batasInput((int)10000).getKata(RiwayatPenyakitSekarang));
-        RiwayatPenyakitKeluarga.setDocument(new batasInput((int)10000).getKata(RiwayatPenyakitKeluarga));
-        RiwayatPenyakitDahulu.setDocument(new batasInput((int)10000).getKata(RiwayatPenyakitDahulu));
-        RiwayatAlergiMakanan.setDocument(new batasInput((int)500).getKata(RiwayatAlergiMakanan));
+        RiwayatPenyakitSekarang.setDocument(new batasInput((int)2000).getKata(RiwayatPenyakitSekarang));
+        RiwayatPenyakitKeluarga.setDocument(new batasInput((int)1000).getKata(RiwayatPenyakitKeluarga));
+        RiwayatPenyakitDahulu.setDocument(new batasInput((int)1000).getKata(RiwayatPenyakitDahulu));
+        RiwayatAlergiMakanan.setDocument(new batasInput((int)150).getKata(RiwayatAlergiMakanan));
         TD.setDocument(new batasInput((byte)8).getKata(TD));
         Nadi.setDocument(new batasInput((byte)5).getKata(Nadi));
         RR.setDocument(new batasInput((byte)5).getKata(RR));
@@ -256,17 +254,17 @@ public final class RMMCU extends javax.swing.JDialog {
         KetExtremitasAtas.setDocument(new batasInput((byte)50).getKata(KetExtremitasAtas));
         KetExtremitasBawah.setDocument(new batasInput((byte)50).getKata(KetExtremitasBawah));
         PemeriksaanLaboratorium.setDocument(new batasInput((int)1000).getKata(PemeriksaanLaboratorium));
-                RongsenThorax.setDocument(new batasInput((int)10000).getKata(RongsenThorax));
-        EKG.setDocument(new batasInput((int)10000).getKata(EKG));
-        Spirometri.setDocument(new batasInput((int)10000).getKata(Spirometri));
-        Audiometri.setDocument(new batasInput((int)10000).getKata(Audiometri));
-        Treadmill.setDocument(new batasInput((int)10000).getKata(Treadmill));
-        Lainlain.setDocument(new batasInput((int)10000).getKata(Lainlain));
-        Merokok.setDocument(new batasInput((int)10000).getKata(Merokok));
-        Alkohol.setDocument(new batasInput((int)10000).getKata(Alkohol));
-        Kesimpulan.setDocument(new batasInput((int)10000).getKata(Kesimpulan));
-        Anjuran.setDocument(new batasInput((int)10000).getKata(Anjuran));
-        TCari.setDocument(new batasInput((int)10000).getKata(TCari));
+        RongsenThorax.setDocument(new batasInput((int)1000).getKata(RongsenThorax));
+        EKG.setDocument(new batasInput((int)1000).getKata(EKG));
+        Spirometri.setDocument(new batasInput((int)1000).getKata(Spirometri));
+        Audiometri.setDocument(new batasInput((int)1000).getKata(Audiometri));
+        Treadmill.setDocument(new batasInput((int)1000).getKata(Treadmill));
+        Lainlain.setDocument(new batasInput((int)1000).getKata(Lainlain));
+        Merokok.setDocument(new batasInput((int)100).getKata(Merokok));
+        Alkohol.setDocument(new batasInput((int)100).getKata(Alkohol));
+        Kesimpulan.setDocument(new batasInput((int)1000).getKata(Kesimpulan));
+        Anjuran.setDocument(new batasInput((int)1000).getKata(Anjuran));
+        TCari.setDocument(new batasInput((int)100).getKata(TCari));
         
         if(koneksiDB.CARICEPAT().equals("aktif")){
             TCari.getDocument().addDocumentListener(new javax.swing.event.DocumentListener(){
@@ -568,8 +566,6 @@ public final class RMMCU extends javax.swing.JDialog {
         jLabel110 = new widget.Label();
         scrollPane18 = new widget.ScrollPane();
         Lainlain = new widget.TextArea();
-        BtnDokter2 = new widget.Button();
-        BtnDokter3 = new widget.Button();
         internalFrame3 = new widget.InternalFrame();
         Scroll = new widget.ScrollPane();
         tbObat = new widget.Table();
@@ -989,7 +985,7 @@ public final class RMMCU extends javax.swing.JDialog {
         jLabel53.setBounds(10, 70, 180, 23);
 
         TglAsuhan.setForeground(new java.awt.Color(50, 70, 50));
-        TglAsuhan.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "17-03-2023 09:40:44" }));
+        TglAsuhan.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "08-06-2022 17:17:33" }));
         TglAsuhan.setDisplayFormat("dd-MM-yyyy HH:mm:ss");
         TglAsuhan.setName("TglAsuhan"); // NOI18N
         TglAsuhan.setOpaque(false);
@@ -2307,34 +2303,6 @@ public final class RMMCU extends javax.swing.JDialog {
         FormInput.add(scrollPane18);
         scrollPane18.setBounds(44, 1540, 810, 53);
 
-        BtnDokter2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/picture/190.png"))); // NOI18N
-        BtnDokter2.setMnemonic('2');
-        BtnDokter2.setText("Intip Radiologi");
-        BtnDokter2.setToolTipText("Alt+2");
-        BtnDokter2.setName("BtnDokter2"); // NOI18N
-        BtnDokter2.setPreferredSize(new java.awt.Dimension(28, 23));
-        BtnDokter2.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                BtnDokter2ActionPerformed(evt);
-            }
-        });
-        FormInput.add(BtnDokter2);
-        BtnDokter2.setBounds(270, 1120, 120, 23);
-
-        BtnDokter3.setIcon(new javax.swing.ImageIcon(getClass().getResource("/picture/190.png"))); // NOI18N
-        BtnDokter3.setMnemonic('2');
-        BtnDokter3.setText("Intip Laborat");
-        BtnDokter3.setToolTipText("Alt+2");
-        BtnDokter3.setName("BtnDokter3"); // NOI18N
-        BtnDokter3.setPreferredSize(new java.awt.Dimension(28, 23));
-        BtnDokter3.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                BtnDokter3ActionPerformed(evt);
-            }
-        });
-        FormInput.add(BtnDokter3);
-        BtnDokter3.setBounds(280, 1040, 110, 23);
-
         scrollInput.setViewportView(FormInput);
 
         internalFrame2.add(scrollInput, java.awt.BorderLayout.CENTER);
@@ -2377,7 +2345,7 @@ public final class RMMCU extends javax.swing.JDialog {
         panelGlass9.add(jLabel19);
 
         DTPCari1.setForeground(new java.awt.Color(50, 70, 50));
-        DTPCari1.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "17-03-2023" }));
+        DTPCari1.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "08-06-2022" }));
         DTPCari1.setDisplayFormat("dd-MM-yyyy");
         DTPCari1.setName("DTPCari1"); // NOI18N
         DTPCari1.setOpaque(false);
@@ -2391,7 +2359,7 @@ public final class RMMCU extends javax.swing.JDialog {
         panelGlass9.add(jLabel21);
 
         DTPCari2.setForeground(new java.awt.Color(50, 70, 50));
-        DTPCari2.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "17-03-2023" }));
+        DTPCari2.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "08-06-2022" }));
         DTPCari2.setDisplayFormat("dd-MM-yyyy");
         DTPCari2.setName("DTPCari2"); // NOI18N
         DTPCari2.setOpaque(false);
@@ -3290,30 +3258,6 @@ public final class RMMCU extends javax.swing.JDialog {
         Valid.pindah2(evt,Treadmill,Merokok);
     }//GEN-LAST:event_LainlainKeyPressed
 
-    private void BtnDokter2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_BtnDokter2ActionPerformed
-        if(TNoRw.getText().equals("")&&TNoRM.getText().equals("")){
-            JOptionPane.showMessageDialog(null,"Pasien masih kosong...!!!");
-        }else{
-            cariradiologi.setNoRawat(TNoRw.getText());
-            cariradiologi.tampil();
-            cariradiologi.setSize(internalFrame1.getWidth()-20,internalFrame1.getHeight()-20);
-            cariradiologi.setLocationRelativeTo(internalFrame1);
-            cariradiologi.setVisible(true);
-        }
-    }//GEN-LAST:event_BtnDokter2ActionPerformed
-
-    private void BtnDokter3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_BtnDokter3ActionPerformed
-        if(TNoRw.getText().equals("")&&TNoRM.getText().equals("")){
-            JOptionPane.showMessageDialog(null,"Pasien masih kosong...!!!");
-        }else{
-            carilaborat.setNoRawat(TNoRw.getText());
-            carilaborat.tampil();
-            carilaborat.setSize(internalFrame1.getWidth()-20,internalFrame1.getHeight()-20);
-            carilaborat.setLocationRelativeTo(internalFrame1);
-            carilaborat.setVisible(true);
-        }
-    }//GEN-LAST:event_BtnDokter3ActionPerformed
-
     /**
     * @param args the command line arguments
     */
@@ -3343,8 +3287,6 @@ public final class RMMCU extends javax.swing.JDialog {
     private widget.Button BtnBatal;
     private widget.Button BtnCari;
     private widget.Button BtnDokter;
-    private widget.Button BtnDokter2;
-    private widget.Button BtnDokter3;
     private widget.Button BtnEdit;
     private widget.Button BtnHapus;
     private widget.Button BtnKeluar;
@@ -3874,7 +3816,7 @@ public final class RMMCU extends javax.swing.JDialog {
             KdDokter.setEditable(false);
             BtnDokter.setEnabled(false);
             KdDokter.setText(akses.getkode());
-            Sequel.cariIsi("select dokter.nm_dokter from dokter where dokter.kd_dokter=?", NmDokter,KdDokter.getText());
+            NmDokter.setText(dokter.tampil3(KdDokter.getText()));
             if(NmDokter.getText().equals("")){
                 KdDokter.setText("");
                 JOptionPane.showMessageDialog(null,"User login bukan dokter...!!");

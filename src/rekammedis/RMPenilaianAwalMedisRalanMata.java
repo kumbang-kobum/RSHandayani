@@ -49,8 +49,6 @@ public final class RMPenilaianAwalMedisRalanMata extends javax.swing.JDialog {
     private PreparedStatement ps;
     private ResultSet rs;
     private int i=0;
-    private RMCariHasilRadiologi cariradiologi=new RMCariHasilRadiologi(null,false);
-    private RMCariHasilLaborat carilaborat=new RMCariHasilLaborat(null,false);
     private DlgCariDokter dokter=new DlgCariDokter(null,false);
     private StringBuilder htmlContent;
     private String finger="";
@@ -507,8 +505,10 @@ public final class RMPenilaianAwalMedisRalanMata extends javax.swing.JDialog {
         scrollPane14 = new widget.ScrollPane();
         Edukasi = new widget.TextArea();
         jSeparator35 = new javax.swing.JSeparator();
-        BtnDokter2 = new widget.Button();
-        BtnDokter3 = new widget.Button();
+        jLabel36 = new widget.Label();
+        jLabel14 = new widget.Label();
+        jLabel24 = new widget.Label();
+        jLabel39 = new widget.Label();
         internalFrame3 = new widget.InternalFrame();
         Scroll = new widget.ScrollPane();
         tbObat = new widget.Table();
@@ -781,7 +781,7 @@ public final class RMPenilaianAwalMedisRalanMata extends javax.swing.JDialog {
         FormInput.add(TglLahir);
         TglLahir.setBounds(644, 10, 80, 23);
 
-        jLabel9.setText("Riwayat Penggunaan Obat :");
+        jLabel9.setText(":");
         jLabel9.setName("jLabel9"); // NOI18N
         FormInput.add(jLabel9);
         jLabel9.setBounds(0, 170, 180, 23);
@@ -916,7 +916,7 @@ public final class RMPenilaianAwalMedisRalanMata extends javax.swing.JDialog {
         FormInput.add(Hubungan);
         Hubungan.setBounds(774, 40, 80, 23);
 
-        jLabel33.setText("Keluhan Utama :");
+        jLabel33.setText(":");
         jLabel33.setName("jLabel33"); // NOI18N
         FormInput.add(jLabel33);
         jLabel33.setBounds(0, 90, 125, 23);
@@ -988,7 +988,7 @@ public final class RMPenilaianAwalMedisRalanMata extends javax.swing.JDialog {
         label11.setBounds(380, 40, 52, 23);
 
         TglAsuhan.setForeground(new java.awt.Color(50, 70, 50));
-        TglAsuhan.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "17-03-2023 09:15:59" }));
+        TglAsuhan.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "28-07-2023 19:26:02" }));
         TglAsuhan.setDisplayFormat("dd-MM-yyyy HH:mm:ss");
         TglAsuhan.setName("TglAsuhan"); // NOI18N
         TglAsuhan.setOpaque(false);
@@ -1584,7 +1584,7 @@ public final class RMPenilaianAwalMedisRalanMata extends javax.swing.JDialog {
         FormInput.add(Suhu);
         Suhu.setBounds(422, 240, 55, 23);
 
-        jLabel22.setText("TD :");
+        jLabel22.setText(":");
         jLabel22.setName("jLabel22"); // NOI18N
         FormInput.add(jLabel22);
         jLabel22.setBounds(0, 240, 64, 23);
@@ -1647,7 +1647,7 @@ public final class RMPenilaianAwalMedisRalanMata extends javax.swing.JDialog {
         FormInput.add(StatusNutrisi);
         StatusNutrisi.setBounds(554, 270, 300, 23);
 
-        jLabel29.setText("Nyeri :");
+        jLabel29.setText(":");
         jLabel29.setName("jLabel29"); // NOI18N
         FormInput.add(jLabel29);
         jLabel29.setBounds(0, 270, 76, 23);
@@ -1918,33 +1918,29 @@ public final class RMPenilaianAwalMedisRalanMata extends javax.swing.JDialog {
         FormInput.add(jSeparator35);
         jSeparator35.setBounds(45, 420, 780, 1);
 
-        BtnDokter2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/picture/190.png"))); // NOI18N
-        BtnDokter2.setMnemonic('2');
-        BtnDokter2.setText("Intip Radiologi");
-        BtnDokter2.setToolTipText("Alt+2");
-        BtnDokter2.setName("BtnDokter2"); // NOI18N
-        BtnDokter2.setPreferredSize(new java.awt.Dimension(28, 23));
-        BtnDokter2.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                BtnDokter2ActionPerformed(evt);
-            }
-        });
-        FormInput.add(BtnDokter2);
-        BtnDokter2.setBounds(380, 1000, 130, 20);
+        jLabel36.setHorizontalAlignment(javax.swing.SwingConstants.LEFT);
+        jLabel36.setText("Keluhan Utama");
+        jLabel36.setName("jLabel36"); // NOI18N
+        FormInput.add(jLabel36);
+        jLabel36.setBounds(44, 90, 90, 23);
 
-        BtnDokter3.setIcon(new javax.swing.ImageIcon(getClass().getResource("/picture/190.png"))); // NOI18N
-        BtnDokter3.setMnemonic('2');
-        BtnDokter3.setText("Intip Laboratorium");
-        BtnDokter3.setToolTipText("Alt+2");
-        BtnDokter3.setName("BtnDokter3"); // NOI18N
-        BtnDokter3.setPreferredSize(new java.awt.Dimension(28, 23));
-        BtnDokter3.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                BtnDokter3ActionPerformed(evt);
-            }
-        });
-        FormInput.add(BtnDokter3);
-        BtnDokter3.setBounds(120, 1000, 150, 20);
+        jLabel14.setHorizontalAlignment(javax.swing.SwingConstants.LEFT);
+        jLabel14.setText("Riwayat Penggunaan Obat");
+        jLabel14.setName("jLabel14"); // NOI18N
+        FormInput.add(jLabel14);
+        jLabel14.setBounds(44, 170, 150, 23);
+
+        jLabel24.setHorizontalAlignment(javax.swing.SwingConstants.LEFT);
+        jLabel24.setText("TD");
+        jLabel24.setName("jLabel24"); // NOI18N
+        FormInput.add(jLabel24);
+        jLabel24.setBounds(44, 240, 30, 23);
+
+        jLabel39.setHorizontalAlignment(javax.swing.SwingConstants.LEFT);
+        jLabel39.setText("Nyeri");
+        jLabel39.setName("jLabel39"); // NOI18N
+        FormInput.add(jLabel39);
+        jLabel39.setBounds(44, 270, 50, 23);
 
         scrollInput.setViewportView(FormInput);
 
@@ -1987,7 +1983,7 @@ public final class RMPenilaianAwalMedisRalanMata extends javax.swing.JDialog {
         panelGlass9.add(jLabel19);
 
         DTPCari1.setForeground(new java.awt.Color(50, 70, 50));
-        DTPCari1.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "17-03-2023" }));
+        DTPCari1.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "28-07-2023" }));
         DTPCari1.setDisplayFormat("dd-MM-yyyy");
         DTPCari1.setName("DTPCari1"); // NOI18N
         DTPCari1.setOpaque(false);
@@ -2001,7 +1997,7 @@ public final class RMPenilaianAwalMedisRalanMata extends javax.swing.JDialog {
         panelGlass9.add(jLabel21);
 
         DTPCari2.setForeground(new java.awt.Color(50, 70, 50));
-        DTPCari2.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "17-03-2023" }));
+        DTPCari2.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "28-07-2023" }));
         DTPCari2.setDisplayFormat("dd-MM-yyyy");
         DTPCari2.setName("DTPCari2"); // NOI18N
         DTPCari2.setOpaque(false);
@@ -2774,30 +2770,6 @@ public final class RMPenilaianAwalMedisRalanMata extends javax.swing.JDialog {
         Valid.pindah2(evt,Tindakan,BtnSimpan);
     }//GEN-LAST:event_EdukasiKeyPressed
 
-    private void BtnDokter2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_BtnDokter2ActionPerformed
-        if(TNoRw.getText().equals("")&&TNoRM.getText().equals("")){
-            JOptionPane.showMessageDialog(null,"Pasien masih kosong...!!!");
-        }else{
-            cariradiologi.setNoRawat(TNoRw.getText());
-            cariradiologi.tampil();
-            cariradiologi.setSize(internalFrame1.getWidth()-20,internalFrame1.getHeight()-20);
-            cariradiologi.setLocationRelativeTo(internalFrame1);
-            cariradiologi.setVisible(true);
-        }
-    }//GEN-LAST:event_BtnDokter2ActionPerformed
-
-    private void BtnDokter3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_BtnDokter3ActionPerformed
-        if(TNoRw.getText().equals("")&&TNoRM.getText().equals("")){
-            JOptionPane.showMessageDialog(null,"Pasien masih kosong...!!!");
-        }else{
-            carilaborat.setNoRawat(TNoRw.getText());
-            carilaborat.tampil();
-            carilaborat.setSize(internalFrame1.getWidth()-20,internalFrame1.getHeight()-20);
-            carilaborat.setLocationRelativeTo(internalFrame1);
-            carilaborat.setVisible(true);
-        }
-    }//GEN-LAST:event_BtnDokter3ActionPerformed
-
     /**
     * @param args the command line arguments
     */
@@ -2822,8 +2794,6 @@ public final class RMPenilaianAwalMedisRalanMata extends javax.swing.JDialog {
     private widget.Button BtnBatal;
     private widget.Button BtnCari;
     private widget.Button BtnDokter;
-    private widget.Button BtnDokter2;
-    private widget.Button BtnDokter3;
     private widget.Button BtnEdit;
     private widget.Button BtnHapus;
     private widget.Button BtnKeluar;
@@ -2914,6 +2884,7 @@ public final class RMPenilaianAwalMedisRalanMata extends javax.swing.JDialog {
     private widget.Label jLabel113;
     private widget.Label jLabel12;
     private widget.Label jLabel13;
+    private widget.Label jLabel14;
     private widget.Label jLabel16;
     private widget.Label jLabel17;
     private widget.Label jLabel18;
@@ -2922,6 +2893,7 @@ public final class RMPenilaianAwalMedisRalanMata extends javax.swing.JDialog {
     private widget.Label jLabel21;
     private widget.Label jLabel22;
     private widget.Label jLabel23;
+    private widget.Label jLabel24;
     private widget.Label jLabel25;
     private widget.Label jLabel26;
     private widget.Label jLabel28;
@@ -2932,8 +2904,10 @@ public final class RMPenilaianAwalMedisRalanMata extends javax.swing.JDialog {
     private widget.Label jLabel33;
     private widget.Label jLabel34;
     private widget.Label jLabel35;
+    private widget.Label jLabel36;
     private widget.Label jLabel37;
     private widget.Label jLabel38;
+    private widget.Label jLabel39;
     private widget.Label jLabel44;
     private widget.Label jLabel45;
     private widget.Label jLabel46;
@@ -3251,7 +3225,7 @@ public final class RMPenilaianAwalMedisRalanMata extends javax.swing.JDialog {
             KdDokter.setEditable(false);
             BtnDokter.setEnabled(false);
             KdDokter.setText(akses.getkode());
-            Sequel.cariIsi("select dokter.nm_dokter from dokter where dokter.kd_dokter=?", NmDokter,KdDokter.getText());
+            NmDokter.setText(dokter.tampil3(KdDokter.getText()));
             if(NmDokter.getText().equals("")){
                 KdDokter.setText("");
                 JOptionPane.showMessageDialog(null,"User login bukan Dokter...!!");

@@ -89,10 +89,6 @@ or status='1' and nm_bangsal like $P{parameter} order by kd_bangsal]]>
 					<pen lineWidth="2.0" lineStyle="Double"/>
 				</graphicElement>
 			</line>
-			<image scaleImage="FillFrame" onErrorType="Blank">
-				<reportElement x="505" y="2" width="48" height="45" uuid="a9c4e324-6fa8-4206-b0d8-e79f6f37491d"/>
-				<imageExpression><![CDATA["/home/naira/JaspersoftWorkspace/MyReports/naira/kars4bintang.png"]]></imageExpression>
-			</image>
 		</band>
 	</title>
 	<pageHeader>

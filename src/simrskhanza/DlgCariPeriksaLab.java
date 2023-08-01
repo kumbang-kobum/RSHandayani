@@ -32,6 +32,7 @@ import javax.swing.text.Document;
 import javax.swing.text.html.HTMLEditorKit;
 import javax.swing.text.html.StyleSheet;
 import laporan.DlgBerkasRawat;
+import rekammedis.RMRiwayatPerawatan;
 import surat.SuratKeteranganCovid;
 
 public class DlgCariPeriksaLab extends javax.swing.JDialog {
@@ -361,6 +362,7 @@ public class DlgCariPeriksaLab extends javax.swing.JDialog {
         MnSaranKesan = new javax.swing.JMenuItem();
         MnCetakSuratCovid = new javax.swing.JMenuItem();
         ppBerkasDigital = new javax.swing.JMenuItem();
+        ppRiwayat = new javax.swing.JMenuItem();
         WindowSaran = new javax.swing.JDialog();
         internalFrame6 = new widget.InternalFrame();
         panelGlass6 = new widget.panelisi();
@@ -856,6 +858,22 @@ public class DlgCariPeriksaLab extends javax.swing.JDialog {
             }
         });
         jPopupMenu1.add(ppBerkasDigital);
+
+        ppRiwayat.setBackground(new java.awt.Color(255, 255, 254));
+        ppRiwayat.setFont(new java.awt.Font("Tahoma", 0, 11)); // NOI18N
+        ppRiwayat.setForeground(new java.awt.Color(50, 50, 50));
+        ppRiwayat.setIcon(new javax.swing.ImageIcon(getClass().getResource("/picture/category.png"))); // NOI18N
+        ppRiwayat.setText("Riwayat Perawatan");
+        ppRiwayat.setHorizontalAlignment(javax.swing.SwingConstants.LEFT);
+        ppRiwayat.setHorizontalTextPosition(javax.swing.SwingConstants.RIGHT);
+        ppRiwayat.setName("ppRiwayat"); // NOI18N
+        ppRiwayat.setPreferredSize(new java.awt.Dimension(190, 26));
+        ppRiwayat.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                ppRiwayatBtnPrintActionPerformed(evt);
+            }
+        });
+        jPopupMenu1.add(ppRiwayat);
 
         WindowSaran.setDefaultCloseOperation(javax.swing.WindowConstants.DISPOSE_ON_CLOSE);
         WindowSaran.setName("WindowSaran"); // NOI18N
@@ -1390,7 +1408,7 @@ private void KdKeyPressed(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_TKdKey
                     TCari.requestFocus();
                 }else if(tabMode.getRowCount()!=0){
                     
-                    Sequel.queryu("truncate table temporary_lab");
+                    Sequel.queryu("delete from temporary_lab");
                     int row=tabMode.getRowCount();
                     for(i=0;i<row;i++){
                         Sequel.menyimpan("temporary_lab","'0','"+
@@ -1419,7 +1437,7 @@ private void KdKeyPressed(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_TKdKey
                     TCari.requestFocus();
                 }else if(tabMode2.getRowCount()!=0){
                     
-                    Sequel.queryu("truncate table temporary_lab");
+                    Sequel.queryu("delete from temporary_lab");
                     int row=tabMode2.getRowCount();
                     for(i=0;i<row;i++){
                         Sequel.menyimpan("temporary_lab","'0','"+
@@ -1632,7 +1650,7 @@ private void BtnHapusActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRS
                                     Sequel.menyimpan("tampjurnal","'"+Beban_Jasa_Menejemen_Laborat_Ranap+"','Beban Jasa Menejemen Laborat Ranap','0','"+ttlmenejemen+"'","kredit=kredit+'"+(ttlmenejemen)+"'","kd_rek='"+Beban_Jasa_Menejemen_Laborat_Ranap+"'");     
                                     Sequel.menyimpan("tampjurnal","'"+Utang_Jasa_Menejemen_Laborat_Ranap+"','Utang Jasa Menejemen Laborat Ranap','"+ttlmenejemen+"','0'","debet=debet+'"+(ttlmenejemen)+"'","kd_rek='"+Utang_Jasa_Menejemen_Laborat_Ranap+"'");                               
                                 }
-                                sukses=jur.simpanJurnal(tbDokter.getValueAt(tbDokter.getSelectedRow(),0).toString(),"U","K097 PEMBATALAN PEMERIKSAAN LABORAT RAWAT INAP PASIEN "+tbDokter.getValueAt(tbDokter.getSelectedRow(),1).toString()+" OLEH "+akses.getkode());  
+                                sukses=jur.simpanJurnal(tbDokter.getValueAt(tbDokter.getSelectedRow(),0).toString(),"U","PEMBATALAN PEMERIKSAAN LABORAT RAWAT INAP PASIEN "+tbDokter.getValueAt(tbDokter.getSelectedRow(),1).toString()+" OLEH "+akses.getkode());  
                             }else if(status.equals("Ralan")){
                                 Sequel.queryu("delete from tampjurnal");    
                                 if(ttlpendapatan>0){
@@ -1667,7 +1685,7 @@ private void BtnHapusActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRS
                                     Sequel.menyimpan("tampjurnal","'"+Beban_Jasa_Menejemen_Laborat_Ralan+"','Beban Jasa Menejemen Laborat Ralan','0','"+ttlmenejemen+"'","kredit=kredit+'"+(ttlmenejemen)+"'","kd_rek='"+Beban_Jasa_Menejemen_Laborat_Ralan+"'");     
                                     Sequel.menyimpan("tampjurnal","'"+Utang_Jasa_Menejemen_Laborat_Ralan+"','Utang Jasa Menejemen Laborat Ralan','"+ttlmenejemen+"','0'","debet=debet+'"+(ttlmenejemen)+"'","kd_rek='"+Utang_Jasa_Menejemen_Laborat_Ralan+"'");                               
                                 }
-                                sukses=jur.simpanJurnal(tbDokter.getValueAt(tbDokter.getSelectedRow(),0).toString(),"U","K098 PEMBATALAN PEMERIKSAAN LABORAT RAWAT JALAN PASIEN "+tbDokter.getValueAt(tbDokter.getSelectedRow(),1).toString()+" OLEH "+akses.getkode());  
+                                sukses=jur.simpanJurnal(tbDokter.getValueAt(tbDokter.getSelectedRow(),0).toString(),"U","PEMBATALAN PEMERIKSAAN LABORAT RAWAT JALAN PASIEN "+tbDokter.getValueAt(tbDokter.getSelectedRow(),1).toString()+" OLEH "+akses.getkode());  
                             }
                         }
 
@@ -1759,7 +1777,6 @@ private void tbDokterKeyPressed(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_
                         param.put("namapasien",rs.getString("nm_pasien"));
                         param.put("jkel",rs.getString("jk"));
                         param.put("umur",rs.getString("umur"));
-                        param.put("lahir",rs.getString("lahir"));
                         param.put("pengirim",Sequel.cariIsi("select dokter.nm_dokter from dokter where dokter.kd_dokter=?",rs.getString("dokter_perujuk")));
                         param.put("tanggal",rs.getString("tgl_periksa"));
                         param.put("penjab",rs.getString("nm_dokter"));
@@ -1772,7 +1789,7 @@ private void tbDokterKeyPressed(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_
                         param.put("finger","Dikeluarkan di "+akses.getnamars()+", Kabupaten/Kota "+akses.getkabupatenrs()+"\nDitandatangani secara elektronik oleh "+rs.getString("nm_dokter")+"\nID "+(finger.equals("")?rs.getString("kd_dokter"):finger)+"\n"+rs.getString("tgl_periksa"));  
                         finger=Sequel.cariIsi("select sha1(sidikjari.sidikjari) from sidikjari inner join pegawai on pegawai.id=sidikjari.id where pegawai.nik=?",rs.getString("nip"));
                         param.put("finger2","Dikeluarkan di "+akses.getnamars()+", Kabupaten/Kota "+akses.getkabupatenrs()+"\nDitandatangani secara elektronik oleh "+rs.getString("nama")+"\nID "+(finger.equals("")?rs.getString("nip"):finger)+"\n"+rs.getString("tgl_periksa"));  
-                        Sequel.queryu("truncate table temporary_lab");
+                        Sequel.queryu("delete from temporary_lab");
 
                         ps2=koneksi.prepareStatement(
                             "select jns_perawatan_lab.kd_jenis_prw,jns_perawatan_lab.nm_perawatan,periksa_lab.biaya from periksa_lab inner join jns_perawatan_lab "+
@@ -1899,7 +1916,7 @@ private void tbDokterKeyPressed(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_
                     ps4.setString(3,tbDokter.getValueAt(tbDokter.getSelectedRow(),0).toString());
                     rs=ps4.executeQuery();
                     if(rs.next()){
-                        Sequel.queryu("truncate table temporary_lab");
+                        Sequel.queryu("delete from temporary_lab");
                         ps2=koneksi.prepareStatement(
                             "select jns_perawatan_lab.kd_jenis_prw,jns_perawatan_lab.nm_perawatan,periksa_lab.biaya from periksa_lab inner join jns_perawatan_lab "+
                             "on periksa_lab.kd_jenis_prw=jns_perawatan_lab.kd_jenis_prw where periksa_lab.kategori='PK' and periksa_lab.no_rawat=? and periksa_lab.tgl_periksa=? "+
@@ -2039,7 +2056,6 @@ private void tbDokterKeyPressed(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_
                         param.put("namapasien",rs.getString("nm_pasien"));
                         param.put("jkel",rs.getString("jk"));
                         param.put("umur",rs.getString("umur"));
-                        param.put("lahir",rs.getString("lahir"));
                         param.put("pengirim",Sequel.cariIsi("select dokter.nm_dokter from dokter where dokter.kd_dokter=?",rs.getString("dokter_perujuk")));
                         param.put("tanggal",rs.getString("tgl_periksa"));
                         param.put("penjab",rs.getString("nm_dokter"));
@@ -2053,7 +2069,7 @@ private void tbDokterKeyPressed(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_
                         finger=Sequel.cariIsi("select sha1(sidikjari.sidikjari) from sidikjari inner join pegawai on pegawai.id=sidikjari.id where pegawai.nik=?",rs.getString("nip"));
                         param.put("finger2","Dikeluarkan di "+akses.getnamars()+", Kabupaten/Kota "+akses.getkabupatenrs()+"\nDitandatangani secara elektronik oleh "+rs.getString("nama")+"\nID "+(finger.equals("")?rs.getString("nip"):finger)+"\n"+rs.getString("tgl_periksa"));  
                         
-                        Sequel.queryu("truncate table temporary_lab");
+                        Sequel.queryu("delete from temporary_lab");
 
                         ps2=koneksi.prepareStatement(
                             "select jns_perawatan_lab.kd_jenis_prw,jns_perawatan_lab.nm_perawatan,periksa_lab.biaya from periksa_lab inner join jns_perawatan_lab "+
@@ -2192,7 +2208,6 @@ private void tbDokterKeyPressed(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_
                         param.put("namapasien",rs.getString("nm_pasien"));
                         param.put("jkel",rs.getString("jk"));
                         param.put("umur",rs.getString("umur"));
-                        param.put("lahir",rs.getString("lahir"));
                         param.put("pengirim",Sequel.cariIsi("select dokter.nm_dokter from dokter where dokter.kd_dokter=?",rs.getString("dokter_perujuk")));
                         param.put("tanggal",rs.getString("tgl_periksa"));
                         param.put("penjab",rs.getString("nm_dokter"));
@@ -2206,7 +2221,7 @@ private void tbDokterKeyPressed(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_
                         finger=Sequel.cariIsi("select sha1(sidikjari.sidikjari) from sidikjari inner join pegawai on pegawai.id=sidikjari.id where pegawai.nik=?",rs.getString("nip"));
                         param.put("finger2","Dikeluarkan di "+akses.getnamars()+", Kabupaten/Kota "+akses.getkabupatenrs()+"\nDitandatangani secara elektronik oleh "+rs.getString("nama")+"\nID "+(finger.equals("")?rs.getString("nip"):finger)+"\n"+rs.getString("tgl_periksa"));  
                         
-                        Sequel.queryu("truncate table temporary_lab");
+                        Sequel.queryu("delete from temporary_lab");
 
                         ps2=koneksi.prepareStatement(
                             "select jns_perawatan_lab.kd_jenis_prw,jns_perawatan_lab.nm_perawatan,periksa_lab.biaya from periksa_lab inner join jns_perawatan_lab "+
@@ -2360,7 +2375,7 @@ private void tbDokterKeyPressed(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_
                         param.put("finger2","Dikeluarkan di "+akses.getnamars()+", Kabupaten/Kota "+akses.getkabupatenrs()+"\nDitandatangani secara elektronik oleh "+rs.getString("nama")+"\nID "+(finger.equals("")?rs.getString("nip"):finger)+"\n"+rs.getString("tgl_periksa"));  
                         
 
-                        Sequel.queryu("truncate table temporary_lab");
+                        Sequel.queryu("delete from temporary_lab");
 
                         ps2=koneksi.prepareStatement(
                             "select jns_perawatan_lab.kd_jenis_prw,jns_perawatan_lab.nm_perawatan,periksa_lab.biaya from periksa_lab inner join jns_perawatan_lab "+
@@ -2514,7 +2529,7 @@ private void tbDokterKeyPressed(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_
                         param.put("finger2","Dikeluarkan di "+akses.getnamars()+", Kabupaten/Kota "+akses.getkabupatenrs()+"\nDitandatangani secara elektronik oleh "+rs.getString("nama")+"\nID "+(finger.equals("")?rs.getString("nip"):finger)+"\n"+rs.getString("tgl_periksa"));  
                         
 
-                        Sequel.queryu("truncate table temporary_lab");
+                        Sequel.queryu("delete from temporary_lab");
 
                         ps2=koneksi.prepareStatement(
                             "select jns_perawatan_lab.kd_jenis_prw,jns_perawatan_lab.nm_perawatan,periksa_lab.biaya from periksa_lab inner join jns_perawatan_lab "+
@@ -2669,7 +2684,7 @@ private void tbDokterKeyPressed(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_
                         param.put("finger2","Dikeluarkan di "+akses.getnamars()+", Kabupaten/Kota "+akses.getkabupatenrs()+"\nDitandatangani secara elektronik oleh "+rs.getString("nama")+"\nID "+(finger.equals("")?rs.getString("nip"):finger)+"\n"+rs.getString("tgl_periksa"));  
                         
 
-                        Sequel.queryu("truncate table temporary_lab");
+                        Sequel.queryu("delete from temporary_lab");
                         ps2=koneksi.prepareStatement(
                             "select jns_perawatan_lab.kd_jenis_prw,jns_perawatan_lab.nm_perawatan,periksa_lab.biaya from periksa_lab inner join jns_perawatan_lab "+
                             "on periksa_lab.kd_jenis_prw=jns_perawatan_lab.kd_jenis_prw where periksa_lab.kategori='PK' and periksa_lab.no_rawat=? and periksa_lab.tgl_periksa=? "+
@@ -2825,7 +2840,7 @@ private void tbDokterKeyPressed(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_
                         param.put("finger2","Dikeluarkan di "+akses.getnamars()+", Kabupaten/Kota "+akses.getkabupatenrs()+"\nDitandatangani secara elektronik oleh "+rs.getString("nama")+"\nID "+(finger.equals("")?rs.getString("nip"):finger)+"\n"+rs.getString("tgl_periksa"));  
                         
 
-                        Sequel.queryu("truncate table temporary_lab");
+                        Sequel.queryu("delete from temporary_lab");
 
                         ps2=koneksi.prepareStatement(
                             "select jns_perawatan_lab.kd_jenis_prw,jns_perawatan_lab.nm_perawatan,periksa_lab.biaya from periksa_lab inner join jns_perawatan_lab "+
@@ -2982,7 +2997,7 @@ private void tbDokterKeyPressed(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_
                         finger=Sequel.cariIsi("select sha1(sidikjari.sidikjari) from sidikjari inner join pegawai on pegawai.id=sidikjari.id where pegawai.nik=?",rs.getString("nip"));
                         param.put("finger2","Dikeluarkan di "+akses.getnamars()+", Kabupaten/Kota "+akses.getkabupatenrs()+"\nDitandatangani secara elektronik oleh "+rs.getString("nama")+"\nID "+(finger.equals("")?rs.getString("nip"):finger)+"\n"+rs.getString("tgl_periksa"));  
                         
-                        Sequel.queryu("truncate table temporary_lab");
+                        Sequel.queryu("delete from temporary_lab");
 
                         ps2=koneksi.prepareStatement(
                             "select jns_perawatan_lab.kd_jenis_prw,jns_perawatan_lab.nm_perawatan,periksa_lab.biaya from periksa_lab inner join jns_perawatan_lab "+
@@ -3123,7 +3138,6 @@ private void tbDokterKeyPressed(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_
                         param.put("namapasien",rs.getString("nm_pasien"));
                         param.put("jkel",rs.getString("jk"));
                         param.put("umur",rs.getString("umur"));
-                        param.put("lahir",rs.getString("lahir"));
                         param.put("pengirim",Sequel.cariIsi("select dokter.nm_dokter from dokter where dokter.kd_dokter=?",rs.getString("dokter_perujuk")));
                         param.put("tanggal",rs.getString("tgl_periksa"));
                         param.put("penjab",rs.getString("nm_dokter"));
@@ -3162,7 +3176,7 @@ private void tbDokterKeyPressed(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_
                         }                    
                         param.put("kesan",kesan);
                         param.put("saran",saran);
-                        Sequel.queryu("truncate table temporary_lab");  
+                        Sequel.queryu("delete from temporary_lab");  
                         ps2=koneksi.prepareStatement(
                             "select jns_perawatan_lab.kd_jenis_prw,jns_perawatan_lab.nm_perawatan,periksa_lab.biaya from periksa_lab inner join jns_perawatan_lab "+
                             "on periksa_lab.kd_jenis_prw=jns_perawatan_lab.kd_jenis_prw where periksa_lab.kategori='PK' and periksa_lab.no_rawat=? and periksa_lab.tgl_periksa=? "+
@@ -3301,7 +3315,6 @@ private void tbDokterKeyPressed(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_
                         param.put("namapasien",rs.getString("nm_pasien"));
                         param.put("jkel",rs.getString("jk"));
                         param.put("umur",rs.getString("umur"));
-                        param.put("lahir",rs.getString("lahir"));
                         param.put("pengirim",Sequel.cariIsi("select dokter.nm_dokter from dokter where dokter.kd_dokter=?",rs.getString("dokter_perujuk")));
                         param.put("tanggal",rs.getString("tgl_periksa"));
                         param.put("penjab",rs.getString("nm_dokter"));
@@ -3340,7 +3353,7 @@ private void tbDokterKeyPressed(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_
                         }                    
                         param.put("kesan",kesan);
                         param.put("saran",saran);
-                        Sequel.queryu("truncate table temporary_lab");
+                        Sequel.queryu("delete from temporary_lab");
                         ps2=koneksi.prepareStatement(
                             "select jns_perawatan_lab.kd_jenis_prw,jns_perawatan_lab.nm_perawatan,periksa_lab.biaya from periksa_lab inner join jns_perawatan_lab "+
                             "on periksa_lab.kd_jenis_prw=jns_perawatan_lab.kd_jenis_prw where periksa_lab.kategori='PK' and periksa_lab.no_rawat=? and periksa_lab.tgl_periksa=? "+
@@ -3480,7 +3493,6 @@ private void tbDokterKeyPressed(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_
                         param.put("namapasien",rs.getString("nm_pasien"));
                         param.put("jkel",rs.getString("jk"));
                         param.put("umur",rs.getString("umur"));
-                        param.put("lahir",rs.getString("lahir"));
                         param.put("pengirim",Sequel.cariIsi("select dokter.nm_dokter from dokter where dokter.kd_dokter=?",rs.getString("dokter_perujuk")));
                         param.put("tanggal",rs.getString("tgl_periksa"));
                         param.put("penjab",rs.getString("nm_dokter"));
@@ -3519,7 +3531,7 @@ private void tbDokterKeyPressed(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_
                         }                    
                         param.put("kesan",kesan);
                         param.put("saran",saran);
-                        Sequel.queryu("truncate table temporary_lab");
+                        Sequel.queryu("delete from temporary_lab");
                         ps2=koneksi.prepareStatement(
                             "select jns_perawatan_lab.kd_jenis_prw,jns_perawatan_lab.nm_perawatan,periksa_lab.biaya from periksa_lab inner join jns_perawatan_lab "+
                             "on periksa_lab.kd_jenis_prw=jns_perawatan_lab.kd_jenis_prw where periksa_lab.kategori='PK' and periksa_lab.no_rawat=? and periksa_lab.tgl_periksa=? "+
@@ -3757,7 +3769,6 @@ private void tbDokterKeyPressed(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_
                         param.put("namapasien",rs.getString("nm_pasien"));
                         param.put("jkel",rs.getString("jk"));
                         param.put("umur",rs.getString("umur"));
-                        param.put("lahir",rs.getString("lahir"));
                         param.put("pengirim",Sequel.cariIsi("select dokter.nm_dokter from dokter where dokter.kd_dokter=?",rs.getString("dokter_perujuk")));
                         param.put("tanggal",rs.getString("tgl_periksa"));
                         param.put("penjab",rs.getString("nm_dokter"));
@@ -3772,7 +3783,7 @@ private void tbDokterKeyPressed(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_
                         param.put("finger2","Dikeluarkan di "+akses.getnamars()+", Kabupaten/Kota "+akses.getkabupatenrs()+"\nDitandatangani secara elektronik oleh "+rs.getString("nama")+"\nID "+(finger.equals("")?rs.getString("nip"):finger)+"\n"+rs.getString("tgl_periksa"));  
                         
 
-                        Sequel.queryu("truncate table temporary_lab");
+                        Sequel.queryu("delete from temporary_lab");
 
                         ps2=koneksi.prepareStatement(
                             "select jns_perawatan_lab.kd_jenis_prw,jns_perawatan_lab.nm_perawatan,periksa_lab.biaya from periksa_lab inner join jns_perawatan_lab "+
@@ -3912,7 +3923,6 @@ private void tbDokterKeyPressed(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_
                         param.put("namapasien",rs.getString("nm_pasien"));
                         param.put("jkel",rs.getString("jk"));
                         param.put("umur",rs.getString("umur"));
-                        param.put("lahir",rs.getString("lahir"));
                         param.put("pengirim",Sequel.cariIsi("select dokter.nm_dokter from dokter where dokter.kd_dokter=?",rs.getString("dokter_perujuk")));
                         param.put("tanggal",rs.getString("tgl_periksa"));
                         param.put("penjab",rs.getString("nm_dokter"));
@@ -3927,7 +3937,7 @@ private void tbDokterKeyPressed(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_
                         param.put("finger2","Dikeluarkan di "+akses.getnamars()+", Kabupaten/Kota "+akses.getkabupatenrs()+"\nDitandatangani secara elektronik oleh "+rs.getString("nama")+"\nID "+(finger.equals("")?rs.getString("nip"):finger)+"\n"+rs.getString("tgl_periksa"));  
                         
 
-                        Sequel.queryu("truncate table temporary_lab");
+                        Sequel.queryu("delete from temporary_lab");
 
                         ps2=koneksi.prepareStatement(
                             "select jns_perawatan_lab.kd_jenis_prw,jns_perawatan_lab.nm_perawatan,periksa_lab.biaya from periksa_lab inner join jns_perawatan_lab "+
@@ -4068,7 +4078,6 @@ private void tbDokterKeyPressed(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_
                         param.put("namapasien",rs.getString("nm_pasien"));
                         param.put("jkel",rs.getString("jk"));
                         param.put("umur",rs.getString("umur"));
-                        param.put("lahir",rs.getString("lahir"));
                         param.put("pengirim",Sequel.cariIsi("select dokter.nm_dokter from dokter where dokter.kd_dokter=?",rs.getString("dokter_perujuk")));
                         param.put("tanggal",rs.getString("tgl_periksa"));
                         param.put("penjab",rs.getString("nm_dokter"));
@@ -4083,7 +4092,7 @@ private void tbDokterKeyPressed(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_
                         param.put("finger2","Dikeluarkan di "+akses.getnamars()+", Kabupaten/Kota "+akses.getkabupatenrs()+"\nDitandatangani secara elektronik oleh "+rs.getString("nama")+"\nID "+(finger.equals("")?rs.getString("nip"):finger)+"\n"+rs.getString("tgl_periksa"));  
                         
 
-                        Sequel.queryu("truncate table temporary_lab");
+                        Sequel.queryu("delete from temporary_lab");
 
                         ps2=koneksi.prepareStatement(
                             "select jns_perawatan_lab.kd_jenis_prw,jns_perawatan_lab.nm_perawatan,periksa_lab.biaya from periksa_lab inner join jns_perawatan_lab "+
@@ -4238,7 +4247,7 @@ private void tbDokterKeyPressed(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_
                         param.put("finger2","Dikeluarkan di "+akses.getnamars()+", Kabupaten/Kota "+akses.getkabupatenrs()+"\nDitandatangani secara elektronik oleh "+rs.getString("nama")+"\nID "+(finger.equals("")?rs.getString("nip"):finger)+"\n"+rs.getString("tgl_periksa"));  
                         
 
-                        Sequel.queryu("truncate table temporary_lab");
+                        Sequel.queryu("delete from temporary_lab");
 
                         ps2=koneksi.prepareStatement(
                             "select jns_perawatan_lab.kd_jenis_prw,jns_perawatan_lab.nm_perawatan,periksa_lab.biaya from periksa_lab inner join jns_perawatan_lab "+
@@ -4392,7 +4401,7 @@ private void tbDokterKeyPressed(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_
                         param.put("finger2","Dikeluarkan di "+akses.getnamars()+", Kabupaten/Kota "+akses.getkabupatenrs()+"\nDitandatangani secara elektronik oleh "+rs.getString("nama")+"\nID "+(finger.equals("")?rs.getString("nip"):finger)+"\n"+rs.getString("tgl_periksa"));  
                         
 
-                        Sequel.queryu("truncate table temporary_lab");
+                        Sequel.queryu("delete from temporary_lab");
 
                         ps2=koneksi.prepareStatement(
                             "select jns_perawatan_lab.kd_jenis_prw,jns_perawatan_lab.nm_perawatan,periksa_lab.biaya from periksa_lab inner join jns_perawatan_lab "+
@@ -4547,7 +4556,7 @@ private void tbDokterKeyPressed(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_
                         param.put("finger2","Dikeluarkan di "+akses.getnamars()+", Kabupaten/Kota "+akses.getkabupatenrs()+"\nDitandatangani secara elektronik oleh "+rs.getString("nama")+"\nID "+(finger.equals("")?rs.getString("nip"):finger)+"\n"+rs.getString("tgl_periksa"));  
                         
 
-                        Sequel.queryu("truncate table temporary_lab");
+                        Sequel.queryu("delete from temporary_lab");
                         ps2=koneksi.prepareStatement(
                             "select jns_perawatan_lab.kd_jenis_prw,jns_perawatan_lab.nm_perawatan,periksa_lab.biaya from periksa_lab inner join jns_perawatan_lab "+
                             "on periksa_lab.kd_jenis_prw=jns_perawatan_lab.kd_jenis_prw where periksa_lab.kategori='PK' and periksa_lab.no_rawat=? and periksa_lab.tgl_periksa=? "+
@@ -4704,7 +4713,7 @@ private void tbDokterKeyPressed(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_
                         param.put("finger2","Dikeluarkan di "+akses.getnamars()+", Kabupaten/Kota "+akses.getkabupatenrs()+"\nDitandatangani secara elektronik oleh "+rs.getString("nama")+"\nID "+(finger.equals("")?rs.getString("nip"):finger)+"\n"+rs.getString("tgl_periksa"));  
                         
 
-                        Sequel.queryu("truncate table temporary_lab");
+                        Sequel.queryu("delete from temporary_lab");
 
                         ps2=koneksi.prepareStatement(
                             "select jns_perawatan_lab.kd_jenis_prw,jns_perawatan_lab.nm_perawatan,periksa_lab.biaya from periksa_lab inner join jns_perawatan_lab "+
@@ -4862,7 +4871,7 @@ private void tbDokterKeyPressed(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_
                         param.put("finger2","Dikeluarkan di "+akses.getnamars()+", Kabupaten/Kota "+akses.getkabupatenrs()+"\nDitandatangani secara elektronik oleh "+rs.getString("nama")+"\nID "+(finger.equals("")?rs.getString("nip"):finger)+"\n"+rs.getString("tgl_periksa"));  
                         
 
-                        Sequel.queryu("truncate table temporary_lab");
+                        Sequel.queryu("delete from temporary_lab");
 
                         ps2=koneksi.prepareStatement(
                             "select jns_perawatan_lab.kd_jenis_prw,jns_perawatan_lab.nm_perawatan,periksa_lab.biaya from periksa_lab inner join jns_perawatan_lab "+
@@ -5003,7 +5012,6 @@ private void tbDokterKeyPressed(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_
                         param.put("namapasien",rs.getString("nm_pasien"));
                         param.put("jkel",rs.getString("jk"));
                         param.put("umur",rs.getString("umur"));
-                        param.put("lahir",rs.getString("lahir"));
                         param.put("pengirim",Sequel.cariIsi("select dokter.nm_dokter from dokter where dokter.kd_dokter=?",rs.getString("dokter_perujuk")));
                         param.put("tanggal",rs.getString("tgl_periksa"));
                         param.put("penjab",rs.getString("nm_dokter"));
@@ -5043,7 +5051,7 @@ private void tbDokterKeyPressed(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_
                         }                    
                         param.put("kesan",kesan);
                         param.put("saran",saran);
-                        Sequel.queryu("truncate table temporary_lab");  
+                        Sequel.queryu("delete from temporary_lab");  
                         ps2=koneksi.prepareStatement(
                             "select jns_perawatan_lab.kd_jenis_prw,jns_perawatan_lab.nm_perawatan,periksa_lab.biaya from periksa_lab inner join jns_perawatan_lab "+
                             "on periksa_lab.kd_jenis_prw=jns_perawatan_lab.kd_jenis_prw where periksa_lab.kategori='PK' and periksa_lab.no_rawat=? and periksa_lab.tgl_periksa=? "+
@@ -5182,7 +5190,6 @@ private void tbDokterKeyPressed(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_
                         param.put("namapasien",rs.getString("nm_pasien"));
                         param.put("jkel",rs.getString("jk"));
                         param.put("umur",rs.getString("umur"));
-                        param.put("lahir",rs.getString("lahir"));
                         param.put("pengirim",Sequel.cariIsi("select dokter.nm_dokter from dokter where dokter.kd_dokter=?",rs.getString("dokter_perujuk")));
                         param.put("tanggal",rs.getString("tgl_periksa"));
                         param.put("penjab",rs.getString("nm_dokter"));
@@ -5222,7 +5229,7 @@ private void tbDokterKeyPressed(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_
                         }                    
                         param.put("kesan",kesan);
                         param.put("saran",saran);
-                        Sequel.queryu("truncate table temporary_lab");
+                        Sequel.queryu("delete from temporary_lab");
                         ps2=koneksi.prepareStatement(
                             "select jns_perawatan_lab.kd_jenis_prw,jns_perawatan_lab.nm_perawatan,periksa_lab.biaya from periksa_lab inner join jns_perawatan_lab "+
                             "on periksa_lab.kd_jenis_prw=jns_perawatan_lab.kd_jenis_prw where periksa_lab.kategori='PK' and periksa_lab.no_rawat=? and periksa_lab.tgl_periksa=? "+
@@ -5362,7 +5369,6 @@ private void tbDokterKeyPressed(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_
                         param.put("namapasien",rs.getString("nm_pasien"));
                         param.put("jkel",rs.getString("jk"));
                         param.put("umur",rs.getString("umur"));
-                        param.put("lahir",rs.getString("lahir"));
                         param.put("pengirim",Sequel.cariIsi("select dokter.nm_dokter from dokter where dokter.kd_dokter=?",rs.getString("dokter_perujuk")));
                         param.put("tanggal",rs.getString("tgl_periksa"));
                         param.put("penjab",rs.getString("nm_dokter"));
@@ -5402,7 +5408,7 @@ private void tbDokterKeyPressed(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_
                         }                    
                         param.put("kesan",kesan);
                         param.put("saran",saran);
-                        Sequel.queryu("truncate table temporary_lab");
+                        Sequel.queryu("delete from temporary_lab");
                         ps2=koneksi.prepareStatement(
                             "select jns_perawatan_lab.kd_jenis_prw,jns_perawatan_lab.nm_perawatan,periksa_lab.biaya from periksa_lab inner join jns_perawatan_lab "+
                             "on periksa_lab.kd_jenis_prw=jns_perawatan_lab.kd_jenis_prw where periksa_lab.kategori='PK' and periksa_lab.no_rawat=? and periksa_lab.tgl_periksa=? "+
@@ -5627,7 +5633,7 @@ private void tbDokterKeyPressed(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_
                         param.put("finger","Dikeluarkan di "+akses.getnamars()+", Kabupaten/Kota "+akses.getkabupatenrs()+"\nDitandatangani secara elektronik oleh "+rs.getString("nm_dokter")+"\nID "+(finger.equals("")?rs.getString("kd_dokter"):finger)+"\n"+rs.getString("tgl_periksa"));  
                         finger=Sequel.cariIsi("select sha1(sidikjari.sidikjari) from sidikjari inner join pegawai on pegawai.id=sidikjari.id where pegawai.nik=?",rs.getString("nip"));
                         param.put("finger2","Dikeluarkan di "+akses.getnamars()+", Kabupaten/Kota "+akses.getkabupatenrs()+"\nDitandatangani secara elektronik oleh "+rs.getString("nama")+"\nID "+(finger.equals("")?rs.getString("nip"):finger)+"\n"+rs.getString("tgl_periksa"));  
-                        Sequel.queryu("truncate table temporary_lab");
+                        Sequel.queryu("delete from temporary_lab");
 
                         ps2=koneksi.prepareStatement(
                             "select jns_perawatan_lab.kd_jenis_prw,jns_perawatan_lab.nm_perawatan,periksa_lab.biaya from periksa_lab inner join jns_perawatan_lab "+
@@ -5805,7 +5811,7 @@ private void tbDokterKeyPressed(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_
                         param.put("finger","Dikeluarkan di "+akses.getnamars()+", Kabupaten/Kota "+akses.getkabupatenrs()+"\nDitandatangani secara elektronik oleh "+rs.getString("nm_dokter")+"\nID "+(finger.equals("")?rs.getString("kd_dokter"):finger)+"\n"+rs.getString("tgl_periksa"));  
                         finger=Sequel.cariIsi("select sha1(sidikjari.sidikjari) from sidikjari inner join pegawai on pegawai.id=sidikjari.id where pegawai.nik=?",rs.getString("nip"));
                         param.put("finger2","Dikeluarkan di "+akses.getnamars()+", Kabupaten/Kota "+akses.getkabupatenrs()+"\nDitandatangani secara elektronik oleh "+rs.getString("nama")+"\nID "+(finger.equals("")?rs.getString("nip"):finger)+"\n"+rs.getString("tgl_periksa"));  
-                        Sequel.queryu("truncate table temporary_lab");
+                        Sequel.queryu("delete from temporary_lab");
 
                         ps2=koneksi.prepareStatement(
                             "select jns_perawatan_lab.kd_jenis_prw,jns_perawatan_lab.nm_perawatan,periksa_lab.biaya from periksa_lab inner join jns_perawatan_lab "+
@@ -5932,6 +5938,28 @@ private void tbDokterKeyPressed(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_
         this.setCursor(Cursor.getDefaultCursor());
     }//GEN-LAST:event_MnCetakHasilLab23ActionPerformed
 
+    private void ppRiwayatBtnPrintActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_ppRiwayatBtnPrintActionPerformed
+        if(tabMode.getRowCount()==0){
+            JOptionPane.showMessageDialog(null,"Maaf, data sudah habis...!!!!");
+            TCari.requestFocus();
+        }else if(tbDokter.getSelectedRow()<= -1){
+            JOptionPane.showMessageDialog(null,"Maaf, Silahkan pilih data..!!");
+        }else {
+            if(Kd2.getText().equals("")){
+                JOptionPane.showMessageDialog(null,"Maaf, silahkan pilih data terlebih dahulu...!!!!");
+            }else{
+                this.setCursor(Cursor.getPredefinedCursor(Cursor.WAIT_CURSOR));
+                RMRiwayatPerawatan resume=new RMRiwayatPerawatan(null,true);
+                datapasien=Sequel.cariIsi("select reg_periksa.no_rkm_medis from reg_periksa where reg_periksa.no_rawat=?",Kd2.getText());
+                resume.setNoRm(datapasien,tbDokter.getValueAt(tbDokter.getSelectedRow(),1).toString().replaceAll(datapasien+" ",""));
+                resume.setSize(internalFrame1.getWidth()-20,internalFrame1.getHeight()-20);
+                resume.setLocationRelativeTo(internalFrame1);
+                resume.setVisible(true);
+                this.setCursor(Cursor.getDefaultCursor());
+            }
+        }
+    }//GEN-LAST:event_ppRiwayatBtnPrintActionPerformed
+
     /**
     * @param args the command line arguments
     */
@@ -6021,6 +6049,7 @@ private void tbDokterKeyPressed(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_
     private widget.panelisi panelisi1;
     private widget.panelisi panelisi3;
     private javax.swing.JMenuItem ppBerkasDigital;
+    private javax.swing.JMenuItem ppRiwayat;
     private widget.ScrollPane scrollPane1;
     private widget.ScrollPane scrollPane2;
     private widget.Table tbDokter;
@@ -6559,7 +6588,8 @@ private void tbDokterKeyPressed(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_
         BtnHapus.setEnabled(akses.getperiksa_lab());
         BtnPrint.setEnabled(akses.getperiksa_lab());
         MnCetakSuratCovid.setEnabled(akses.getsurat_keterangan_covid());
-        ppBerkasDigital.setEnabled(akses.getberkas_digital_perawatan());     
+        ppBerkasDigital.setEnabled(akses.getberkas_digital_perawatan());  
+        ppRiwayat.setEnabled(akses.getresume_pasien());   
     }
     
     public void setPasien(String pasien){

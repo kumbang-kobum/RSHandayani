@@ -34,11 +34,9 @@ public class IPSRSPermintaan extends javax.swing.JDialog {
     private final DefaultTableModel tabMode;
     private sekuel Sequel=new sekuel();
     private validasi Valid=new validasi();
-    private Jurnal jur=new Jurnal();
     private Connection koneksi=koneksiDB.condb();
     private PreparedStatement ps;
     private ResultSet rs;
-    private Dimension screen=Toolkit.getDefaultToolkit().getScreenSize();
     private int jml=0,i=0,row=0,index=0;
     private String[] jumlah,kodebarang,namabarang,satuan,jenis,keterangan;
     private WarnaTable2 warna=new WarnaTable2();
@@ -668,12 +666,10 @@ private void TanggalKeyPressed(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_T
 
 private void kdptgKeyPressed(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_kdptgKeyPressed
         if(evt.getKeyCode()==KeyEvent.VK_PAGE_DOWN){
-            Sequel.cariIsi("select pegawai.nama from pegawai where pegawai.nik=?", nmptg,kdptg.getText());          
+            nmptg.setText(pegawai.tampil3(kdptg.getText()));        
         }else if(evt.getKeyCode()==KeyEvent.VK_PAGE_UP){
-            Sequel.cariIsi("select pegawai.nama from pegawai where pegawai.nik=?", nmptg,kdptg.getText());
             Ruangan.requestFocus();
         }else if(evt.getKeyCode()==KeyEvent.VK_ENTER){
-            Sequel.cariIsi("select pegawai.nama from pegawai where pegawai.nik=?", nmptg,kdptg.getText());
             BtnSimpan.requestFocus();  
         }else if(evt.getKeyCode()==KeyEvent.VK_UP){
             btnPetugasActionPerformed(null);
@@ -884,8 +880,8 @@ private void btnPetugasActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FI
             kdptg.setText(akses.getkode());
             BtnSimpan.setEnabled(akses.getpermintaan_non_medis());
             BtnTambah.setEnabled(akses.getipsrs_barang());
-            Sequel.cariIsi("select pegawai.nama from pegawai where pegawai.nik=?", nmptg,kdptg.getText());
-            Sequel.cariIsi("select pegawai.departemen from pegawai where pegawai.nik=?",Departemen,kdptg.getText());
+            nmptg.setText(pegawai.tampil3(kdptg.getText()));
+            Departemen.setText(pegawai.tampilDepartemen(kdptg.getText()));
         }        
     }
     

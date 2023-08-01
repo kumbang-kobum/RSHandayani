@@ -193,8 +193,8 @@ public final class RMSkriningMPPFormA extends javax.swing.JDialog {
         TNoRw.setDocument(new batasInput((byte)17).getKata(TNoRw));
         TDiagnosis.setDocument(new batasInput((int)150).getKata(TDiagnosis));
         TKelompok.setDocument(new batasInput((int)150).getKata(TKelompok));
-        Assemen.setDocument(new batasInput((int)1000).getKata(Assemen));
-        Identifikasi.setDocument(new batasInput((int)1000).getKata(Identifikasi));
+        Assemen.setDocument(new batasInput((int)250).getKata(Assemen));
+        Identifikasi.setDocument(new batasInput((int)250).getKata(Identifikasi));
         Perencanaan.setDocument(new batasInput((int)2000).getKata(Perencanaan));
         TCari.setDocument(new batasInput((int)100).getKata(TCari));
         
@@ -1733,7 +1733,7 @@ public final class RMSkriningMPPFormA extends javax.swing.JDialog {
 
     private void formWindowOpened(java.awt.event.WindowEvent evt) {//GEN-FIRST:event_formWindowOpened
         try {
-            if(Valid.daysOld("./cache/masalahmpp.iyem")<8){
+            if(Valid.daysOld("./cache/masalahmpp.iyem")<30){
                 tampilMasalah2();
             }else{
                 tampilMasalah();
@@ -1825,7 +1825,7 @@ public final class RMSkriningMPPFormA extends javax.swing.JDialog {
 
     private void KdDok1KeyPressed(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_KdDok1KeyPressed
         if(evt.getKeyCode()==KeyEvent.VK_PAGE_DOWN){
-            Sequel.cariIsi("select dokter.nm_dokter from dokter where dokter.kd_dokter=?",TDokter1,KdDok1.getText());
+            TDokter1.setText(dokter.tampil3(KdDok1.getText()));
         }else if(evt.getKeyCode()==KeyEvent.VK_UP){
             btnDokter1ActionPerformed(null);
         }
@@ -1846,7 +1846,7 @@ public final class RMSkriningMPPFormA extends javax.swing.JDialog {
 
     private void KdDok2KeyPressed(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_KdDok2KeyPressed
         if(evt.getKeyCode()==KeyEvent.VK_PAGE_DOWN){
-            Sequel.cariIsi("select dokter.nm_dokter from dokter where dokter.kd_dokter=?",TDokter2,KdDok2.getText());
+            TDokter2.setText(dokter.tampil3(KdDok2.getText()));
         }else if(evt.getKeyCode()==KeyEvent.VK_UP){
             btnDokter2ActionPerformed(null);
         }
@@ -2209,7 +2209,7 @@ public final class RMSkriningMPPFormA extends javax.swing.JDialog {
             KdPetugas.setEditable(false);
             BtnPetugas.setEnabled(false);
             KdPetugas.setText(akses.getkode());
-            Sequel.cariIsi("select pegawai.nama from pegawai where pegawai.nik=?", NmPetugas,KdPetugas.getText());
+            NmPetugas.setText(petugas.tampil3(KdPetugas.getText()));
         }            
     }
 

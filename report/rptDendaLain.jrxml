@@ -19,7 +19,7 @@
                 perpustakaan_bayar_denda.besar_denda,perpustakaan_bayar_denda.keterangan_denda from perpustakaan_inventaris 
                 inner join perpustakaan_buku inner join perpustakaan_bayar_denda inner join perpustakaan_anggota inner join perpustakaan_denda on 
                 perpustakaan_buku.kode_buku=perpustakaan_inventaris.kode_buku and perpustakaan_bayar_denda.no_anggota=perpustakaan_anggota.no_anggota 
-                and perpustakaan_inventaris.no_inventaris=perpustakaan_bayar_denda.no_inventaris and perpustakaan_bayar_denda.kode_denda=perpustakaan_denda.kode_denda]]>
+                and perpustakaan_inventaris.no_inventaris=perpustakaan_bayar_denda.no_inventaris and perpustakaan_bayar_denda.kode_denda=perpustakaan_denda.kode_denda ]]>
 	</queryString>
 	<field name="tgl_denda" class="java.sql.Date">
 		<property name="com.jaspersoft.studio.field.label" value="tgl_denda"/>
@@ -127,10 +127,6 @@
 				</textElement>
 				<text><![CDATA[DATA PEMBAYARAN DENDA LAIN-LAIN]]></text>
 			</staticText>
-			<image scaleImage="FillFrame" isUsingCache="true" onErrorType="Blank">
-				<reportElement x="755" y="-2" width="45" height="43" uuid="cc11dded-69e7-4612-9137-63a685e5804b"/>
-				<imageExpression><![CDATA["/home/naira/JaspersoftWorkspace/MyReports/naira/kars4bintang.png"]]></imageExpression>
-			</image>
 		</band>
 	</title>
 	<pageHeader>

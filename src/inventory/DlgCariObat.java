@@ -443,7 +443,8 @@ public final class DlgCariObat extends javax.swing.JDialog {
         }
         
         try {
-            psrekening=koneksi.prepareStatement("select * from set_akun_ralan");
+            psrekening=koneksi.prepareStatement(
+                "select set_akun_ralan.Suspen_Piutang_Obat_Ralan,set_akun_ralan.Obat_Ralan,set_akun_ralan.HPP_Obat_Rawat_Jalan,set_akun_ralan.Persediaan_Obat_Rawat_Jalan from set_akun_ralan");
             try {
                 rsrekening=psrekening.executeQuery();
                 while(rsrekening.next()){
@@ -608,9 +609,6 @@ public final class DlgCariObat extends javax.swing.JDialog {
         setUndecorated(true);
         setResizable(false);
         addWindowListener(new java.awt.event.WindowAdapter() {
-            public void windowOpened(java.awt.event.WindowEvent evt) {
-                formWindowOpened(evt);
-            }
             public void windowActivated(java.awt.event.WindowEvent evt) {
                 formWindowActivated(evt);
             }
@@ -848,7 +846,7 @@ public final class DlgCariObat extends javax.swing.JDialog {
         jLabel8.setBounds(4, 40, 65, 23);
 
         DTPTgl.setForeground(new java.awt.Color(50, 70, 50));
-        DTPTgl.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "09-04-2021" }));
+        DTPTgl.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "13-04-2023" }));
         DTPTgl.setDisplayFormat("dd-MM-yyyy");
         DTPTgl.setName("DTPTgl"); // NOI18N
         DTPTgl.setOpaque(false);
@@ -1592,7 +1590,7 @@ private void BtnSimpanActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIR
                             Sequel.menyimpan("tampjurnal","'"+Persediaan_Obat_Rawat_Jalan+"','Persediaan Obat Rawat Jalan','0','"+ttlhpp+"'","Rekening");                              
                         }
                         if((ttljual>0)||(ttlhpp>0)){
-                            sukses=jur.simpanJurnal(TNoRw.getText(),"U","K011 PEMBERIAN OBAT RAWAT JALAN PASIEN "+TNoRM.getText()+" "+TPasien.getText()+", DIPOSTING OLEH "+akses.getkode());     
+                            sukses=jur.simpanJurnal(TNoRw.getText(),"U","PEMBERIAN OBAT RAWAT JALAN PASIEN "+TNoRM.getText()+" "+TPasien.getText()+", DIPOSTING OLEH "+akses.getkode());     
                         }
                     }
                     
@@ -1689,12 +1687,6 @@ private void JeniskelasKeyPressed(java.awt.event.KeyEvent evt) {//GEN-FIRST:even
             label13.setPreferredSize(new Dimension(1, 23));
         }      
     }//GEN-LAST:event_formWindowActivated
-
-    private void formWindowOpened(java.awt.event.WindowEvent evt) {//GEN-FIRST:event_formWindowOpened
-        if(noresep.equals("")){
-            tampilobat();
-        }            
-    }//GEN-LAST:event_formWindowOpened
 
     private void ChkNoResepItemStateChanged(java.awt.event.ItemEvent evt) {//GEN-FIRST:event_ChkNoResepItemStateChanged
         if(ChkNoResep.isSelected()==true){
@@ -3432,6 +3424,23 @@ private void JeniskelasKeyPressed(java.awt.event.KeyEvent evt) {//GEN-FIRST:even
         noresep="";
         Tanggal.setText(tanggal);
         Jam.setText(jam);  
+        KdPj.setText(Sequel.cariIsi("select reg_periksa.kd_pj from reg_periksa where reg_periksa.no_rawat=?",norwt));
+        kenaikan=Sequel.cariIsiAngka("select (set_harga_obat_ralan.hargajual/100) from set_harga_obat_ralan where set_harga_obat_ralan.kd_pj=?",KdPj.getText());
+        TCari.requestFocus();
+    }
+    
+    public void setNoRm2(String norwt,String norm,String nama,Date tanggal, String jam,String menit,String detik,boolean cekbox) {        
+        aktifpcare="no";
+        TNoRw.setText(norwt);
+        LblNoRawat.setText(norwt);
+        TNoRM.setText(norm);
+        TPasien.setText(nama);
+        noresep="";
+        DTPTgl.setDate(tanggal);
+        cmbJam.setSelectedItem(jam); 
+        cmbMnt.setSelectedItem(menit); 
+        cmbDtk.setSelectedItem(detik);  
+        ChkJln.setSelected(cekbox);
         KdPj.setText(Sequel.cariIsi("select reg_periksa.kd_pj from reg_periksa where reg_periksa.no_rawat=?",norwt));
         kenaikan=Sequel.cariIsiAngka("select (set_harga_obat_ralan.hargajual/100) from set_harga_obat_ralan where set_harga_obat_ralan.kd_pj=?",KdPj.getText());
         TCari.requestFocus();

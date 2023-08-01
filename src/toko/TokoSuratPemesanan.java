@@ -1178,7 +1178,7 @@ private void btnPetugasActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FI
             tbDokter.requestFocus();
         }else if(tbDokter.getRowCount()!=0){
             
-            Sequel.queryu("truncate table temporary_toko");
+            Sequel.queryu("delete from temporary_toko");
             row=tabMode.getRowCount();
             for(i=0;i<row;i++){  
                 if(Valid.SetAngka(tbDokter.getValueAt(i,0).toString())>0){
@@ -1471,7 +1471,7 @@ private void btnPetugasActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FI
             BtnSimpan.setEnabled(akses.gettoko_surat_pemesanan());
             BtnTambah.setEnabled(akses.gettoko_barang());
             nmptg.setText(pegawai.tampil3(kdptg.getText()));
-            Sequel.cariIsi("select pegawai.departemen from pegawai where pegawai.nik=?",Departemen,kdptg.getText());
+            Departemen.setText(pegawai.tampilDepartemen(kdptg.getText()));
         }        
     }
     

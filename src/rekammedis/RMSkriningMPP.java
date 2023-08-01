@@ -49,7 +49,7 @@ public final class RMSkriningMPP extends javax.swing.JDialog {
     private ResultSet rs;
     private int i=0;    
     private DlgCariPegawai pegawai=new DlgCariPegawai(null,false);
-    private String param1, param2, param3, param4, param5, param6, param7, param8, param9, param10, param11, param12, param13,finger="";
+    private String param1, param2, param3, param4, param5, param6, param7, param8, param9, param10, param11, param12, param13, param14, param15, param16,finger="";
     
     /** Creates new form DlgRujuk
      * @param parent
@@ -60,7 +60,8 @@ public final class RMSkriningMPP extends javax.swing.JDialog {
         
         tabMode=new DefaultTableModel(null,new Object[]{
             "No.Rawat","No.RM","Nama Pasien","J.K.","Tgl.Lahir","Alamat","Tgl.Skrining","Parameter 1","Parameter 2","Parameter 3","Parameter 4",
-            "Parameter 5","Parameter 6","Parameter 7","Parameter 8","Parameter 9","Parameter 10","Parameter 11","Parameter 12","Parameter 13","NIP","Nama Petugas"
+            "Parameter 5","Parameter 6","Parameter 7","Parameter 8","Parameter 9","Parameter 10","Parameter 11","Parameter 12","Parameter 13","Parameter 14",
+            "Parameter 15","Parameter 16","NIP","Nama Petugas"
         }){
               @Override public boolean isCellEditable(int rowIndex, int colIndex){return false;}
         };
@@ -69,7 +70,7 @@ public final class RMSkriningMPP extends javax.swing.JDialog {
         tbObat.setPreferredScrollableViewportSize(new Dimension(500,500));
         tbObat.setAutoResizeMode(JTable.AUTO_RESIZE_OFF);
 
-        for (i = 0; i < 22; i++) {
+        for (i = 0; i < 25; i++) {
             TableColumn column = tbObat.getColumnModel().getColumn(i);
             if(i==0){
                 column.setPreferredWidth(105);
@@ -85,9 +86,9 @@ public final class RMSkriningMPP extends javax.swing.JDialog {
                 column.setPreferredWidth(180);
             }else if(i==6){
                 column.setPreferredWidth(75);
-            }else if(i==20){
+            }else if(i==23){
                 column.setPreferredWidth(80);
-            }else if(i==21){
+            }else if(i==24){
                 column.setPreferredWidth(150);
             }else{
                 column.setPreferredWidth(75);
@@ -261,6 +262,12 @@ public final class RMSkriningMPP extends javax.swing.JDialog {
         jLabel67 = new widget.Label();
         jLabel68 = new widget.Label();
         jLabel69 = new widget.Label();
+        jLabel70 = new widget.Label();
+        jLabel71 = new widget.Label();
+        jLabel72 = new widget.Label();
+        jLabel73 = new widget.Label();
+        jLabel74 = new widget.Label();
+        jLabel75 = new widget.Label();
         Param8Ya = new widget.RadioButton();
         Param8Tidak = new widget.RadioButton();
         Param9Ya = new widget.RadioButton();
@@ -273,6 +280,12 @@ public final class RMSkriningMPP extends javax.swing.JDialog {
         Param12Tidak = new widget.RadioButton();
         Param13Ya = new widget.RadioButton();
         Param13Tidak = new widget.RadioButton();
+        Param14Ya = new widget.RadioButton();
+        Param14Tidak = new widget.RadioButton();
+        Param15Tidak = new widget.RadioButton();
+        Param15Ya = new widget.RadioButton();
+        Param16Ya = new widget.RadioButton();
+        Param16Tidak = new widget.RadioButton();
         jSeparator1 = new javax.swing.JSeparator();
         jSeparator2 = new javax.swing.JSeparator();
 
@@ -492,7 +505,7 @@ public final class RMSkriningMPP extends javax.swing.JDialog {
         panelGlass9.add(jLabel19);
 
         DTPCari1.setForeground(new java.awt.Color(50, 70, 50));
-        DTPCari1.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "08-04-2023" }));
+        DTPCari1.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "25-03-2023" }));
         DTPCari1.setDisplayFormat("dd-MM-yyyy");
         DTPCari1.setName("DTPCari1"); // NOI18N
         DTPCari1.setOpaque(false);
@@ -506,7 +519,7 @@ public final class RMSkriningMPP extends javax.swing.JDialog {
         panelGlass9.add(jLabel21);
 
         DTPCari2.setForeground(new java.awt.Color(50, 70, 50));
-        DTPCari2.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "08-04-2023" }));
+        DTPCari2.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "25-03-2023" }));
         DTPCari2.setDisplayFormat("dd-MM-yyyy");
         DTPCari2.setName("DTPCari2"); // NOI18N
         DTPCari2.setOpaque(false);
@@ -906,7 +919,7 @@ public final class RMSkriningMPP extends javax.swing.JDialog {
         jLabel59.setBounds(0, 290, 70, 23);
 
         jLabel60.setHorizontalAlignment(javax.swing.SwingConstants.LEFT);
-        jLabel60.setText("Kasus ynag melebihi standar LOS");
+        jLabel60.setText("Pasien APS (Atas Permintaan Sendiri)");
         jLabel60.setName("jLabel60"); // NOI18N
         FormInput.add(jLabel60);
         jLabel60.setBounds(77, 265, 590, 23);
@@ -934,7 +947,7 @@ public final class RMSkriningMPP extends javax.swing.JDialog {
         jLabel64.setBounds(0, 340, 70, 23);
 
         jLabel65.setHorizontalAlignment(javax.swing.SwingConstants.LEFT);
-        jLabel65.setText("Penundaan tindakan medis");
+        jLabel65.setText("Penolakan tindakan diagnostik");
         jLabel65.setName("jLabel65"); // NOI18N
         FormInput.add(jLabel65);
         jLabel65.setBounds(77, 340, 590, 23);
@@ -945,7 +958,7 @@ public final class RMSkriningMPP extends javax.swing.JDialog {
         jLabel66.setBounds(0, 365, 70, 23);
 
         jLabel67.setHorizontalAlignment(javax.swing.SwingConstants.LEFT);
-        jLabel67.setText("Riwayat gangguan mental, upaya bunuh diri, terlantar, kekerasan, pelecehan, tinggal sendiri, pemakai narkoba");
+        jLabel67.setText("Penolakan tindakan keperawatan");
         jLabel67.setName("jLabel67"); // NOI18N
         FormInput.add(jLabel67);
         jLabel67.setBounds(77, 365, 590, 23);
@@ -956,10 +969,43 @@ public final class RMSkriningMPP extends javax.swing.JDialog {
         jLabel68.setBounds(0, 390, 70, 23);
 
         jLabel69.setHorizontalAlignment(javax.swing.SwingConstants.LEFT);
-        jLabel69.setText("Membutuhkan kontinuitas pelayanan pasca discharge");
+        jLabel69.setText("Penolakan tindakan medis");
         jLabel69.setName("jLabel69"); // NOI18N
         FormInput.add(jLabel69);
         jLabel69.setBounds(77, 390, 590, 23);
+
+        jLabel70.setText("14. ");
+        jLabel70.setName("jLabel70"); // NOI18N
+        FormInput.add(jLabel70);
+        jLabel70.setBounds(0, 415, 70, 23);
+
+        jLabel71.setHorizontalAlignment(javax.swing.SwingConstants.LEFT);
+        jLabel71.setText("Penundaan tindakan medis");
+        jLabel71.setName("jLabel71"); // NOI18N
+        FormInput.add(jLabel71);
+        jLabel71.setBounds(77, 415, 590, 23);
+
+        jLabel72.setText("15. ");
+        jLabel72.setName("jLabel72"); // NOI18N
+        FormInput.add(jLabel72);
+        jLabel72.setBounds(0, 440, 70, 23);
+
+        jLabel73.setHorizontalAlignment(javax.swing.SwingConstants.LEFT);
+        jLabel73.setText("Riwayat gangguan mental, upaya bunuh diri, terlantar, kekerasan, pelecehan, tinggal sendiri, pemakai narkoba");
+        jLabel73.setName("jLabel73"); // NOI18N
+        FormInput.add(jLabel73);
+        jLabel73.setBounds(77, 440, 590, 23);
+
+        jLabel74.setText("16. ");
+        jLabel74.setName("jLabel74"); // NOI18N
+        FormInput.add(jLabel74);
+        jLabel74.setBounds(0, 465, 70, 23);
+
+        jLabel75.setHorizontalAlignment(javax.swing.SwingConstants.LEFT);
+        jLabel75.setText("Membutuhkan kontinuitas pelayanan pasca discharge");
+        jLabel75.setName("jLabel75"); // NOI18N
+        FormInput.add(jLabel75);
+        jLabel75.setBounds(77, 465, 590, 23);
 
         buttonGroup8.add(Param8Ya);
         Param8Ya.setText("Ya");
@@ -1045,6 +1091,48 @@ public final class RMSkriningMPP extends javax.swing.JDialog {
         FormInput.add(Param13Tidak);
         Param13Tidak.setBounds(720, 390, 60, 23);
 
+        buttonGroup14.add(Param14Ya);
+        Param14Ya.setText("Ya");
+        Param14Ya.setName("Param14Ya"); // NOI18N
+        Param14Ya.setPreferredSize(new java.awt.Dimension(40, 20));
+        FormInput.add(Param14Ya);
+        Param14Ya.setBounds(670, 415, 45, 23);
+
+        buttonGroup14.add(Param14Tidak);
+        Param14Tidak.setSelected(true);
+        Param14Tidak.setText("Tidak");
+        Param14Tidak.setName("Param14Tidak"); // NOI18N
+        FormInput.add(Param14Tidak);
+        Param14Tidak.setBounds(720, 415, 60, 23);
+
+        buttonGroup15.add(Param15Tidak);
+        Param15Tidak.setSelected(true);
+        Param15Tidak.setText("Tidak");
+        Param15Tidak.setName("Param15Tidak"); // NOI18N
+        FormInput.add(Param15Tidak);
+        Param15Tidak.setBounds(720, 440, 60, 23);
+
+        buttonGroup15.add(Param15Ya);
+        Param15Ya.setText("Ya");
+        Param15Ya.setName("Param15Ya"); // NOI18N
+        Param15Ya.setPreferredSize(new java.awt.Dimension(40, 20));
+        FormInput.add(Param15Ya);
+        Param15Ya.setBounds(670, 440, 45, 23);
+
+        buttonGroup16.add(Param16Ya);
+        Param16Ya.setText("Ya");
+        Param16Ya.setName("Param16Ya"); // NOI18N
+        Param16Ya.setPreferredSize(new java.awt.Dimension(40, 20));
+        FormInput.add(Param16Ya);
+        Param16Ya.setBounds(670, 465, 45, 23);
+
+        buttonGroup16.add(Param16Tidak);
+        Param16Tidak.setSelected(true);
+        Param16Tidak.setText("Tidak");
+        Param16Tidak.setName("Param16Tidak"); // NOI18N
+        FormInput.add(Param16Tidak);
+        Param16Tidak.setBounds(720, 465, 60, 23);
+
         jSeparator1.setBackground(new java.awt.Color(239, 244, 234));
         jSeparator1.setForeground(new java.awt.Color(239, 244, 234));
         jSeparator1.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(239, 244, 234)));
@@ -1098,6 +1186,9 @@ public final class RMSkriningMPP extends javax.swing.JDialog {
             param11="Tidak";
             param12="Tidak";
             param13="Tidak";
+            param14="Tidak";
+            param15="Tidak";
+            param16="Tidak";
             if(Param1Ya.isSelected()==true){
                 param1="Ya";
             }
@@ -1137,13 +1228,22 @@ public final class RMSkriningMPP extends javax.swing.JDialog {
             if(Param13Ya.isSelected()==true){
                 param13="Ya";
             }
-            if(Sequel.menyimpantf("mpp_skrining","?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?","No.Rawat",16,new String[]{
+            if(Param14Ya.isSelected()==true){
+                param14="Ya";
+            }
+            if(Param15Ya.isSelected()==true){
+                param15="Ya";
+            }
+            if(Param16Ya.isSelected()==true){
+                param16="Ya";
+            }
+            if(Sequel.menyimpantf("mpp_skrining","?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?","No.Rawat",19,new String[]{
                     TNoRw.getText(),Valid.SetTgl(TglSkrining.getSelectedItem()+""), param1, param2, param3, param4, param5, param6, param7,
-                    param8, param9, param10, param11, param12, param13,KdPetugas.getText()
+                    param8, param9, param10, param11, param12, param13, param14, param15, param16,KdPetugas.getText()
                 })==true){
                     tabMode.addRow(new String[]{
                         TNoRw.getText(),TNoRM.getText(),TPasien.getText(),JK.getText().substring(0,1),TglLahir.getText(),AlamatLengkap.getText(),Valid.SetTgl(TglSkrining.getSelectedItem()+""),
-                        param1,param2,param3,param4,param5,param6,param7,param8,param9,param10,param11,param12,param13,KdPetugas.getText(),NmPetugas.getText()
+                        param1,param2,param3,param4,param5,param6,param7,param8,param9,param10,param11,param12,param13,param14,param15,param16,KdPetugas.getText(),NmPetugas.getText()
                     });
                     emptTeks();
                     LCount.setText(""+tabMode.getRowCount());
@@ -1176,7 +1276,7 @@ public final class RMSkriningMPP extends javax.swing.JDialog {
             if(akses.getkode().equals("Admin Utama")){
                 hapus();
             }else{
-                if(KdPetugas.getText().equals(tbObat.getValueAt(tbObat.getSelectedRow(),20).toString())){
+                if(KdPetugas.getText().equals(tbObat.getValueAt(tbObat.getSelectedRow(),23).toString())){
                     hapus();
                 }else{
                     JOptionPane.showMessageDialog(null,"Hanya bisa dihapus oleh petugas yang bersangkutan..!!");
@@ -1206,7 +1306,7 @@ public final class RMSkriningMPP extends javax.swing.JDialog {
                 if(akses.getkode().equals("Admin Utama")){
                     ganti();
                 }else{
-                    if(KdPetugas.getText().equals(tbObat.getValueAt(tbObat.getSelectedRow(),20).toString())){
+                    if(KdPetugas.getText().equals(tbObat.getValueAt(tbObat.getSelectedRow(),23).toString())){
                         ganti();
                     }else{
                         JOptionPane.showMessageDialog(null,"Hanya bisa diganti oleh petugas yang bersangkutan..!!");
@@ -1254,7 +1354,7 @@ public final class RMSkriningMPP extends javax.swing.JDialog {
                         "mpp_skrining.tanggal,mpp_skrining.param1,mpp_skrining.param2,mpp_skrining.param3,mpp_skrining.param3,"+
                         "mpp_skrining.param4,mpp_skrining.param5,mpp_skrining.param5,mpp_skrining.param6,mpp_skrining.param7,"+
                         "mpp_skrining.param8,mpp_skrining.param9,mpp_skrining.param10,mpp_skrining.param11,mpp_skrining.param12,"+
-                        "mpp_skrining.param13,mpp_skrining.nip,pegawai.nama "+
+                        "mpp_skrining.param13,mpp_skrining.param14,mpp_skrining.param15,mpp_skrining.param16,mpp_skrining.nip,pegawai.nama "+
                         "from reg_periksa inner join pasien on reg_periksa.no_rkm_medis=pasien.no_rkm_medis "+
                         "inner join mpp_skrining on reg_periksa.no_rawat=mpp_skrining.no_rawat "+
                         "inner join pegawai on mpp_skrining.nip=pegawai.nik "+
@@ -1269,7 +1369,7 @@ public final class RMSkriningMPP extends javax.swing.JDialog {
                         "mpp_skrining.tanggal,mpp_skrining.param1,mpp_skrining.param2,mpp_skrining.param3,mpp_skrining.param3,"+
                         "mpp_skrining.param4,mpp_skrining.param5,mpp_skrining.param5,mpp_skrining.param6,mpp_skrining.param7,"+
                         "mpp_skrining.param8,mpp_skrining.param9,mpp_skrining.param10,mpp_skrining.param11,mpp_skrining.param12,"+
-                        "mpp_skrining.param13,mpp_skrining.nip,pegawai.nama "+
+                        "mpp_skrining.param13,mpp_skrining.param14,mpp_skrining.param15,mpp_skrining.param16,mpp_skrining.nip,pegawai.nama "+
                         "from reg_periksa inner join pasien on reg_periksa.no_rkm_medis=pasien.no_rkm_medis "+
                         "inner join mpp_skrining on reg_periksa.no_rawat=mpp_skrining.no_rawat "+
                         "inner join pegawai on mpp_skrining.nip=pegawai.nik "+
@@ -1393,7 +1493,7 @@ public final class RMSkriningMPP extends javax.swing.JDialog {
                         "mpp_skrining.tanggal,mpp_skrining.param1,mpp_skrining.param2,mpp_skrining.param3,mpp_skrining.param3,"+
                         "mpp_skrining.param4,mpp_skrining.param5,mpp_skrining.param5,mpp_skrining.param6,mpp_skrining.param7,"+
                         "mpp_skrining.param8,mpp_skrining.param9,mpp_skrining.param10,mpp_skrining.param11,mpp_skrining.param12,"+
-                        "mpp_skrining.param13,mpp_skrining.nip,pegawai.nama,reg_periksa.umurdaftar,reg_periksa.sttsumur, penjab.png_jawab "+
+                        "mpp_skrining.param13,mpp_skrining.param14,mpp_skrining.param15,mpp_skrining.param16,mpp_skrining.nip,pegawai.nama,reg_periksa.umurdaftar,reg_periksa.sttsumur, penjab.png_jawab "+
                         "from reg_periksa inner join pasien on reg_periksa.no_rkm_medis=pasien.no_rkm_medis "+
                         "inner join mpp_skrining on reg_periksa.no_rawat=mpp_skrining.no_rawat "+
                         "inner join pegawai on mpp_skrining.nip=pegawai.nik "+
@@ -1494,6 +1594,12 @@ public final class RMSkriningMPP extends javax.swing.JDialog {
     private widget.RadioButton Param12Ya;
     private widget.RadioButton Param13Tidak;
     private widget.RadioButton Param13Ya;
+    private widget.RadioButton Param14Tidak;
+    private widget.RadioButton Param14Ya;
+    private widget.RadioButton Param15Tidak;
+    private widget.RadioButton Param15Ya;
+    private widget.RadioButton Param16Tidak;
+    private widget.RadioButton Param16Ya;
     private widget.RadioButton Param1Tidak;
     private widget.RadioButton Param1Ya;
     private widget.RadioButton Param2Tidak;
@@ -1570,6 +1676,12 @@ public final class RMSkriningMPP extends javax.swing.JDialog {
     private widget.Label jLabel68;
     private widget.Label jLabel69;
     private widget.Label jLabel7;
+    private widget.Label jLabel70;
+    private widget.Label jLabel71;
+    private widget.Label jLabel72;
+    private widget.Label jLabel73;
+    private widget.Label jLabel74;
+    private widget.Label jLabel75;
     private widget.Label jLabel8;
     private javax.swing.JPanel jPanel3;
     private javax.swing.JPopupMenu jPopupMenu1;
@@ -1592,7 +1704,7 @@ public final class RMSkriningMPP extends javax.swing.JDialog {
                         "mpp_skrining.tanggal,mpp_skrining.param1,mpp_skrining.param2,mpp_skrining.param3,mpp_skrining.param3,"+
                         "mpp_skrining.param4,mpp_skrining.param5,mpp_skrining.param5,mpp_skrining.param6,mpp_skrining.param7,"+
                         "mpp_skrining.param8,mpp_skrining.param9,mpp_skrining.param10,mpp_skrining.param11,mpp_skrining.param12,"+
-                        "mpp_skrining.param13,mpp_skrining.nip,pegawai.nama "+
+                        "mpp_skrining.param13,mpp_skrining.param14,mpp_skrining.param15,mpp_skrining.param16,mpp_skrining.nip,pegawai.nama "+
                         "from reg_periksa inner join pasien on reg_periksa.no_rkm_medis=pasien.no_rkm_medis "+
                         "inner join mpp_skrining on reg_periksa.no_rawat=mpp_skrining.no_rawat "+
                         "inner join pegawai on mpp_skrining.nip=pegawai.nik "+
@@ -1607,7 +1719,7 @@ public final class RMSkriningMPP extends javax.swing.JDialog {
                         "mpp_skrining.tanggal,mpp_skrining.param1,mpp_skrining.param2,mpp_skrining.param3,mpp_skrining.param3,"+
                         "mpp_skrining.param4,mpp_skrining.param5,mpp_skrining.param5,mpp_skrining.param6,mpp_skrining.param7,"+
                         "mpp_skrining.param8,mpp_skrining.param9,mpp_skrining.param10,mpp_skrining.param11,mpp_skrining.param12,"+
-                        "mpp_skrining.param13,mpp_skrining.nip,pegawai.nama "+
+                        "mpp_skrining.param13,mpp_skrining.param14,mpp_skrining.param15,mpp_skrining.param16,mpp_skrining.nip,pegawai.nama "+
                         "from reg_periksa inner join pasien on reg_periksa.no_rkm_medis=pasien.no_rkm_medis "+
                         "inner join mpp_skrining on reg_periksa.no_rawat=mpp_skrining.no_rawat "+
                         "inner join pegawai on mpp_skrining.nip=pegawai.nik "+
@@ -1638,7 +1750,7 @@ public final class RMSkriningMPP extends javax.swing.JDialog {
                         rs.getString("no_rawat"),rs.getString("no_rkm_medis"),rs.getString("nm_pasien"),rs.getString("jk"),rs.getString("tgl_lahir"),rs.getString("alamat"),
                         rs.getString("tanggal"),rs.getString("param1"),rs.getString("param2"),rs.getString("param3"),rs.getString("param4"),rs.getString("param5"),
                         rs.getString("param6"),rs.getString("param7"),rs.getString("param8"),rs.getString("param9"),rs.getString("param10"),rs.getString("param11"),
-                        rs.getString("param12"),rs.getString("param13"),rs.getString("nip"),rs.getString("nama")
+                        rs.getString("param12"),rs.getString("param13"),rs.getString("param14"),rs.getString("param15"),rs.getString("param16"),rs.getString("nip"),rs.getString("nama")
                     });
                 }
             } catch (Exception e) {
@@ -1673,6 +1785,9 @@ public final class RMSkriningMPP extends javax.swing.JDialog {
         Param11Tidak.setSelected(true);
         Param12Tidak.setSelected(true);
         Param13Tidak.setSelected(true);
+        Param14Tidak.setSelected(true);
+        Param15Tidak.setSelected(true);
+        Param16Tidak.setSelected(true);
         TNoRw.requestFocus();
     } 
 
@@ -1750,8 +1865,23 @@ public final class RMSkriningMPP extends javax.swing.JDialog {
             }else{
                 Param13Tidak.setSelected(true);
             }
-            KdPetugas.setText(tbObat.getValueAt(tbObat.getSelectedRow(),20).toString());
-            NmPetugas.setText(tbObat.getValueAt(tbObat.getSelectedRow(),21).toString());  
+            if(tbObat.getValueAt(tbObat.getSelectedRow(),20).toString().equals("Ya")){
+                Param14Ya.setSelected(true);
+            }else{
+                Param14Tidak.setSelected(true);
+            }
+            if(tbObat.getValueAt(tbObat.getSelectedRow(),21).toString().equals("Ya")){
+                Param15Ya.setSelected(true);
+            }else{
+                Param15Tidak.setSelected(true);
+            }
+            if(tbObat.getValueAt(tbObat.getSelectedRow(),22).toString().equals("Ya")){
+                Param16Ya.setSelected(true);
+            }else{
+                Param16Tidak.setSelected(true);
+            }
+            KdPetugas.setText(tbObat.getValueAt(tbObat.getSelectedRow(),23).toString());
+            NmPetugas.setText(tbObat.getValueAt(tbObat.getSelectedRow(),24).toString());  
         }
     }
 
@@ -1825,7 +1955,7 @@ public final class RMSkriningMPP extends javax.swing.JDialog {
             KdPetugas.setEditable(false);
             BtnPetugas.setEnabled(false);
             KdPetugas.setText(akses.getkode());
-            Sequel.cariIsi("select pegawai.nama from pegawai where pegawai.nik=?", NmPetugas,KdPetugas.getText());
+            NmPetugas.setText(pegawai.tampil3(KdPetugas.getText()));
         }         
     }
 
@@ -1855,6 +1985,9 @@ public final class RMSkriningMPP extends javax.swing.JDialog {
         param11="Tidak";
         param12="Tidak";
         param13="Tidak";
+        param14="Tidak";
+        param15="Tidak";
+        param16="Tidak";
         if(Param1Ya.isSelected()==true){
             param1="Ya";
         }
@@ -1893,9 +2026,18 @@ public final class RMSkriningMPP extends javax.swing.JDialog {
         }
         if(Param13Ya.isSelected()==true){
             param13="Ya";
+        }
+        if(Param14Ya.isSelected()==true){
+            param14="Ya";
+        }
+        if(Param15Ya.isSelected()==true){
+            param15="Ya";
+        }
+        if(Param16Ya.isSelected()==true){
+            param16="Ya";
         }  
-        if(Sequel.mengedittf("mpp_skrining","no_rawat=? and tanggal=?","no_rawat=?,tanggal=?,param1=?,param2=?,param3=?,param4=?,param5=?,param6=?,param7=?,param8=?,param9=?,param10=?,param11=?,param12=?,param13=?,nip=?",18,new String[]{
-                TNoRw.getText(),Valid.SetTgl(TglSkrining.getSelectedItem()+""), param1, param2, param3, param4, param5, param6, param7,param8, param9, param10, param11, param12, param13,
+        if(Sequel.mengedittf("mpp_skrining","no_rawat=? and tanggal=?","no_rawat=?,tanggal=?,param1=?,param2=?,param3=?,param4=?,param5=?,param6=?,param7=?,param8=?,param9=?,param10=?,param11=?,param12=?,param13=?,param14=?,param15=?,param16=?,nip=?",21,new String[]{
+                TNoRw.getText(),Valid.SetTgl(TglSkrining.getSelectedItem()+""), param1, param2, param3, param4, param5, param6, param7,param8, param9, param10, param11, param12, param13, param14, param15, param16,
                 KdPetugas.getText(),tbObat.getValueAt(tbObat.getSelectedRow(),0).toString(),tbObat.getValueAt(tbObat.getSelectedRow(),6).toString()
             })==true){
                 tbObat.setValueAt(TNoRw.getText(),tbObat.getSelectedRow(),0);
@@ -1918,8 +2060,11 @@ public final class RMSkriningMPP extends javax.swing.JDialog {
                 tbObat.setValueAt(param11,tbObat.getSelectedRow(),17);
                 tbObat.setValueAt(param12,tbObat.getSelectedRow(),18);
                 tbObat.setValueAt(param13,tbObat.getSelectedRow(),19);
-                tbObat.setValueAt(KdPetugas.getText(),tbObat.getSelectedRow(),20);
-                tbObat.setValueAt(NmPetugas.getText(),tbObat.getSelectedRow(),21);
+                tbObat.setValueAt(param14,tbObat.getSelectedRow(),20);
+                tbObat.setValueAt(param15,tbObat.getSelectedRow(),21);
+                tbObat.setValueAt(param16,tbObat.getSelectedRow(),22);
+                tbObat.setValueAt(KdPetugas.getText(),tbObat.getSelectedRow(),23);
+                tbObat.setValueAt(NmPetugas.getText(),tbObat.getSelectedRow(),24);
                 emptTeks();
         }
     }

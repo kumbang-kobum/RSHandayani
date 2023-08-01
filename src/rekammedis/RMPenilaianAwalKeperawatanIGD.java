@@ -3373,7 +3373,7 @@ public final class RMPenilaianAwalKeperawatanIGD extends javax.swing.JDialog {
 
     private void formWindowOpened(java.awt.event.WindowEvent evt) {//GEN-FIRST:event_formWindowOpened
         try {
-            if(Valid.daysOld("./cache/masalahkeperawatanigd.iyem")<8){
+            if(Valid.daysOld("./cache/masalahkeperawatanigd.iyem")<30){
                 tampilMasalah2();
             }else{
                 tampilMasalah();
@@ -4331,7 +4331,7 @@ public final class RMPenilaianAwalKeperawatanIGD extends javax.swing.JDialog {
                     StatusPernikahan.setText(rs.getString("stts_nikah"));
                     Pekerjaan.setText(rs.getString("pekerjaan"));
                     PendidikanPasien.setText(rs.getString("pnd"));
-                    Pembayaran.setText("png_jawab");
+                    Pembayaran.setText(rs.getString("png_jawab"));
                 }
             } catch (Exception e) {
                 System.out.println("Notif : "+e);

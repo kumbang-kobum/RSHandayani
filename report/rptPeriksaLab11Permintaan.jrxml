@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<!-- Created with Jaspersoft Studio version 6.8.0.final using JasperReports Library version 6.8.0-2ed8dfabb690ff337a5797129f2cd92902b0c87b  -->
+<!-- Created with Jaspersoft Studio version 6.16.0.final using JasperReports Library version 6.5.1  -->
 <jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="null" pageWidth="595" pageHeight="842" columnWidth="493" leftMargin="85" rightMargin="17" topMargin="20" bottomMargin="20" uuid="64edbf16-d1c4-4fb6-8c48-24946dab597f">
 	<property name="ireport.zoom" value="1.5"/>
 	<property name="ireport.x" value="0"/>
@@ -350,10 +350,6 @@
 				</textElement>
 				<text><![CDATA[Tanggal & Jam Keluar Hasil]]></text>
 			</staticText>
-			<image scaleImage="FillFrame" onErrorType="Blank">
-				<reportElement x="379" y="12" width="67" height="67" uuid="1315aa6a-9faa-432b-bc6e-bea2b57630c5"/>
-				<imageExpression><![CDATA["/naira/kars4bintang.png"]]></imageExpression>
-			</image>
 		</band>
 	</title>
 	<detail>

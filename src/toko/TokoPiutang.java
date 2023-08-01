@@ -907,7 +907,7 @@ private void KdKeyPressed(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_TKdKey
             tbObat.requestFocus();
         }else {
             this.setCursor(Cursor.getPredefinedCursor(Cursor.WAIT_CURSOR));
-            Sequel.queryu("truncate table temporary_toko");
+            Sequel.queryu("delete from temporary_toko");
             for(i=0;i<tabMode.getRowCount();i++){  
                 try {
                     if(Valid.SetAngka(tabMode.getValueAt(i,0).toString())>0){
@@ -1395,7 +1395,7 @@ private void ppBersihkanActionPerformed(java.awt.event.ActionEvent evt) {//GEN-F
             Sequel.queryu("delete from tampjurnal");                    
             Sequel.menyimpan2("tampjurnal","'"+Piutang_Toko+"','PIUTANG TOKO','"+(tagihan-uangmuka)+"','0'","Rekening");     
             Sequel.menyimpan2("tampjurnal","'"+Kontra_Piutang_Toko+"','Persediaan Barang Toko','0','"+(tagihan-uangmuka)+"'","Rekening");                              
-            sukses=jur.simpanJurnal(NoNota.getText(),"U","K152 PIUTANG TOKO / MINIMARKET / KOPERASI, OLEH "+akses.getkode());     
+            sukses=jur.simpanJurnal(NoNota.getText(),"U","PIUTANG TOKO / MINIMARKET / KOPERASI, OLEH "+akses.getkode());     
          }
     }
 
