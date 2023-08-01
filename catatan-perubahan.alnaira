@@ -13,7 +13,7 @@ Valid.MyReportqry("rptItemResep.jasper","report","::[ Aturan Pakai Obat ]::",
  =============================================================================
  2.DlgReg penambahan no KTP
  ==============================================================================
- import rekammedis.RMPenilaianAwalMedisRalanMata;
+import rekammedis.RMPenilaianAwalMedisRalanMata;
 import rekammedis.RMPenilaianAwalMedisRalanNeurologi;
 import rekammedis.RMPenilaianAwalMedisRalanOrthopedi;
 MnPenilaianAwalMedisRalanPenyakitDalam = new javax.swing.JMenuItem();
