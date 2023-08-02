@@ -1842,11 +1842,15 @@
                         <Component class="widget.ComboBox" name="cmbKesadaran">
                           <Properties>
                             <Property name="model" type="javax.swing.ComboBoxModel" editor="org.netbeans.modules.form.editors2.ComboBoxModelEditor">
-                              <StringArray count="4">
+                              <StringArray count="8">
                                 <StringItem index="0" value="Compos Mentis"/>
                                 <StringItem index="1" value="Somnolence"/>
                                 <StringItem index="2" value="Sopor"/>
                                 <StringItem index="3" value="Coma"/>
+                                <StringItem index="4" value="Apatis"/>
+                                <StringItem index="5" value="Delirium"/>
+                                <StringItem index="6" value="Semi Coma"/>
+                                <StringItem index="7" value="-"/>
                               </StringArray>
                             </Property>
                             <Property name="name" type="java.lang.String" value="cmbKesadaran" noResource="true"/>
