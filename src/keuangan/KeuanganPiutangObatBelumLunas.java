@@ -693,7 +693,7 @@ private void MnDetailPiutangActionPerformed(java.awt.event.ActionEvent evt) {//G
                             if(Double.parseDouble(tabMode.getValueAt(i,13).toString())>0){
                                 Sequel.menyimpan("tampjurnal","'"+Piutang_Tidak_Terbayar+"','PIUTANG TIDAK TERBAYAR','"+tabMode.getValueAt(i,13).toString()+"','0'","Rekening"); 
                             }
-                            sukses=jur.simpanJurnal(tabMode.getValueAt(i,1).toString(),"U","BAYAR PIUTANG"+", OLEH "+akses.getkode());                   
+                            sukses=jur.simpanJurnal(tabMode.getValueAt(i,1).toString(),"U","K092 BAYAR PIUTANG"+", OLEH "+akses.getkode());                   
                         }else{
                             sukses=false;
                         }

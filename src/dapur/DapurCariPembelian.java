@@ -846,7 +846,7 @@ private void ppHapusActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST
                       Sequel.menyimpan("tampjurnal","?,?,?,?","Rekening",4,new String[]{
                           rs.getString("kd_rek"),"KAS DI TANGAN",rs.getString("tagihan"),"0"
                       }); 
-                      sukses=jur.simpanJurnal(rs.getString("no_faktur"),"U","PEMBATALAN PEMBELIAN BARANG DAPUR KERING & BASAH"+", OLEH "+akses.getkode());
+                      sukses=jur.simpanJurnal(rs.getString("no_faktur"),"U","K163 PEMBATALAN PEMBELIAN BARANG DAPUR KERING & BASAH"+", OLEH "+akses.getkode());
                       if(sukses==true){
                           Sequel.queryu2("delete from dapurpembelian where no_faktur=?",1,new String[]{tbDokter.getValueAt(tbDokter.getSelectedRow(),1).toString()});
                           Sequel.Commit();
