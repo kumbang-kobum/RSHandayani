@@ -143,6 +143,10 @@ and tokopemesanan.kode_suplier=tokosuplier.kode_suplier]]>
 					<pen lineWidth="2.0" lineStyle="Double"/>
 				</graphicElement>
 			</line>
+			<image scaleImage="FillFrame" onErrorType="Blank">
+				<reportElement x="752" y="3" width="48" height="45" uuid="4aea2ab5-31ca-4bab-8af1-147f18e2ee41"/>
+				<imageExpression><![CDATA["/home/naira/JaspersoftWorkspace/MyReports/naira/kars4bintang.png"]]></imageExpression>
+			</image>
 		</band>
 	</title>
 	<pageHeader>

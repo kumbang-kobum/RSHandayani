@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="null" pageWidth="595" pageHeight="842" columnWidth="555" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20">
+<!-- Created with Jaspersoft Studio version 6.8.0.final using JasperReports Library version 6.8.0-2ed8dfabb690ff337a5797129f2cd92902b0c87b  -->
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="null" pageWidth="595" pageHeight="842" columnWidth="555" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="fd1cc1ef-7190-4215-88ad-4acc763006ee">
 	<queryString>
 		<![CDATA[select pasien.no_rkm_medis, pasien.nm_pasien, pasien.no_ktp, pasien.jk, 
                    pasien.tmp_lahir, pasien.tgl_lahir, pasien.alamat, pasien.gol_darah, pasien.pekerjaan,
@@ -71,49 +72,49 @@
 	<detail>
 		<band height="802" splitType="Stretch">
 			<textField isStretchWithOverflow="true">
-				<reportElement x="73" y="134" width="73" height="20"/>
+				<reportElement x="73" y="134" width="73" height="20" uuid="1c27fb6c-305b-4b17-aae0-cb4f05b7fad3"/>
 				<textElement>
 					<font fontName="Arial" size="10"/>
 				</textElement>
-				<textFieldExpression class="java.lang.String"><![CDATA[$F{umur}]]></textFieldExpression>
+				<textFieldExpression><![CDATA[$F{umur}]]></textFieldExpression>
 			</textField>
 			<textField isStretchWithOverflow="true">
-				<reportElement x="73" y="109" width="222" height="20"/>
+				<reportElement x="73" y="109" width="222" height="20" uuid="de1010cf-29e4-4a3d-a18b-2843780428a2"/>
 				<textElement>
 					<font fontName="Arial" size="10"/>
 				</textElement>
-				<textFieldExpression class="java.lang.String"><![CDATA[$F{nm_pasien}]]></textFieldExpression>
+				<textFieldExpression><![CDATA[$F{nm_pasien}]]></textFieldExpression>
 			</textField>
 			<textField isStretchWithOverflow="true">
-				<reportElement x="408" y="109" width="147" height="20"/>
+				<reportElement x="408" y="109" width="147" height="20" uuid="7e9c1679-c409-475c-b299-8f4f05b8090d"/>
 				<textElement>
 					<font fontName="Arial" size="10"/>
 				</textElement>
-				<textFieldExpression class="java.lang.String"><![CDATA[$F{no_rkm_medis}]]></textFieldExpression>
+				<textFieldExpression><![CDATA[$F{no_rkm_medis}]]></textFieldExpression>
 			</textField>
 			<ellipse>
-				<reportElement mode="Transparent" x="266" y="131" width="15" height="21">
+				<reportElement mode="Transparent" x="266" y="131" width="15" height="21" uuid="97335d32-426f-4630-b99c-1130180386a2">
 					<printWhenExpression><![CDATA[($F{jk}.equals("P")?   Boolean.TRUE:Boolean.FALSE)]]></printWhenExpression>
 				</reportElement>
 			</ellipse>
 			<ellipse>
-				<reportElement mode="Transparent" x="242" y="131" width="15" height="21">
+				<reportElement mode="Transparent" x="242" y="131" width="15" height="21" uuid="3eff216d-44b0-44d0-af3b-7fdbde8a814e">
 					<printWhenExpression><![CDATA[($F{jk}.equals("L")?   Boolean.TRUE:Boolean.FALSE)]]></printWhenExpression>
 				</reportElement>
 			</ellipse>
 			<textField pattern="dd/MM/yyyy">
-				<reportElement x="73" y="158" width="100" height="20"/>
+				<reportElement x="73" y="158" width="100" height="20" uuid="fbc97b00-e05e-474d-9616-b80248d98ceb"/>
 				<textElement>
 					<font fontName="Arial"/>
 				</textElement>
-				<textFieldExpression class="java.util.Date"><![CDATA[new java.util.Date()]]></textFieldExpression>
+				<textFieldExpression><![CDATA[new java.util.Date()]]></textFieldExpression>
 			</textField>
 			<textField pattern="HH.mm.ss">
-				<reportElement x="242" y="158" width="100" height="20"/>
+				<reportElement x="242" y="158" width="100" height="20" uuid="205948cc-0d09-4f20-ab68-38296983bf6a"/>
 				<textElement>
 					<font fontName="Arial"/>
 				</textElement>
-				<textFieldExpression class="java.util.Date"><![CDATA[new java.util.Date()]]></textFieldExpression>
+				<textFieldExpression><![CDATA[new java.util.Date()]]></textFieldExpression>
 			</textField>
 		</band>
 	</detail>

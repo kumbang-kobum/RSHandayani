@@ -129,6 +129,10 @@ where tokobarang.status='1' order by tokobarang.kode_brng]]>
 					<pen lineWidth="2.0" lineStyle="Double"/>
 				</graphicElement>
 			</line>
+			<image scaleImage="FillFrame" onErrorType="Blank">
+				<reportElement x="750" y="2" width="48" height="45" uuid="5654fbe9-48c4-4684-a32a-ba22bde60839"/>
+				<imageExpression><![CDATA["/home/naira/JaspersoftWorkspace/MyReports/naira/kars4bintang.png"]]></imageExpression>
+			</image>
 		</band>
 	</title>
 	<pageHeader>

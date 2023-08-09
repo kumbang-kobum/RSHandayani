@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="null" pageWidth="595" pageHeight="842" columnWidth="567" leftMargin="20" rightMargin="8" topMargin="20" bottomMargin="20">
+<!-- Created with Jaspersoft Studio version 6.8.0.final using JasperReports Library version 6.8.0-2ed8dfabb690ff337a5797129f2cd92902b0c87b  -->
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="null" pageWidth="595" pageHeight="842" columnWidth="567" leftMargin="20" rightMargin="8" topMargin="20" bottomMargin="20" uuid="f41468ae-133a-40fa-a809-9e7c4dd5109e">
 	<property name="ireport.zoom" value="1.5"/>
 	<property name="ireport.x" value="0"/>
 	<property name="ireport.y" value="0"/>
@@ -74,41 +75,45 @@
 	<detail>
 		<band height="802">
 			<textField>
-				<reportElement x="417" y="37" width="150" height="13"/>
-				<textElement lineSpacing="Single">
+				<reportElement x="417" y="37" width="150" height="13" uuid="47eba819-36fc-46c6-ba6a-fd083ebcbcd3"/>
+				<textElement>
 					<font fontName="Tahoma" size="10"/>
+					<paragraph lineSpacing="Single"/>
 				</textElement>
-				<textFieldExpression class="java.lang.String"><![CDATA[$F{nm_pasien}]]></textFieldExpression>
+				<textFieldExpression><![CDATA[$F{nm_pasien}]]></textFieldExpression>
 			</textField>
 			<textField>
-				<reportElement x="417" y="63" width="148" height="13"/>
-				<textElement lineSpacing="Single">
+				<reportElement x="417" y="63" width="148" height="13" uuid="0d2d787a-d5ea-4f25-abfc-1232e367da31"/>
+				<textElement>
 					<font fontName="Tahoma" size="10"/>
+					<paragraph lineSpacing="Single"/>
 				</textElement>
-				<textFieldExpression class="java.lang.String"><![CDATA[$F{alamat}]]></textFieldExpression>
+				<textFieldExpression><![CDATA[$F{alamat}]]></textFieldExpression>
 			</textField>
 			<textField>
-				<reportElement x="417" y="76" width="148" height="13"/>
-				<textElement lineSpacing="Single">
+				<reportElement x="417" y="76" width="148" height="13" uuid="3c410c92-795c-4924-ae9a-5d3fa18dae0f"/>
+				<textElement>
 					<font fontName="Tahoma" size="10"/>
+					<paragraph lineSpacing="Single"/>
 				</textElement>
-				<textFieldExpression class="java.lang.String"><![CDATA[$F{no_rkm_medis}]]></textFieldExpression>
+				<textFieldExpression><![CDATA[$F{no_rkm_medis}]]></textFieldExpression>
 			</textField>
 			<textField>
-				<reportElement x="417" y="50" width="96" height="13"/>
-				<textElement lineSpacing="Single">
+				<reportElement x="417" y="50" width="96" height="13" uuid="ec847399-a910-45ac-9e8d-3902b6c9609c"/>
+				<textElement>
 					<font fontName="Tahoma" size="10"/>
+					<paragraph lineSpacing="Single"/>
 				</textElement>
-				<textFieldExpression class="java.lang.String"><![CDATA[$F{umur}]]></textFieldExpression>
+				<textFieldExpression><![CDATA[$F{umur}]]></textFieldExpression>
 			</textField>
 			<ellipse>
-				<reportElement mode="Transparent" x="521" y="49" width="13" height="15">
+				<reportElement mode="Transparent" x="521" y="49" width="13" height="15" uuid="69d1b08b-21d9-4176-a50a-0968dc5771e1">
 					<printWhenExpression><![CDATA[($F{jk}.equals("L")?
   Boolean.TRUE:Boolean.FALSE)]]></printWhenExpression>
 				</reportElement>
 			</ellipse>
 			<ellipse>
-				<reportElement mode="Transparent" x="539" y="49" width="13" height="15">
+				<reportElement mode="Transparent" x="539" y="49" width="13" height="15" uuid="aaea6ac6-7ccb-4444-aa2c-9726d4c3b2f7">
 					<printWhenExpression><![CDATA[($F{jk}.equals("P")?
   Boolean.TRUE:Boolean.FALSE)]]></printWhenExpression>
 				</reportElement>

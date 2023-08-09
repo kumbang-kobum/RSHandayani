@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<!-- Created with Jaspersoft Studio version 6.16.0.final using JasperReports Library version 6.5.1  -->
+<!-- Created with Jaspersoft Studio version 6.8.0.final using JasperReports Library version 6.8.0-2ed8dfabb690ff337a5797129f2cd92902b0c87b  -->
 <jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="null" pageWidth="311" pageHeight="595" orientation="Landscape" columnWidth="277" leftMargin="17" rightMargin="17" topMargin="17" bottomMargin="17" uuid="f71eddde-54e0-4c95-bb40-f4df24903e9d">
 	<property name="ireport.zoom" value="3.0"/>
 	<property name="ireport.x" value="0"/>
@@ -190,7 +190,7 @@
 	<title>
 		<band height="133" splitType="Stretch">
 			<textField>
-				<reportElement x="48" y="14" width="229" height="14" uuid="31498202-9007-4a25-814a-401a5c13ac09"/>
+				<reportElement x="48" y="14" width="181" height="14" uuid="31498202-9007-4a25-814a-401a5c13ac09"/>
 				<textElement textAlignment="Center">
 					<font fontName="Tahoma" size="7"/>
 					<paragraph lineSpacing="Single"/>
@@ -198,7 +198,7 @@
 				<textFieldExpression><![CDATA[$P{alamatrs}+", "+$P{kotars}+", "+$P{propinsirs}]]></textFieldExpression>
 			</textField>
 			<textField>
-				<reportElement x="48" y="35" width="229" height="14" uuid="73e85403-89cd-40d2-8f5c-6399f58d2d25"/>
+				<reportElement x="48" y="35" width="181" height="14" uuid="73e85403-89cd-40d2-8f5c-6399f58d2d25"/>
 				<textElement textAlignment="Center">
 					<font fontName="Tahoma" size="7"/>
 					<paragraph lineSpacing="Single"/>
@@ -206,7 +206,7 @@
 				<textFieldExpression><![CDATA["E-mail : "+$P{emailrs}]]></textFieldExpression>
 			</textField>
 			<textField>
-				<reportElement x="48" y="25" width="229" height="14" uuid="3be313cc-f94e-4637-b5fc-af2c58beb2db"/>
+				<reportElement x="48" y="25" width="181" height="14" uuid="3be313cc-f94e-4637-b5fc-af2c58beb2db"/>
 				<textElement textAlignment="Center">
 					<font fontName="Tahoma" size="7"/>
 					<paragraph lineSpacing="Single"/>
@@ -214,7 +214,7 @@
 				<textFieldExpression><![CDATA[$P{kontakrs}]]></textFieldExpression>
 			</textField>
 			<textField>
-				<reportElement x="48" y="0" width="229" height="17" uuid="d8be6aea-f634-4f94-9b05-67ac12748fa0"/>
+				<reportElement x="48" y="0" width="181" height="17" uuid="d8be6aea-f634-4f94-9b05-67ac12748fa0"/>
 				<textElement textAlignment="Center">
 					<font fontName="Tahoma" size="10"/>
 					<paragraph lineSpacing="Single"/>
@@ -383,6 +383,10 @@
 					<pen lineWidth="2.0" lineStyle="Double"/>
 				</graphicElement>
 			</line>
+			<image scaleImage="FillFrame" onErrorType="Blank">
+				<reportElement x="229" y="0" width="48" height="45" uuid="6349cf03-2b2e-467c-bf18-6645a3ce70f1"/>
+				<imageExpression><![CDATA[$P{logo}]]></imageExpression>
+			</image>
 		</band>
 	</title>
 	<pageHeader>

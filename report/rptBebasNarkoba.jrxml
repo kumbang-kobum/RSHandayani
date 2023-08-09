@@ -375,6 +375,10 @@
 					<jr:codeExpression><![CDATA[$P{finger}]]></jr:codeExpression>
 				</jr:QRCode>
 			</componentElement>
+			<image scaleImage="FillFrame" onErrorType="Blank">
+				<reportElement x="484" y="-1" width="70" height="70" uuid="59f86a58-c4dd-4479-a014-b80f7c0a6086"/>
+				<imageExpression><![CDATA["/home/naira/JaspersoftWorkspace/MyReports/naira/kars4bintang.png"]]></imageExpression>
+			</image>
 		</band>
 	</detail>
 	<summary>

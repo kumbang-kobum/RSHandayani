@@ -779,32 +779,32 @@
 				<imageExpression><![CDATA[$P{logo}]]></imageExpression>
 			</image>
 			<textField>
-				<reportElement x="100" y="4" width="430" height="17" uuid="cb9cea3d-b453-4565-a3a2-379f597b2ecf"/>
-				<textElement textAlignment="Left">
+				<reportElement x="100" y="4" width="360" height="17" uuid="cb9cea3d-b453-4565-a3a2-379f597b2ecf"/>
+				<textElement textAlignment="Center">
 					<font fontName="Tahoma" size="14" isBold="true"/>
 					<paragraph lineSpacing="Single"/>
 				</textElement>
 				<textFieldExpression><![CDATA[$P{namars}]]></textFieldExpression>
 			</textField>
 			<textField>
-				<reportElement x="100" y="23" width="430" height="14" uuid="1a010c53-4d01-4a2a-96ca-1a3183aba950"/>
-				<textElement textAlignment="Left">
+				<reportElement x="100" y="23" width="360" height="14" uuid="1a010c53-4d01-4a2a-96ca-1a3183aba950"/>
+				<textElement textAlignment="Center">
 					<font fontName="Tahoma" size="10"/>
 					<paragraph lineSpacing="Single"/>
 				</textElement>
 				<textFieldExpression><![CDATA[$P{alamatrs}+", "+$P{kotars}+", "+$P{propinsirs}]]></textFieldExpression>
 			</textField>
 			<textField>
-				<reportElement x="100" y="39" width="430" height="14" uuid="3fadebdd-7a02-4fb1-852a-3860f018e358"/>
-				<textElement textAlignment="Left">
+				<reportElement x="100" y="39" width="360" height="14" uuid="3fadebdd-7a02-4fb1-852a-3860f018e358"/>
+				<textElement textAlignment="Center">
 					<font fontName="Tahoma" size="10"/>
 					<paragraph lineSpacing="Single"/>
 				</textElement>
 				<textFieldExpression><![CDATA[$P{kontakrs}]]></textFieldExpression>
 			</textField>
 			<textField>
-				<reportElement x="100" y="53" width="430" height="14" uuid="90d9ef3a-87ae-4512-8be4-3a0f6313a34e"/>
-				<textElement textAlignment="Left">
+				<reportElement x="100" y="53" width="360" height="14" uuid="90d9ef3a-87ae-4512-8be4-3a0f6313a34e"/>
+				<textElement textAlignment="Center">
 					<font fontName="Tahoma" size="10"/>
 					<paragraph lineSpacing="Single"/>
 				</textElement>
@@ -818,6 +818,10 @@
 					<jr:codeExpression><![CDATA[$P{finger}]]></jr:codeExpression>
 				</jr:QRCode>
 			</componentElement>
+			<image scaleImage="FillFrame" onErrorType="Blank">
+				<reportElement x="460" y="4" width="70" height="70" uuid="667dc17d-cee2-47b9-84a1-2507fa2e6d44"/>
+				<imageExpression><![CDATA["/home/naira/JaspersoftWorkspace/MyReports/naira/kars4bintang.png"]]></imageExpression>
+			</image>
 		</band>
 	</detail>
 	<summary>

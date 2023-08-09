@@ -209,7 +209,7 @@ and pasien.kd_kec=kecamatan.kd_kec and pasien.kd_kab=kabupaten.kd_kab]]>
 			</image>
 			<textField>
 				<reportElement x="64" y="41" width="335" height="14" uuid="a7403e37-21b2-4ecb-9567-a276f96a7a2b"/>
-				<textElement>
+				<textElement textAlignment="Center">
 					<font fontName="Tahoma" size="10"/>
 					<paragraph lineSpacing="Single"/>
 				</textElement>
@@ -217,7 +217,7 @@ and pasien.kd_kec=kecamatan.kd_kec and pasien.kd_kab=kabupaten.kd_kab]]>
 			</textField>
 			<textField>
 				<reportElement x="64" y="30" width="335" height="14" uuid="dbb148ac-82bf-407f-b9b7-d7d128c1ae1b"/>
-				<textElement>
+				<textElement textAlignment="Center">
 					<font fontName="Tahoma" size="10"/>
 					<paragraph lineSpacing="Single"/>
 				</textElement>
@@ -225,7 +225,7 @@ and pasien.kd_kec=kecamatan.kd_kec and pasien.kd_kab=kabupaten.kd_kab]]>
 			</textField>
 			<textField>
 				<reportElement x="64" y="3" width="335" height="17" uuid="145ce8c0-76d8-4df7-b81a-9982089e7d11"/>
-				<textElement>
+				<textElement textAlignment="Center">
 					<font fontName="Tahoma" size="14"/>
 					<paragraph lineSpacing="Single"/>
 				</textElement>
@@ -233,7 +233,7 @@ and pasien.kd_kec=kecamatan.kd_kec and pasien.kd_kab=kabupaten.kd_kab]]>
 			</textField>
 			<textField>
 				<reportElement x="64" y="19" width="335" height="14" uuid="dfd64cc4-7a17-40cf-b1ff-35934fabfb43"/>
-				<textElement>
+				<textElement textAlignment="Center">
 					<font fontName="Tahoma" size="10"/>
 					<paragraph lineSpacing="Single"/>
 				</textElement>

@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<!-- Created with Jaspersoft Studio version 6.17.0.final using JasperReports Library version 5.2.0  -->
+<!-- Created with Jaspersoft Studio version 6.8.0.final using JasperReports Library version 6.8.0-2ed8dfabb690ff337a5797129f2cd92902b0c87b  -->
 <jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="null" pageWidth="595" pageHeight="842" columnWidth="555" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="0f505995-42c1-4cc5-b34d-0896041d3a11">
 	<property name="ireport.zoom" value="1.5"/>
 	<property name="ireport.x" value="0"/>
@@ -119,7 +119,7 @@ inner join petugas on pemantauan_pews_dewasa.nip=petugas.nip]]>
 					<font fontName="Tahoma" size="11" isBold="false"/>
 					<paragraph lineSpacing="Single"/>
 				</textElement>
-				<text><![CDATA[PEMANTAUAN EWS DEWASA]]></text>
+				<text><![CDATA[PEMANTAUAN PEWS DEWASA]]></text>
 			</staticText>
 			<staticText>
 				<reportElement mode="Transparent" x="5" y="87" width="70" height="14" forecolor="#000000" backcolor="#F0F0DC" uuid="b2cdf71f-db7d-4272-8d62-f12f21abeefc"/>
@@ -234,7 +234,7 @@ inner join petugas on pemantauan_pews_dewasa.nip=petugas.nip]]>
 				</graphicElement>
 			</line>
 			<line>
-				<reportElement positionType="FixRelativeToBottom" x="552" y="83" width="1" height="65" uuid="bc504372-aece-4974-afd4-7fb7aeff76e1">
+				<reportElement positionType="FixRelativeToBottom" x="551" y="83" width="1" height="65" uuid="bc504372-aece-4974-afd4-7fb7aeff76e1">
 					<property name="com.jaspersoft.studio.unit.height" value="px"/>
 				</reportElement>
 				<graphicElement>
@@ -386,7 +386,7 @@ inner join petugas on pemantauan_pews_dewasa.nip=petugas.nip]]>
 				</graphicElement>
 			</line>
 			<line>
-				<reportElement positionType="FixRelativeToBottom" x="552" y="0" width="1" height="17" uuid="081764b4-e741-463e-b354-cc17e8a75a20">
+				<reportElement positionType="FixRelativeToBottom" x="551" y="0" width="1" height="17" uuid="081764b4-e741-463e-b354-cc17e8a75a20">
 					<property name="com.jaspersoft.studio.unit.y" value="px"/>
 				</reportElement>
 				<graphicElement>
@@ -410,7 +410,7 @@ inner join petugas on pemantauan_pews_dewasa.nip=petugas.nip]]>
 				<text><![CDATA[Monitoring]]></text>
 			</staticText>
 			<textField isStretchWithOverflow="true" pattern="dd/MM/yyyy hh:mm:ss">
-				<reportElement positionType="Float" x="2" y="1" width="81" height="69" uuid="e45c241b-0ddf-46c8-9c14-441abf008377">
+				<reportElement positionType="Float" x="2" y="1" width="81" height="29" uuid="e45c241b-0ddf-46c8-9c14-441abf008377">
 					<property name="com.jaspersoft.studio.unit.width" value="px"/>
 				</reportElement>
 				<textElement textAlignment="Center" verticalAlignment="Middle">
@@ -420,9 +420,8 @@ inner join petugas on pemantauan_pews_dewasa.nip=petugas.nip]]>
 				<textFieldExpression><![CDATA[$F{tanggal}]]></textFieldExpression>
 			</textField>
 			<textField isStretchWithOverflow="true">
-				<reportElement positionType="Float" mode="Opaque" x="180" y="1" width="283" height="14" forecolor="#000000" backcolor="#FFFFFF" uuid="8ccda384-6ed4-4843-8596-bf675bb62e18">
+				<reportElement positionType="Float" mode="Opaque" x="180" y="1" width="284" height="14" forecolor="#FFFFFF" backcolor="#00FF00" uuid="8ccda384-6ed4-4843-8596-bf675bb62e18">
 					<property name="com.jaspersoft.studio.unit.height" value="px"/>
-					<property name="com.jaspersoft.studio.unit.width" value="px"/>
 					<printWhenExpression><![CDATA[($F{skor_laju_respirasi}.equals("0") ? Boolean.TRUE:Boolean.FALSE)]]></printWhenExpression>
 				</reportElement>
 				<textElement verticalAlignment="Top">
@@ -432,7 +431,7 @@ inner join petugas on pemantauan_pews_dewasa.nip=petugas.nip]]>
 				<textFieldExpression><![CDATA[": "+$F{parameter_laju_respirasi}]]></textFieldExpression>
 			</textField>
 			<textField isStretchWithOverflow="true">
-				<reportElement positionType="Float" mode="Opaque" x="466" y="1" width="84" height="14" forecolor="#000000" backcolor="#FFFFFF" uuid="a81a96e5-b43b-4fc6-9133-c930b2a533cd">
+				<reportElement positionType="Float" mode="Opaque" x="465" y="1" width="86" height="14" forecolor="#FFFFFF" backcolor="#00FF00" uuid="a81a96e5-b43b-4fc6-9133-c930b2a533cd">
 					<property name="com.jaspersoft.studio.unit.height" value="px"/>
 					<printWhenExpression><![CDATA[($F{skor_laju_respirasi}.equals("0") ? Boolean.TRUE:Boolean.FALSE)]]></printWhenExpression>
 				</reportElement>
@@ -443,7 +442,7 @@ inner join petugas on pemantauan_pews_dewasa.nip=petugas.nip]]>
 				<textFieldExpression><![CDATA[$F{skor_laju_respirasi}]]></textFieldExpression>
 			</textField>
 			<line>
-				<reportElement positionType="Float" x="84" y="0" width="1" height="156" uuid="fe0debe5-13d1-441c-89e8-ed19c7eeecaa">
+				<reportElement positionType="Float" x="85" y="0" width="1" height="156" uuid="fe0debe5-13d1-441c-89e8-ed19c7eeecaa">
 					<property name="com.jaspersoft.studio.unit.y" value="px"/>
 					<property name="com.jaspersoft.studio.unit.height" value="px"/>
 				</reportElement>
@@ -461,7 +460,7 @@ inner join petugas on pemantauan_pews_dewasa.nip=petugas.nip]]>
 				</graphicElement>
 			</line>
 			<line>
-				<reportElement positionType="Float" x="552" y="0" width="1" height="156" uuid="556b7791-1090-4673-94d9-efe13381d163">
+				<reportElement positionType="Float" x="551" y="0" width="1" height="156" uuid="556b7791-1090-4673-94d9-efe13381d163">
 					<property name="com.jaspersoft.studio.unit.y" value="px"/>
 					<property name="com.jaspersoft.studio.unit.height" value="px"/>
 				</reportElement>
@@ -494,9 +493,8 @@ inner join petugas on pemantauan_pews_dewasa.nip=petugas.nip]]>
 				</graphicElement>
 			</line>
 			<textField isStretchWithOverflow="true">
-				<reportElement positionType="Float" mode="Opaque" x="180" y="16" width="283" height="14" forecolor="#000000" backcolor="#FFFFFF" uuid="030540f6-cf84-4b98-a8ee-37406c66a1e8">
+				<reportElement positionType="Float" mode="Opaque" x="180" y="16" width="284" height="14" forecolor="#FFFFFF" backcolor="#00FF00" uuid="030540f6-cf84-4b98-a8ee-37406c66a1e8">
 					<property name="com.jaspersoft.studio.unit.height" value="px"/>
-					<property name="com.jaspersoft.studio.unit.width" value="px"/>
 					<printWhenExpression><![CDATA[($F{skor_saturasi_oksigen}.equals("0") ? Boolean.TRUE:Boolean.FALSE)]]></printWhenExpression>
 				</reportElement>
 				<textElement verticalAlignment="Top">
@@ -506,9 +504,8 @@ inner join petugas on pemantauan_pews_dewasa.nip=petugas.nip]]>
 				<textFieldExpression><![CDATA[": "+$F{parameter_saturasi_oksigen}]]></textFieldExpression>
 			</textField>
 			<textField isStretchWithOverflow="true">
-				<reportElement positionType="Float" mode="Opaque" x="180" y="31" width="283" height="14" forecolor="#000000" backcolor="#FFFFFF" uuid="d07f21d4-ebb4-457e-b6b0-8d04ec2089a8">
+				<reportElement positionType="Float" mode="Opaque" x="180" y="31" width="284" height="14" forecolor="#FFFFFF" backcolor="#00FF00" uuid="d07f21d4-ebb4-457e-b6b0-8d04ec2089a8">
 					<property name="com.jaspersoft.studio.unit.height" value="px"/>
-					<property name="com.jaspersoft.studio.unit.width" value="px"/>
 					<printWhenExpression><![CDATA[($F{skor_suplemen_oksigen}.equals("0") ? Boolean.TRUE:Boolean.FALSE)]]></printWhenExpression>
 				</reportElement>
 				<textElement verticalAlignment="Top">
@@ -518,7 +515,7 @@ inner join petugas on pemantauan_pews_dewasa.nip=petugas.nip]]>
 				<textFieldExpression><![CDATA[": "+$F{parameter_suplemen_oksigen}]]></textFieldExpression>
 			</textField>
 			<textField isStretchWithOverflow="true">
-				<reportElement positionType="Float" mode="Opaque" x="466" y="16" width="84" height="14" forecolor="#000000" backcolor="#FFFFFF" uuid="d9ba85d1-bb41-4221-8ce3-287684c151f4">
+				<reportElement positionType="Float" mode="Opaque" x="465" y="16" width="86" height="14" forecolor="#FFFFFF" backcolor="#00FF00" uuid="d9ba85d1-bb41-4221-8ce3-287684c151f4">
 					<property name="com.jaspersoft.studio.unit.height" value="px"/>
 					<printWhenExpression><![CDATA[($F{skor_saturasi_oksigen}.equals("0") ? Boolean.TRUE:Boolean.FALSE)]]></printWhenExpression>
 				</reportElement>
@@ -529,7 +526,7 @@ inner join petugas on pemantauan_pews_dewasa.nip=petugas.nip]]>
 				<textFieldExpression><![CDATA[$F{skor_saturasi_oksigen}]]></textFieldExpression>
 			</textField>
 			<textField isStretchWithOverflow="true">
-				<reportElement positionType="Float" mode="Opaque" x="466" y="31" width="84" height="14" forecolor="#000000" backcolor="#FFFFFF" uuid="28ba0b62-5c41-48fd-ab87-e765cab19ae4">
+				<reportElement positionType="Float" mode="Opaque" x="465" y="31" width="86" height="14" forecolor="#FFFFFF" backcolor="#00FF00" uuid="28ba0b62-5c41-48fd-ab87-e765cab19ae4">
 					<property name="com.jaspersoft.studio.unit.height" value="px"/>
 					<printWhenExpression><![CDATA[($F{skor_suplemen_oksigen}.equals("0") ? Boolean.TRUE:Boolean.FALSE)]]></printWhenExpression>
 				</reportElement>
@@ -540,7 +537,7 @@ inner join petugas on pemantauan_pews_dewasa.nip=petugas.nip]]>
 				<textFieldExpression><![CDATA[$F{skor_suplemen_oksigen}]]></textFieldExpression>
 			</textField>
 			<staticText>
-				<reportElement positionType="Float" mode="Opaque" x="86" y="1" width="94" height="14" forecolor="#000000" backcolor="#FFFFFF" uuid="89766a88-6368-4dc4-91b2-0a225a127d47">
+				<reportElement positionType="Float" mode="Opaque" x="86" y="1" width="94" height="14" forecolor="#FFFFFF" backcolor="#00FF00" uuid="89766a88-6368-4dc4-91b2-0a225a127d47">
 					<property name="com.jaspersoft.studio.unit.width" value="px"/>
 					<property name="com.jaspersoft.studio.unit.height" value="px"/>
 					<printWhenExpression><![CDATA[($F{skor_laju_respirasi}.equals("0") ? Boolean.TRUE:Boolean.FALSE)]]></printWhenExpression>
@@ -552,7 +549,7 @@ inner join petugas on pemantauan_pews_dewasa.nip=petugas.nip]]>
 				<text><![CDATA[1. Laju Respirasi]]></text>
 			</staticText>
 			<staticText>
-				<reportElement positionType="Float" mode="Opaque" x="86" y="16" width="94" height="14" forecolor="#000000" backcolor="#FFFFFF" uuid="421c623f-2dff-4c6b-8412-c4b1cb447e3b">
+				<reportElement positionType="Float" mode="Opaque" x="86" y="16" width="94" height="14" forecolor="#FFFFFF" backcolor="#00FF00" uuid="421c623f-2dff-4c6b-8412-c4b1cb447e3b">
 					<property name="com.jaspersoft.studio.unit.width" value="px"/>
 					<property name="com.jaspersoft.studio.unit.height" value="px"/>
 					<printWhenExpression><![CDATA[($F{skor_saturasi_oksigen}.equals("0") ? Boolean.TRUE:Boolean.FALSE)]]></printWhenExpression>
@@ -564,7 +561,7 @@ inner join petugas on pemantauan_pews_dewasa.nip=petugas.nip]]>
 				<text><![CDATA[2. Saturasi Oksigen]]></text>
 			</staticText>
 			<staticText>
-				<reportElement positionType="Float" mode="Opaque" x="86" y="31" width="94" height="14" forecolor="#000000" backcolor="#FFFFFF" uuid="f16ef8e0-a7ac-4407-924f-b1e5aae40d20">
+				<reportElement positionType="Float" mode="Opaque" x="86" y="31" width="94" height="14" forecolor="#FFFFFF" backcolor="#00FF00" uuid="f16ef8e0-a7ac-4407-924f-b1e5aae40d20">
 					<property name="com.jaspersoft.studio.unit.width" value="px"/>
 					<property name="com.jaspersoft.studio.unit.height" value="px"/>
 					<printWhenExpression><![CDATA[($F{skor_suplemen_oksigen}.equals("0") ? Boolean.TRUE:Boolean.FALSE)]]></printWhenExpression>
@@ -576,8 +573,8 @@ inner join petugas on pemantauan_pews_dewasa.nip=petugas.nip]]>
 				<text><![CDATA[3. Suplemen Oksigen]]></text>
 			</staticText>
 			<textField>
-				<reportElement positionType="Float" x="86" y="123" width="377" height="31" uuid="2e4a7549-2160-4efb-93bf-988e56009093">
-					<printWhenExpression><![CDATA[(Integer.parseInt($F{skor_total})==0 ? Boolean.TRUE:Boolean.FALSE)]]></printWhenExpression>
+				<reportElement positionType="Float" x="86" y="123" width="377" height="23" uuid="2e4a7549-2160-4efb-93bf-988e56009093">
+					<printWhenExpression><![CDATA[(Integer.parseInt($F{skor_total})<=7 ? Boolean.TRUE:Boolean.FALSE)]]></printWhenExpression>
 				</reportElement>
 				<textElement verticalAlignment="Top">
 					<font fontName="Tahoma" size="7"/>
@@ -586,9 +583,9 @@ inner join petugas on pemantauan_pews_dewasa.nip=petugas.nip]]>
 				<textFieldExpression><![CDATA[$F{parameter_total}]]></textFieldExpression>
 			</textField>
 			<textField isStretchWithOverflow="true">
-				<reportElement positionType="Float" x="466" y="123" width="84" height="31" uuid="1ae01361-7587-4c10-82f1-2106d9bbf4a1">
+				<reportElement positionType="Float" x="466" y="123" width="84" height="23" uuid="1ae01361-7587-4c10-82f1-2106d9bbf4a1">
 					<property name="com.jaspersoft.studio.unit.height" value="px"/>
-					<printWhenExpression><![CDATA[(Integer.parseInt($F{skor_total})==0 ? Boolean.TRUE:Boolean.FALSE)]]></printWhenExpression>
+					<printWhenExpression><![CDATA[(Integer.parseInt($F{skor_total})<=7 ? Boolean.TRUE:Boolean.FALSE)]]></printWhenExpression>
 				</reportElement>
 				<textElement textAlignment="Center" verticalAlignment="Top">
 					<font fontName="Tahoma" size="7"/>
@@ -605,12 +602,339 @@ inner join petugas on pemantauan_pews_dewasa.nip=petugas.nip]]>
 				</graphicElement>
 			</line>
 			<textField>
-				<reportElement positionType="Float" x="2" y="70" width="81" height="85" uuid="40565fc1-eb23-4a42-8c36-2a263be7c805"/>
+				<reportElement positionType="Float" x="2" y="103" width="81" height="52" uuid="40565fc1-eb23-4a42-8c36-2a263be7c805"/>
 				<textElement textAlignment="Center" verticalAlignment="Middle">
 					<font fontName="Tahoma" size="7"/>
 					<paragraph lineSpacing="Single"/>
 				</textElement>
 				<textFieldExpression><![CDATA[$F{nip}+" "+$F{nama}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement positionType="Float" mode="Opaque" x="86" y="1" width="94" height="14" forecolor="#00FF00" backcolor="#FFFF00" uuid="48737a09-51cc-4d44-9e9c-ef8b004e9bf5">
+					<property name="com.jaspersoft.studio.unit.width" value="px"/>
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+					<printWhenExpression><![CDATA[($F{skor_laju_respirasi}.equals("1") ? Boolean.TRUE:Boolean.FALSE)]]></printWhenExpression>
+				</reportElement>
+				<textElement verticalAlignment="Top">
+					<font fontName="Tahoma" size="7" isBold="false"/>
+					<paragraph lineSpacing="Single"/>
+				</textElement>
+				<text><![CDATA[1. Laju Respirasi]]></text>
+			</staticText>
+			<textField isStretchWithOverflow="true">
+				<reportElement positionType="Float" mode="Opaque" x="180" y="1" width="284" height="14" forecolor="#00FF00" backcolor="#FFFF00" uuid="b38ca13b-fd1c-44fc-93cd-1dfd37204ea4">
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+					<printWhenExpression><![CDATA[($F{skor_laju_respirasi}.equals("1") ? Boolean.TRUE:Boolean.FALSE)]]></printWhenExpression>
+				</reportElement>
+				<textElement verticalAlignment="Top">
+					<font fontName="Tahoma" size="7"/>
+					<paragraph lineSpacing="Single"/>
+				</textElement>
+				<textFieldExpression><![CDATA[": "+$F{parameter_laju_respirasi}]]></textFieldExpression>
+			</textField>
+			<textField isStretchWithOverflow="true">
+				<reportElement positionType="Float" mode="Opaque" x="465" y="1" width="86" height="14" forecolor="#00FF00" backcolor="#FFFF00" uuid="e7873e1f-8dfa-45ac-9b9a-6d8e1cfd57b2">
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+					<printWhenExpression><![CDATA[($F{skor_laju_respirasi}.equals("1") ? Boolean.TRUE:Boolean.FALSE)]]></printWhenExpression>
+				</reportElement>
+				<textElement textAlignment="Center" verticalAlignment="Top">
+					<font fontName="Tahoma" size="7"/>
+					<paragraph lineSpacing="Single"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{skor_laju_respirasi}]]></textFieldExpression>
+			</textField>
+			<textField isStretchWithOverflow="true">
+				<reportElement positionType="Float" mode="Opaque" x="465" y="16" width="86" height="14" forecolor="#00FF00" backcolor="#FFFF00" uuid="8b01208e-2f4d-4bda-b3ae-08c81335cf6a">
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+					<printWhenExpression><![CDATA[($F{skor_saturasi_oksigen}.equals("1") ? Boolean.TRUE:Boolean.FALSE)]]></printWhenExpression>
+				</reportElement>
+				<textElement textAlignment="Center" verticalAlignment="Top">
+					<font fontName="Tahoma" size="7"/>
+					<paragraph lineSpacing="Single"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{skor_saturasi_oksigen}]]></textFieldExpression>
+			</textField>
+			<textField isStretchWithOverflow="true">
+				<reportElement positionType="Float" mode="Opaque" x="180" y="16" width="284" height="14" forecolor="#00FF00" backcolor="#FFFF00" uuid="bfede815-3406-4016-8522-184e809dc286">
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+					<printWhenExpression><![CDATA[($F{skor_saturasi_oksigen}.equals("1") ? Boolean.TRUE:Boolean.FALSE)]]></printWhenExpression>
+				</reportElement>
+				<textElement verticalAlignment="Top">
+					<font fontName="Tahoma" size="7"/>
+					<paragraph lineSpacing="Single"/>
+				</textElement>
+				<textFieldExpression><![CDATA[": "+$F{parameter_saturasi_oksigen}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement positionType="Float" mode="Opaque" x="86" y="16" width="94" height="14" forecolor="#00FF00" backcolor="#FFFF00" uuid="0ec5220e-6f0a-43a4-9c7e-a546980c583c">
+					<property name="com.jaspersoft.studio.unit.width" value="px"/>
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+					<printWhenExpression><![CDATA[($F{skor_saturasi_oksigen}.equals("1") ? Boolean.TRUE:Boolean.FALSE)]]></printWhenExpression>
+				</reportElement>
+				<textElement verticalAlignment="Top">
+					<font fontName="Tahoma" size="7" isBold="false"/>
+					<paragraph lineSpacing="Single"/>
+				</textElement>
+				<text><![CDATA[2. Saturasi Oksigen]]></text>
+			</staticText>
+			<staticText>
+				<reportElement positionType="Float" mode="Opaque" x="86" y="31" width="94" height="14" forecolor="#00FF00" backcolor="#FFFF00" uuid="4fa50841-04b0-4410-8f9d-b8f9b3851926">
+					<property name="com.jaspersoft.studio.unit.width" value="px"/>
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+					<printWhenExpression><![CDATA[($F{skor_suplemen_oksigen}.equals("1") ? Boolean.TRUE:Boolean.FALSE)]]></printWhenExpression>
+				</reportElement>
+				<textElement verticalAlignment="Top">
+					<font fontName="Tahoma" size="7" isBold="false"/>
+					<paragraph lineSpacing="Single"/>
+				</textElement>
+				<text><![CDATA[3. Suplemen Oksigen]]></text>
+			</staticText>
+			<textField isStretchWithOverflow="true">
+				<reportElement positionType="Float" mode="Opaque" x="180" y="31" width="284" height="14" forecolor="#00FF00" backcolor="#FFFF00" uuid="17474686-2fd0-4a09-8ec8-d4468eff1a03">
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+					<printWhenExpression><![CDATA[($F{skor_suplemen_oksigen}.equals("1") ? Boolean.TRUE:Boolean.FALSE)]]></printWhenExpression>
+				</reportElement>
+				<textElement verticalAlignment="Top">
+					<font fontName="Tahoma" size="7"/>
+					<paragraph lineSpacing="Single"/>
+				</textElement>
+				<textFieldExpression><![CDATA[": "+$F{parameter_suplemen_oksigen}]]></textFieldExpression>
+			</textField>
+			<textField isStretchWithOverflow="true">
+				<reportElement positionType="Float" mode="Opaque" x="465" y="31" width="86" height="14" forecolor="#00FF00" backcolor="#FFFF00" uuid="b2dc77a2-4164-4f5c-96d0-17bd2db57dd9">
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+					<printWhenExpression><![CDATA[($F{skor_suplemen_oksigen}.equals("1") ? Boolean.TRUE:Boolean.FALSE)]]></printWhenExpression>
+				</reportElement>
+				<textElement textAlignment="Center" verticalAlignment="Top">
+					<font fontName="Tahoma" size="7"/>
+					<paragraph lineSpacing="Single"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{skor_suplemen_oksigen}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement positionType="Float" mode="Opaque" x="86" y="1" width="94" height="14" forecolor="#FFFFFF" backcolor="#FFA500" uuid="7cb19776-f258-49a1-8b34-7bd2f0b8abf3">
+					<property name="com.jaspersoft.studio.unit.width" value="px"/>
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+					<printWhenExpression><![CDATA[($F{skor_laju_respirasi}.equals("2") ? Boolean.TRUE:Boolean.FALSE)]]></printWhenExpression>
+				</reportElement>
+				<textElement verticalAlignment="Top">
+					<font fontName="Tahoma" size="7" isBold="false"/>
+					<paragraph lineSpacing="Single"/>
+				</textElement>
+				<text><![CDATA[1. Laju Respirasi]]></text>
+			</staticText>
+			<staticText>
+				<reportElement positionType="Float" mode="Opaque" x="86" y="16" width="94" height="14" forecolor="#FFFFFF" backcolor="#FFA500" uuid="257f889a-9e0e-4f37-8a5f-27ec9f0eb627">
+					<property name="com.jaspersoft.studio.unit.width" value="px"/>
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+					<printWhenExpression><![CDATA[($F{skor_saturasi_oksigen}.equals("2") ? Boolean.TRUE:Boolean.FALSE)]]></printWhenExpression>
+				</reportElement>
+				<textElement verticalAlignment="Top">
+					<font fontName="Tahoma" size="7" isBold="false"/>
+					<paragraph lineSpacing="Single"/>
+				</textElement>
+				<text><![CDATA[2. Saturasi Oksigen]]></text>
+			</staticText>
+			<staticText>
+				<reportElement positionType="Float" mode="Opaque" x="86" y="31" width="94" height="14" forecolor="#FFFFFF" backcolor="#FFA500" uuid="4469596b-5199-42e2-af8f-93e8beb6ef2c">
+					<property name="com.jaspersoft.studio.unit.width" value="px"/>
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+					<printWhenExpression><![CDATA[($F{skor_suplemen_oksigen}.equals("2") ? Boolean.TRUE:Boolean.FALSE)]]></printWhenExpression>
+				</reportElement>
+				<textElement verticalAlignment="Top">
+					<font fontName="Tahoma" size="7" isBold="false"/>
+					<paragraph lineSpacing="Single"/>
+				</textElement>
+				<text><![CDATA[3. Suplemen Oksigen]]></text>
+			</staticText>
+			<textField isStretchWithOverflow="true">
+				<reportElement positionType="Float" mode="Opaque" x="180" y="1" width="284" height="14" forecolor="#FFFFFF" backcolor="#FFA500" uuid="7fff7161-95bf-4374-b608-06bdecb569ea">
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+					<printWhenExpression><![CDATA[($F{skor_laju_respirasi}.equals("2") ? Boolean.TRUE:Boolean.FALSE)]]></printWhenExpression>
+				</reportElement>
+				<textElement verticalAlignment="Top">
+					<font fontName="Tahoma" size="7"/>
+					<paragraph lineSpacing="Single"/>
+				</textElement>
+				<textFieldExpression><![CDATA[": "+$F{parameter_laju_respirasi}]]></textFieldExpression>
+			</textField>
+			<textField isStretchWithOverflow="true">
+				<reportElement positionType="Float" mode="Opaque" x="180" y="16" width="284" height="14" forecolor="#FFFFFF" backcolor="#FFA500" uuid="897df486-9cd9-4cf8-a2a6-b47b29cad81b">
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+					<printWhenExpression><![CDATA[($F{skor_saturasi_oksigen}.equals("2") ? Boolean.TRUE:Boolean.FALSE)]]></printWhenExpression>
+				</reportElement>
+				<textElement verticalAlignment="Top">
+					<font fontName="Tahoma" size="7"/>
+					<paragraph lineSpacing="Single"/>
+				</textElement>
+				<textFieldExpression><![CDATA[": "+$F{parameter_saturasi_oksigen}]]></textFieldExpression>
+			</textField>
+			<textField isStretchWithOverflow="true">
+				<reportElement positionType="Float" mode="Opaque" x="180" y="31" width="284" height="14" forecolor="#FFFFFF" backcolor="#FFA500" uuid="d34095f6-ab63-4bf9-b7d4-03e31e302488">
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+					<printWhenExpression><![CDATA[($F{skor_suplemen_oksigen}.equals("2") ? Boolean.TRUE:Boolean.FALSE)]]></printWhenExpression>
+				</reportElement>
+				<textElement verticalAlignment="Top">
+					<font fontName="Tahoma" size="7"/>
+					<paragraph lineSpacing="Single"/>
+				</textElement>
+				<textFieldExpression><![CDATA[": "+$F{parameter_suplemen_oksigen}]]></textFieldExpression>
+			</textField>
+			<textField isStretchWithOverflow="true">
+				<reportElement positionType="Float" mode="Opaque" x="465" y="1" width="86" height="14" forecolor="#FFFFFF" backcolor="#FFA500" uuid="3389968d-298e-4499-9a8a-be6229f10645">
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+					<printWhenExpression><![CDATA[($F{skor_laju_respirasi}.equals("2") ? Boolean.TRUE:Boolean.FALSE)]]></printWhenExpression>
+				</reportElement>
+				<textElement textAlignment="Center" verticalAlignment="Top">
+					<font fontName="Tahoma" size="7"/>
+					<paragraph lineSpacing="Single"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{skor_laju_respirasi}]]></textFieldExpression>
+			</textField>
+			<textField isStretchWithOverflow="true">
+				<reportElement positionType="Float" mode="Opaque" x="465" y="16" width="86" height="14" forecolor="#FFFFFF" backcolor="#FFA500" uuid="d9402d78-a26c-407c-a9cd-5bdadd50cc8e">
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+					<printWhenExpression><![CDATA[($F{skor_saturasi_oksigen}.equals("2") ? Boolean.TRUE:Boolean.FALSE)]]></printWhenExpression>
+				</reportElement>
+				<textElement textAlignment="Center" verticalAlignment="Top">
+					<font fontName="Tahoma" size="7"/>
+					<paragraph lineSpacing="Single"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{skor_saturasi_oksigen}]]></textFieldExpression>
+			</textField>
+			<textField isStretchWithOverflow="true">
+				<reportElement positionType="Float" mode="Opaque" x="465" y="31" width="86" height="14" forecolor="#FFFFFF" backcolor="#FFA500" uuid="cfd6e555-71e2-4100-bca3-e45fbff7fbf0">
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+					<printWhenExpression><![CDATA[($F{skor_suplemen_oksigen}.equals("2") ? Boolean.TRUE:Boolean.FALSE)]]></printWhenExpression>
+				</reportElement>
+				<textElement textAlignment="Center" verticalAlignment="Top">
+					<font fontName="Tahoma" size="7"/>
+					<paragraph lineSpacing="Single"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{skor_suplemen_oksigen}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement positionType="Float" mode="Opaque" x="86" y="1" width="94" height="14" forecolor="#FFFFFF" backcolor="#FF0000" uuid="bee5edf7-2820-4211-b8af-d09bf176f921">
+					<property name="com.jaspersoft.studio.unit.width" value="px"/>
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+					<printWhenExpression><![CDATA[($F{skor_laju_respirasi}.equals("3") ? Boolean.TRUE:Boolean.FALSE)]]></printWhenExpression>
+				</reportElement>
+				<textElement verticalAlignment="Top">
+					<font fontName="Tahoma" size="7" isBold="false"/>
+					<paragraph lineSpacing="Single"/>
+				</textElement>
+				<text><![CDATA[1. Laju Respirasi]]></text>
+			</staticText>
+			<textField isStretchWithOverflow="true">
+				<reportElement positionType="Float" mode="Opaque" x="180" y="1" width="284" height="14" forecolor="#FFFFFF" backcolor="#FF0000" uuid="2b7d996d-d48d-4390-aecd-166b0baceef2">
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+					<printWhenExpression><![CDATA[($F{skor_laju_respirasi}.equals("3") ? Boolean.TRUE:Boolean.FALSE)]]></printWhenExpression>
+				</reportElement>
+				<textElement verticalAlignment="Top">
+					<font fontName="Tahoma" size="7"/>
+					<paragraph lineSpacing="Single"/>
+				</textElement>
+				<textFieldExpression><![CDATA[": "+$F{parameter_laju_respirasi}]]></textFieldExpression>
+			</textField>
+			<textField isStretchWithOverflow="true">
+				<reportElement positionType="Float" mode="Opaque" x="465" y="1" width="86" height="14" forecolor="#FFFFFF" backcolor="#FF0000" uuid="21374124-53c3-42c7-91f9-bea5370cdf90">
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+					<printWhenExpression><![CDATA[($F{skor_laju_respirasi}.equals("3") ? Boolean.TRUE:Boolean.FALSE)]]></printWhenExpression>
+				</reportElement>
+				<textElement textAlignment="Center" verticalAlignment="Top">
+					<font fontName="Tahoma" size="7"/>
+					<paragraph lineSpacing="Single"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{skor_laju_respirasi}]]></textFieldExpression>
+			</textField>
+			<textField isStretchWithOverflow="true">
+				<reportElement positionType="Float" mode="Opaque" x="465" y="16" width="86" height="14" forecolor="#FFFFFF" backcolor="#FF0000" uuid="d8849648-63a5-46ee-8244-f0ba694db18d">
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+					<printWhenExpression><![CDATA[($F{skor_saturasi_oksigen}.equals("3") ? Boolean.TRUE:Boolean.FALSE)]]></printWhenExpression>
+				</reportElement>
+				<textElement textAlignment="Center" verticalAlignment="Top">
+					<font fontName="Tahoma" size="7"/>
+					<paragraph lineSpacing="Single"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{skor_saturasi_oksigen}]]></textFieldExpression>
+			</textField>
+			<textField isStretchWithOverflow="true">
+				<reportElement positionType="Float" mode="Opaque" x="180" y="16" width="284" height="14" forecolor="#FFFFFF" backcolor="#FF0000" uuid="8558d69c-0f10-494d-a79c-a7ebb83d0870">
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+					<printWhenExpression><![CDATA[($F{skor_saturasi_oksigen}.equals("3") ? Boolean.TRUE:Boolean.FALSE)]]></printWhenExpression>
+				</reportElement>
+				<textElement verticalAlignment="Top">
+					<font fontName="Tahoma" size="7"/>
+					<paragraph lineSpacing="Single"/>
+				</textElement>
+				<textFieldExpression><![CDATA[": "+$F{parameter_saturasi_oksigen}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement positionType="Float" mode="Opaque" x="86" y="16" width="94" height="14" forecolor="#FFFFFF" backcolor="#FF0000" uuid="5ec773b6-f5c9-4ba3-9af0-655f29be7f76">
+					<property name="com.jaspersoft.studio.unit.width" value="px"/>
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+					<printWhenExpression><![CDATA[($F{skor_saturasi_oksigen}.equals("3") ? Boolean.TRUE:Boolean.FALSE)]]></printWhenExpression>
+				</reportElement>
+				<textElement verticalAlignment="Top">
+					<font fontName="Tahoma" size="7" isBold="false"/>
+					<paragraph lineSpacing="Single"/>
+				</textElement>
+				<text><![CDATA[2. Saturasi Oksigen]]></text>
+			</staticText>
+			<staticText>
+				<reportElement positionType="Float" mode="Opaque" x="86" y="31" width="94" height="14" forecolor="#FFFFFF" backcolor="#FF0000" uuid="3a4654fe-769a-4853-8978-03d6ef358a34">
+					<property name="com.jaspersoft.studio.unit.width" value="px"/>
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+					<printWhenExpression><![CDATA[($F{skor_suplemen_oksigen}.equals("3") ? Boolean.TRUE:Boolean.FALSE)]]></printWhenExpression>
+				</reportElement>
+				<textElement verticalAlignment="Top">
+					<font fontName="Tahoma" size="7" isBold="false"/>
+					<paragraph lineSpacing="Single"/>
+				</textElement>
+				<text><![CDATA[3. Suplemen Oksigen]]></text>
+			</staticText>
+			<textField isStretchWithOverflow="true">
+				<reportElement positionType="Float" mode="Opaque" x="180" y="31" width="284" height="14" forecolor="#FFFFFF" backcolor="#FF0000" uuid="a07a6460-667f-401e-a942-6127dbe197f3">
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+					<printWhenExpression><![CDATA[($F{skor_suplemen_oksigen}.equals("3") ? Boolean.TRUE:Boolean.FALSE)]]></printWhenExpression>
+				</reportElement>
+				<textElement verticalAlignment="Top">
+					<font fontName="Tahoma" size="7"/>
+					<paragraph lineSpacing="Single"/>
+				</textElement>
+				<textFieldExpression><![CDATA[": "+$F{parameter_suplemen_oksigen}]]></textFieldExpression>
+			</textField>
+			<textField isStretchWithOverflow="true">
+				<reportElement positionType="Float" mode="Opaque" x="465" y="31" width="86" height="14" forecolor="#FFFFFF" backcolor="#FF0000" uuid="4709b374-0ac7-4982-88f5-8ce8518dcbbe">
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+					<printWhenExpression><![CDATA[($F{skor_suplemen_oksigen}.equals("3") ? Boolean.TRUE:Boolean.FALSE)]]></printWhenExpression>
+				</reportElement>
+				<textElement textAlignment="Center" verticalAlignment="Top">
+					<font fontName="Tahoma" size="7"/>
+					<paragraph lineSpacing="Single"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{skor_suplemen_oksigen}]]></textFieldExpression>
+			</textField>
+			<textField isStretchWithOverflow="true">
+				<reportElement positionType="Float" mode="Opaque" x="466" y="123" width="84" height="23" forecolor="#FFFFFF" backcolor="#0000FF" uuid="111a4ddf-b65e-41f3-b631-960abf524542">
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+					<printWhenExpression><![CDATA[(Integer.parseInt($F{skor_total})>7 ? Boolean.TRUE:Boolean.FALSE)]]></printWhenExpression>
+				</reportElement>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Tahoma" size="7"/>
+					<paragraph lineSpacing="Single"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{skor_total}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement positionType="Float" mode="Opaque" x="86" y="123" width="377" height="23" forecolor="#FFFFFF" backcolor="#0000FF" uuid="19f9ea73-54bc-4850-bf58-6770d07fb883">
+					<printWhenExpression><![CDATA[(Integer.parseInt($F{skor_total})>7 ? Boolean.TRUE:Boolean.FALSE)]]></printWhenExpression>
+				</reportElement>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Tahoma" size="7"/>
+					<paragraph lineSpacing="Single"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{parameter_total}]]></textFieldExpression>
 			</textField>
 			<staticText>
 				<reportElement positionType="Float" mode="Opaque" x="465" y="110" width="86" height="11" forecolor="#000000" backcolor="#F0F0DC" uuid="c5f241b7-707c-4bef-bf60-15dd5f90818c"/>
@@ -625,10 +949,10 @@ inner join petugas on pemantauan_pews_dewasa.nip=petugas.nip]]>
 				<text><![CDATA[Total Skor]]></text>
 			</staticText>
 			<staticText>
-				<reportElement positionType="Float" mode="Opaque" x="86" y="46" width="94" height="14" forecolor="#000000" backcolor="#FFFFFF" uuid="cfe99a08-15d1-44a2-bbfb-bb0027b62590">
+				<reportElement positionType="Float" mode="Opaque" x="86" y="46" width="94" height="14" forecolor="#FFFFFF" backcolor="#00FF00" uuid="cfe99a08-15d1-44a2-bbfb-bb0027b62590">
 					<property name="com.jaspersoft.studio.unit.width" value="px"/>
 					<property name="com.jaspersoft.studio.unit.height" value="px"/>
-					<printWhenExpression><![CDATA[($F{skor_tekanan_darah_sistolik}.equals("0") ? Boolean.TRUE:Boolean.FALSE)]]></printWhenExpression>
+					<printWhenExpression><![CDATA[($F{skor_suplemen_oksigen}.equals("0") ? Boolean.TRUE:Boolean.FALSE)]]></printWhenExpression>
 				</reportElement>
 				<textElement verticalAlignment="Top">
 					<font fontName="Tahoma" size="7" isBold="false"/>
@@ -637,183 +961,7 @@ inner join petugas on pemantauan_pews_dewasa.nip=petugas.nip]]>
 				<text><![CDATA[4. Tekanan Darah Sistolik]]></text>
 			</staticText>
 			<staticText>
-				<reportElement positionType="Float" mode="Opaque" x="86" y="61" width="94" height="14" forecolor="#000000" backcolor="#FFFFFF" uuid="4faec2d0-1dfe-4c45-a437-b650aebe47ae">
-					<property name="com.jaspersoft.studio.unit.width" value="px"/>
-					<property name="com.jaspersoft.studio.unit.height" value="px"/>
-					<printWhenExpression><![CDATA[($F{skor_laju_jantung}.equals("0") ? Boolean.TRUE:Boolean.FALSE)]]></printWhenExpression>
-				</reportElement>
-				<textElement verticalAlignment="Top">
-					<font fontName="Tahoma" size="7" isBold="false"/>
-					<paragraph lineSpacing="Single"/>
-				</textElement>
-				<text><![CDATA[5. Laju Jantung]]></text>
-			</staticText>
-			<staticText>
-				<reportElement positionType="Float" mode="Opaque" x="86" y="76" width="94" height="14" forecolor="#000000" backcolor="#FFFFFF" uuid="5c5bd4fd-5014-48c0-b491-52bdee62105b">
-					<property name="com.jaspersoft.studio.unit.width" value="px"/>
-					<property name="com.jaspersoft.studio.unit.height" value="px"/>
-					<printWhenExpression><![CDATA[($F{skor_kesadaran}.equals("0") ? Boolean.TRUE:Boolean.FALSE)]]></printWhenExpression>
-				</reportElement>
-				<textElement verticalAlignment="Top">
-					<font fontName="Tahoma" size="7" isBold="false"/>
-					<paragraph lineSpacing="Single"/>
-				</textElement>
-				<text><![CDATA[6. Kesadaran]]></text>
-			</staticText>
-			<staticText>
-				<reportElement positionType="Float" mode="Opaque" x="86" y="91" width="94" height="14" forecolor="#000000" backcolor="#FFFFFF" uuid="24adde6a-6645-491e-8db1-26e0c1710b9f">
-					<property name="com.jaspersoft.studio.unit.width" value="px"/>
-					<property name="com.jaspersoft.studio.unit.height" value="px"/>
-					<printWhenExpression><![CDATA[($F{skor_temperatur}.equals("0") ? Boolean.TRUE:Boolean.FALSE)]]></printWhenExpression>
-				</reportElement>
-				<textElement verticalAlignment="Top">
-					<font fontName="Tahoma" size="7" isBold="false"/>
-					<paragraph lineSpacing="Single"/>
-				</textElement>
-				<text><![CDATA[7. Temperatur]]></text>
-			</staticText>
-			<textField isStretchWithOverflow="true">
-				<reportElement positionType="Float" mode="Opaque" x="180" y="46" width="283" height="14" forecolor="#000000" backcolor="#FFFFFF" uuid="ed05e04e-529b-481f-9041-3be31ed4ac16">
-					<property name="com.jaspersoft.studio.unit.height" value="px"/>
-					<property name="com.jaspersoft.studio.unit.width" value="px"/>
-					<printWhenExpression><![CDATA[($F{skor_tekanan_darah_sistolik}.equals("0") ? Boolean.TRUE:Boolean.FALSE)]]></printWhenExpression>
-				</reportElement>
-				<textElement verticalAlignment="Top">
-					<font fontName="Tahoma" size="7"/>
-					<paragraph lineSpacing="Single"/>
-				</textElement>
-				<textFieldExpression><![CDATA[": "+$F{parameter_tekanan_darah_sistolik}]]></textFieldExpression>
-			</textField>
-			<textField isStretchWithOverflow="true">
-				<reportElement positionType="Float" mode="Opaque" x="180" y="61" width="283" height="14" forecolor="#000000" backcolor="#FFFFFF" uuid="8bf57ff6-2971-4b4a-a2d4-6311b31a2a40">
-					<property name="com.jaspersoft.studio.unit.height" value="px"/>
-					<property name="com.jaspersoft.studio.unit.width" value="px"/>
-					<printWhenExpression><![CDATA[($F{skor_laju_jantung}.equals("0") ? Boolean.TRUE:Boolean.FALSE)]]></printWhenExpression>
-				</reportElement>
-				<textElement verticalAlignment="Top">
-					<font fontName="Tahoma" size="7"/>
-					<paragraph lineSpacing="Single"/>
-				</textElement>
-				<textFieldExpression><![CDATA[": "+$F{parameter_laju_jantung}]]></textFieldExpression>
-			</textField>
-			<textField isStretchWithOverflow="true">
-				<reportElement positionType="Float" mode="Opaque" x="180" y="76" width="283" height="14" forecolor="#000000" backcolor="#FFFFFF" uuid="039874bc-3b34-4582-9027-f3154b7a4146">
-					<property name="com.jaspersoft.studio.unit.height" value="px"/>
-					<property name="com.jaspersoft.studio.unit.width" value="px"/>
-					<printWhenExpression><![CDATA[($F{skor_kesadaran}.equals("0") ? Boolean.TRUE:Boolean.FALSE)]]></printWhenExpression>
-				</reportElement>
-				<textElement verticalAlignment="Top">
-					<font fontName="Tahoma" size="7"/>
-					<paragraph lineSpacing="Single"/>
-				</textElement>
-				<textFieldExpression><![CDATA[": "+$F{parameter_kesadaran}]]></textFieldExpression>
-			</textField>
-			<textField isStretchWithOverflow="true">
-				<reportElement positionType="Float" mode="Opaque" x="180" y="91" width="283" height="14" forecolor="#000000" backcolor="#FFFFFF" uuid="d2829c90-d9dc-4bda-8a2f-6a0481d088f6">
-					<property name="com.jaspersoft.studio.unit.height" value="px"/>
-					<property name="com.jaspersoft.studio.unit.width" value="px"/>
-					<printWhenExpression><![CDATA[($F{skor_temperatur}.equals("0") ? Boolean.TRUE:Boolean.FALSE)]]></printWhenExpression>
-				</reportElement>
-				<textElement verticalAlignment="Top">
-					<font fontName="Tahoma" size="7"/>
-					<paragraph lineSpacing="Single"/>
-				</textElement>
-				<textFieldExpression><![CDATA[": "+$F{parameter_temperatur}]]></textFieldExpression>
-			</textField>
-			<textField isStretchWithOverflow="true">
-				<reportElement positionType="Float" mode="Opaque" x="466" y="46" width="84" height="14" forecolor="#000000" backcolor="#FFFFFF" uuid="bd01470a-0216-4594-97fb-e6d08c5d85d4">
-					<property name="com.jaspersoft.studio.unit.height" value="px"/>
-					<printWhenExpression><![CDATA[($F{skor_tekanan_darah_sistolik}.equals("0") ? Boolean.TRUE:Boolean.FALSE)]]></printWhenExpression>
-				</reportElement>
-				<textElement textAlignment="Center" verticalAlignment="Top">
-					<font fontName="Tahoma" size="7"/>
-					<paragraph lineSpacing="Single"/>
-				</textElement>
-				<textFieldExpression><![CDATA[$F{skor_tekanan_darah_sistolik}]]></textFieldExpression>
-			</textField>
-			<textField isStretchWithOverflow="true">
-				<reportElement positionType="Float" mode="Opaque" x="466" y="61" width="84" height="14" forecolor="#000000" backcolor="#FFFFFF" uuid="35ae938f-1ab1-4234-a298-8dc02e13f3ff">
-					<property name="com.jaspersoft.studio.unit.height" value="px"/>
-					<printWhenExpression><![CDATA[($F{skor_laju_jantung}.equals("0") ? Boolean.TRUE:Boolean.FALSE)]]></printWhenExpression>
-				</reportElement>
-				<textElement textAlignment="Center" verticalAlignment="Top">
-					<font fontName="Tahoma" size="7"/>
-					<paragraph lineSpacing="Single"/>
-				</textElement>
-				<textFieldExpression><![CDATA[$F{skor_laju_jantung}]]></textFieldExpression>
-			</textField>
-			<textField isStretchWithOverflow="true">
-				<reportElement positionType="Float" mode="Opaque" x="466" y="76" width="84" height="14" forecolor="#000000" backcolor="#FFFFFF" uuid="d63b8b12-898e-4f87-8ba2-42e5d814dc8c">
-					<property name="com.jaspersoft.studio.unit.height" value="px"/>
-					<printWhenExpression><![CDATA[($F{skor_kesadaran}.equals("0") ? Boolean.TRUE:Boolean.FALSE)]]></printWhenExpression>
-				</reportElement>
-				<textElement textAlignment="Center" verticalAlignment="Top">
-					<font fontName="Tahoma" size="7"/>
-					<paragraph lineSpacing="Single"/>
-				</textElement>
-				<textFieldExpression><![CDATA[$F{skor_kesadaran}]]></textFieldExpression>
-			</textField>
-			<textField isStretchWithOverflow="true">
-				<reportElement positionType="Float" mode="Opaque" x="466" y="91" width="84" height="14" forecolor="#000000" backcolor="#FFFFFF" uuid="8ce51ec8-4274-43fb-b5ba-9001ec47b016">
-					<property name="com.jaspersoft.studio.unit.height" value="px"/>
-					<printWhenExpression><![CDATA[($F{skor_temperatur}.equals("0") ? Boolean.TRUE:Boolean.FALSE)]]></printWhenExpression>
-				</reportElement>
-				<textElement textAlignment="Center" verticalAlignment="Top">
-					<font fontName="Tahoma" size="7"/>
-					<paragraph lineSpacing="Single"/>
-				</textElement>
-				<textFieldExpression><![CDATA[$F{skor_temperatur}]]></textFieldExpression>
-			</textField>
-			<staticText>
-				<reportElement positionType="Float" mode="Opaque" x="86" y="91" width="94" height="14" forecolor="#00FF00" backcolor="#FFFF00" uuid="9a0a8898-8203-47f0-99e4-b02e1f1d6c2f">
-					<property name="com.jaspersoft.studio.unit.width" value="px"/>
-					<property name="com.jaspersoft.studio.unit.height" value="px"/>
-					<printWhenExpression><![CDATA[($F{skor_temperatur}.equals("1") ? Boolean.TRUE:Boolean.FALSE)]]></printWhenExpression>
-				</reportElement>
-				<textElement verticalAlignment="Top">
-					<font fontName="Tahoma" size="7" isBold="false"/>
-					<paragraph lineSpacing="Single"/>
-				</textElement>
-				<text><![CDATA[7. Temperatur]]></text>
-			</staticText>
-			<staticText>
-				<reportElement positionType="Float" mode="Opaque" x="86" y="76" width="94" height="14" forecolor="#00FF00" backcolor="#FFFF00" uuid="86b35f3d-f75d-496e-8166-576d80b46129">
-					<property name="com.jaspersoft.studio.unit.width" value="px"/>
-					<property name="com.jaspersoft.studio.unit.height" value="px"/>
-					<printWhenExpression><![CDATA[($F{skor_kesadaran}.equals("1") ? Boolean.TRUE:Boolean.FALSE)]]></printWhenExpression>
-				</reportElement>
-				<textElement verticalAlignment="Top">
-					<font fontName="Tahoma" size="7" isBold="false"/>
-					<paragraph lineSpacing="Single"/>
-				</textElement>
-				<text><![CDATA[6. Kesadaran]]></text>
-			</staticText>
-			<staticText>
-				<reportElement positionType="Float" mode="Opaque" x="86" y="61" width="94" height="14" forecolor="#00FF00" backcolor="#FFFF00" uuid="527f0bf9-6312-464f-a103-7aad28944f73">
-					<property name="com.jaspersoft.studio.unit.width" value="px"/>
-					<property name="com.jaspersoft.studio.unit.height" value="px"/>
-					<printWhenExpression><![CDATA[($F{skor_laju_jantung}.equals("1") ? Boolean.TRUE:Boolean.FALSE)]]></printWhenExpression>
-				</reportElement>
-				<textElement verticalAlignment="Top">
-					<font fontName="Tahoma" size="7" isBold="false"/>
-					<paragraph lineSpacing="Single"/>
-				</textElement>
-				<text><![CDATA[5. Laju Jantung]]></text>
-			</staticText>
-			<staticText>
-				<reportElement positionType="Float" mode="Opaque" x="86" y="46" width="94" height="14" forecolor="#00FF00" backcolor="#FFFF00" uuid="4c1aa9ba-33d8-45f6-a3f7-ac32639c32d2">
-					<property name="com.jaspersoft.studio.unit.width" value="px"/>
-					<property name="com.jaspersoft.studio.unit.height" value="px"/>
-					<printWhenExpression><![CDATA[($F{skor_tekanan_darah_sistolik}.equals("1") ? Boolean.TRUE:Boolean.FALSE)]]></printWhenExpression>
-				</reportElement>
-				<textElement verticalAlignment="Top">
-					<font fontName="Tahoma" size="7" isBold="false"/>
-					<paragraph lineSpacing="Single"/>
-				</textElement>
-				<text><![CDATA[4. Tekanan Darah Sistolik]]></text>
-			</staticText>
-			<staticText>
-				<reportElement positionType="Float" mode="Opaque" x="86" y="31" width="94" height="14" forecolor="#00FF00" backcolor="#FFFF00" uuid="82031965-8a4d-4c0b-98ae-a916f6fe95e2">
+				<reportElement positionType="Float" mode="Opaque" x="86" y="46" width="94" height="14" forecolor="#00FF00" backcolor="#FFFF00" uuid="e43d401e-cbc5-4642-a653-b1634ca6c073">
 					<property name="com.jaspersoft.studio.unit.width" value="px"/>
 					<property name="com.jaspersoft.studio.unit.height" value="px"/>
 					<printWhenExpression><![CDATA[($F{skor_suplemen_oksigen}.equals("1") ? Boolean.TRUE:Boolean.FALSE)]]></printWhenExpression>
@@ -822,73 +970,202 @@ inner join petugas on pemantauan_pews_dewasa.nip=petugas.nip]]>
 					<font fontName="Tahoma" size="7" isBold="false"/>
 					<paragraph lineSpacing="Single"/>
 				</textElement>
-				<text><![CDATA[3. Suplemen Oksigen]]></text>
+				<text><![CDATA[4. Tekanan Darah Sistolik]]></text>
 			</staticText>
 			<staticText>
-				<reportElement positionType="Float" mode="Opaque" x="86" y="16" width="94" height="14" forecolor="#00FF00" backcolor="#FFFF00" uuid="c558b9a2-de75-448a-8d19-d7770799f828">
+				<reportElement positionType="Float" mode="Opaque" x="86" y="46" width="94" height="14" forecolor="#FFFFFF" backcolor="#FFA500" uuid="95fae931-348b-4769-bc4a-fd831ce7ae8e">
 					<property name="com.jaspersoft.studio.unit.width" value="px"/>
 					<property name="com.jaspersoft.studio.unit.height" value="px"/>
-					<printWhenExpression><![CDATA[($F{skor_saturasi_oksigen}.equals("1") ? Boolean.TRUE:Boolean.FALSE)]]></printWhenExpression>
+					<printWhenExpression><![CDATA[($F{skor_suplemen_oksigen}.equals("2") ? Boolean.TRUE:Boolean.FALSE)]]></printWhenExpression>
 				</reportElement>
 				<textElement verticalAlignment="Top">
 					<font fontName="Tahoma" size="7" isBold="false"/>
 					<paragraph lineSpacing="Single"/>
 				</textElement>
-				<text><![CDATA[2. Saturasi Oksigen]]></text>
+				<text><![CDATA[4. Tekanan Darah Sistolik]]></text>
 			</staticText>
 			<staticText>
-				<reportElement positionType="Float" mode="Opaque" x="86" y="1" width="94" height="14" forecolor="#00FF00" backcolor="#FFFF00" uuid="94f012a0-38b1-4247-a1d9-afe2c7d89d4d">
+				<reportElement positionType="Float" mode="Opaque" x="86" y="46" width="94" height="14" forecolor="#FFFFFF" backcolor="#FF0000" uuid="17ce7e8e-d4a2-405d-a1ed-8e8769c5f7f0">
 					<property name="com.jaspersoft.studio.unit.width" value="px"/>
 					<property name="com.jaspersoft.studio.unit.height" value="px"/>
-					<printWhenExpression><![CDATA[($F{skor_laju_respirasi}.equals("1") ? Boolean.TRUE:Boolean.FALSE)]]></printWhenExpression>
+					<printWhenExpression><![CDATA[($F{skor_suplemen_oksigen}.equals("3") ? Boolean.TRUE:Boolean.FALSE)]]></printWhenExpression>
 				</reportElement>
 				<textElement verticalAlignment="Top">
 					<font fontName="Tahoma" size="7" isBold="false"/>
 					<paragraph lineSpacing="Single"/>
 				</textElement>
-				<text><![CDATA[1. Laju Respirasi]]></text>
+				<text><![CDATA[4. Tekanan Darah Sistolik]]></text>
+			</staticText>
+			<staticText>
+				<reportElement positionType="Float" mode="Opaque" x="86" y="61" width="94" height="14" forecolor="#FFFFFF" backcolor="#00FF00" uuid="4faec2d0-1dfe-4c45-a437-b650aebe47ae">
+					<property name="com.jaspersoft.studio.unit.width" value="px"/>
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+					<printWhenExpression><![CDATA[($F{skor_suplemen_oksigen}.equals("0") ? Boolean.TRUE:Boolean.FALSE)]]></printWhenExpression>
+				</reportElement>
+				<textElement verticalAlignment="Top">
+					<font fontName="Tahoma" size="7" isBold="false"/>
+					<paragraph lineSpacing="Single"/>
+				</textElement>
+				<text><![CDATA[5. Laju Jantung]]></text>
+			</staticText>
+			<staticText>
+				<reportElement positionType="Float" mode="Opaque" x="86" y="61" width="94" height="14" forecolor="#00FF00" backcolor="#FFFF00" uuid="db1d2f1f-991b-446b-8889-7f7c110a092a">
+					<property name="com.jaspersoft.studio.unit.width" value="px"/>
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+					<printWhenExpression><![CDATA[($F{skor_suplemen_oksigen}.equals("1") ? Boolean.TRUE:Boolean.FALSE)]]></printWhenExpression>
+				</reportElement>
+				<textElement verticalAlignment="Top">
+					<font fontName="Tahoma" size="7" isBold="false"/>
+					<paragraph lineSpacing="Single"/>
+				</textElement>
+				<text><![CDATA[5. Laju Jantung]]></text>
+			</staticText>
+			<staticText>
+				<reportElement positionType="Float" mode="Opaque" x="86" y="61" width="94" height="14" forecolor="#FFFFFF" backcolor="#FFA500" uuid="5ac82e9b-8fee-431c-9de5-0adee0056389">
+					<property name="com.jaspersoft.studio.unit.width" value="px"/>
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+					<printWhenExpression><![CDATA[($F{skor_suplemen_oksigen}.equals("2") ? Boolean.TRUE:Boolean.FALSE)]]></printWhenExpression>
+				</reportElement>
+				<textElement verticalAlignment="Top">
+					<font fontName="Tahoma" size="7" isBold="false"/>
+					<paragraph lineSpacing="Single"/>
+				</textElement>
+				<text><![CDATA[5. Laju Jantung]]></text>
+			</staticText>
+			<staticText>
+				<reportElement positionType="Float" mode="Opaque" x="86" y="61" width="94" height="14" forecolor="#FFFFFF" backcolor="#FF0000" uuid="1467ce3e-fcec-4219-9dc1-2e3410c72dd3">
+					<property name="com.jaspersoft.studio.unit.width" value="px"/>
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+					<printWhenExpression><![CDATA[($F{skor_suplemen_oksigen}.equals("3") ? Boolean.TRUE:Boolean.FALSE)]]></printWhenExpression>
+				</reportElement>
+				<textElement verticalAlignment="Top">
+					<font fontName="Tahoma" size="7" isBold="false"/>
+					<paragraph lineSpacing="Single"/>
+				</textElement>
+				<text><![CDATA[5. Laju Jantung]]></text>
+			</staticText>
+			<staticText>
+				<reportElement positionType="Float" mode="Opaque" x="86" y="76" width="94" height="14" forecolor="#FFFFFF" backcolor="#00FF00" uuid="5c5bd4fd-5014-48c0-b491-52bdee62105b">
+					<property name="com.jaspersoft.studio.unit.width" value="px"/>
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+					<printWhenExpression><![CDATA[($F{skor_suplemen_oksigen}.equals("0") ? Boolean.TRUE:Boolean.FALSE)]]></printWhenExpression>
+				</reportElement>
+				<textElement verticalAlignment="Top">
+					<font fontName="Tahoma" size="7" isBold="false"/>
+					<paragraph lineSpacing="Single"/>
+				</textElement>
+				<text><![CDATA[6. Kesadaran]]></text>
+			</staticText>
+			<staticText>
+				<reportElement positionType="Float" mode="Opaque" x="86" y="76" width="94" height="14" forecolor="#00FF00" backcolor="#FFFF00" uuid="35b1e080-e978-4d5b-a650-102a846b9313">
+					<property name="com.jaspersoft.studio.unit.width" value="px"/>
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+					<printWhenExpression><![CDATA[($F{skor_suplemen_oksigen}.equals("1") ? Boolean.TRUE:Boolean.FALSE)]]></printWhenExpression>
+				</reportElement>
+				<textElement verticalAlignment="Top">
+					<font fontName="Tahoma" size="7" isBold="false"/>
+					<paragraph lineSpacing="Single"/>
+				</textElement>
+				<text><![CDATA[6. Kesadaran]]></text>
+			</staticText>
+			<staticText>
+				<reportElement positionType="Float" mode="Opaque" x="86" y="76" width="94" height="14" forecolor="#FFFFFF" backcolor="#FFA500" uuid="cfb964c5-07b7-4f11-9891-c8dbae1dd720">
+					<property name="com.jaspersoft.studio.unit.width" value="px"/>
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+					<printWhenExpression><![CDATA[($F{skor_suplemen_oksigen}.equals("2") ? Boolean.TRUE:Boolean.FALSE)]]></printWhenExpression>
+				</reportElement>
+				<textElement verticalAlignment="Top">
+					<font fontName="Tahoma" size="7" isBold="false"/>
+					<paragraph lineSpacing="Single"/>
+				</textElement>
+				<text><![CDATA[6. Kesadaran]]></text>
+			</staticText>
+			<staticText>
+				<reportElement positionType="Float" mode="Opaque" x="86" y="76" width="94" height="14" forecolor="#FFFFFF" backcolor="#FF0000" uuid="6bb01426-243d-4c29-92ce-6377d1aef747">
+					<property name="com.jaspersoft.studio.unit.width" value="px"/>
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+					<printWhenExpression><![CDATA[($F{skor_suplemen_oksigen}.equals("3") ? Boolean.TRUE:Boolean.FALSE)]]></printWhenExpression>
+				</reportElement>
+				<textElement verticalAlignment="Top">
+					<font fontName="Tahoma" size="7" isBold="false"/>
+					<paragraph lineSpacing="Single"/>
+				</textElement>
+				<text><![CDATA[6. Kesadaran]]></text>
+			</staticText>
+			<staticText>
+				<reportElement positionType="Float" mode="Opaque" x="86" y="91" width="94" height="14" forecolor="#FFFFFF" backcolor="#00FF00" uuid="24adde6a-6645-491e-8db1-26e0c1710b9f">
+					<property name="com.jaspersoft.studio.unit.width" value="px"/>
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+					<printWhenExpression><![CDATA[($F{skor_suplemen_oksigen}.equals("0") ? Boolean.TRUE:Boolean.FALSE)]]></printWhenExpression>
+				</reportElement>
+				<textElement verticalAlignment="Top">
+					<font fontName="Tahoma" size="7" isBold="false"/>
+					<paragraph lineSpacing="Single"/>
+				</textElement>
+				<text><![CDATA[7. Temperatur]]></text>
+			</staticText>
+			<staticText>
+				<reportElement positionType="Float" mode="Opaque" x="86" y="91" width="94" height="14" forecolor="#00FF00" backcolor="#FFFF00" uuid="dfa0d914-1a49-4364-bfab-5b4f16269621">
+					<property name="com.jaspersoft.studio.unit.width" value="px"/>
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+					<printWhenExpression><![CDATA[($F{skor_suplemen_oksigen}.equals("1") ? Boolean.TRUE:Boolean.FALSE)]]></printWhenExpression>
+				</reportElement>
+				<textElement verticalAlignment="Top">
+					<font fontName="Tahoma" size="7" isBold="false"/>
+					<paragraph lineSpacing="Single"/>
+				</textElement>
+				<text><![CDATA[7. Temperatur]]></text>
+			</staticText>
+			<staticText>
+				<reportElement positionType="Float" mode="Opaque" x="86" y="91" width="94" height="14" forecolor="#FFFFFF" backcolor="#FFA500" uuid="0a12cf74-f1db-4627-8d98-6e98591b4b12">
+					<property name="com.jaspersoft.studio.unit.width" value="px"/>
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+					<printWhenExpression><![CDATA[($F{skor_suplemen_oksigen}.equals("2") ? Boolean.TRUE:Boolean.FALSE)]]></printWhenExpression>
+				</reportElement>
+				<textElement verticalAlignment="Top">
+					<font fontName="Tahoma" size="7" isBold="false"/>
+					<paragraph lineSpacing="Single"/>
+				</textElement>
+				<text><![CDATA[7. Temperatur]]></text>
+			</staticText>
+			<staticText>
+				<reportElement positionType="Float" mode="Opaque" x="86" y="91" width="94" height="14" forecolor="#FFFFFF" backcolor="#FF0000" uuid="4babc5fb-1ab0-4c26-9f79-d1202844eb81">
+					<property name="com.jaspersoft.studio.unit.width" value="px"/>
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+					<printWhenExpression><![CDATA[($F{skor_suplemen_oksigen}.equals("3") ? Boolean.TRUE:Boolean.FALSE)]]></printWhenExpression>
+				</reportElement>
+				<textElement verticalAlignment="Top">
+					<font fontName="Tahoma" size="7" isBold="false"/>
+					<paragraph lineSpacing="Single"/>
+				</textElement>
+				<text><![CDATA[7. Temperatur]]></text>
 			</staticText>
 			<textField isStretchWithOverflow="true">
-				<reportElement positionType="Float" mode="Opaque" x="180" y="1" width="283" height="14" forecolor="#00FF00" backcolor="#FFFF00" uuid="bc65f634-6de8-4a49-a6f9-13c78ce2ddab">
+				<reportElement positionType="Float" mode="Opaque" x="180" y="46" width="284" height="14" forecolor="#FFFFFF" backcolor="#00FF00" uuid="ed05e04e-529b-481f-9041-3be31ed4ac16">
 					<property name="com.jaspersoft.studio.unit.height" value="px"/>
-					<property name="com.jaspersoft.studio.unit.width" value="px"/>
-					<printWhenExpression><![CDATA[($F{skor_laju_respirasi}.equals("1") ? Boolean.TRUE:Boolean.FALSE)]]></printWhenExpression>
+					<printWhenExpression><![CDATA[($F{skor_suplemen_oksigen}.equals("0") ? Boolean.TRUE:Boolean.FALSE)]]></printWhenExpression>
 				</reportElement>
 				<textElement verticalAlignment="Top">
 					<font fontName="Tahoma" size="7"/>
 					<paragraph lineSpacing="Single"/>
 				</textElement>
-				<textFieldExpression><![CDATA[": "+$F{parameter_laju_respirasi}]]></textFieldExpression>
+				<textFieldExpression><![CDATA[": "+$F{parameter_tekanan_darah_sistolik}]]></textFieldExpression>
 			</textField>
 			<textField isStretchWithOverflow="true">
-				<reportElement positionType="Float" mode="Opaque" x="180" y="16" width="283" height="14" forecolor="#00FF00" backcolor="#FFFF00" uuid="68bb5125-185d-47a5-86d8-b215f54fb946">
+				<reportElement positionType="Float" mode="Opaque" x="180" y="46" width="284" height="14" forecolor="#00FF00" backcolor="#FFFF00" uuid="49a03ac5-4126-40e0-aed8-f2d812e1a512">
 					<property name="com.jaspersoft.studio.unit.height" value="px"/>
-					<property name="com.jaspersoft.studio.unit.width" value="px"/>
-					<printWhenExpression><![CDATA[($F{skor_saturasi_oksigen}.equals("1") ? Boolean.TRUE:Boolean.FALSE)]]></printWhenExpression>
-				</reportElement>
-				<textElement verticalAlignment="Top">
-					<font fontName="Tahoma" size="7"/>
-					<paragraph lineSpacing="Single"/>
-				</textElement>
-				<textFieldExpression><![CDATA[": "+$F{parameter_saturasi_oksigen}]]></textFieldExpression>
-			</textField>
-			<textField isStretchWithOverflow="true">
-				<reportElement positionType="Float" mode="Opaque" x="180" y="31" width="283" height="14" forecolor="#00FF00" backcolor="#FFFF00" uuid="bf0085d3-b53e-4da9-be86-76c7ce8dd239">
-					<property name="com.jaspersoft.studio.unit.height" value="px"/>
-					<property name="com.jaspersoft.studio.unit.width" value="px"/>
 					<printWhenExpression><![CDATA[($F{skor_suplemen_oksigen}.equals("1") ? Boolean.TRUE:Boolean.FALSE)]]></printWhenExpression>
 				</reportElement>
 				<textElement verticalAlignment="Top">
 					<font fontName="Tahoma" size="7"/>
 					<paragraph lineSpacing="Single"/>
 				</textElement>
-				<textFieldExpression><![CDATA[": "+$F{parameter_suplemen_oksigen}]]></textFieldExpression>
+				<textFieldExpression><![CDATA[": "+$F{parameter_tekanan_darah_sistolik}]]></textFieldExpression>
 			</textField>
 			<textField isStretchWithOverflow="true">
-				<reportElement positionType="Float" mode="Opaque" x="180" y="46" width="283" height="14" forecolor="#00FF00" backcolor="#FFFF00" uuid="336f4f01-cae3-43b6-89b1-621231dfdd0f">
+				<reportElement positionType="Float" mode="Opaque" x="180" y="46" width="284" height="14" forecolor="#FFFFFF" backcolor="#FFA500" uuid="fae37d1d-bf37-4437-842e-24bded70dcf4">
 					<property name="com.jaspersoft.studio.unit.height" value="px"/>
-					<property name="com.jaspersoft.studio.unit.width" value="px"/>
-					<printWhenExpression><![CDATA[($F{skor_tekanan_darah_sistolik}.equals("1") ? Boolean.TRUE:Boolean.FALSE)]]></printWhenExpression>
+					<printWhenExpression><![CDATA[($F{skor_suplemen_oksigen}.equals("2") ? Boolean.TRUE:Boolean.FALSE)]]></printWhenExpression>
 				</reportElement>
 				<textElement verticalAlignment="Top">
 					<font fontName="Tahoma" size="7"/>
@@ -897,10 +1174,20 @@ inner join petugas on pemantauan_pews_dewasa.nip=petugas.nip]]>
 				<textFieldExpression><![CDATA[": "+$F{parameter_tekanan_darah_sistolik}]]></textFieldExpression>
 			</textField>
 			<textField isStretchWithOverflow="true">
-				<reportElement positionType="Float" mode="Opaque" x="180" y="61" width="283" height="14" forecolor="#00FF00" backcolor="#FFFF00" uuid="2386dfb1-e2fb-4e1b-b6c3-7394d6380aae">
+				<reportElement positionType="Float" mode="Opaque" x="180" y="46" width="284" height="14" forecolor="#FFFFFF" backcolor="#FF0000" uuid="ae5d6707-1000-4763-8150-f23e44e43a2f">
 					<property name="com.jaspersoft.studio.unit.height" value="px"/>
-					<property name="com.jaspersoft.studio.unit.width" value="px"/>
-					<printWhenExpression><![CDATA[($F{skor_laju_jantung}.equals("1") ? Boolean.TRUE:Boolean.FALSE)]]></printWhenExpression>
+					<printWhenExpression><![CDATA[($F{skor_suplemen_oksigen}.equals("3") ? Boolean.TRUE:Boolean.FALSE)]]></printWhenExpression>
+				</reportElement>
+				<textElement verticalAlignment="Top">
+					<font fontName="Tahoma" size="7"/>
+					<paragraph lineSpacing="Single"/>
+				</textElement>
+				<textFieldExpression><![CDATA[": "+$F{parameter_tekanan_darah_sistolik}]]></textFieldExpression>
+			</textField>
+			<textField isStretchWithOverflow="true">
+				<reportElement positionType="Float" mode="Opaque" x="180" y="61" width="284" height="14" forecolor="#FFFFFF" backcolor="#00FF00" uuid="8bf57ff6-2971-4b4a-a2d4-6311b31a2a40">
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+					<printWhenExpression><![CDATA[($F{skor_suplemen_oksigen}.equals("0") ? Boolean.TRUE:Boolean.FALSE)]]></printWhenExpression>
 				</reportElement>
 				<textElement verticalAlignment="Top">
 					<font fontName="Tahoma" size="7"/>
@@ -909,10 +1196,42 @@ inner join petugas on pemantauan_pews_dewasa.nip=petugas.nip]]>
 				<textFieldExpression><![CDATA[": "+$F{parameter_laju_jantung}]]></textFieldExpression>
 			</textField>
 			<textField isStretchWithOverflow="true">
-				<reportElement positionType="Float" mode="Opaque" x="180" y="76" width="283" height="14" forecolor="#00FF00" backcolor="#FFFF00" uuid="a35a9dcc-68f9-4d8d-b61f-51804d792768">
+				<reportElement positionType="Float" mode="Opaque" x="180" y="61" width="284" height="14" forecolor="#00FF00" backcolor="#FFFF00" uuid="50200847-1868-4f01-bbd7-c2f009dede0d">
 					<property name="com.jaspersoft.studio.unit.height" value="px"/>
-					<property name="com.jaspersoft.studio.unit.width" value="px"/>
-					<printWhenExpression><![CDATA[($F{skor_kesadaran}.equals("1") ? Boolean.TRUE:Boolean.FALSE)]]></printWhenExpression>
+					<printWhenExpression><![CDATA[($F{skor_suplemen_oksigen}.equals("1") ? Boolean.TRUE:Boolean.FALSE)]]></printWhenExpression>
+				</reportElement>
+				<textElement verticalAlignment="Top">
+					<font fontName="Tahoma" size="7"/>
+					<paragraph lineSpacing="Single"/>
+				</textElement>
+				<textFieldExpression><![CDATA[": "+$F{parameter_laju_jantung}]]></textFieldExpression>
+			</textField>
+			<textField isStretchWithOverflow="true">
+				<reportElement positionType="Float" mode="Opaque" x="180" y="61" width="284" height="14" forecolor="#FFFFFF" backcolor="#FFA500" uuid="afa7eb82-7ba5-4ae5-9d24-da8f38a0fbcf">
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+					<printWhenExpression><![CDATA[($F{skor_suplemen_oksigen}.equals("2") ? Boolean.TRUE:Boolean.FALSE)]]></printWhenExpression>
+				</reportElement>
+				<textElement verticalAlignment="Top">
+					<font fontName="Tahoma" size="7"/>
+					<paragraph lineSpacing="Single"/>
+				</textElement>
+				<textFieldExpression><![CDATA[": "+$F{parameter_laju_jantung}]]></textFieldExpression>
+			</textField>
+			<textField isStretchWithOverflow="true">
+				<reportElement positionType="Float" mode="Opaque" x="180" y="61" width="284" height="14" forecolor="#FFFFFF" backcolor="#FF0000" uuid="72f7f100-619e-4ee3-9974-45278a0aa0c5">
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+					<printWhenExpression><![CDATA[($F{skor_suplemen_oksigen}.equals("3") ? Boolean.TRUE:Boolean.FALSE)]]></printWhenExpression>
+				</reportElement>
+				<textElement verticalAlignment="Top">
+					<font fontName="Tahoma" size="7"/>
+					<paragraph lineSpacing="Single"/>
+				</textElement>
+				<textFieldExpression><![CDATA[": "+$F{parameter_laju_jantung}]]></textFieldExpression>
+			</textField>
+			<textField isStretchWithOverflow="true">
+				<reportElement positionType="Float" mode="Opaque" x="180" y="76" width="284" height="14" forecolor="#FFFFFF" backcolor="#00FF00" uuid="039874bc-3b34-4582-9027-f3154b7a4146">
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+					<printWhenExpression><![CDATA[($F{skor_suplemen_oksigen}.equals("0") ? Boolean.TRUE:Boolean.FALSE)]]></printWhenExpression>
 				</reportElement>
 				<textElement verticalAlignment="Top">
 					<font fontName="Tahoma" size="7"/>
@@ -921,10 +1240,42 @@ inner join petugas on pemantauan_pews_dewasa.nip=petugas.nip]]>
 				<textFieldExpression><![CDATA[": "+$F{parameter_kesadaran}]]></textFieldExpression>
 			</textField>
 			<textField isStretchWithOverflow="true">
-				<reportElement positionType="Float" mode="Opaque" x="180" y="91" width="283" height="14" forecolor="#00FF00" backcolor="#FFFF00" uuid="77e298ee-8e84-4b56-918d-a3ac3432c049">
+				<reportElement positionType="Float" mode="Opaque" x="180" y="76" width="284" height="14" forecolor="#00FF00" backcolor="#FFFF00" uuid="b1a652af-27ec-43f8-9fa4-2821408fa761">
 					<property name="com.jaspersoft.studio.unit.height" value="px"/>
-					<property name="com.jaspersoft.studio.unit.width" value="px"/>
-					<printWhenExpression><![CDATA[($F{skor_temperatur}.equals("1") ? Boolean.TRUE:Boolean.FALSE)]]></printWhenExpression>
+					<printWhenExpression><![CDATA[($F{skor_suplemen_oksigen}.equals("1") ? Boolean.TRUE:Boolean.FALSE)]]></printWhenExpression>
+				</reportElement>
+				<textElement verticalAlignment="Top">
+					<font fontName="Tahoma" size="7"/>
+					<paragraph lineSpacing="Single"/>
+				</textElement>
+				<textFieldExpression><![CDATA[": "+$F{parameter_kesadaran}]]></textFieldExpression>
+			</textField>
+			<textField isStretchWithOverflow="true">
+				<reportElement positionType="Float" mode="Opaque" x="180" y="76" width="284" height="14" forecolor="#FFFFFF" backcolor="#FFA500" uuid="801c91a5-d433-4bbb-8f80-fb535a8c6ed0">
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+					<printWhenExpression><![CDATA[($F{skor_suplemen_oksigen}.equals("2") ? Boolean.TRUE:Boolean.FALSE)]]></printWhenExpression>
+				</reportElement>
+				<textElement verticalAlignment="Top">
+					<font fontName="Tahoma" size="7"/>
+					<paragraph lineSpacing="Single"/>
+				</textElement>
+				<textFieldExpression><![CDATA[": "+$F{parameter_kesadaran}]]></textFieldExpression>
+			</textField>
+			<textField isStretchWithOverflow="true">
+				<reportElement positionType="Float" mode="Opaque" x="180" y="76" width="284" height="14" forecolor="#FFFFFF" backcolor="#FF0000" uuid="27483932-427b-4e2e-b40f-6298f918cddd">
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+					<printWhenExpression><![CDATA[($F{skor_suplemen_oksigen}.equals("3") ? Boolean.TRUE:Boolean.FALSE)]]></printWhenExpression>
+				</reportElement>
+				<textElement verticalAlignment="Top">
+					<font fontName="Tahoma" size="7"/>
+					<paragraph lineSpacing="Single"/>
+				</textElement>
+				<textFieldExpression><![CDATA[": "+$F{parameter_kesadaran}]]></textFieldExpression>
+			</textField>
+			<textField isStretchWithOverflow="true">
+				<reportElement positionType="Float" mode="Opaque" x="180" y="91" width="284" height="14" forecolor="#FFFFFF" backcolor="#00FF00" uuid="d2829c90-d9dc-4bda-8a2f-6a0481d088f6">
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+					<printWhenExpression><![CDATA[($F{skor_suplemen_oksigen}.equals("0") ? Boolean.TRUE:Boolean.FALSE)]]></printWhenExpression>
 				</reportElement>
 				<textElement verticalAlignment="Top">
 					<font fontName="Tahoma" size="7"/>
@@ -933,29 +1284,51 @@ inner join petugas on pemantauan_pews_dewasa.nip=petugas.nip]]>
 				<textFieldExpression><![CDATA[": "+$F{parameter_temperatur}]]></textFieldExpression>
 			</textField>
 			<textField isStretchWithOverflow="true">
-				<reportElement positionType="Float" mode="Opaque" x="466" y="1" width="84" height="14" forecolor="#00FF00" backcolor="#FFFF00" uuid="879269f9-adc0-48af-bdc1-7886487360f6">
+				<reportElement positionType="Float" mode="Opaque" x="180" y="91" width="284" height="14" forecolor="#00FF00" backcolor="#FFFF00" uuid="88b46cab-5669-4077-83f0-58075eaed202">
 					<property name="com.jaspersoft.studio.unit.height" value="px"/>
-					<printWhenExpression><![CDATA[($F{skor_laju_respirasi}.equals("1") ? Boolean.TRUE:Boolean.FALSE)]]></printWhenExpression>
+					<printWhenExpression><![CDATA[($F{skor_suplemen_oksigen}.equals("1") ? Boolean.TRUE:Boolean.FALSE)]]></printWhenExpression>
+				</reportElement>
+				<textElement verticalAlignment="Top">
+					<font fontName="Tahoma" size="7"/>
+					<paragraph lineSpacing="Single"/>
+				</textElement>
+				<textFieldExpression><![CDATA[": "+$F{parameter_temperatur}]]></textFieldExpression>
+			</textField>
+			<textField isStretchWithOverflow="true">
+				<reportElement positionType="Float" mode="Opaque" x="180" y="91" width="284" height="14" forecolor="#FFFFFF" backcolor="#FFA500" uuid="b1cd1b94-4669-4aae-90be-122fb69b096c">
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+					<printWhenExpression><![CDATA[($F{skor_suplemen_oksigen}.equals("2") ? Boolean.TRUE:Boolean.FALSE)]]></printWhenExpression>
+				</reportElement>
+				<textElement verticalAlignment="Top">
+					<font fontName="Tahoma" size="7"/>
+					<paragraph lineSpacing="Single"/>
+				</textElement>
+				<textFieldExpression><![CDATA[": "+$F{parameter_temperatur}]]></textFieldExpression>
+			</textField>
+			<textField isStretchWithOverflow="true">
+				<reportElement positionType="Float" mode="Opaque" x="180" y="91" width="284" height="14" forecolor="#FFFFFF" backcolor="#FF0000" uuid="bb8e38bd-8213-4d44-9197-bc7b0613106f">
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+					<printWhenExpression><![CDATA[($F{skor_suplemen_oksigen}.equals("3") ? Boolean.TRUE:Boolean.FALSE)]]></printWhenExpression>
+				</reportElement>
+				<textElement verticalAlignment="Top">
+					<font fontName="Tahoma" size="7"/>
+					<paragraph lineSpacing="Single"/>
+				</textElement>
+				<textFieldExpression><![CDATA[": "+$F{parameter_temperatur}]]></textFieldExpression>
+			</textField>
+			<textField isStretchWithOverflow="true">
+				<reportElement positionType="Float" mode="Opaque" x="465" y="46" width="86" height="14" forecolor="#FFFFFF" backcolor="#00FF00" uuid="bd01470a-0216-4594-97fb-e6d08c5d85d4">
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+					<printWhenExpression><![CDATA[($F{skor_suplemen_oksigen}.equals("0") ? Boolean.TRUE:Boolean.FALSE)]]></printWhenExpression>
 				</reportElement>
 				<textElement textAlignment="Center" verticalAlignment="Top">
 					<font fontName="Tahoma" size="7"/>
 					<paragraph lineSpacing="Single"/>
 				</textElement>
-				<textFieldExpression><![CDATA[$F{skor_laju_respirasi}]]></textFieldExpression>
+				<textFieldExpression><![CDATA[$F{skor_tekanan_darah_sistolik}]]></textFieldExpression>
 			</textField>
 			<textField isStretchWithOverflow="true">
-				<reportElement positionType="Float" mode="Opaque" x="466" y="16" width="84" height="14" forecolor="#00FF00" backcolor="#FFFF00" uuid="9fd6cbf8-3c52-4d83-bc30-19a781f93436">
-					<property name="com.jaspersoft.studio.unit.height" value="px"/>
-					<printWhenExpression><![CDATA[($F{skor_saturasi_oksigen}.equals("1") ? Boolean.TRUE:Boolean.FALSE)]]></printWhenExpression>
-				</reportElement>
-				<textElement textAlignment="Center" verticalAlignment="Top">
-					<font fontName="Tahoma" size="7"/>
-					<paragraph lineSpacing="Single"/>
-				</textElement>
-				<textFieldExpression><![CDATA[$F{skor_saturasi_oksigen}]]></textFieldExpression>
-			</textField>
-			<textField isStretchWithOverflow="true">
-				<reportElement positionType="Float" mode="Opaque" x="466" y="31" width="84" height="14" forecolor="#00FF00" backcolor="#FFFF00" uuid="131ca5b9-41ed-4c67-9f13-a9d19f662235">
+				<reportElement positionType="Float" mode="Opaque" x="465" y="46" width="86" height="14" forecolor="#00FF00" backcolor="#FFFF00" uuid="1aedfb48-e045-45b9-a165-875a57bdc46e">
 					<property name="com.jaspersoft.studio.unit.height" value="px"/>
 					<printWhenExpression><![CDATA[($F{skor_suplemen_oksigen}.equals("1") ? Boolean.TRUE:Boolean.FALSE)]]></printWhenExpression>
 				</reportElement>
@@ -963,244 +1336,10 @@ inner join petugas on pemantauan_pews_dewasa.nip=petugas.nip]]>
 					<font fontName="Tahoma" size="7"/>
 					<paragraph lineSpacing="Single"/>
 				</textElement>
-				<textFieldExpression><![CDATA[$F{skor_suplemen_oksigen}]]></textFieldExpression>
-			</textField>
-			<textField isStretchWithOverflow="true">
-				<reportElement positionType="Float" mode="Opaque" x="466" y="46" width="84" height="14" forecolor="#00FF00" backcolor="#FFFF00" uuid="7b35b197-d7b7-4676-a13f-12d03bf09382">
-					<property name="com.jaspersoft.studio.unit.height" value="px"/>
-					<printWhenExpression><![CDATA[($F{skor_tekanan_darah_sistolik}.equals("1") ? Boolean.TRUE:Boolean.FALSE)]]></printWhenExpression>
-				</reportElement>
-				<textElement textAlignment="Center" verticalAlignment="Top">
-					<font fontName="Tahoma" size="7"/>
-					<paragraph lineSpacing="Single"/>
-				</textElement>
 				<textFieldExpression><![CDATA[$F{skor_tekanan_darah_sistolik}]]></textFieldExpression>
 			</textField>
 			<textField isStretchWithOverflow="true">
-				<reportElement positionType="Float" mode="Opaque" x="466" y="61" width="84" height="14" forecolor="#00FF00" backcolor="#FFFF00" uuid="5b3a113e-9192-4e4d-857e-0ec1778d6f90">
-					<property name="com.jaspersoft.studio.unit.height" value="px"/>
-					<printWhenExpression><![CDATA[($F{skor_laju_jantung}.equals("1") ? Boolean.TRUE:Boolean.FALSE)]]></printWhenExpression>
-				</reportElement>
-				<textElement textAlignment="Center" verticalAlignment="Top">
-					<font fontName="Tahoma" size="7"/>
-					<paragraph lineSpacing="Single"/>
-				</textElement>
-				<textFieldExpression><![CDATA[$F{skor_laju_jantung}]]></textFieldExpression>
-			</textField>
-			<textField isStretchWithOverflow="true">
-				<reportElement positionType="Float" mode="Opaque" x="466" y="76" width="84" height="14" forecolor="#00FF00" backcolor="#FFFF00" uuid="bc308812-5803-4395-9205-2993ed528658">
-					<property name="com.jaspersoft.studio.unit.height" value="px"/>
-					<printWhenExpression><![CDATA[($F{skor_kesadaran}.equals("1") ? Boolean.TRUE:Boolean.FALSE)]]></printWhenExpression>
-				</reportElement>
-				<textElement textAlignment="Center" verticalAlignment="Top">
-					<font fontName="Tahoma" size="7"/>
-					<paragraph lineSpacing="Single"/>
-				</textElement>
-				<textFieldExpression><![CDATA[$F{skor_kesadaran}]]></textFieldExpression>
-			</textField>
-			<textField isStretchWithOverflow="true">
-				<reportElement positionType="Float" mode="Opaque" x="466" y="91" width="84" height="14" forecolor="#00FF00" backcolor="#FFFF00" uuid="03cf469a-baba-4b10-9d36-757646f8b3b7">
-					<property name="com.jaspersoft.studio.unit.height" value="px"/>
-					<printWhenExpression><![CDATA[($F{skor_temperatur}.equals("1") ? Boolean.TRUE:Boolean.FALSE)]]></printWhenExpression>
-				</reportElement>
-				<textElement textAlignment="Center" verticalAlignment="Top">
-					<font fontName="Tahoma" size="7"/>
-					<paragraph lineSpacing="Single"/>
-				</textElement>
-				<textFieldExpression><![CDATA[$F{skor_temperatur}]]></textFieldExpression>
-			</textField>
-			<staticText>
-				<reportElement positionType="Float" mode="Opaque" x="86" y="1" width="94" height="14" forecolor="#FFFFFF" backcolor="#FFC800" uuid="49af1e1d-5bd3-4637-8d03-274bfc50e8a7">
-					<property name="com.jaspersoft.studio.unit.width" value="px"/>
-					<property name="com.jaspersoft.studio.unit.height" value="px"/>
-					<printWhenExpression><![CDATA[($F{skor_laju_respirasi}.equals("2") ? Boolean.TRUE:Boolean.FALSE)]]></printWhenExpression>
-				</reportElement>
-				<textElement verticalAlignment="Top">
-					<font fontName="Tahoma" size="7" isBold="false"/>
-					<paragraph lineSpacing="Single"/>
-				</textElement>
-				<text><![CDATA[1. Laju Respirasi]]></text>
-			</staticText>
-			<staticText>
-				<reportElement positionType="Float" mode="Opaque" x="86" y="16" width="94" height="14" forecolor="#FFFFFF" backcolor="#FFC800" uuid="42ccc36e-bcfe-402a-b77b-e2eb7a9eb9ad">
-					<property name="com.jaspersoft.studio.unit.width" value="px"/>
-					<property name="com.jaspersoft.studio.unit.height" value="px"/>
-					<printWhenExpression><![CDATA[($F{skor_saturasi_oksigen}.equals("2") ? Boolean.TRUE:Boolean.FALSE)]]></printWhenExpression>
-				</reportElement>
-				<textElement verticalAlignment="Top">
-					<font fontName="Tahoma" size="7" isBold="false"/>
-					<paragraph lineSpacing="Single"/>
-				</textElement>
-				<text><![CDATA[2. Saturasi Oksigen]]></text>
-			</staticText>
-			<staticText>
-				<reportElement positionType="Float" mode="Opaque" x="86" y="31" width="94" height="14" forecolor="#FFFFFF" backcolor="#FFC800" uuid="aa5ec286-9882-4009-9ed2-49c5418a3458">
-					<property name="com.jaspersoft.studio.unit.width" value="px"/>
-					<property name="com.jaspersoft.studio.unit.height" value="px"/>
-					<printWhenExpression><![CDATA[($F{skor_suplemen_oksigen}.equals("2") ? Boolean.TRUE:Boolean.FALSE)]]></printWhenExpression>
-				</reportElement>
-				<textElement verticalAlignment="Top">
-					<font fontName="Tahoma" size="7" isBold="false"/>
-					<paragraph lineSpacing="Single"/>
-				</textElement>
-				<text><![CDATA[3. Suplemen Oksigen]]></text>
-			</staticText>
-			<staticText>
-				<reportElement positionType="Float" mode="Opaque" x="86" y="46" width="94" height="14" forecolor="#FFFFFF" backcolor="#FFC800" uuid="dabcaa9e-7328-4661-a675-cff18fb0abcf">
-					<property name="com.jaspersoft.studio.unit.width" value="px"/>
-					<property name="com.jaspersoft.studio.unit.height" value="px"/>
-					<printWhenExpression><![CDATA[($F{skor_tekanan_darah_sistolik}.equals("2") ? Boolean.TRUE:Boolean.FALSE)]]></printWhenExpression>
-				</reportElement>
-				<textElement verticalAlignment="Top">
-					<font fontName="Tahoma" size="7" isBold="false"/>
-					<paragraph lineSpacing="Single"/>
-				</textElement>
-				<text><![CDATA[4. Tekanan Darah Sistolik]]></text>
-			</staticText>
-			<staticText>
-				<reportElement positionType="Float" mode="Opaque" x="86" y="61" width="94" height="14" forecolor="#FFFFFF" backcolor="#FFC800" uuid="cc293d9d-11cc-430e-928d-c86c35a5d56e">
-					<property name="com.jaspersoft.studio.unit.width" value="px"/>
-					<property name="com.jaspersoft.studio.unit.height" value="px"/>
-					<printWhenExpression><![CDATA[($F{skor_laju_jantung}.equals("2") ? Boolean.TRUE:Boolean.FALSE)]]></printWhenExpression>
-				</reportElement>
-				<textElement verticalAlignment="Top">
-					<font fontName="Tahoma" size="7" isBold="false"/>
-					<paragraph lineSpacing="Single"/>
-				</textElement>
-				<text><![CDATA[5. Laju Jantung]]></text>
-			</staticText>
-			<staticText>
-				<reportElement positionType="Float" mode="Opaque" x="86" y="76" width="94" height="14" forecolor="#FFFFFF" backcolor="#FFC800" uuid="65311269-5a95-4938-9ef0-fa9b177f3baa">
-					<property name="com.jaspersoft.studio.unit.width" value="px"/>
-					<property name="com.jaspersoft.studio.unit.height" value="px"/>
-					<printWhenExpression><![CDATA[($F{skor_kesadaran}.equals("2") ? Boolean.TRUE:Boolean.FALSE)]]></printWhenExpression>
-				</reportElement>
-				<textElement verticalAlignment="Top">
-					<font fontName="Tahoma" size="7" isBold="false"/>
-					<paragraph lineSpacing="Single"/>
-				</textElement>
-				<text><![CDATA[6. Kesadaran]]></text>
-			</staticText>
-			<staticText>
-				<reportElement positionType="Float" mode="Opaque" x="86" y="91" width="94" height="14" forecolor="#FFFFFF" backcolor="#FFC800" uuid="cecffaf6-70b7-4338-a8ca-79e618e94028">
-					<property name="com.jaspersoft.studio.unit.width" value="px"/>
-					<property name="com.jaspersoft.studio.unit.height" value="px"/>
-					<printWhenExpression><![CDATA[($F{skor_temperatur}.equals("2") ? Boolean.TRUE:Boolean.FALSE)]]></printWhenExpression>
-				</reportElement>
-				<textElement verticalAlignment="Top">
-					<font fontName="Tahoma" size="7" isBold="false"/>
-					<paragraph lineSpacing="Single"/>
-				</textElement>
-				<text><![CDATA[7. Temperatur]]></text>
-			</staticText>
-			<textField isStretchWithOverflow="true">
-				<reportElement positionType="Float" mode="Opaque" x="180" y="91" width="283" height="14" forecolor="#FFFFFF" backcolor="#FFC800" uuid="2d821481-c0b7-450b-8df2-1dfc0189e977">
-					<property name="com.jaspersoft.studio.unit.height" value="px"/>
-					<property name="com.jaspersoft.studio.unit.width" value="px"/>
-					<printWhenExpression><![CDATA[($F{skor_temperatur}.equals("2") ? Boolean.TRUE:Boolean.FALSE)]]></printWhenExpression>
-				</reportElement>
-				<textElement verticalAlignment="Top">
-					<font fontName="Tahoma" size="7"/>
-					<paragraph lineSpacing="Single"/>
-				</textElement>
-				<textFieldExpression><![CDATA[": "+$F{parameter_temperatur}]]></textFieldExpression>
-			</textField>
-			<textField isStretchWithOverflow="true">
-				<reportElement positionType="Float" mode="Opaque" x="180" y="76" width="283" height="14" forecolor="#FFFFFF" backcolor="#FFC800" uuid="84b31e57-15f9-49e3-b126-d08c8e0a6a3b">
-					<property name="com.jaspersoft.studio.unit.height" value="px"/>
-					<property name="com.jaspersoft.studio.unit.width" value="px"/>
-					<printWhenExpression><![CDATA[($F{skor_kesadaran}.equals("2") ? Boolean.TRUE:Boolean.FALSE)]]></printWhenExpression>
-				</reportElement>
-				<textElement verticalAlignment="Top">
-					<font fontName="Tahoma" size="7"/>
-					<paragraph lineSpacing="Single"/>
-				</textElement>
-				<textFieldExpression><![CDATA[": "+$F{parameter_kesadaran}]]></textFieldExpression>
-			</textField>
-			<textField isStretchWithOverflow="true">
-				<reportElement positionType="Float" mode="Opaque" x="180" y="61" width="283" height="14" forecolor="#FFFFFF" backcolor="#FFC800" uuid="05549f2d-6002-4eab-8b96-331065970f87">
-					<property name="com.jaspersoft.studio.unit.height" value="px"/>
-					<property name="com.jaspersoft.studio.unit.width" value="px"/>
-					<printWhenExpression><![CDATA[($F{skor_laju_jantung}.equals("2") ? Boolean.TRUE:Boolean.FALSE)]]></printWhenExpression>
-				</reportElement>
-				<textElement verticalAlignment="Top">
-					<font fontName="Tahoma" size="7"/>
-					<paragraph lineSpacing="Single"/>
-				</textElement>
-				<textFieldExpression><![CDATA[": "+$F{parameter_laju_jantung}]]></textFieldExpression>
-			</textField>
-			<textField isStretchWithOverflow="true">
-				<reportElement positionType="Float" mode="Opaque" x="180" y="46" width="283" height="14" forecolor="#FFFFFF" backcolor="#FFC800" uuid="83cb8f9f-3094-471e-92ba-c30892b8d10f">
-					<property name="com.jaspersoft.studio.unit.height" value="px"/>
-					<property name="com.jaspersoft.studio.unit.width" value="px"/>
-					<printWhenExpression><![CDATA[($F{skor_tekanan_darah_sistolik}.equals("2") ? Boolean.TRUE:Boolean.FALSE)]]></printWhenExpression>
-				</reportElement>
-				<textElement verticalAlignment="Top">
-					<font fontName="Tahoma" size="7"/>
-					<paragraph lineSpacing="Single"/>
-				</textElement>
-				<textFieldExpression><![CDATA[": "+$F{parameter_tekanan_darah_sistolik}]]></textFieldExpression>
-			</textField>
-			<textField isStretchWithOverflow="true">
-				<reportElement positionType="Float" mode="Opaque" x="180" y="31" width="283" height="14" forecolor="#FFFFFF" backcolor="#FFC800" uuid="bf6284a8-5938-412d-aada-2e7a71dd815e">
-					<property name="com.jaspersoft.studio.unit.height" value="px"/>
-					<property name="com.jaspersoft.studio.unit.width" value="px"/>
-					<printWhenExpression><![CDATA[($F{skor_suplemen_oksigen}.equals("2") ? Boolean.TRUE:Boolean.FALSE)]]></printWhenExpression>
-				</reportElement>
-				<textElement verticalAlignment="Top">
-					<font fontName="Tahoma" size="7"/>
-					<paragraph lineSpacing="Single"/>
-				</textElement>
-				<textFieldExpression><![CDATA[": "+$F{parameter_suplemen_oksigen}]]></textFieldExpression>
-			</textField>
-			<textField isStretchWithOverflow="true">
-				<reportElement positionType="Float" mode="Opaque" x="180" y="16" width="283" height="14" forecolor="#FFFFFF" backcolor="#FFC800" uuid="adaebb66-bec9-45eb-b5a9-5d606926bac3">
-					<property name="com.jaspersoft.studio.unit.height" value="px"/>
-					<property name="com.jaspersoft.studio.unit.width" value="px"/>
-					<printWhenExpression><![CDATA[($F{skor_saturasi_oksigen}.equals("2") ? Boolean.TRUE:Boolean.FALSE)]]></printWhenExpression>
-				</reportElement>
-				<textElement verticalAlignment="Top">
-					<font fontName="Tahoma" size="7"/>
-					<paragraph lineSpacing="Single"/>
-				</textElement>
-				<textFieldExpression><![CDATA[": "+$F{parameter_saturasi_oksigen}]]></textFieldExpression>
-			</textField>
-			<textField isStretchWithOverflow="true">
-				<reportElement positionType="Float" mode="Opaque" x="180" y="1" width="283" height="14" forecolor="#FFFFFF" backcolor="#FFC800" uuid="03086544-3f01-42b8-a8f2-8750baf9124b">
-					<property name="com.jaspersoft.studio.unit.height" value="px"/>
-					<property name="com.jaspersoft.studio.unit.width" value="px"/>
-					<printWhenExpression><![CDATA[($F{skor_laju_respirasi}.equals("2") ? Boolean.TRUE:Boolean.FALSE)]]></printWhenExpression>
-				</reportElement>
-				<textElement verticalAlignment="Top">
-					<font fontName="Tahoma" size="7"/>
-					<paragraph lineSpacing="Single"/>
-				</textElement>
-				<textFieldExpression><![CDATA[": "+$F{parameter_laju_respirasi}]]></textFieldExpression>
-			</textField>
-			<textField isStretchWithOverflow="true">
-				<reportElement positionType="Float" mode="Opaque" x="466" y="1" width="84" height="14" forecolor="#FFFFFF" backcolor="#FFC800" uuid="6f3052a7-0ed0-4843-97cc-41ceef31e3eb">
-					<property name="com.jaspersoft.studio.unit.height" value="px"/>
-					<printWhenExpression><![CDATA[($F{skor_laju_respirasi}.equals("2") ? Boolean.TRUE:Boolean.FALSE)]]></printWhenExpression>
-				</reportElement>
-				<textElement textAlignment="Center" verticalAlignment="Top">
-					<font fontName="Tahoma" size="7"/>
-					<paragraph lineSpacing="Single"/>
-				</textElement>
-				<textFieldExpression><![CDATA[$F{skor_laju_respirasi}]]></textFieldExpression>
-			</textField>
-			<textField isStretchWithOverflow="true">
-				<reportElement positionType="Float" mode="Opaque" x="466" y="16" width="84" height="14" forecolor="#FFFFFF" backcolor="#FFC800" uuid="5ca094d0-9031-4a0a-a781-1797a785b884">
-					<property name="com.jaspersoft.studio.unit.height" value="px"/>
-					<printWhenExpression><![CDATA[($F{skor_saturasi_oksigen}.equals("2") ? Boolean.TRUE:Boolean.FALSE)]]></printWhenExpression>
-				</reportElement>
-				<textElement textAlignment="Center" verticalAlignment="Top">
-					<font fontName="Tahoma" size="7"/>
-					<paragraph lineSpacing="Single"/>
-				</textElement>
-				<textFieldExpression><![CDATA[$F{skor_saturasi_oksigen}]]></textFieldExpression>
-			</textField>
-			<textField isStretchWithOverflow="true">
-				<reportElement positionType="Float" mode="Opaque" x="466" y="31" width="84" height="14" forecolor="#FFFFFF" backcolor="#FFC800" uuid="7f058aa5-fa16-4ff8-9937-1708f60d5b8f">
+				<reportElement positionType="Float" mode="Opaque" x="465" y="46" width="86" height="14" forecolor="#FFFFFF" backcolor="#FFA500" uuid="5d761019-1030-4dbb-9946-82f12efbb362">
 					<property name="com.jaspersoft.studio.unit.height" value="px"/>
 					<printWhenExpression><![CDATA[($F{skor_suplemen_oksigen}.equals("2") ? Boolean.TRUE:Boolean.FALSE)]]></printWhenExpression>
 				</reportElement>
@@ -1208,12 +1347,12 @@ inner join petugas on pemantauan_pews_dewasa.nip=petugas.nip]]>
 					<font fontName="Tahoma" size="7"/>
 					<paragraph lineSpacing="Single"/>
 				</textElement>
-				<textFieldExpression><![CDATA[$F{skor_suplemen_oksigen}]]></textFieldExpression>
+				<textFieldExpression><![CDATA[$F{skor_tekanan_darah_sistolik}]]></textFieldExpression>
 			</textField>
 			<textField isStretchWithOverflow="true">
-				<reportElement positionType="Float" mode="Opaque" x="466" y="46" width="84" height="14" forecolor="#FFFFFF" backcolor="#FFC800" uuid="9b68ef59-c89b-497a-ae0d-9b4169cea978">
+				<reportElement positionType="Float" mode="Opaque" x="465" y="46" width="86" height="14" forecolor="#FFFFFF" backcolor="#FF0000" uuid="d085b833-ab76-4f8e-937b-0726d8d81a00">
 					<property name="com.jaspersoft.studio.unit.height" value="px"/>
-					<printWhenExpression><![CDATA[($F{skor_tekanan_darah_sistolik}.equals("2") ? Boolean.TRUE:Boolean.FALSE)]]></printWhenExpression>
+					<printWhenExpression><![CDATA[($F{skor_suplemen_oksigen}.equals("3") ? Boolean.TRUE:Boolean.FALSE)]]></printWhenExpression>
 				</reportElement>
 				<textElement textAlignment="Center" verticalAlignment="Top">
 					<font fontName="Tahoma" size="7"/>
@@ -1222,9 +1361,9 @@ inner join petugas on pemantauan_pews_dewasa.nip=petugas.nip]]>
 				<textFieldExpression><![CDATA[$F{skor_tekanan_darah_sistolik}]]></textFieldExpression>
 			</textField>
 			<textField isStretchWithOverflow="true">
-				<reportElement positionType="Float" mode="Opaque" x="466" y="61" width="84" height="14" forecolor="#FFFFFF" backcolor="#FFC800" uuid="a8f038b9-4700-4906-828c-321de50c9de7">
+				<reportElement positionType="Float" mode="Opaque" x="465" y="61" width="86" height="14" forecolor="#FFFFFF" backcolor="#00FF00" uuid="35ae938f-1ab1-4234-a298-8dc02e13f3ff">
 					<property name="com.jaspersoft.studio.unit.height" value="px"/>
-					<printWhenExpression><![CDATA[($F{skor_laju_jantung}.equals("2") ? Boolean.TRUE:Boolean.FALSE)]]></printWhenExpression>
+					<printWhenExpression><![CDATA[($F{skor_suplemen_oksigen}.equals("0") ? Boolean.TRUE:Boolean.FALSE)]]></printWhenExpression>
 				</reportElement>
 				<textElement textAlignment="Center" verticalAlignment="Top">
 					<font fontName="Tahoma" size="7"/>
@@ -1233,195 +1372,9 @@ inner join petugas on pemantauan_pews_dewasa.nip=petugas.nip]]>
 				<textFieldExpression><![CDATA[$F{skor_laju_jantung}]]></textFieldExpression>
 			</textField>
 			<textField isStretchWithOverflow="true">
-				<reportElement positionType="Float" mode="Opaque" x="466" y="76" width="84" height="14" forecolor="#FFFFFF" backcolor="#FFC800" uuid="63deece6-af33-4f44-bf2c-71c7519d9cd8">
+				<reportElement positionType="Float" mode="Opaque" x="465" y="61" width="86" height="14" forecolor="#00FF00" backcolor="#FFFF00" uuid="01f1adc5-2ba7-4ce3-adbf-85f6ff08b84a">
 					<property name="com.jaspersoft.studio.unit.height" value="px"/>
-					<printWhenExpression><![CDATA[($F{skor_kesadaran}.equals("2") ? Boolean.TRUE:Boolean.FALSE)]]></printWhenExpression>
-				</reportElement>
-				<textElement textAlignment="Center" verticalAlignment="Top">
-					<font fontName="Tahoma" size="7"/>
-					<paragraph lineSpacing="Single"/>
-				</textElement>
-				<textFieldExpression><![CDATA[$F{skor_kesadaran}]]></textFieldExpression>
-			</textField>
-			<textField isStretchWithOverflow="true">
-				<reportElement positionType="Float" mode="Opaque" x="466" y="91" width="84" height="14" forecolor="#FFFFFF" backcolor="#FFC800" uuid="8d045fbc-680e-413c-bbbf-7df088674e7e">
-					<property name="com.jaspersoft.studio.unit.height" value="px"/>
-					<printWhenExpression><![CDATA[($F{skor_temperatur}.equals("2") ? Boolean.TRUE:Boolean.FALSE)]]></printWhenExpression>
-				</reportElement>
-				<textElement textAlignment="Center" verticalAlignment="Top">
-					<font fontName="Tahoma" size="7"/>
-					<paragraph lineSpacing="Single"/>
-				</textElement>
-				<textFieldExpression><![CDATA[$F{skor_temperatur}]]></textFieldExpression>
-			</textField>
-			<staticText>
-				<reportElement positionType="Float" mode="Opaque" x="86" y="1" width="94" height="14" forecolor="#FFFFFF" backcolor="#FF0000" uuid="d027e2f7-3df2-4b85-b8b0-bc1c639cdd41">
-					<property name="com.jaspersoft.studio.unit.width" value="px"/>
-					<property name="com.jaspersoft.studio.unit.height" value="px"/>
-					<printWhenExpression><![CDATA[($F{skor_laju_respirasi}.equals("3") ? Boolean.TRUE:Boolean.FALSE)]]></printWhenExpression>
-				</reportElement>
-				<textElement verticalAlignment="Top">
-					<font fontName="Tahoma" size="7" isBold="false"/>
-					<paragraph lineSpacing="Single"/>
-				</textElement>
-				<text><![CDATA[1. Laju Respirasi]]></text>
-			</staticText>
-			<textField isStretchWithOverflow="true">
-				<reportElement positionType="Float" mode="Opaque" x="180" y="1" width="283" height="14" forecolor="#FFFFFF" backcolor="#FF0000" uuid="09a7efc3-7e83-4f41-b1b0-57322fd1675f">
-					<property name="com.jaspersoft.studio.unit.height" value="px"/>
-					<property name="com.jaspersoft.studio.unit.width" value="px"/>
-					<printWhenExpression><![CDATA[($F{skor_laju_respirasi}.equals("3") ? Boolean.TRUE:Boolean.FALSE)]]></printWhenExpression>
-				</reportElement>
-				<textElement verticalAlignment="Top">
-					<font fontName="Tahoma" size="7"/>
-					<paragraph lineSpacing="Single"/>
-				</textElement>
-				<textFieldExpression><![CDATA[": "+$F{parameter_laju_respirasi}]]></textFieldExpression>
-			</textField>
-			<textField isStretchWithOverflow="true">
-				<reportElement positionType="Float" mode="Opaque" x="466" y="1" width="84" height="14" forecolor="#FFFFFF" backcolor="#FF0000" uuid="66647e65-65c3-47c0-8386-5f31d33b7776">
-					<property name="com.jaspersoft.studio.unit.height" value="px"/>
-					<printWhenExpression><![CDATA[($F{skor_laju_respirasi}.equals("3") ? Boolean.TRUE:Boolean.FALSE)]]></printWhenExpression>
-				</reportElement>
-				<textElement textAlignment="Center" verticalAlignment="Top">
-					<font fontName="Tahoma" size="7"/>
-					<paragraph lineSpacing="Single"/>
-				</textElement>
-				<textFieldExpression><![CDATA[$F{skor_laju_respirasi}]]></textFieldExpression>
-			</textField>
-			<staticText>
-				<reportElement positionType="Float" mode="Opaque" x="86" y="16" width="94" height="14" forecolor="#FFFFFF" backcolor="#FF0000" uuid="f19ce9c7-1230-4964-8ffa-9fc1d6758aeb">
-					<property name="com.jaspersoft.studio.unit.width" value="px"/>
-					<property name="com.jaspersoft.studio.unit.height" value="px"/>
-					<printWhenExpression><![CDATA[($F{skor_saturasi_oksigen}.equals("3") ? Boolean.TRUE:Boolean.FALSE)]]></printWhenExpression>
-				</reportElement>
-				<textElement verticalAlignment="Top">
-					<font fontName="Tahoma" size="7" isBold="false"/>
-					<paragraph lineSpacing="Single"/>
-				</textElement>
-				<text><![CDATA[2. Saturasi Oksigen]]></text>
-			</staticText>
-			<textField isStretchWithOverflow="true">
-				<reportElement positionType="Float" mode="Opaque" x="180" y="16" width="283" height="14" forecolor="#FFFFFF" backcolor="#FF0000" uuid="68d51263-f9cc-4f8e-b9db-ca80198d1e77">
-					<property name="com.jaspersoft.studio.unit.height" value="px"/>
-					<property name="com.jaspersoft.studio.unit.width" value="px"/>
-					<printWhenExpression><![CDATA[($F{skor_saturasi_oksigen}.equals("3") ? Boolean.TRUE:Boolean.FALSE)]]></printWhenExpression>
-				</reportElement>
-				<textElement verticalAlignment="Top">
-					<font fontName="Tahoma" size="7"/>
-					<paragraph lineSpacing="Single"/>
-				</textElement>
-				<textFieldExpression><![CDATA[": "+$F{parameter_saturasi_oksigen}]]></textFieldExpression>
-			</textField>
-			<textField isStretchWithOverflow="true">
-				<reportElement positionType="Float" mode="Opaque" x="466" y="16" width="84" height="14" forecolor="#FFFFFF" backcolor="#FF0000" uuid="6f6edd0d-054f-4e4f-a2ec-4e3c249374c5">
-					<property name="com.jaspersoft.studio.unit.height" value="px"/>
-					<printWhenExpression><![CDATA[($F{skor_saturasi_oksigen}.equals("3") ? Boolean.TRUE:Boolean.FALSE)]]></printWhenExpression>
-				</reportElement>
-				<textElement textAlignment="Center" verticalAlignment="Top">
-					<font fontName="Tahoma" size="7"/>
-					<paragraph lineSpacing="Single"/>
-				</textElement>
-				<textFieldExpression><![CDATA[$F{skor_saturasi_oksigen}]]></textFieldExpression>
-			</textField>
-			<staticText>
-				<reportElement positionType="Float" mode="Opaque" x="86" y="31" width="94" height="14" forecolor="#FFFFFF" backcolor="#FF0000" uuid="df16ba71-1dab-4328-849a-ab13a60fbc7d">
-					<property name="com.jaspersoft.studio.unit.width" value="px"/>
-					<property name="com.jaspersoft.studio.unit.height" value="px"/>
-					<printWhenExpression><![CDATA[($F{skor_suplemen_oksigen}.equals("3") ? Boolean.TRUE:Boolean.FALSE)]]></printWhenExpression>
-				</reportElement>
-				<textElement verticalAlignment="Top">
-					<font fontName="Tahoma" size="7" isBold="false"/>
-					<paragraph lineSpacing="Single"/>
-				</textElement>
-				<text><![CDATA[3. Suplemen Oksigen]]></text>
-			</staticText>
-			<textField isStretchWithOverflow="true">
-				<reportElement positionType="Float" mode="Opaque" x="180" y="31" width="283" height="14" forecolor="#FFFFFF" backcolor="#FF0000" uuid="f3298604-27e9-4cb4-ad5c-7b6a161ece3b">
-					<property name="com.jaspersoft.studio.unit.height" value="px"/>
-					<property name="com.jaspersoft.studio.unit.width" value="px"/>
-					<printWhenExpression><![CDATA[($F{skor_suplemen_oksigen}.equals("3") ? Boolean.TRUE:Boolean.FALSE)]]></printWhenExpression>
-				</reportElement>
-				<textElement verticalAlignment="Top">
-					<font fontName="Tahoma" size="7"/>
-					<paragraph lineSpacing="Single"/>
-				</textElement>
-				<textFieldExpression><![CDATA[": "+$F{parameter_suplemen_oksigen}]]></textFieldExpression>
-			</textField>
-			<textField isStretchWithOverflow="true">
-				<reportElement positionType="Float" mode="Opaque" x="466" y="31" width="84" height="14" forecolor="#FFFFFF" backcolor="#FF0000" uuid="65d36467-61bc-49d9-875c-3594fdc8292a">
-					<property name="com.jaspersoft.studio.unit.height" value="px"/>
-					<printWhenExpression><![CDATA[($F{skor_suplemen_oksigen}.equals("3") ? Boolean.TRUE:Boolean.FALSE)]]></printWhenExpression>
-				</reportElement>
-				<textElement textAlignment="Center" verticalAlignment="Top">
-					<font fontName="Tahoma" size="7"/>
-					<paragraph lineSpacing="Single"/>
-				</textElement>
-				<textFieldExpression><![CDATA[$F{skor_suplemen_oksigen}]]></textFieldExpression>
-			</textField>
-			<staticText>
-				<reportElement positionType="Float" mode="Opaque" x="86" y="46" width="94" height="14" forecolor="#FFFFFF" backcolor="#FF0000" uuid="ea645754-f583-4561-b89c-18186acacd34">
-					<property name="com.jaspersoft.studio.unit.width" value="px"/>
-					<property name="com.jaspersoft.studio.unit.height" value="px"/>
-					<printWhenExpression><![CDATA[($F{skor_tekanan_darah_sistolik}.equals("3") ? Boolean.TRUE:Boolean.FALSE)]]></printWhenExpression>
-				</reportElement>
-				<textElement verticalAlignment="Top">
-					<font fontName="Tahoma" size="7" isBold="false"/>
-					<paragraph lineSpacing="Single"/>
-				</textElement>
-				<text><![CDATA[4. Tekanan Darah Sistolik]]></text>
-			</staticText>
-			<textField isStretchWithOverflow="true">
-				<reportElement positionType="Float" mode="Opaque" x="180" y="46" width="283" height="14" forecolor="#FFFFFF" backcolor="#FF0000" uuid="a492261b-a584-48aa-8b1b-e2ec6e9ef07a">
-					<property name="com.jaspersoft.studio.unit.height" value="px"/>
-					<property name="com.jaspersoft.studio.unit.width" value="px"/>
-					<printWhenExpression><![CDATA[($F{skor_tekanan_darah_sistolik}.equals("3") ? Boolean.TRUE:Boolean.FALSE)]]></printWhenExpression>
-				</reportElement>
-				<textElement verticalAlignment="Top">
-					<font fontName="Tahoma" size="7"/>
-					<paragraph lineSpacing="Single"/>
-				</textElement>
-				<textFieldExpression><![CDATA[": "+$F{parameter_tekanan_darah_sistolik}]]></textFieldExpression>
-			</textField>
-			<textField isStretchWithOverflow="true">
-				<reportElement positionType="Float" mode="Opaque" x="466" y="46" width="84" height="14" forecolor="#FFFFFF" backcolor="#FF0000" uuid="c6d20eae-98c9-4d80-9fb6-acf19e8d3d97">
-					<property name="com.jaspersoft.studio.unit.height" value="px"/>
-					<printWhenExpression><![CDATA[($F{skor_tekanan_darah_sistolik}.equals("3") ? Boolean.TRUE:Boolean.FALSE)]]></printWhenExpression>
-				</reportElement>
-				<textElement textAlignment="Center" verticalAlignment="Top">
-					<font fontName="Tahoma" size="7"/>
-					<paragraph lineSpacing="Single"/>
-				</textElement>
-				<textFieldExpression><![CDATA[$F{skor_tekanan_darah_sistolik}]]></textFieldExpression>
-			</textField>
-			<staticText>
-				<reportElement positionType="Float" mode="Opaque" x="86" y="61" width="94" height="14" forecolor="#FFFFFF" backcolor="#FF0000" uuid="cb452e04-05e6-44d3-bc2d-bd773abdf1ad">
-					<property name="com.jaspersoft.studio.unit.width" value="px"/>
-					<property name="com.jaspersoft.studio.unit.height" value="px"/>
-					<printWhenExpression><![CDATA[($F{skor_laju_jantung}.equals("3") ? Boolean.TRUE:Boolean.FALSE)]]></printWhenExpression>
-				</reportElement>
-				<textElement verticalAlignment="Top">
-					<font fontName="Tahoma" size="7" isBold="false"/>
-					<paragraph lineSpacing="Single"/>
-				</textElement>
-				<text><![CDATA[5. Laju Jantung]]></text>
-			</staticText>
-			<textField isStretchWithOverflow="true">
-				<reportElement positionType="Float" mode="Opaque" x="180" y="61" width="283" height="14" forecolor="#FFFFFF" backcolor="#FF0000" uuid="92777d37-fa53-409a-ba78-30737a6aa6a7">
-					<property name="com.jaspersoft.studio.unit.height" value="px"/>
-					<property name="com.jaspersoft.studio.unit.width" value="px"/>
-					<printWhenExpression><![CDATA[($F{skor_laju_jantung}.equals("3") ? Boolean.TRUE:Boolean.FALSE)]]></printWhenExpression>
-				</reportElement>
-				<textElement verticalAlignment="Top">
-					<font fontName="Tahoma" size="7"/>
-					<paragraph lineSpacing="Single"/>
-				</textElement>
-				<textFieldExpression><![CDATA[": "+$F{parameter_laju_jantung}]]></textFieldExpression>
-			</textField>
-			<textField isStretchWithOverflow="true">
-				<reportElement positionType="Float" mode="Opaque" x="466" y="61" width="84" height="14" forecolor="#FFFFFF" backcolor="#FF0000" uuid="59edee55-7d0d-4869-8296-ddef225583b8">
-					<property name="com.jaspersoft.studio.unit.height" value="px"/>
-					<printWhenExpression><![CDATA[($F{skor_laju_jantung}.equals("3") ? Boolean.TRUE:Boolean.FALSE)]]></printWhenExpression>
+					<printWhenExpression><![CDATA[($F{skor_suplemen_oksigen}.equals("1") ? Boolean.TRUE:Boolean.FALSE)]]></printWhenExpression>
 				</reportElement>
 				<textElement textAlignment="Center" verticalAlignment="Top">
 					<font fontName="Tahoma" size="7"/>
@@ -1429,244 +1382,10 @@ inner join petugas on pemantauan_pews_dewasa.nip=petugas.nip]]>
 				</textElement>
 				<textFieldExpression><![CDATA[$F{skor_laju_jantung}]]></textFieldExpression>
 			</textField>
-			<staticText>
-				<reportElement positionType="Float" mode="Opaque" x="86" y="76" width="94" height="14" forecolor="#FFFFFF" backcolor="#FF0000" uuid="578c2516-cbaa-462f-a39a-e5c3e31b6346">
-					<property name="com.jaspersoft.studio.unit.width" value="px"/>
-					<property name="com.jaspersoft.studio.unit.height" value="px"/>
-					<printWhenExpression><![CDATA[($F{skor_kesadaran}.equals("3") ? Boolean.TRUE:Boolean.FALSE)]]></printWhenExpression>
-				</reportElement>
-				<textElement verticalAlignment="Top">
-					<font fontName="Tahoma" size="7" isBold="false"/>
-					<paragraph lineSpacing="Single"/>
-				</textElement>
-				<text><![CDATA[6. Kesadaran]]></text>
-			</staticText>
 			<textField isStretchWithOverflow="true">
-				<reportElement positionType="Float" mode="Opaque" x="180" y="76" width="283" height="14" forecolor="#FFFFFF" backcolor="#FF0000" uuid="5eacc2fb-7483-4bdd-9f6c-409153d3cf8e">
+				<reportElement positionType="Float" mode="Opaque" x="465" y="61" width="86" height="14" forecolor="#FFFFFF" backcolor="#FFA500" uuid="7997b129-c992-4cf5-94d6-ad4331ec6738">
 					<property name="com.jaspersoft.studio.unit.height" value="px"/>
-					<property name="com.jaspersoft.studio.unit.width" value="px"/>
-					<printWhenExpression><![CDATA[($F{skor_kesadaran}.equals("3") ? Boolean.TRUE:Boolean.FALSE)]]></printWhenExpression>
-				</reportElement>
-				<textElement verticalAlignment="Top">
-					<font fontName="Tahoma" size="7"/>
-					<paragraph lineSpacing="Single"/>
-				</textElement>
-				<textFieldExpression><![CDATA[": "+$F{parameter_kesadaran}]]></textFieldExpression>
-			</textField>
-			<textField isStretchWithOverflow="true">
-				<reportElement positionType="Float" mode="Opaque" x="466" y="76" width="84" height="14" forecolor="#FFFFFF" backcolor="#FF0000" uuid="48bf0048-006b-422c-8c34-5a9776ddf57e">
-					<property name="com.jaspersoft.studio.unit.height" value="px"/>
-					<printWhenExpression><![CDATA[($F{skor_kesadaran}.equals("3") ? Boolean.TRUE:Boolean.FALSE)]]></printWhenExpression>
-				</reportElement>
-				<textElement textAlignment="Center" verticalAlignment="Top">
-					<font fontName="Tahoma" size="7"/>
-					<paragraph lineSpacing="Single"/>
-				</textElement>
-				<textFieldExpression><![CDATA[$F{skor_kesadaran}]]></textFieldExpression>
-			</textField>
-			<staticText>
-				<reportElement positionType="Float" mode="Opaque" x="86" y="91" width="94" height="14" forecolor="#FFFFFF" backcolor="#FF0000" uuid="9c90b1fe-fc61-4f2a-9dcf-b37d9e892f1c">
-					<property name="com.jaspersoft.studio.unit.width" value="px"/>
-					<property name="com.jaspersoft.studio.unit.height" value="px"/>
-					<printWhenExpression><![CDATA[($F{skor_temperatur}.equals("3") ? Boolean.TRUE:Boolean.FALSE)]]></printWhenExpression>
-				</reportElement>
-				<textElement verticalAlignment="Top">
-					<font fontName="Tahoma" size="7" isBold="false"/>
-					<paragraph lineSpacing="Single"/>
-				</textElement>
-				<text><![CDATA[7. Temperatur]]></text>
-			</staticText>
-			<textField isStretchWithOverflow="true">
-				<reportElement positionType="Float" mode="Opaque" x="180" y="91" width="283" height="14" forecolor="#FFFFFF" backcolor="#FF0000" uuid="715547a0-ea85-42ee-9658-f0491b698fad">
-					<property name="com.jaspersoft.studio.unit.height" value="px"/>
-					<property name="com.jaspersoft.studio.unit.width" value="px"/>
-					<printWhenExpression><![CDATA[($F{skor_temperatur}.equals("3") ? Boolean.TRUE:Boolean.FALSE)]]></printWhenExpression>
-				</reportElement>
-				<textElement verticalAlignment="Top">
-					<font fontName="Tahoma" size="7"/>
-					<paragraph lineSpacing="Single"/>
-				</textElement>
-				<textFieldExpression><![CDATA[": "+$F{parameter_temperatur}]]></textFieldExpression>
-			</textField>
-			<textField isStretchWithOverflow="true">
-				<reportElement positionType="Float" mode="Opaque" x="466" y="91" width="84" height="14" forecolor="#FFFFFF" backcolor="#FF0000" uuid="00901cd7-8636-47c0-b8e1-17043292a794">
-					<property name="com.jaspersoft.studio.unit.height" value="px"/>
-					<printWhenExpression><![CDATA[($F{skor_temperatur}.equals("3") ? Boolean.TRUE:Boolean.FALSE)]]></printWhenExpression>
-				</reportElement>
-				<textElement textAlignment="Center" verticalAlignment="Top">
-					<font fontName="Tahoma" size="7"/>
-					<paragraph lineSpacing="Single"/>
-				</textElement>
-				<textFieldExpression><![CDATA[$F{skor_temperatur}]]></textFieldExpression>
-			</textField>
-			<staticText>
-				<reportElement positionType="Float" mode="Opaque" x="86" y="1" width="94" height="14" forecolor="#FFFFFF" backcolor="#0000FF" uuid="327a2cc3-4045-4ff4-a66b-83d85cb982b2">
-					<property name="com.jaspersoft.studio.unit.width" value="px"/>
-					<property name="com.jaspersoft.studio.unit.height" value="px"/>
-					<printWhenExpression><![CDATA[($F{skor_laju_respirasi}.equals("7") ? Boolean.TRUE:Boolean.FALSE)]]></printWhenExpression>
-				</reportElement>
-				<textElement verticalAlignment="Top">
-					<font fontName="Tahoma" size="7" isBold="false"/>
-					<paragraph lineSpacing="Single"/>
-				</textElement>
-				<text><![CDATA[1. Laju Respirasi]]></text>
-			</staticText>
-			<textField isStretchWithOverflow="true">
-				<reportElement positionType="Float" mode="Opaque" x="180" y="1" width="283" height="14" forecolor="#FFFFFF" backcolor="#0000FF" uuid="8052ed9a-c76f-427e-b718-52a89cd04ef8">
-					<property name="com.jaspersoft.studio.unit.height" value="px"/>
-					<property name="com.jaspersoft.studio.unit.width" value="px"/>
-					<printWhenExpression><![CDATA[($F{skor_laju_respirasi}.equals("7") ? Boolean.TRUE:Boolean.FALSE)]]></printWhenExpression>
-				</reportElement>
-				<textElement verticalAlignment="Top">
-					<font fontName="Tahoma" size="7"/>
-					<paragraph lineSpacing="Single"/>
-				</textElement>
-				<textFieldExpression><![CDATA[": "+$F{parameter_laju_respirasi}]]></textFieldExpression>
-			</textField>
-			<textField isStretchWithOverflow="true">
-				<reportElement positionType="Float" mode="Opaque" x="466" y="1" width="84" height="14" forecolor="#FFFFFF" backcolor="#0000FF" uuid="1c319a75-cfce-4a50-8e66-a9895d3aef05">
-					<property name="com.jaspersoft.studio.unit.height" value="px"/>
-					<printWhenExpression><![CDATA[($F{skor_laju_respirasi}.equals("7") ? Boolean.TRUE:Boolean.FALSE)]]></printWhenExpression>
-				</reportElement>
-				<textElement textAlignment="Center" verticalAlignment="Top">
-					<font fontName="Tahoma" size="7"/>
-					<paragraph lineSpacing="Single"/>
-				</textElement>
-				<textFieldExpression><![CDATA[$F{skor_laju_respirasi}]]></textFieldExpression>
-			</textField>
-			<staticText>
-				<reportElement positionType="Float" mode="Opaque" x="86" y="16" width="94" height="14" forecolor="#FFFFFF" backcolor="#0000FF" uuid="45d604dc-2670-4782-a37a-eebb906aa142">
-					<property name="com.jaspersoft.studio.unit.width" value="px"/>
-					<property name="com.jaspersoft.studio.unit.height" value="px"/>
-					<printWhenExpression><![CDATA[($F{skor_saturasi_oksigen}.equals("7") ? Boolean.TRUE:Boolean.FALSE)]]></printWhenExpression>
-				</reportElement>
-				<textElement verticalAlignment="Top">
-					<font fontName="Tahoma" size="7" isBold="false"/>
-					<paragraph lineSpacing="Single"/>
-				</textElement>
-				<text><![CDATA[2. Saturasi Oksigen]]></text>
-			</staticText>
-			<textField isStretchWithOverflow="true">
-				<reportElement positionType="Float" mode="Opaque" x="180" y="16" width="283" height="14" forecolor="#FFFFFF" backcolor="#0000FF" uuid="be3ee966-7533-4058-9385-02c8332ba121">
-					<property name="com.jaspersoft.studio.unit.height" value="px"/>
-					<property name="com.jaspersoft.studio.unit.width" value="px"/>
-					<printWhenExpression><![CDATA[($F{skor_saturasi_oksigen}.equals("7") ? Boolean.TRUE:Boolean.FALSE)]]></printWhenExpression>
-				</reportElement>
-				<textElement verticalAlignment="Top">
-					<font fontName="Tahoma" size="7"/>
-					<paragraph lineSpacing="Single"/>
-				</textElement>
-				<textFieldExpression><![CDATA[": "+$F{parameter_saturasi_oksigen}]]></textFieldExpression>
-			</textField>
-			<textField isStretchWithOverflow="true">
-				<reportElement positionType="Float" mode="Opaque" x="466" y="16" width="84" height="14" forecolor="#FFFFFF" backcolor="#0000FF" uuid="dbf83d8e-3451-4964-bb71-6196c3241e52">
-					<property name="com.jaspersoft.studio.unit.height" value="px"/>
-					<printWhenExpression><![CDATA[($F{skor_saturasi_oksigen}.equals("7") ? Boolean.TRUE:Boolean.FALSE)]]></printWhenExpression>
-				</reportElement>
-				<textElement textAlignment="Center" verticalAlignment="Top">
-					<font fontName="Tahoma" size="7"/>
-					<paragraph lineSpacing="Single"/>
-				</textElement>
-				<textFieldExpression><![CDATA[$F{skor_saturasi_oksigen}]]></textFieldExpression>
-			</textField>
-			<staticText>
-				<reportElement positionType="Float" mode="Opaque" x="86" y="31" width="94" height="14" forecolor="#FFFFFF" backcolor="#0000FF" uuid="a028b085-165b-42d1-a549-b949a802166d">
-					<property name="com.jaspersoft.studio.unit.width" value="px"/>
-					<property name="com.jaspersoft.studio.unit.height" value="px"/>
-					<printWhenExpression><![CDATA[($F{skor_suplemen_oksigen}.equals("7") ? Boolean.TRUE:Boolean.FALSE)]]></printWhenExpression>
-				</reportElement>
-				<textElement verticalAlignment="Top">
-					<font fontName="Tahoma" size="7" isBold="false"/>
-					<paragraph lineSpacing="Single"/>
-				</textElement>
-				<text><![CDATA[3. Suplemen Oksigen]]></text>
-			</staticText>
-			<textField isStretchWithOverflow="true">
-				<reportElement positionType="Float" mode="Opaque" x="180" y="31" width="283" height="14" forecolor="#FFFFFF" backcolor="#0000FF" uuid="857e6ed8-78a9-41ee-ad32-3d6293edc98f">
-					<property name="com.jaspersoft.studio.unit.height" value="px"/>
-					<property name="com.jaspersoft.studio.unit.width" value="px"/>
-					<printWhenExpression><![CDATA[($F{skor_suplemen_oksigen}.equals("7") ? Boolean.TRUE:Boolean.FALSE)]]></printWhenExpression>
-				</reportElement>
-				<textElement verticalAlignment="Top">
-					<font fontName="Tahoma" size="7"/>
-					<paragraph lineSpacing="Single"/>
-				</textElement>
-				<textFieldExpression><![CDATA[": "+$F{parameter_suplemen_oksigen}]]></textFieldExpression>
-			</textField>
-			<textField isStretchWithOverflow="true">
-				<reportElement positionType="Float" mode="Opaque" x="466" y="31" width="84" height="14" forecolor="#FFFFFF" backcolor="#0000FF" uuid="264903ab-b8b8-4d68-abb9-4cda65f15434">
-					<property name="com.jaspersoft.studio.unit.height" value="px"/>
-					<printWhenExpression><![CDATA[($F{skor_suplemen_oksigen}.equals("7") ? Boolean.TRUE:Boolean.FALSE)]]></printWhenExpression>
-				</reportElement>
-				<textElement textAlignment="Center" verticalAlignment="Top">
-					<font fontName="Tahoma" size="7"/>
-					<paragraph lineSpacing="Single"/>
-				</textElement>
-				<textFieldExpression><![CDATA[$F{skor_suplemen_oksigen}]]></textFieldExpression>
-			</textField>
-			<staticText>
-				<reportElement positionType="Float" mode="Opaque" x="86" y="46" width="94" height="14" forecolor="#FFFFFF" backcolor="#0000FF" uuid="c7b0f0bb-2f32-49db-894a-0074199e4f00">
-					<property name="com.jaspersoft.studio.unit.width" value="px"/>
-					<property name="com.jaspersoft.studio.unit.height" value="px"/>
-					<printWhenExpression><![CDATA[($F{skor_tekanan_darah_sistolik}.equals("7") ? Boolean.TRUE:Boolean.FALSE)]]></printWhenExpression>
-				</reportElement>
-				<textElement verticalAlignment="Top">
-					<font fontName="Tahoma" size="7" isBold="false"/>
-					<paragraph lineSpacing="Single"/>
-				</textElement>
-				<text><![CDATA[4. Tekanan Darah Sistolik]]></text>
-			</staticText>
-			<textField isStretchWithOverflow="true">
-				<reportElement positionType="Float" mode="Opaque" x="180" y="46" width="283" height="14" forecolor="#FFFFFF" backcolor="#0000FF" uuid="c8aceda2-b681-4e4a-910e-e3678e865dd8">
-					<property name="com.jaspersoft.studio.unit.height" value="px"/>
-					<property name="com.jaspersoft.studio.unit.width" value="px"/>
-					<printWhenExpression><![CDATA[($F{skor_tekanan_darah_sistolik}.equals("7") ? Boolean.TRUE:Boolean.FALSE)]]></printWhenExpression>
-				</reportElement>
-				<textElement verticalAlignment="Top">
-					<font fontName="Tahoma" size="7"/>
-					<paragraph lineSpacing="Single"/>
-				</textElement>
-				<textFieldExpression><![CDATA[": "+$F{parameter_tekanan_darah_sistolik}]]></textFieldExpression>
-			</textField>
-			<textField isStretchWithOverflow="true">
-				<reportElement positionType="Float" mode="Opaque" x="466" y="46" width="84" height="14" forecolor="#FFFFFF" backcolor="#0000FF" uuid="06cdf3f3-821f-41d7-95c8-f88cd3b87343">
-					<property name="com.jaspersoft.studio.unit.height" value="px"/>
-					<printWhenExpression><![CDATA[($F{skor_tekanan_darah_sistolik}.equals("7") ? Boolean.TRUE:Boolean.FALSE)]]></printWhenExpression>
-				</reportElement>
-				<textElement textAlignment="Center" verticalAlignment="Top">
-					<font fontName="Tahoma" size="7"/>
-					<paragraph lineSpacing="Single"/>
-				</textElement>
-				<textFieldExpression><![CDATA[$F{skor_tekanan_darah_sistolik}]]></textFieldExpression>
-			</textField>
-			<staticText>
-				<reportElement positionType="Float" mode="Opaque" x="86" y="61" width="94" height="14" forecolor="#FFFFFF" backcolor="#0000FF" uuid="310c4f45-7492-4ae5-a24d-dba8cbad9fc6">
-					<property name="com.jaspersoft.studio.unit.width" value="px"/>
-					<property name="com.jaspersoft.studio.unit.height" value="px"/>
-					<printWhenExpression><![CDATA[($F{skor_laju_jantung}.equals("7") ? Boolean.TRUE:Boolean.FALSE)]]></printWhenExpression>
-				</reportElement>
-				<textElement verticalAlignment="Top">
-					<font fontName="Tahoma" size="7" isBold="false"/>
-					<paragraph lineSpacing="Single"/>
-				</textElement>
-				<text><![CDATA[5. Laju Jantung]]></text>
-			</staticText>
-			<textField isStretchWithOverflow="true">
-				<reportElement positionType="Float" mode="Opaque" x="180" y="61" width="283" height="14" forecolor="#FFFFFF" backcolor="#0000FF" uuid="22cf0259-5232-44ce-9d25-2149b6ae2267">
-					<property name="com.jaspersoft.studio.unit.height" value="px"/>
-					<property name="com.jaspersoft.studio.unit.width" value="px"/>
-					<printWhenExpression><![CDATA[($F{skor_laju_jantung}.equals("7") ? Boolean.TRUE:Boolean.FALSE)]]></printWhenExpression>
-				</reportElement>
-				<textElement verticalAlignment="Top">
-					<font fontName="Tahoma" size="7"/>
-					<paragraph lineSpacing="Single"/>
-				</textElement>
-				<textFieldExpression><![CDATA[": "+$F{parameter_laju_jantung}]]></textFieldExpression>
-			</textField>
-			<textField isStretchWithOverflow="true">
-				<reportElement positionType="Float" mode="Opaque" x="466" y="61" width="84" height="14" forecolor="#FFFFFF" backcolor="#0000FF" uuid="30cc3e8f-8a40-4c94-ad8b-0dcfe7659b2f">
-					<property name="com.jaspersoft.studio.unit.height" value="px"/>
-					<printWhenExpression><![CDATA[($F{skor_laju_jantung}.equals("7") ? Boolean.TRUE:Boolean.FALSE)]]></printWhenExpression>
+					<printWhenExpression><![CDATA[($F{skor_suplemen_oksigen}.equals("2") ? Boolean.TRUE:Boolean.FALSE)]]></printWhenExpression>
 				</reportElement>
 				<textElement textAlignment="Center" verticalAlignment="Top">
 					<font fontName="Tahoma" size="7"/>
@@ -1674,34 +1393,21 @@ inner join petugas on pemantauan_pews_dewasa.nip=petugas.nip]]>
 				</textElement>
 				<textFieldExpression><![CDATA[$F{skor_laju_jantung}]]></textFieldExpression>
 			</textField>
-			<staticText>
-				<reportElement positionType="Float" mode="Opaque" x="86" y="76" width="94" height="14" forecolor="#FFFFFF" backcolor="#0000FF" uuid="bd8a3c59-bbbb-4560-b17b-0b14bf086cef">
-					<property name="com.jaspersoft.studio.unit.width" value="px"/>
-					<property name="com.jaspersoft.studio.unit.height" value="px"/>
-					<printWhenExpression><![CDATA[($F{skor_kesadaran}.equals("7") ? Boolean.TRUE:Boolean.FALSE)]]></printWhenExpression>
-				</reportElement>
-				<textElement verticalAlignment="Top">
-					<font fontName="Tahoma" size="7" isBold="false"/>
-					<paragraph lineSpacing="Single"/>
-				</textElement>
-				<text><![CDATA[6. Kesadaran]]></text>
-			</staticText>
 			<textField isStretchWithOverflow="true">
-				<reportElement positionType="Float" mode="Opaque" x="180" y="76" width="283" height="14" forecolor="#FFFFFF" backcolor="#0000FF" uuid="2d454131-7ff1-4043-b9f0-081b653fd330">
+				<reportElement positionType="Float" mode="Opaque" x="465" y="61" width="86" height="14" forecolor="#FFFFFF" backcolor="#FF0000" uuid="aad1043c-1ac2-4ca3-92d2-41b2afe4f442">
 					<property name="com.jaspersoft.studio.unit.height" value="px"/>
-					<property name="com.jaspersoft.studio.unit.width" value="px"/>
-					<printWhenExpression><![CDATA[($F{skor_kesadaran}.equals("7") ? Boolean.TRUE:Boolean.FALSE)]]></printWhenExpression>
+					<printWhenExpression><![CDATA[($F{skor_suplemen_oksigen}.equals("3") ? Boolean.TRUE:Boolean.FALSE)]]></printWhenExpression>
 				</reportElement>
-				<textElement verticalAlignment="Top">
+				<textElement textAlignment="Center" verticalAlignment="Top">
 					<font fontName="Tahoma" size="7"/>
 					<paragraph lineSpacing="Single"/>
 				</textElement>
-				<textFieldExpression><![CDATA[": "+$F{parameter_kesadaran}]]></textFieldExpression>
+				<textFieldExpression><![CDATA[$F{skor_laju_jantung}]]></textFieldExpression>
 			</textField>
 			<textField isStretchWithOverflow="true">
-				<reportElement positionType="Float" mode="Opaque" x="466" y="76" width="84" height="14" forecolor="#FFFFFF" backcolor="#0000FF" uuid="93f8842f-76e5-47a7-8e4f-01aa9c1c202b">
+				<reportElement positionType="Float" mode="Opaque" x="465" y="76" width="86" height="14" forecolor="#FFFFFF" backcolor="#00FF00" uuid="d63b8b12-898e-4f87-8ba2-42e5d814dc8c">
 					<property name="com.jaspersoft.studio.unit.height" value="px"/>
-					<printWhenExpression><![CDATA[($F{skor_kesadaran}.equals("7") ? Boolean.TRUE:Boolean.FALSE)]]></printWhenExpression>
+					<printWhenExpression><![CDATA[($F{skor_suplemen_oksigen}.equals("0") ? Boolean.TRUE:Boolean.FALSE)]]></printWhenExpression>
 				</reportElement>
 				<textElement textAlignment="Center" verticalAlignment="Top">
 					<font fontName="Tahoma" size="7"/>
@@ -1709,34 +1415,43 @@ inner join petugas on pemantauan_pews_dewasa.nip=petugas.nip]]>
 				</textElement>
 				<textFieldExpression><![CDATA[$F{skor_kesadaran}]]></textFieldExpression>
 			</textField>
-			<staticText>
-				<reportElement positionType="Float" mode="Opaque" x="86" y="91" width="94" height="14" forecolor="#FFFFFF" backcolor="#0000FF" uuid="e82f3d88-4f1f-4e28-b1ef-d5a7f5eb3beb">
-					<property name="com.jaspersoft.studio.unit.width" value="px"/>
-					<property name="com.jaspersoft.studio.unit.height" value="px"/>
-					<printWhenExpression><![CDATA[($F{skor_temperatur}.equals("7") ? Boolean.TRUE:Boolean.FALSE)]]></printWhenExpression>
-				</reportElement>
-				<textElement verticalAlignment="Top">
-					<font fontName="Tahoma" size="7" isBold="false"/>
-					<paragraph lineSpacing="Single"/>
-				</textElement>
-				<text><![CDATA[7. Temperatur]]></text>
-			</staticText>
 			<textField isStretchWithOverflow="true">
-				<reportElement positionType="Float" mode="Opaque" x="180" y="91" width="283" height="14" forecolor="#FFFFFF" backcolor="#0000FF" uuid="710a67f8-629c-4e88-8db8-a6815276a187">
+				<reportElement positionType="Float" mode="Opaque" x="465" y="76" width="86" height="14" forecolor="#00FF00" backcolor="#FFFF00" uuid="8e79e0b7-ba2e-4bf2-87db-73e654035c7b">
 					<property name="com.jaspersoft.studio.unit.height" value="px"/>
-					<property name="com.jaspersoft.studio.unit.width" value="px"/>
-					<printWhenExpression><![CDATA[($F{skor_temperatur}.equals("7") ? Boolean.TRUE:Boolean.FALSE)]]></printWhenExpression>
+					<printWhenExpression><![CDATA[($F{skor_suplemen_oksigen}.equals("1") ? Boolean.TRUE:Boolean.FALSE)]]></printWhenExpression>
 				</reportElement>
-				<textElement verticalAlignment="Top">
+				<textElement textAlignment="Center" verticalAlignment="Top">
 					<font fontName="Tahoma" size="7"/>
 					<paragraph lineSpacing="Single"/>
 				</textElement>
-				<textFieldExpression><![CDATA[": "+$F{parameter_temperatur}]]></textFieldExpression>
+				<textFieldExpression><![CDATA[$F{skor_kesadaran}]]></textFieldExpression>
 			</textField>
 			<textField isStretchWithOverflow="true">
-				<reportElement positionType="Float" mode="Opaque" x="466" y="91" width="84" height="14" forecolor="#FFFFFF" backcolor="#0000FF" uuid="b9989148-0e1f-429b-a687-73eb5ca214a2">
+				<reportElement positionType="Float" mode="Opaque" x="465" y="76" width="86" height="14" forecolor="#FFFFFF" backcolor="#FFA500" uuid="f388df4c-0294-4f94-8b59-f7e60064c5ed">
 					<property name="com.jaspersoft.studio.unit.height" value="px"/>
-					<printWhenExpression><![CDATA[($F{skor_temperatur}.equals("7") ? Boolean.TRUE:Boolean.FALSE)]]></printWhenExpression>
+					<printWhenExpression><![CDATA[($F{skor_suplemen_oksigen}.equals("2") ? Boolean.TRUE:Boolean.FALSE)]]></printWhenExpression>
+				</reportElement>
+				<textElement textAlignment="Center" verticalAlignment="Top">
+					<font fontName="Tahoma" size="7"/>
+					<paragraph lineSpacing="Single"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{skor_kesadaran}]]></textFieldExpression>
+			</textField>
+			<textField isStretchWithOverflow="true">
+				<reportElement positionType="Float" mode="Opaque" x="465" y="76" width="86" height="14" forecolor="#FFFFFF" backcolor="#FF0000" uuid="f7c087ff-73ec-43a3-8798-44a7ae09fd01">
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+					<printWhenExpression><![CDATA[($F{skor_suplemen_oksigen}.equals("3") ? Boolean.TRUE:Boolean.FALSE)]]></printWhenExpression>
+				</reportElement>
+				<textElement textAlignment="Center" verticalAlignment="Top">
+					<font fontName="Tahoma" size="7"/>
+					<paragraph lineSpacing="Single"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{skor_kesadaran}]]></textFieldExpression>
+			</textField>
+			<textField isStretchWithOverflow="true">
+				<reportElement positionType="Float" mode="Opaque" x="465" y="91" width="86" height="14" forecolor="#FFFFFF" backcolor="#00FF00" uuid="8ce51ec8-4274-43fb-b5ba-9001ec47b016">
+					<property name="com.jaspersoft.studio.unit.height" value="px"/>
+					<printWhenExpression><![CDATA[($F{skor_suplemen_oksigen}.equals("0") ? Boolean.TRUE:Boolean.FALSE)]]></printWhenExpression>
 				</reportElement>
 				<textElement textAlignment="Center" verticalAlignment="Top">
 					<font fontName="Tahoma" size="7"/>
@@ -1744,89 +1459,38 @@ inner join petugas on pemantauan_pews_dewasa.nip=petugas.nip]]>
 				</textElement>
 				<textFieldExpression><![CDATA[$F{skor_temperatur}]]></textFieldExpression>
 			</textField>
-			<textField>
-				<reportElement positionType="Float" mode="Opaque" x="86" y="123" width="377" height="31" forecolor="#00FF00" backcolor="#FFFF00" uuid="0cfa90bd-e117-47d8-971a-e51de64ab2ad">
-					<printWhenExpression><![CDATA[((Integer.parseInt($F{skor_total})>0)&&(Integer.parseInt($F{skor_total})<5) ? Boolean.TRUE:Boolean.FALSE)]]></printWhenExpression>
-				</reportElement>
-				<textElement verticalAlignment="Top">
-					<font fontName="Tahoma" size="7"/>
-					<paragraph lineSpacing="Single"/>
-				</textElement>
-				<textFieldExpression><![CDATA[$F{parameter_total}]]></textFieldExpression>
-			</textField>
 			<textField isStretchWithOverflow="true">
-				<reportElement positionType="Float" mode="Opaque" x="466" y="123" width="84" height="31" forecolor="#00FF00" backcolor="#FFFF00" uuid="4045bccd-cf67-4a7f-b704-443bb7733c94">
+				<reportElement positionType="Float" mode="Opaque" x="465" y="91" width="86" height="14" forecolor="#00FF00" backcolor="#FFFF00" uuid="9eb55dbf-dd9f-4613-a577-8cb58304b7e2">
 					<property name="com.jaspersoft.studio.unit.height" value="px"/>
-					<printWhenExpression><![CDATA[((Integer.parseInt($F{skor_total})>0)&&(Integer.parseInt($F{skor_total})<5) ? Boolean.TRUE:Boolean.FALSE)]]></printWhenExpression>
+					<printWhenExpression><![CDATA[($F{skor_suplemen_oksigen}.equals("1") ? Boolean.TRUE:Boolean.FALSE)]]></printWhenExpression>
 				</reportElement>
 				<textElement textAlignment="Center" verticalAlignment="Top">
 					<font fontName="Tahoma" size="7"/>
 					<paragraph lineSpacing="Single"/>
 				</textElement>
-				<textFieldExpression><![CDATA[$F{skor_total}]]></textFieldExpression>
+				<textFieldExpression><![CDATA[$F{skor_temperatur}]]></textFieldExpression>
 			</textField>
 			<textField isStretchWithOverflow="true">
-				<reportElement positionType="Float" mode="Opaque" x="466" y="123" width="84" height="31" forecolor="#FFFFFF" backcolor="#FFC800" uuid="b4027aba-1235-445b-be4f-df51cf82c535">
+				<reportElement positionType="Float" mode="Opaque" x="465" y="91" width="86" height="14" forecolor="#FFFFFF" backcolor="#FFA500" uuid="7ead27e5-1d32-4aa2-be87-dacbfbea9622">
 					<property name="com.jaspersoft.studio.unit.height" value="px"/>
-					<printWhenExpression><![CDATA[((Integer.parseInt($F{skor_total})>=5)&&(Integer.parseInt($F{skor_total})<7) ? Boolean.TRUE:Boolean.FALSE)]]></printWhenExpression>
+					<printWhenExpression><![CDATA[($F{skor_suplemen_oksigen}.equals("2") ? Boolean.TRUE:Boolean.FALSE)]]></printWhenExpression>
 				</reportElement>
 				<textElement textAlignment="Center" verticalAlignment="Top">
 					<font fontName="Tahoma" size="7"/>
 					<paragraph lineSpacing="Single"/>
 				</textElement>
-				<textFieldExpression><![CDATA[$F{skor_total}]]></textFieldExpression>
-			</textField>
-			<textField>
-				<reportElement positionType="Float" mode="Opaque" x="86" y="123" width="377" height="31" forecolor="#FFFFFF" backcolor="#FFC800" uuid="33da0ac1-0607-48a3-87a9-9aa9a9c06f55">
-					<printWhenExpression><![CDATA[((Integer.parseInt($F{skor_total})>=5)&&(Integer.parseInt($F{skor_total})<7) ? Boolean.TRUE:Boolean.FALSE)]]></printWhenExpression>
-				</reportElement>
-				<textElement verticalAlignment="Top">
-					<font fontName="Tahoma" size="7"/>
-					<paragraph lineSpacing="Single"/>
-				</textElement>
-				<textFieldExpression><![CDATA[$F{parameter_total}]]></textFieldExpression>
+				<textFieldExpression><![CDATA[$F{skor_temperatur}]]></textFieldExpression>
 			</textField>
 			<textField isStretchWithOverflow="true">
-				<reportElement positionType="Float" mode="Opaque" x="466" y="123" width="84" height="31" forecolor="#FFFFFF" backcolor="#FF0000" uuid="3899fe9b-1f1b-4833-8928-690adb8582b1">
+				<reportElement positionType="Float" mode="Opaque" x="465" y="91" width="86" height="14" forecolor="#FFFFFF" backcolor="#FF0000" uuid="aef7c5f7-afac-4bd4-91d9-7922b64468fe">
 					<property name="com.jaspersoft.studio.unit.height" value="px"/>
-					<printWhenExpression><![CDATA[(($F{skor_total}.equals("7"))||($F{skor_total}.equals("8"))||($F{skor_laju_respirasi}.equals("7"))||($F{skor_tekanan_darah_sistolik}.equals("7"))||($F{skor_laju_jantung}.equals("7"))||($F{skor_kesadaran}.equals("7")) ? Boolean.TRUE:Boolean.FALSE)]]></printWhenExpression>
+					<printWhenExpression><![CDATA[($F{skor_suplemen_oksigen}.equals("3") ? Boolean.TRUE:Boolean.FALSE)]]></printWhenExpression>
 				</reportElement>
 				<textElement textAlignment="Center" verticalAlignment="Top">
 					<font fontName="Tahoma" size="7"/>
 					<paragraph lineSpacing="Single"/>
 				</textElement>
-				<textFieldExpression><![CDATA[$F{skor_total}]]></textFieldExpression>
-			</textField>
-			<textField>
-				<reportElement positionType="Float" mode="Opaque" x="86" y="123" width="377" height="31" forecolor="#FFFFFF" backcolor="#FF0000" uuid="c830ef2a-7f4e-4395-98af-d6a69719e96f">
-					<printWhenExpression><![CDATA[(($F{skor_total}.equals("7"))||($F{skor_total}.equals("8"))||($F{skor_laju_respirasi}.equals("7"))||($F{skor_tekanan_darah_sistolik}.equals("7"))||($F{skor_laju_jantung}.equals("7"))||($F{skor_kesadaran}.equals("7")) ? Boolean.TRUE:Boolean.FALSE)]]></printWhenExpression>
-				</reportElement>
-				<textElement verticalAlignment="Top">
-					<font fontName="Tahoma" size="7"/>
-					<paragraph lineSpacing="Single"/>
-				</textElement>
-				<textFieldExpression><![CDATA[$F{parameter_total}]]></textFieldExpression>
-			</textField>
-			<textField isStretchWithOverflow="true">
-				<reportElement positionType="Float" mode="Opaque" x="466" y="123" width="84" height="31" forecolor="#FFFFFF" backcolor="#0000FF" uuid="9a6ca07a-5a03-4fc2-aca2-fa8339d918fb">
-					<property name="com.jaspersoft.studio.unit.height" value="px"/>
-					<printWhenExpression><![CDATA[(Integer.parseInt($F{skor_total})>8 ? Boolean.TRUE:Boolean.FALSE)]]></printWhenExpression>
-				</reportElement>
-				<textElement textAlignment="Center" verticalAlignment="Top">
-					<font fontName="Tahoma" size="7"/>
-					<paragraph lineSpacing="Single"/>
-				</textElement>
-				<textFieldExpression><![CDATA[$F{skor_total}]]></textFieldExpression>
-			</textField>
-			<textField>
-				<reportElement positionType="Float" mode="Opaque" x="86" y="123" width="377" height="31" forecolor="#FFFFFF" backcolor="#0000FF" uuid="3dfce6b1-59d9-4d5d-aa48-93dbeaead3e0">
-					<printWhenExpression><![CDATA[(Integer.parseInt($F{skor_total})>8 ? Boolean.TRUE:Boolean.FALSE)]]></printWhenExpression>
-				</reportElement>
-				<textElement verticalAlignment="Top">
-					<font fontName="Tahoma" size="7"/>
-					<paragraph lineSpacing="Single"/>
-				</textElement>
-				<textFieldExpression><![CDATA[$F{parameter_total}]]></textFieldExpression>
+				<textFieldExpression><![CDATA[$F{skor_temperatur}]]></textFieldExpression>
 			</textField>
 		</band>
 	</detail>

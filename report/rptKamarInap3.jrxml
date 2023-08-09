@@ -188,6 +188,10 @@ and pasien.kd_kec=kecamatan.kd_kec and pasien.kd_kab=kabupaten.kd_kab]]>
 					<pen lineWidth="0.5"/>
 				</graphicElement>
 			</line>
+			<image scaleImage="FillFrame" onErrorType="Blank">
+				<reportElement x="751" y="-1" width="48" height="45" uuid="34cb5f4b-5b4b-4dd8-ac07-31bba747acca"/>
+				<imageExpression><![CDATA["/home/naira/JaspersoftWorkspace/MyReports/naira/kars4bintang.png"]]></imageExpression>
+			</image>
 		</band>
 	</title>
 	<pageHeader>

@@ -99,6 +99,10 @@
 				</textElement>
 				<text><![CDATA[DATA PEMBAYARAN DENDA KETERLAMBATAN]]></text>
 			</staticText>
+			<image scaleImage="FillFrame" isUsingCache="true" onErrorType="Blank">
+				<reportElement x="754" y="-4" width="45" height="43" uuid="6964c838-229f-4f3d-842d-a659922ca00d"/>
+				<imageExpression><![CDATA["/home/naira/JaspersoftWorkspace/MyReports/naira/kars4bintang.png"]]></imageExpression>
+			</image>
 		</band>
 	</title>
 	<pageHeader>

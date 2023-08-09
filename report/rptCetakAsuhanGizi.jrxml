@@ -1191,6 +1191,10 @@ inner join petugas on asuhan_gizi.nip=petugas.nip]]>
 				</textElement>
 				<text><![CDATA[V]]></text>
 			</staticText>
+			<image scaleImage="FillFrame" isUsingCache="true" onErrorType="Blank">
+				<reportElement x="510" y="9" width="45" height="45" uuid="4930590a-32bc-4a86-9334-3132618d198c"/>
+				<imageExpression><![CDATA["/home/naira/JaspersoftWorkspace/MyReports/naira/kars4bintang.png"]]></imageExpression>
+			</image>
 		</band>
 	</title>
 </jasperReport>

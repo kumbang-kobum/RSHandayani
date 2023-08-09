@@ -1623,6 +1623,10 @@
 				</textElement>
 				<textFieldExpression><![CDATA[$F{penilaian_nyeri_diberitahukan_dokter}+", "+"("+$F{penilaian_nyeri_jam_diberitahukan_dokter}+")"]]></textFieldExpression>
 			</textField>
+			<image scaleImage="FillFrame" isUsingCache="true" onErrorType="Blank">
+				<reportElement x="510" y="9" width="45" height="45" uuid="853b4f5a-16c4-4d74-bc1c-0430e97550c1"/>
+				<imageExpression><![CDATA["/naira/kars4bintang.png"]]></imageExpression>
+			</image>
 		</band>
 	</title>
 </jasperReport>
