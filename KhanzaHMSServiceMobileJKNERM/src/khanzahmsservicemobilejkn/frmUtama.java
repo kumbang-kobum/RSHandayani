@@ -775,7 +775,7 @@ public class frmUtama extends javax.swing.JFrame {
                                                 }
                                             }
                                             
-                                            datajam=Sequel.cariIsi("select concat(pemeriksaan_ralan.tgl_perawatan,' ',pemeriksaan_ralan.jam_rawat) from pemeriksaan_ralan where pemeriksaan_ralan.no_rawat=?",rs.getString("no_rawat"));
+                                            datajam=Sequel.cariIsi("select concat(pemeriksaan_ralan.tgl_perawatan,' ',pemeriksaan_ralan.jam_rawat) from pemeriksaan_ralan where pemeriksaan_ralan.no_rawat='"+rs.getString("no_rawat")+"'and pemeriksaan_ralan.nip='"+rs.getString("kd_dokter")+"'ORDER BY pemeriksaan_ralan.jam_rawat DESC"); //kostum
                                             if(!datajam.equals("")){
                                                 if(Sequel.menyimpantf2("referensi_mobilejkn_bpjs_taskid","?,?,?","task id",3,new String[]{rs.getString("no_rawat"),"4",datajam})==true){
                                                     parsedDate = dateFormat.parse(datajam);

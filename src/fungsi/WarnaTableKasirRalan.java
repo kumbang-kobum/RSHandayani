@@ -38,7 +38,7 @@ public class WarnaTableKasirRalan extends DefaultTableCellRenderer {
                 component.setForeground(new Color(245, 255, 245));
             }
         }
-
+        
         if (valueAtColumn20 != null) {
             String value20 = valueAtColumn20.toString();
 
@@ -46,6 +46,7 @@ public class WarnaTableKasirRalan extends DefaultTableCellRenderer {
                 component.setBackground(new Color(0, 0, 255)); // Blue color
                 component.setForeground(new Color(255, 255, 255));
             }
+           
         }
 
         if(table.getValueAt(row,15).toString().equals("Sudah Bayar")){
