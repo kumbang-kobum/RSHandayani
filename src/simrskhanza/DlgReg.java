@@ -82,6 +82,9 @@ import bridging.ICareRiwayatPerawatanFKTP;
 import bridging.INACBGPerawatanCorona;
 import bridging.PilihanBridgingAsuransi;
 import inventory.DlgCopyResep;
+import java.awt.Desktop;
+import java.io.BufferedWriter;
+import java.io.File;
 import rekammedis.RMDataResumePasien;
 import org.jfree.chart.ChartFactory;
 import org.jfree.chart.ChartFrame;
@@ -201,12 +204,13 @@ public final class DlgReg extends javax.swing.JDialog {
     private ResultSet rs;
     private int pilihan=0,i=0,kuota=0,jmlparsial=0;
     private boolean ceksukses=false;
-    private String nosisrute="",aktifkanparsial="no",BASENOREG="",finger="",
+    private String nosisrute="",aktifkanparsial="no",BASENOREG="",finger="",nohp="",
             URUTNOREG="",status="Baru",order="reg_periksa.tgl_registrasi,reg_periksa.jam_reg desc",alamatperujuk="-",aktifjadwal="",IPPRINTERTRACER="",umur="0",sttsumur="Th",terbitsep="",
             validasiregistrasi=Sequel.cariIsi("select set_validasi_registrasi.wajib_closing_kasir from set_validasi_registrasi"),
             validasicatatan=Sequel.cariIsi("select set_validasi_catatan.tampilkan_catatan from set_validasi_catatan"),norawatdipilih="",normdipilih="",variabel="";
     private SimpleDateFormat dateformat = new SimpleDateFormat("yyyy/MM/dd");
     private char ESC = 27;
+    private StringBuilder htmlContent;//tambah chandra
     // ganti kertas
     private char[] FORM_FEED = {12};
     // reset setting
@@ -1166,6 +1170,7 @@ public final class DlgReg extends javax.swing.JDialog {
         jMenu7 = new javax.swing.JMenu();
         MnStatusBaru = new javax.swing.JMenuItem();
         MnStatusLama = new javax.swing.JMenuItem();
+        ppCSVWARocket = new javax.swing.JMenuItem();
         Kd2 = new widget.TextBox();
         DlgDemografi = new javax.swing.JDialog();
         internalFrame4 = new widget.InternalFrame();
@@ -5303,6 +5308,22 @@ public final class DlgReg extends javax.swing.JDialog {
 
         jPopupMenu1.add(MnHapusData);
 
+        ppCSVWARocket.setBackground(new java.awt.Color(255, 255, 254));
+        ppCSVWARocket.setFont(new java.awt.Font("Tahoma", 0, 11)); // NOI18N
+        ppCSVWARocket.setForeground(new java.awt.Color(50, 50, 50));
+        ppCSVWARocket.setIcon(new javax.swing.ImageIcon(getClass().getResource("/picture/category.png"))); // NOI18N
+        ppCSVWARocket.setText("CSV WA Rocket");
+        ppCSVWARocket.setHorizontalAlignment(javax.swing.SwingConstants.LEFT);
+        ppCSVWARocket.setHorizontalTextPosition(javax.swing.SwingConstants.RIGHT);
+        ppCSVWARocket.setName("ppCSVWARocket"); // NOI18N
+        ppCSVWARocket.setPreferredSize(new java.awt.Dimension(170, 25));
+        ppCSVWARocket.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                ppCSVWARocketActionPerformed(evt);
+            }
+        });
+        jPopupMenu1.add(ppCSVWARocket);
+
         Kd2.setName("Kd2"); // NOI18N
         Kd2.setPreferredSize(new java.awt.Dimension(207, 23));
 
@@ -6350,7 +6371,7 @@ public final class DlgReg extends javax.swing.JDialog {
         jLabel15.setPreferredSize(new java.awt.Dimension(60, 23));
         panelGlass7.add(jLabel15);
 
-        DTPCari1.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "09-08-2023" }));
+        DTPCari1.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "24-08-2023" }));
         DTPCari1.setDisplayFormat("dd-MM-yyyy");
         DTPCari1.setName("DTPCari1"); // NOI18N
         DTPCari1.setOpaque(false);
@@ -6363,7 +6384,7 @@ public final class DlgReg extends javax.swing.JDialog {
         jLabel17.setPreferredSize(new java.awt.Dimension(24, 23));
         panelGlass7.add(jLabel17);
 
-        DTPCari2.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "09-08-2023" }));
+        DTPCari2.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "24-08-2023" }));
         DTPCari2.setDisplayFormat("dd-MM-yyyy");
         DTPCari2.setName("DTPCari2"); // NOI18N
         DTPCari2.setOpaque(false);
@@ -6503,7 +6524,7 @@ public final class DlgReg extends javax.swing.JDialog {
         FormInput.add(jLabel9);
         jLabel9.setBounds(165, 72, 36, 23);
 
-        DTPReg.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "09-08-2023" }));
+        DTPReg.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "24-08-2023" }));
         DTPReg.setDisplayFormat("dd-MM-yyyy");
         DTPReg.setName("DTPReg"); // NOI18N
         DTPReg.setOpaque(false);
@@ -14104,6 +14125,39 @@ private void MnLaporanRekapKunjunganBulananPoliActionPerformed(java.awt.event.Ac
         }        // TODO add your handling code here:
     }//GEN-LAST:event_MnLabelTrackerBPJSActionPerformed
 
+    private void ppCSVWARocketActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_ppCSVWARocketActionPerformed
+        try {
+            File f;
+            BufferedWriter bw;
+            htmlContent = new StringBuilder();
+            htmlContent.append(
+                "\"No.HP\";\"Isi Pesan\"\n"
+            );
+
+            for(i=0;i<tabMode.getRowCount();i++){
+                try {
+                    nohp="";
+                    if(tabMode.getValueAt(i,18).toString().substring(0,1).equals("0")){
+                        nohp="62"+tabMode.getValueAt(i,18).toString().substring(1,tabMode.getValueAt(i,18).toString().length());
+                    }else{
+                        nohp=tabMode.getValueAt(i,18).toString();
+                    }
+                    htmlContent.append(
+                        "\" "+nohp+"\";\""+"Mengingatkan kembali kepada saudara "+tabMode.getValueAt(i,8)+" dengan No.RM "+tabMode.getValueAt(i,7)+", berdasarkan Registrasi dengan tujuan pemeriksaan di "+tabMode.getValueAt(i,11)+" pada tanggal "+tabMode.getValueAt(i,3)+" agar bisa datang 1 jam sebelum jam pelayanan poli dimulai.dengan nomor antrian *"+tabMode.getValueAt(i,1)+"*. Customer Service "+akses.getnamars()+"\"\n"
+                    );
+                } catch (Exception e) {
+                }
+            }
+
+            f = new File("WARocket.csv");
+            bw = new BufferedWriter(new FileWriter(f));
+            bw.write(htmlContent.toString());
+            bw.close();
+            Desktop.getDesktop().browse(f.toURI());
+        } catch (Exception e) {
+        }
+    }//GEN-LAST:event_ppCSVWARocketActionPerformed
+
     /**
     * @param args the command line arguments
     */
@@ -14494,6 +14548,7 @@ private void MnLaporanRekapKunjunganBulananPoliActionPerformed(java.awt.event.Ac
     private javax.swing.JMenuItem ppBerkas;
     private javax.swing.JMenuItem ppBerkasDigital;
     private javax.swing.JMenuItem ppBerkasDigital1;
+    private javax.swing.JMenuItem ppCSVWARocket;
     private javax.swing.JMenuItem ppCatatanAdimeGizi;
     private javax.swing.JMenuItem ppCatatanPasien;
     private javax.swing.JMenuItem ppDataIndukKecelakaan;
