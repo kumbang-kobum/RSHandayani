@@ -17,8 +17,12 @@ import fungsi.sekuel;
 import fungsi.validasi;
 import fungsi.akses;
 import java.awt.Cursor;
+import java.awt.Desktop;
 import java.awt.Dimension;
 import java.awt.event.KeyEvent;
+import java.io.BufferedWriter;
+import java.io.File;
+import java.io.FileWriter;
 import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
@@ -40,8 +44,10 @@ public final class MobileJKNReferensiPendaftaran extends javax.swing.JDialog {
     private validasi Valid=new validasi();
     private Connection koneksi=koneksiDB.condb();
     private PreparedStatement ps;
-    private ResultSet rs;    
+    private ResultSet rs; 
+    private String aktifjadwal="",URUTNOREG="",status="",no_rawat="",umur="",sttsumur="",nohp="";
     private int i=0;
+    private StringBuilder htmlContent;
 
     /** Creates new form DlgJnsPerawatanRalan
      * @param parent
@@ -136,6 +142,8 @@ public final class MobileJKNReferensiPendaftaran extends javax.swing.JDialog {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
+        Popupjkn = new javax.swing.JPopupMenu();
+        ppCSVWARocket = new javax.swing.JMenuItem();
         internalFrame1 = new widget.InternalFrame();
         Scroll = new widget.ScrollPane();
         tbJnsPerawatan = new widget.Table();
@@ -158,6 +166,26 @@ public final class MobileJKNReferensiPendaftaran extends javax.swing.JDialog {
         BtnCari = new widget.Button();
         BtnAll = new widget.Button();
 
+        Popupjkn.setMaximumSize(new java.awt.Dimension(32769, 98309));
+        Popupjkn.setName("Popupjkn"); // NOI18N
+        Popupjkn.setPreferredSize(new java.awt.Dimension(172, 25));
+
+        ppCSVWARocket.setBackground(new java.awt.Color(255, 255, 254));
+        ppCSVWARocket.setFont(new java.awt.Font("Tahoma", 0, 11)); // NOI18N
+        ppCSVWARocket.setForeground(new java.awt.Color(50, 50, 50));
+        ppCSVWARocket.setIcon(new javax.swing.ImageIcon(getClass().getResource("/picture/category.png"))); // NOI18N
+        ppCSVWARocket.setText("CSV WA Rocket");
+        ppCSVWARocket.setHorizontalAlignment(javax.swing.SwingConstants.LEFT);
+        ppCSVWARocket.setHorizontalTextPosition(javax.swing.SwingConstants.RIGHT);
+        ppCSVWARocket.setName("ppCSVWARocket"); // NOI18N
+        ppCSVWARocket.setPreferredSize(new java.awt.Dimension(170, 25));
+        ppCSVWARocket.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                ppCSVWARocketActionPerformed(evt);
+            }
+        });
+        Popupjkn.add(ppCSVWARocket);
+
         setDefaultCloseOperation(javax.swing.WindowConstants.DISPOSE_ON_CLOSE);
         setUndecorated(true);
         setResizable(false);
@@ -166,6 +194,7 @@ public final class MobileJKNReferensiPendaftaran extends javax.swing.JDialog {
         internalFrame1.setName("internalFrame1"); // NOI18N
         internalFrame1.setLayout(new java.awt.BorderLayout(1, 1));
 
+        Scroll.setComponentPopupMenu(Popupjkn);
         Scroll.setName("Scroll"); // NOI18N
         Scroll.setOpaque(true);
 
@@ -297,7 +326,7 @@ public final class MobileJKNReferensiPendaftaran extends javax.swing.JDialog {
         panelGlass10.add(jLabel19);
 
         DTPCari1.setForeground(new java.awt.Color(50, 70, 50));
-        DTPCari1.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "08-02-2022" }));
+        DTPCari1.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "13-09-2023" }));
         DTPCari1.setDisplayFormat("dd-MM-yyyy");
         DTPCari1.setName("DTPCari1"); // NOI18N
         DTPCari1.setOpaque(false);
@@ -311,7 +340,7 @@ public final class MobileJKNReferensiPendaftaran extends javax.swing.JDialog {
         panelGlass10.add(jLabel21);
 
         DTPCari2.setForeground(new java.awt.Color(50, 70, 50));
-        DTPCari2.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "08-02-2022" }));
+        DTPCari2.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "13-09-2023" }));
         DTPCari2.setDisplayFormat("dd-MM-yyyy");
         DTPCari2.setName("DTPCari2"); // NOI18N
         DTPCari2.setOpaque(false);
@@ -524,6 +553,39 @@ public final class MobileJKNReferensiPendaftaran extends javax.swing.JDialog {
             BtnBelumActionPerformed(null);
         }else{Valid.pindah(evt, BtnCheckin, BtnBatal);}
     }//GEN-LAST:event_BtnBelumKeyPressed
+//tambah chandra
+    private void ppCSVWARocketActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_ppCSVWARocketActionPerformed
+        try {
+            File f;
+            BufferedWriter bw;
+            htmlContent = new StringBuilder();
+            htmlContent.append(
+                "\"No.HP\";\"Isi Pesan\"\n"
+            );
+
+            for(i=0;i<tabMode.getRowCount();i++){
+                try {
+                    nohp="";
+                    if(tabMode.getValueAt(i,4).toString().substring(0,1).equals("0")){
+                        nohp="62"+tabMode.getValueAt(i,4).toString().substring(1,tabMode.getValueAt(i,4).toString().length());
+                    }else{
+                        nohp=tabMode.getValueAt(i,4).toString();
+                    }
+                    htmlContent.append(
+                        "\" "+nohp+"\";\""+"Mengingatkan kembali kepada saudara *"+tabMode.getValueAt(i,2)+"* dengan No.RM "+tabMode.getValueAt(i,1)+",berdasarkan booking di aplikasi MJKN dengan tujuan pemeriksaan di Poliklinik/Dokter "+tabMode.getValueAt(i,7)+" / "+tabMode.getValueAt(i,8)+" pada tanggal "+tabMode.getValueAt(i,6)+" pada tanggal 2023-09-13 agar dapat datang dan melakukan checkin pukul "+tabMode.getValueAt(i,9)+"WIB. wib di meja Customer Service "+akses.getnamars()+"\"\n"
+                    );
+                } catch (Exception e) {
+                }
+            }
+
+            f = new File("WARocket.csv");
+            bw = new BufferedWriter(new FileWriter(f));
+            bw.write(htmlContent.toString());
+            bw.close();
+            Desktop.getDesktop().browse(f.toURI());
+        } catch (Exception e) {
+        }
+    }//GEN-LAST:event_ppCSVWARocketActionPerformed
 
     /**
     * @param args the command line arguments
@@ -552,6 +614,7 @@ public final class MobileJKNReferensiPendaftaran extends javax.swing.JDialog {
     private widget.Tanggal DTPCari1;
     private widget.Tanggal DTPCari2;
     private widget.Label LCount;
+    private javax.swing.JPopupMenu Popupjkn;
     private widget.ScrollPane Scroll;
     private widget.TextBox TCari;
     private widget.InternalFrame internalFrame1;
@@ -562,6 +625,7 @@ public final class MobileJKNReferensiPendaftaran extends javax.swing.JDialog {
     private javax.swing.JPanel jPanel3;
     private widget.panelisi panelGlass10;
     private widget.panelisi panelGlass8;
+    private javax.swing.JMenuItem ppCSVWARocket;
     private widget.Table tbJnsPerawatan;
     // End of variables declaration//GEN-END:variables
 
