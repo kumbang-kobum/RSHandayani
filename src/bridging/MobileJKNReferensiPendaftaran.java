@@ -566,10 +566,10 @@ public final class MobileJKNReferensiPendaftaran extends javax.swing.JDialog {
             for(i=0;i<tabMode.getRowCount();i++){
                 try {
                     nohp="";
-                    if(tabMode.getValueAt(i,4).toString().substring(0,1).equals("0")){
-                        nohp="62"+tabMode.getValueAt(i,4).toString().substring(1,tabMode.getValueAt(i,4).toString().length());
+                    if(tabMode.getValueAt(i,3).toString().substring(0,1).equals("0")){
+                        nohp="62"+tabMode.getValueAt(i,3).toString().substring(1,tabMode.getValueAt(i,3).toString().length());
                     }else{
-                        nohp=tabMode.getValueAt(i,4).toString();
+                        nohp=tabMode.getValueAt(i,3).toString();
                     }
                     htmlContent.append(
                         "\" "+nohp+"\";\""+"Mengingatkan kembali kepada saudara *"+tabMode.getValueAt(i,2)+"* dengan No.RM "+tabMode.getValueAt(i,1)+",berdasarkan booking di aplikasi MJKN dengan tujuan pemeriksaan di Poliklinik/Dokter "+tabMode.getValueAt(i,7)+" / "+tabMode.getValueAt(i,8)+" pada tanggal "+tabMode.getValueAt(i,6)+" pada tanggal 2023-09-13 agar dapat datang dan melakukan checkin pukul "+tabMode.getValueAt(i,9)+"WIB. wib di meja Customer Service "+akses.getnamars()+"\"\n"
