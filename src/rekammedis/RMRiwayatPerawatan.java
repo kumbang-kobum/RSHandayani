@@ -4139,30 +4139,30 @@ private void BtnPasienKeyPressed(java.awt.event.KeyEvent evt) {//GEN-FIRST:event
                                                     "<tr align='left' border='0'>"+ //tambah chandra
                                                         "<td valign='top' width='20%' border='0'>Diagnosa</td><td valign='top' width='60%' border='0'>:&nbsp;"+rs2.getString("diagnosa_utama")+"</td><td valign='top' width='20%' border='0'>&nbsp;"+rs2.getString("kd_diagnosa_utama")+"</td>"+
                                                     "</tr>"+
-                                                   // "<tr align='left' border='0'>"+
-                                                  //      "<td valign='top' width='20%' border='0'>Diagnosa Sekunder 1</td><td valign='top' width='60%' border='0'>:&nbsp;"+rs2.getString("diagnosa_sekunder")+"</td><td valign='top' width='20%' border='0'>&nbsp;"+rs2.getString("kd_diagnosa_sekunder")+"</td>"+
-                                                  //  "</tr>"+
-                                                  //  "<tr align='left' border='0'>"+
-                                                    //    "<td valign='top' width='20%' border='0'>Diagnosa Sekunder 2</td><td valign='top' width='60%' border='0'>:&nbsp;"+rs2.getString("diagnosa_sekunder2")+"</td><td valign='top' width='20%' border='0'>&nbsp;"+rs2.getString("kd_diagnosa_sekunder2")+"</td>"+
-                                                    //"</tr>"+
-                                                    //"<tr align='left' border='0'>"+
-                                                      //  "<td valign='top' width='20%' border='0'>Diagnosa Sekunder 3</td><td valign='top' width='60%' border='0'>:&nbsp;"+rs2.getString("diagnosa_sekunder3")+"</td><td valign='top' width='20%' border='0'>&nbsp;"+rs2.getString("kd_diagnosa_sekunder3")+"</td>"+
-                                                    //"</tr>"+
-                                                   // "<tr align='left' border='0'>"+
-                                                     //   "<td valign='top' width='20%' border='0'>Diagnosa Sekunder 4</td><td valign='top' width='60%' border='0'>:&nbsp;"+rs2.getString("diagnosa_sekunder4")+"</td><td valign='top' width='20%' border='0'>&nbsp;"+rs2.getString("kd_diagnosa_sekunder4")+"</td>"+
-                                                    //"</tr>"+
+                                                  "<tr align='left' border='0'>"+
+                                                        "<td valign='top' width='20%' border='0'>Diagnosa </td><td valign='top' width='60%' border='0'>:&nbsp;"+rs2.getString("diagnosa_sekunder")+"</td><td valign='top' width='20%' border='0'>&nbsp;"+rs2.getString("kd_diagnosa_sekunder")+"</td>"+
+                                                    "</tr>"+
+                                                    "<tr align='left' border='0'>"+
+                                                        "<td valign='top' width='20%' border='0'>Diagnosa </td><td valign='top' width='60%' border='0'>:&nbsp;"+rs2.getString("diagnosa_sekunder2")+"</td><td valign='top' width='20%' border='0'>&nbsp;"+rs2.getString("kd_diagnosa_sekunder2")+"</td>"+
+                                                    "</tr>"+
+                                                    "<tr align='left' border='0'>"+
+                                                        "<td valign='top' width='20%' border='0'>Diagnosa </td><td valign='top' width='60%' border='0'>:&nbsp;"+rs2.getString("diagnosa_sekunder3")+"</td><td valign='top' width='20%' border='0'>&nbsp;"+rs2.getString("kd_diagnosa_sekunder3")+"</td>"+
+                                                    "</tr>"+
+                                                    "<tr align='left' border='0'>"+
+                                                        "<td valign='top' width='20%' border='0'>Diagnosa </td><td valign='top' width='60%' border='0'>:&nbsp;"+rs2.getString("diagnosa_sekunder4")+"</td><td valign='top' width='20%' border='0'>&nbsp;"+rs2.getString("kd_diagnosa_sekunder4")+"</td>"+
+                                                    "</tr>"+
                                                     "<tr align='left' border='0'>"+
                                                         "<td valign='top' width='20%' border='0'>Prosedur</td><td valign='top' width='60%' border='0'>:&nbsp;"+rs2.getString("prosedur_utama")+"</td><td valign='top' width='20%' border='0'>&nbsp;"+rs2.getString("kd_prosedur_utama")+"</td>"+
                                                     "</tr>"+
-                                                    //"<tr align='left' border='0'>"+
-                                                     //   "<td valign='top' width='20%' border='0'>Prosedur Sekunder 1</td><td valign='top' width='60%' border='0'>:&nbsp;"+rs2.getString("prosedur_sekunder")+"</td><td valign='top' width='20%' border='0'>&nbsp;"+rs2.getString("kd_prosedur_sekunder")+"</td>"+
-                                                    //"</tr>"+
-                                                   // "<tr align='left' border='0'>"+
-                                                     //   "<td valign='top' width='20%' border='0'>Prosedur Sekunder 2</td><td valign='top' width='60%' border='0'>:&nbsp;"+rs2.getString("prosedur_sekunder2")+"</td><td valign='top' width='20%' border='0'>&nbsp;"+rs2.getString("kd_prosedur_sekunder2")+"</td>"+
-                                                    //"</tr>"+
-                                                    //"<tr align='left' border='0'>"+
-                                                      //  "<td valign='top' width='20%' border='0'>Prosedur Sekunder 3</td><td valign='top' width='60%' border='0'>:&nbsp;"+rs2.getString("prosedur_sekunder3")+"</td><td valign='top' width='20%' border='0'>&nbsp;"+rs2.getString("kd_prosedur_sekunder3")+"</td>"+
-                                                   // "</tr>"+
+                                                    "<tr align='left' border='0'>"+
+                                                        "<td valign='top' width='20%' border='0'>Prosedur</td><td valign='top' width='60%' border='0'>:&nbsp;"+rs2.getString("prosedur_sekunder")+"</td><td valign='top' width='20%' border='0'>&nbsp;"+rs2.getString("kd_prosedur_sekunder")+"</td>"+
+                                                    "</tr>"+
+                                                    "<tr align='left' border='0'>"+
+                                                        "<td valign='top' width='20%' border='0'>Prosedur</td><td valign='top' width='60%' border='0'>:&nbsp;"+rs2.getString("prosedur_sekunder2")+"</td><td valign='top' width='20%' border='0'>&nbsp;"+rs2.getString("kd_prosedur_sekunder2")+"</td>"+
+                                                    "</tr>"+
+                                                    "<tr align='left' border='0'>"+
+                                                        "<td valign='top' width='20%' border='0'>Prosedur</td><td valign='top' width='60%' border='0'>:&nbsp;"+rs2.getString("prosedur_sekunder3")+"</td><td valign='top' width='20%' border='0'>&nbsp;"+rs2.getString("kd_prosedur_sekunder3")+"</td>"+
+                                                    "</tr>"+
                                                 "</table>"+
                                             "</td>"+
                                          "</tr>"+
@@ -4258,30 +4258,30 @@ private void BtnPasienKeyPressed(java.awt.event.KeyEvent evt) {//GEN-FIRST:event
                                                     "<tr align='left' border='0'>"+
                                                         "<td valign='top' width='20%' border='0'>Diagnosa </td><td valign='top' width='60%' border='0'>:&nbsp;"+rs2.getString("diagnosa_utama")+"</td><td valign='top' width='20%' border='0'>&nbsp;"+rs2.getString("kd_diagnosa_utama")+"</td>"+
                                                     "</tr>"+
-                                                    //"<tr align='left' border='0'>"+
-                                                    //    "<td valign='top' width='20%' border='0'>Diagnosa Sekunder 1</td><td valign='top' width='60%' border='0'>:&nbsp;"+rs2.getString("diagnosa_sekunder")+"</td><td valign='top' width='20%' border='0'>&nbsp;"+rs2.getString("kd_diagnosa_sekunder")+"</td>"+
-                                                 //   "</tr>"+
-                                                 //   "<tr align='left' border='0'>"+
-                                                   //     "<td valign='top' width='20%' border='0'>Diagnosa Sekunder 2</td><td valign='top' width='60%' border='0'>:&nbsp;"+rs2.getString("diagnosa_sekunder2")+"</td><td valign='top' width='20%' border='0'>&nbsp;"+rs2.getString("kd_diagnosa_sekunder2")+"</td>"+
-                                                   // "</tr>"+
-                                                   // "<tr align='left' border='0'>"+
-                                                   //     "<td valign='top' width='20%' border='0'>Diagnosa Sekunder 3</td><td valign='top' width='60%' border='0'>:&nbsp;"+rs2.getString("diagnosa_sekunder3")+"</td><td valign='top' width='20%' border='0'>&nbsp;"+rs2.getString("kd_diagnosa_sekunder3")+"</td>"+
-                                                   // "</tr>"+
-                                                   // "<tr align='left' border='0'>"+
-                                                   //     "<td valign='top' width='20%' border='0'>Diagnosa Sekunder 4</td><td valign='top' width='60%' border='0'>:&nbsp;"+rs2.getString("diagnosa_sekunder4")+"</td><td valign='top' width='20%' border='0'>&nbsp;"+rs2.getString("kd_diagnosa_sekunder4")+"</td>"+
-                                                   // "</tr>"+
+                                                    "<tr align='left' border='0'>"+
+                                                        "<td valign='top' width='20%' border='0'>Diagnosa </td><td valign='top' width='60%' border='0'>:&nbsp;"+rs2.getString("diagnosa_sekunder")+"</td><td valign='top' width='20%' border='0'>&nbsp;"+rs2.getString("kd_diagnosa_sekunder")+"</td>"+
+                                                    "</tr>"+
+                                                    "<tr align='left' border='0'>"+
+                                                        "<td valign='top' width='20%' border='0'>Diagnosa </td><td valign='top' width='60%' border='0'>:&nbsp;"+rs2.getString("diagnosa_sekunder2")+"</td><td valign='top' width='20%' border='0'>&nbsp;"+rs2.getString("kd_diagnosa_sekunder2")+"</td>"+
+                                                    "</tr>"+
+                                                    "<tr align='left' border='0'>"+
+                                                        "<td valign='top' width='20%' border='0'>Diagnosa </td><td valign='top' width='60%' border='0'>:&nbsp;"+rs2.getString("diagnosa_sekunder3")+"</td><td valign='top' width='20%' border='0'>&nbsp;"+rs2.getString("kd_diagnosa_sekunder3")+"</td>"+
+                                                    "</tr>"+
+                                                    "<tr align='left' border='0'>"+
+                                                        "<td valign='top' width='20%' border='0'>Diagnosa </td><td valign='top' width='60%' border='0'>:&nbsp;"+rs2.getString("diagnosa_sekunder4")+"</td><td valign='top' width='20%' border='0'>&nbsp;"+rs2.getString("kd_diagnosa_sekunder4")+"</td>"+
+                                                    "</tr>"+
                                                     "<tr align='left' border='0'>"+
                                                         "<td valign='top' width='20%' border='0'>Prosedur </td><td valign='top' width='60%' border='0'>:&nbsp;"+rs2.getString("prosedur_utama")+"</td><td valign='top' width='20%' border='0'>&nbsp;"+rs2.getString("kd_prosedur_utama")+"</td>"+
                                                     "</tr>"+
-                                                   // "<tr align='left' border='0'>"+
-                                                     //   "<td valign='top' width='20%' border='0'>Prosedur Sekunder 1</td><td valign='top' width='60%' border='0'>:&nbsp;"+rs2.getString("prosedur_sekunder")+"</td><td valign='top' width='20%' border='0'>&nbsp;"+rs2.getString("kd_prosedur_sekunder")+"</td>"+
-                                                    //"</tr>"+
-                                                    //"<tr align='left' border='0'>"+
-                                                      //  "<td valign='top' width='20%' border='0'>Prosedur Sekunder 2</td><td valign='top' width='60%' border='0'>:&nbsp;"+rs2.getString("prosedur_sekunder2")+"</td><td valign='top' width='20%' border='0'>&nbsp;"+rs2.getString("kd_prosedur_sekunder2")+"</td>"+
-                                                    //"</tr>"+
-                                                    //"<tr align='left' border='0'>"+
-                                                      //  "<td valign='top' width='20%' border='0'>Prosedur Sekunder 3</td><td valign='top' width='60%' border='0'>:&nbsp;"+rs2.getString("prosedur_sekunder3")+"</td><td valign='top' width='20%' border='0'>&nbsp;"+rs2.getString("kd_prosedur_sekunder3")+"</td>"+
-                                                    //"</tr>"+
+                                                    "<tr align='left' border='0'>"+
+                                                        "<td valign='top' width='20%' border='0'>Prosedur </td><td valign='top' width='60%' border='0'>:&nbsp;"+rs2.getString("prosedur_sekunder")+"</td><td valign='top' width='20%' border='0'>&nbsp;"+rs2.getString("kd_prosedur_sekunder")+"</td>"+
+                                                    "</tr>"+
+                                                    "<tr align='left' border='0'>"+
+                                                        "<td valign='top' width='20%' border='0'>Prosedur </td><td valign='top' width='60%' border='0'>:&nbsp;"+rs2.getString("prosedur_sekunder2")+"</td><td valign='top' width='20%' border='0'>&nbsp;"+rs2.getString("kd_prosedur_sekunder2")+"</td>"+
+                                                    "</tr>"+
+                                                    "<tr align='left' border='0'>"+
+                                                        "<td valign='top' width='20%' border='0'>Prosedur </td><td valign='top' width='60%' border='0'>:&nbsp;"+rs2.getString("prosedur_sekunder3")+"</td><td valign='top' width='20%' border='0'>&nbsp;"+rs2.getString("kd_prosedur_sekunder3")+"</td>"+
+                                                    "</tr>"+
                                                 "</table>"+
                                             "</td>"+
                                          "</tr>"+
