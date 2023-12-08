@@ -1055,7 +1055,7 @@ private void KdKeyPressed(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_TKdKey
                         Sequel.queryu("delete from tampjurnal");
                         Sequel.menyimpan2("tampjurnal","'"+Sequel.cariIsi("select Retur_Dari_pembeli from set_akun")+"','RETUR PENJUALAN','0','"+ttlretur+"'","Rekening");    
                         Sequel.menyimpan2("tampjurnal","'"+Sequel.cariIsi("select Kontra_Retur_Dari_Pembeli from set_akun")+"','KAS DI TANGAN','"+ttlretur+"','0'","Rekening"); 
-                        sukses=jur.simpanJurnal(NoRetur.getText(),"U","K033 RETUR PENJUALAN DI "+nmgudang.getText().toUpperCase()+", OLEH "+akses.getkode());
+                        sukses=jur.simpanJurnal(NoRetur.getText(),"U","K033 RETUR PENJUALAN DI "+nmgudang.getText().toUpperCase()+", OLEH "+akses.getkode());//tambah chan
                     }
                 }
                 if(sukses==true){

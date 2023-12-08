@@ -48,12 +48,12 @@ public final class RMPenilaianAwalMedisRalanPenyakitDalam extends javax.swing.JD
     private validasi Valid=new validasi();
     private PreparedStatement ps;
     private ResultSet rs;
-    private RMCariHasilRadiologi cariradiologi=new RMCariHasilRadiologi(null,false);
-    private RMCariHasilLaborat carilaborat=new RMCariHasilLaborat(null,false);
     private int i=0;
     private DlgCariDokter dokter=new DlgCariDokter(null,false);
     private StringBuilder htmlContent;
     private String finger="";
+    private RMCariHasilRadiologi cariradiologi=new RMCariHasilRadiologi(null,false);//tambah chan
+    private RMCariHasilLaborat carilaborat=new RMCariHasilLaborat(null,false);//tambah chan
     
     /** Creates new form DlgRujuk
      * @param parent
@@ -1072,7 +1072,7 @@ public final class RMPenilaianAwalMedisRalanPenyakitDalam extends javax.swing.JD
         label11.setBounds(380, 40, 52, 23);
 
         TglAsuhan.setForeground(new java.awt.Color(50, 70, 50));
-        TglAsuhan.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "21-03-2023 06:28:10" }));
+        TglAsuhan.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "01-08-2023 12:09:07" }));
         TglAsuhan.setDisplayFormat("dd-MM-yyyy HH:mm:ss");
         TglAsuhan.setName("TglAsuhan"); // NOI18N
         TglAsuhan.setOpaque(false);
@@ -1411,7 +1411,7 @@ public final class RMPenilaianAwalMedisRalanPenyakitDalam extends javax.swing.JD
         FormInput.add(scrollPane14);
         scrollPane14.setBounds(44, 850, 810, 63);
 
-        BtnDokter2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/picture/190.png"))); // NOI18N
+        BtnDokter2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/picture/Radioactive.png"))); // NOI18N
         BtnDokter2.setMnemonic('2');
         BtnDokter2.setText("Intip Radiologi");
         BtnDokter2.setToolTipText("Alt+2");
@@ -1423,11 +1423,11 @@ public final class RMPenilaianAwalMedisRalanPenyakitDalam extends javax.swing.JD
             }
         });
         FormInput.add(BtnDokter2);
-        BtnDokter2.setBounds(370, 490, 120, 20);
+        BtnDokter2.setBounds(380, 480, 150, 30);
 
-        BtnDokter3.setIcon(new javax.swing.ImageIcon(getClass().getResource("/picture/190.png"))); // NOI18N
+        BtnDokter3.setIcon(new javax.swing.ImageIcon(getClass().getResource("/picture/TestTubes.png"))); // NOI18N
         BtnDokter3.setMnemonic('2');
-        BtnDokter3.setText("Intip Laboratorium");
+        BtnDokter3.setText("Intip Laborat");
         BtnDokter3.setToolTipText("Alt+2");
         BtnDokter3.setName("BtnDokter3"); // NOI18N
         BtnDokter3.setPreferredSize(new java.awt.Dimension(28, 23));
@@ -1437,7 +1437,7 @@ public final class RMPenilaianAwalMedisRalanPenyakitDalam extends javax.swing.JD
             }
         });
         FormInput.add(BtnDokter3);
-        BtnDokter3.setBounds(110, 490, 150, 20);
+        BtnDokter3.setBounds(150, 480, 150, 23);
 
         scrollInput.setViewportView(FormInput);
 
@@ -1480,7 +1480,7 @@ public final class RMPenilaianAwalMedisRalanPenyakitDalam extends javax.swing.JD
         panelGlass9.add(jLabel19);
 
         DTPCari1.setForeground(new java.awt.Color(50, 70, 50));
-        DTPCari1.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "21-03-2023" }));
+        DTPCari1.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "01-08-2023" }));
         DTPCari1.setDisplayFormat("dd-MM-yyyy");
         DTPCari1.setName("DTPCari1"); // NOI18N
         DTPCari1.setOpaque(false);
@@ -1494,7 +1494,7 @@ public final class RMPenilaianAwalMedisRalanPenyakitDalam extends javax.swing.JD
         panelGlass9.add(jLabel21);
 
         DTPCari2.setForeground(new java.awt.Color(50, 70, 50));
-        DTPCari2.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "21-03-2023" }));
+        DTPCari2.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "01-08-2023" }));
         DTPCari2.setDisplayFormat("dd-MM-yyyy");
         DTPCari2.setName("DTPCari2"); // NOI18N
         DTPCari2.setOpaque(false);
@@ -2082,7 +2082,7 @@ public final class RMPenilaianAwalMedisRalanPenyakitDalam extends javax.swing.JD
     }//GEN-LAST:event_BBKeyPressed
 
     private void BtnDokter2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_BtnDokter2ActionPerformed
-        if(TNoRw.getText().equals("")&&TNoRM.getText().equals("")){
+        if(TNoRw.getText().equals("")&&TNoRM.getText().equals("")){//tambah chan
             JOptionPane.showMessageDialog(null,"Pasien masih kosong...!!!");
         }else{
             cariradiologi.setNoRawat(TNoRw.getText());
@@ -2094,7 +2094,7 @@ public final class RMPenilaianAwalMedisRalanPenyakitDalam extends javax.swing.JD
     }//GEN-LAST:event_BtnDokter2ActionPerformed
 
     private void BtnDokter3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_BtnDokter3ActionPerformed
-        if(TNoRw.getText().equals("")&&TNoRM.getText().equals("")){
+        if(TNoRw.getText().equals("")&&TNoRM.getText().equals("")){//tambah chan
             JOptionPane.showMessageDialog(null,"Pasien masih kosong...!!!");
         }else{
             carilaborat.setNoRawat(TNoRw.getText());
@@ -2494,7 +2494,6 @@ public final class RMPenilaianAwalMedisRalanPenyakitDalam extends javax.swing.JD
     public void isCek(){
         BtnSimpan.setEnabled(akses.getpenilaian_awal_medis_ralan_penyakit_dalam());
         BtnHapus.setEnabled(akses.getpenilaian_awal_medis_ralan_penyakit_dalam());
-        BtnEdit.setEnabled(akses.getpenilaian_awal_medis_ralan_penyakit_dalam());
         BtnEdit.setEnabled(akses.getpenilaian_awal_medis_ralan_penyakit_dalam());
         if(akses.getjml2()>=1){
             KdDokter.setEditable(false);

@@ -47,11 +47,11 @@ public final class RMDataAsuhanGizi extends javax.swing.JDialog {
     private validasi Valid=new validasi();
     private PreparedStatement ps;
     private ResultSet rs;
-    private int i=0,umur=0;
-    private RMCariHasilRadiologi cariradiologi=new RMCariHasilRadiologi(null,false);
-    private RMCariHasilLaborat carilaborat=new RMCariHasilLaborat(null,false);    
+    private int i=0,umur=0;    
     private DlgCariPetugas petugas=new DlgCariPetugas(null,false);
     private String alergi_telur, alergi_susu_sapi, alergi_kacang, alergi_gluten, alergi_udang, alergi_ikan, alergi_hazelnut,sttsumur="";
+    private RMCariHasilRadiologi cariradiologi=new RMCariHasilRadiologi(null,false);//tambah chan
+    private RMCariHasilLaborat carilaborat=new RMCariHasilLaborat(null,false);//tambah chan
     
     /** Creates new form DlgRujuk
      * @param parent
@@ -385,8 +385,8 @@ public final class RMDataAsuhanGizi extends javax.swing.JDialog {
         IntervensiGizi = new widget.TextArea();
         scrollPane5 = new widget.ScrollPane();
         DiagnosisGizi = new widget.TextArea();
-        BtnDokter2 = new widget.Button();
         BtnDokter3 = new widget.Button();
+        BtnDokter2 = new widget.Button();
 
         jPopupMenu1.setName("jPopupMenu1"); // NOI18N
 
@@ -1323,7 +1323,21 @@ public final class RMDataAsuhanGizi extends javax.swing.JDialog {
         FormInput.add(scrollPane5);
         scrollPane5.setBounds(134, 510, 645, 63);
 
-        BtnDokter2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/picture/190.png"))); // NOI18N
+        BtnDokter3.setIcon(new javax.swing.ImageIcon(getClass().getResource("/picture/TestTubes.png"))); // NOI18N
+        BtnDokter3.setMnemonic('2');
+        BtnDokter3.setText("Intip Laborat");
+        BtnDokter3.setToolTipText("Alt+2");
+        BtnDokter3.setName("BtnDokter3"); // NOI18N
+        BtnDokter3.setPreferredSize(new java.awt.Dimension(28, 23));
+        BtnDokter3.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                BtnDokter3ActionPerformed(evt);
+            }
+        });
+        FormInput.add(BtnDokter3);
+        BtnDokter3.setBounds(200, 320, 150, 23);
+
+        BtnDokter2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/picture/Radioactive.png"))); // NOI18N
         BtnDokter2.setMnemonic('2');
         BtnDokter2.setText("Intip Radiologi");
         BtnDokter2.setToolTipText("Alt+2");
@@ -1335,21 +1349,7 @@ public final class RMDataAsuhanGizi extends javax.swing.JDialog {
             }
         });
         FormInput.add(BtnDokter2);
-        BtnDokter2.setBounds(410, 320, 120, 20);
-
-        BtnDokter3.setIcon(new javax.swing.ImageIcon(getClass().getResource("/picture/190.png"))); // NOI18N
-        BtnDokter3.setMnemonic('2');
-        BtnDokter3.setText("Intip Laboratorium");
-        BtnDokter3.setToolTipText("Alt+2");
-        BtnDokter3.setName("BtnDokter3"); // NOI18N
-        BtnDokter3.setPreferredSize(new java.awt.Dimension(28, 23));
-        BtnDokter3.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                BtnDokter3ActionPerformed(evt);
-            }
-        });
-        FormInput.add(BtnDokter3);
-        BtnDokter3.setBounds(210, 320, 150, 20);
+        BtnDokter2.setBounds(370, 320, 150, 30);
 
         scrollInput.setViewportView(FormInput);
 
@@ -1829,20 +1829,8 @@ public final class RMDataAsuhanGizi extends javax.swing.JDialog {
         Valid.pindah2(evt,RiwayatPersonal,IntervensiGizi);
     }//GEN-LAST:event_DiagnosisGiziKeyPressed
 
-    private void BtnDokter2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_BtnDokter2ActionPerformed
-        if(TNoRw.getText().equals("")&&TNoRM.getText().equals("")){
-            JOptionPane.showMessageDialog(null,"Pasien masih kosong...!!!");
-        }else{
-            cariradiologi.setNoRawat(TNoRw.getText());
-            cariradiologi.tampil();
-            cariradiologi.setSize(internalFrame1.getWidth()-20,internalFrame1.getHeight()-20);
-            cariradiologi.setLocationRelativeTo(internalFrame1);
-            cariradiologi.setVisible(true);
-        }
-    }//GEN-LAST:event_BtnDokter2ActionPerformed
-
     private void BtnDokter3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_BtnDokter3ActionPerformed
-        if(TNoRw.getText().equals("")&&TNoRM.getText().equals("")){
+        if(TNoRw.getText().equals("")&&TNoRM.getText().equals("")){//tambah chan
             JOptionPane.showMessageDialog(null,"Pasien masih kosong...!!!");
         }else{
             carilaborat.setNoRawat(TNoRw.getText());
@@ -1852,6 +1840,18 @@ public final class RMDataAsuhanGizi extends javax.swing.JDialog {
             carilaborat.setVisible(true);
         }
     }//GEN-LAST:event_BtnDokter3ActionPerformed
+
+    private void BtnDokter2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_BtnDokter2ActionPerformed
+        if(TNoRw.getText().equals("")&&TNoRM.getText().equals("")){//tambah chan
+            JOptionPane.showMessageDialog(null,"Pasien masih kosong...!!!");
+        }else{
+            cariradiologi.setNoRawat(TNoRw.getText());
+            cariradiologi.tampil();
+            cariradiologi.setSize(internalFrame1.getWidth()-20,internalFrame1.getHeight()-20);
+            cariradiologi.setLocationRelativeTo(internalFrame1);
+            cariradiologi.setVisible(true);
+        }
+    }//GEN-LAST:event_BtnDokter2ActionPerformed
 
     /**
     * @param args the command line arguments
@@ -2191,7 +2191,7 @@ public final class RMDataAsuhanGizi extends javax.swing.JDialog {
 
     private void isRawat() {
          Sequel.cariIsi("select reg_periksa.no_rkm_medis from reg_periksa where reg_periksa.no_rawat=? ",TNoRM,TNoRw.getText());
-         Sequel.cariIsi("select diagnosa_awal from kamar_inap where diagnosa_awal<>'' and no_rawat=? ",DiagnosaMasukRanap,TNoRw.getText());
+         Sequel.cariIsi("select kamar_inap.diagnosa_awal from kamar_inap where kamar_inap.diagnosa_awal<>'' and kamar_inap.no_rawat=? ",DiagnosaMasukRanap,TNoRw.getText());
     }
 
     private void isPsien() {

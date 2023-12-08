@@ -93,10 +93,6 @@
 				<reportElement x="0" y="2" width="48" height="45" uuid="8c19049a-1d01-4036-acb1-c6e08ce6631b"/>
 				<imageExpression><![CDATA[$P{logo}]]></imageExpression>
 			</image>
-			<image scaleImage="FillFrame" onErrorType="Blank">
-				<reportElement x="504" y="1" width="48" height="45" uuid="1af3887c-275d-4c55-a794-2d84a114fac1"/>
-				<imageExpression><![CDATA["/home/naira/JaspersoftWorkspace/MyReports/naira/kars4bintang.png"]]></imageExpression>
-			</image>
 		</band>
 	</title>
 	<pageHeader>

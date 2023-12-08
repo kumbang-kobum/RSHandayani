@@ -689,5 +689,8 @@ sukses=jur.simpanJurnal(NoFaktur.getText(),"U","K165 PEMBELIAN BARANG DAPUR KERI
 DapurPengeluaran.java	
 sukses=jur.simpanJurnal(NoKeluar.getText(),"U","K166 PENGGUNAAN BARANG DAPUR KERING DAN BASAH"+", OLEH "+akses.getkode());
 =====================================
+MasterCariTemplatePemeriksaan.java	
+                            sukses=jur.simpanJurnal(noperawatan,"U","K167 TINDAKAN RAWAT JALAN PASIEN "+noperawatan+" DIPOSTING OLEH "+akses.getkode());
+=================================================================================================
 tambah delirium di kesadaran SOAP RANAP
 =============================================

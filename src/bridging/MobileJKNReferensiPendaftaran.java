@@ -17,12 +17,12 @@ import fungsi.sekuel;
 import fungsi.validasi;
 import fungsi.akses;
 import java.awt.Cursor;
-import java.awt.Desktop;
+import java.awt.Desktop; //tambah chan
 import java.awt.Dimension;
 import java.awt.event.KeyEvent;
-import java.io.BufferedWriter;
-import java.io.File;
-import java.io.FileWriter;
+import java.io.BufferedWriter; //tambah chan
+import java.io.File; //tambah chan
+import java.io.FileWriter; //tambah chan
 import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
@@ -44,10 +44,10 @@ public final class MobileJKNReferensiPendaftaran extends javax.swing.JDialog {
     private validasi Valid=new validasi();
     private Connection koneksi=koneksiDB.condb();
     private PreparedStatement ps;
-    private ResultSet rs; 
-    private String aktifjadwal="",URUTNOREG="",status="",no_rawat="",umur="",sttsumur="",nohp="";
+    private ResultSet rs;
+    private String aktifjadwal="",URUTNOREG="",status="",no_rawat="",umur="",sttsumur="",nohp=""; //tambah chan
     private int i=0;
-    private StringBuilder htmlContent;
+    private StringBuilder htmlContent; //tambah chan
 
     /** Creates new form DlgJnsPerawatanRalan
      * @param parent
@@ -194,7 +194,6 @@ public final class MobileJKNReferensiPendaftaran extends javax.swing.JDialog {
         internalFrame1.setName("internalFrame1"); // NOI18N
         internalFrame1.setLayout(new java.awt.BorderLayout(1, 1));
 
-        Scroll.setComponentPopupMenu(Popupjkn);
         Scroll.setName("Scroll"); // NOI18N
         Scroll.setOpaque(true);
 
@@ -326,7 +325,7 @@ public final class MobileJKNReferensiPendaftaran extends javax.swing.JDialog {
         panelGlass10.add(jLabel19);
 
         DTPCari1.setForeground(new java.awt.Color(50, 70, 50));
-        DTPCari1.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "13-09-2023" }));
+        DTPCari1.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "06-12-2022" }));
         DTPCari1.setDisplayFormat("dd-MM-yyyy");
         DTPCari1.setName("DTPCari1"); // NOI18N
         DTPCari1.setOpaque(false);
@@ -340,7 +339,7 @@ public final class MobileJKNReferensiPendaftaran extends javax.swing.JDialog {
         panelGlass10.add(jLabel21);
 
         DTPCari2.setForeground(new java.awt.Color(50, 70, 50));
-        DTPCari2.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "13-09-2023" }));
+        DTPCari2.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "06-12-2022" }));
         DTPCari2.setDisplayFormat("dd-MM-yyyy");
         DTPCari2.setName("DTPCari2"); // NOI18N
         DTPCari2.setOpaque(false);
@@ -553,9 +552,9 @@ public final class MobileJKNReferensiPendaftaran extends javax.swing.JDialog {
             BtnBelumActionPerformed(null);
         }else{Valid.pindah(evt, BtnCheckin, BtnBatal);}
     }//GEN-LAST:event_BtnBelumKeyPressed
-//tambah chandra
+
     private void ppCSVWARocketActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_ppCSVWARocketActionPerformed
-        try {
+        try { //tambah chan
             File f;
             BufferedWriter bw;
             htmlContent = new StringBuilder();
@@ -584,7 +583,7 @@ public final class MobileJKNReferensiPendaftaran extends javax.swing.JDialog {
             bw.close();
             Desktop.getDesktop().browse(f.toURI());
         } catch (Exception e) {
-        }
+        } //batas tambah
     }//GEN-LAST:event_ppCSVWARocketActionPerformed
 
     /**

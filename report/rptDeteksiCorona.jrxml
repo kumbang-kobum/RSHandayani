@@ -994,10 +994,6 @@ inner join petugas on deteksi_dini_corona.nip=petugas.nip]]>
 				</textElement>
 				<textFieldExpression><![CDATA[$F{nama}]]></textFieldExpression>
 			</textField>
-			<image scaleImage="FillFrame" onErrorType="Blank">
-				<reportElement x="483" y="8" width="67" height="67" uuid="007b5d37-7e9c-43df-8b0b-36069659c154"/>
-				<imageExpression><![CDATA["/home/naira/JaspersoftWorkspace/MyReports/naira/kars4bintang.png"]]></imageExpression>
-			</image>
 		</band>
 	</title>
 </jasperReport>

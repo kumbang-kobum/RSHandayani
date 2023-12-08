@@ -9,7 +9,7 @@
  * Created on 24 Oktober 2021, 10:19:56
  */
 
-package rekammedis;
+package rekammedis; //tambah chan semua
 
 import fungsi.WarnaTable;
 import fungsi.batasInput;

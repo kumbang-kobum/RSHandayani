@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<!-- Created with Jaspersoft Studio version 6.8.0.final using JasperReports Library version 6.8.0-2ed8dfabb690ff337a5797129f2cd92902b0c87b  -->
+<!-- Created with Jaspersoft Studio version 6.11.0.final using JasperReports Library version 6.11.0-0c4056ccaa4d25a5a8c45672d2f764ea3498bebb  -->
 <jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="null" pageWidth="842" pageHeight="595" orientation="Landscape" columnWidth="802" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="96c20e22-b805-44d8-a2d8-3120d1f27f75">
 	<property name="ireport.zoom" value="1.5"/>
 	<property name="ireport.x" value="0"/>
@@ -106,10 +106,6 @@
 				<reportElement x="0" y="2" width="48" height="45" uuid="936a22cb-3dc3-4651-ac78-f25b45ad3e66"/>
 				<imageExpression><![CDATA[$P{logo}]]></imageExpression>
 			</image>
-			<image scaleImage="FillFrame" onErrorType="Blank">
-				<reportElement x="751" y="0" width="48" height="45" uuid="384b7ead-5005-4ca6-9954-dceb28ff8679"/>
-				<imageExpression><![CDATA["/home/naira/JaspersoftWorkspace/MyReports/naira/kars4bintang.png"]]></imageExpression>
-			</image>
 		</band>
 	</title>
 	<pageHeader>
@@ -173,7 +169,7 @@
 	</columnHeader>
 	<detail>
 		<band height="11" splitType="Stretch">
-			<textField isBlankWhenNull="true">
+			<textField textAdjust="StretchHeight" isBlankWhenNull="true">
 				<reportElement stretchType="RelativeToBandHeight" x="0" y="0" width="73" height="10" uuid="c595355c-f83b-44c3-858c-834df6ec6938"/>
 				<textElement>
 					<font fontName="Tahoma" size="8"/>
@@ -181,7 +177,7 @@
 				</textElement>
 				<textFieldExpression><![CDATA[$F{kode_pemberi}]]></textFieldExpression>
 			</textField>
-			<textField isBlankWhenNull="true">
+			<textField textAdjust="StretchHeight" isBlankWhenNull="true">
 				<reportElement stretchType="RelativeToBandHeight" x="76" y="0" width="242" height="10" uuid="2427a3e9-9a01-4107-bbc5-c4c69ce2e781"/>
 				<textElement>
 					<font fontName="Tahoma" size="8"/>
@@ -189,7 +185,7 @@
 				</textElement>
 				<textFieldExpression><![CDATA[$F{nama_pemberi}]]></textFieldExpression>
 			</textField>
-			<textField isBlankWhenNull="true">
+			<textField textAdjust="StretchHeight" isBlankWhenNull="true">
 				<reportElement stretchType="RelativeToBandHeight" x="319" y="0" width="265" height="10" uuid="5e54ed3f-2cec-4f6b-a4d4-038f2be3e2c6"/>
 				<textElement>
 					<font fontName="Tahoma" size="8"/>
@@ -197,7 +193,7 @@
 				</textElement>
 				<textFieldExpression><![CDATA[$F{alamat}]]></textFieldExpression>
 			</textField>
-			<textField isBlankWhenNull="true">
+			<textField textAdjust="StretchHeight" isBlankWhenNull="true">
 				<reportElement stretchType="RelativeToBandHeight" x="585" y="0" width="133" height="10" uuid="fe2d92b7-20fd-46f3-bfb8-448f602ea0e7"/>
 				<textElement>
 					<font fontName="Tahoma" size="8"/>
@@ -205,7 +201,7 @@
 				</textElement>
 				<textFieldExpression><![CDATA[$F{kota}]]></textFieldExpression>
 			</textField>
-			<textField isBlankWhenNull="true">
+			<textField textAdjust="StretchHeight" isBlankWhenNull="true">
 				<reportElement stretchType="RelativeToBandHeight" x="718" y="0" width="84" height="10" uuid="a4922253-409f-423d-9352-a8d464221721"/>
 				<textElement>
 					<font fontName="Tahoma" size="8"/>

@@ -79,8 +79,8 @@ public class MasterRencanaKeperawatanAnak extends javax.swing.JDialog {
         tbSpesialis.setDefaultRenderer(Object.class, new WarnaTable());
 
         kdrencana.setDocument(new batasInput((byte)3).getKata(kdrencana));
-        namarencana.setDocument(new batasInput((int)1000).getKata(namarencana));
-        TCari.setDocument(new batasInput((byte)100).getKata(TCari));
+        namarencana.setDocument(new batasInput((int)150).getKata(namarencana));
+        TCari.setDocument(new batasInput((byte)1000).getKata(TCari));//tambah chan
         if(koneksiDB.CARICEPAT().equals("aktif")){
             TCari.getDocument().addDocumentListener(new javax.swing.event.DocumentListener(){
                 @Override

@@ -6,7 +6,7 @@ import javax.swing.JTable;
 import javax.swing.table.DefaultTableCellRenderer;
 
 public class WarnaTableKasirRalan extends DefaultTableCellRenderer {
-    public Component getTableCellRendererComponent(JTable table, Object value, boolean isSelected, boolean hasFocus, int row, int column) {
+    public Component getTableCellRendererComponent(JTable table, Object value, boolean isSelected, boolean hasFocus, int row, int column) { //tambah chan semua
         Component component = super.getTableCellRendererComponent(table, value, isSelected, hasFocus, row, column);
 
         if (row % 2 == 1) {
