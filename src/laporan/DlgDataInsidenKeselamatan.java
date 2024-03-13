@@ -145,7 +145,7 @@ public final class DlgDataInsidenKeselamatan extends javax.swing.JDialog {
         Tindakan.setDocument(new batasInput((int)150).getKata(Tindakan));
         Identifikasi.setDocument(new batasInput((int)150).getKata(Identifikasi));
         TindakLanjut.setDocument(new batasInput((int)150).getKata(TindakLanjut));
-        Kronologis.setDocument(new batasInput((int)300).getKata(Kronologis));
+        Kronologis.setDocument(new batasInput((int)1000).getKata(Kronologis)); //tambah chandra
         TCari.setDocument(new batasInput((int)100).getKata(TCari));
         
         if(koneksiDB.CARICEPAT().equals("aktif")){
@@ -609,7 +609,7 @@ public final class DlgDataInsidenKeselamatan extends javax.swing.JDialog {
         panelGlass9.add(jLabel19);
 
         DTPCari1.setForeground(new java.awt.Color(50, 70, 50));
-        DTPCari1.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "04-09-2019" }));
+        DTPCari1.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "12-01-2023" }));
         DTPCari1.setDisplayFormat("dd-MM-yyyy");
         DTPCari1.setName("DTPCari1"); // NOI18N
         DTPCari1.setOpaque(false);
@@ -623,7 +623,7 @@ public final class DlgDataInsidenKeselamatan extends javax.swing.JDialog {
         panelGlass9.add(jLabel21);
 
         DTPCari2.setForeground(new java.awt.Color(50, 70, 50));
-        DTPCari2.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "04-09-2019" }));
+        DTPCari2.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "12-01-2023" }));
         DTPCari2.setDisplayFormat("dd-MM-yyyy");
         DTPCari2.setName("DTPCari2"); // NOI18N
         DTPCari2.setOpaque(false);
@@ -718,7 +718,7 @@ public final class DlgDataInsidenKeselamatan extends javax.swing.JDialog {
         TPasien.setBounds(361, 10, 424, 23);
 
         Kejadian.setForeground(new java.awt.Color(50, 70, 50));
-        Kejadian.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "04-09-2019" }));
+        Kejadian.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "12-01-2023" }));
         Kejadian.setDisplayFormat("dd-MM-yyyy");
         Kejadian.setName("Kejadian"); // NOI18N
         Kejadian.setOpaque(false);
@@ -808,7 +808,7 @@ public final class DlgDataInsidenKeselamatan extends javax.swing.JDialog {
         jLabel17.setBounds(420, 40, 50, 23);
 
         Lapor.setForeground(new java.awt.Color(50, 70, 50));
-        Lapor.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "04-09-2019" }));
+        Lapor.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "12-01-2023" }));
         Lapor.setDisplayFormat("dd-MM-yyyy");
         Lapor.setName("Lapor"); // NOI18N
         Lapor.setOpaque(false);

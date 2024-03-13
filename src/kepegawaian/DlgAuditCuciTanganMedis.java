@@ -377,7 +377,7 @@ public final class DlgAuditCuciTanganMedis extends javax.swing.JDialog {
         panelGlass9.add(jLabel19);
 
         DTPCari1.setForeground(new java.awt.Color(50, 70, 50));
-        DTPCari1.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "19-06-2022" }));
+        DTPCari1.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "23-02-2024" }));
         DTPCari1.setDisplayFormat("dd-MM-yyyy");
         DTPCari1.setName("DTPCari1"); // NOI18N
         DTPCari1.setOpaque(false);
@@ -391,7 +391,7 @@ public final class DlgAuditCuciTanganMedis extends javax.swing.JDialog {
         panelGlass9.add(jLabel21);
 
         DTPCari2.setForeground(new java.awt.Color(50, 70, 50));
-        DTPCari2.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "19-06-2022" }));
+        DTPCari2.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "23-02-2024" }));
         DTPCari2.setDisplayFormat("dd-MM-yyyy");
         DTPCari2.setName("DTPCari2"); // NOI18N
         DTPCari2.setOpaque(false);
@@ -461,7 +461,7 @@ public final class DlgAuditCuciTanganMedis extends javax.swing.JDialog {
         FormInput.setLayout(null);
 
         Tanggal.setForeground(new java.awt.Color(50, 70, 50));
-        Tanggal.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "19-06-2022" }));
+        Tanggal.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "23-02-2024" }));
         Tanggal.setDisplayFormat("dd-MM-yyyy");
         Tanggal.setName("Tanggal"); // NOI18N
         Tanggal.setOpaque(false);
@@ -557,7 +557,7 @@ public final class DlgAuditCuciTanganMedis extends javax.swing.JDialog {
         FormInput.add(jLabel14);
         jLabel14.setBounds(64, 40, 250, 23);
 
-        SebelumMenyentuh.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "Ya", "Tidak" }));
+        SebelumMenyentuh.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "Ya", "Tidak Melakukan", "Tidak" }));
         SebelumMenyentuh.setName("SebelumMenyentuh"); // NOI18N
         SebelumMenyentuh.addKeyListener(new java.awt.event.KeyAdapter() {
             public void keyPressed(java.awt.event.KeyEvent evt) {
@@ -573,7 +573,7 @@ public final class DlgAuditCuciTanganMedis extends javax.swing.JDialog {
         FormInput.add(jLabel17);
         jLabel17.setBounds(505, 40, 200, 23);
 
-        SebelumTehnik.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "Ya", "Tidak" }));
+        SebelumTehnik.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "Ya", "Tidak Melakukan", "Tidak" }));
         SebelumTehnik.setName("SebelumTehnik"); // NOI18N
         SebelumTehnik.addKeyListener(new java.awt.event.KeyAdapter() {
             public void keyPressed(java.awt.event.KeyEvent evt) {
@@ -589,7 +589,7 @@ public final class DlgAuditCuciTanganMedis extends javax.swing.JDialog {
         FormInput.add(jLabel23);
         jLabel23.setBounds(64, 70, 250, 23);
 
-        SetelahTerpapar.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "Ya", "Tidak" }));
+        SetelahTerpapar.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "Ya", "Tidak Melakukan", "Tidak" }));
         SetelahTerpapar.setName("SetelahTerpapar"); // NOI18N
         SetelahTerpapar.addKeyListener(new java.awt.event.KeyAdapter() {
             public void keyPressed(java.awt.event.KeyEvent evt) {
@@ -621,7 +621,7 @@ public final class DlgAuditCuciTanganMedis extends javax.swing.JDialog {
         FormInput.add(jLabel20);
         jLabel20.setBounds(64, 100, 250, 23);
 
-        SetelahKontak.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "Ya", "Tidak" }));
+        SetelahKontak.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "Ya", "Tidak Melakukan", "Tidak" }));
         SetelahKontak.setName("SetelahKontak"); // NOI18N
         SetelahKontak.addKeyListener(new java.awt.event.KeyAdapter() {
             public void keyPressed(java.awt.event.KeyEvent evt) {
@@ -631,7 +631,7 @@ public final class DlgAuditCuciTanganMedis extends javax.swing.JDialog {
         FormInput.add(SetelahKontak);
         SetelahKontak.setBounds(710, 70, 78, 23);
 
-        SetelahLingkungan.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "Ya", "Tidak" }));
+        SetelahLingkungan.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "Ya", "Tidak Melakukan", "Tidak" }));
         SetelahLingkungan.setName("SetelahLingkungan"); // NOI18N
         SetelahLingkungan.addKeyListener(new java.awt.event.KeyAdapter() {
             public void keyPressed(java.awt.event.KeyEvent evt) {
@@ -1018,15 +1018,15 @@ public final class DlgAuditCuciTanganMedis extends javax.swing.JDialog {
                 ttlsebelum_menyentuh_pasien=0;ttlsebelum_tehnik_aseptik=0;ttlsetelah_terpapar_cairan_tubuh_pasien=0;ttlsetelah_kontak_dengan_pasien=0;ttlsetelah_kontak_dengan_lingkungan_pasien=0;ttlpenilaian=0;
                 i=1;
                 while(rs.next()){
-                    sebelum_menyentuh_pasien=Double.parseDouble(rs.getString("sebelum_menyentuh_pasien").replaceAll("Ya","1").replaceAll("Tidak","0"));
+                    sebelum_menyentuh_pasien=Double.parseDouble(rs.getString("sebelum_menyentuh_pasien").replaceAll("Ya","1").replaceAll("Tidak Melakukan","1").replaceAll("Tidak","0"));//tambah chan
                     ttlsebelum_menyentuh_pasien=ttlsebelum_menyentuh_pasien+sebelum_menyentuh_pasien;
-                    sebelum_tehnik_aseptik=Double.parseDouble(rs.getString("sebelum_tehnik_aseptik").replaceAll("Ya","1").replaceAll("Tidak","0"));
+                    sebelum_tehnik_aseptik=Double.parseDouble(rs.getString("sebelum_tehnik_aseptik").replaceAll("Ya","1").replaceAll("Tidak Melakukan","1").replaceAll("Tidak","0"));//tambah chan
                     ttlsebelum_tehnik_aseptik=ttlsebelum_tehnik_aseptik+sebelum_tehnik_aseptik;
-                    setelah_terpapar_cairan_tubuh_pasien=Double.parseDouble(rs.getString("setelah_terpapar_cairan_tubuh_pasien").replaceAll("Ya","1").replaceAll("Tidak","0"));
+                    setelah_terpapar_cairan_tubuh_pasien=Double.parseDouble(rs.getString("setelah_terpapar_cairan_tubuh_pasien").replaceAll("Ya","1").replaceAll("Tidak Melakukan","1").replaceAll("Tidak","0"));//tambah chan
                     ttlsetelah_terpapar_cairan_tubuh_pasien=ttlsetelah_terpapar_cairan_tubuh_pasien+setelah_terpapar_cairan_tubuh_pasien;
-                    setelah_kontak_dengan_pasien=Double.parseDouble(rs.getString("setelah_kontak_dengan_pasien").replaceAll("Ya","1").replaceAll("Tidak","0"));
+                    setelah_kontak_dengan_pasien=Double.parseDouble(rs.getString("setelah_kontak_dengan_pasien").replaceAll("Ya","1").replaceAll("Tidak Melakukan","1").replaceAll("Tidak","0"));//tambah chan
                     ttlsetelah_kontak_dengan_pasien=ttlsetelah_kontak_dengan_pasien+setelah_kontak_dengan_pasien;
-                    setelah_kontak_dengan_lingkungan_pasien=Double.parseDouble(rs.getString("setelah_kontak_dengan_lingkungan_pasien").replaceAll("Ya","1").replaceAll("Tidak","0"));
+                    setelah_kontak_dengan_lingkungan_pasien=Double.parseDouble(rs.getString("setelah_kontak_dengan_lingkungan_pasien").replaceAll("Ya","1").replaceAll("Tidak Melakukan","1").replaceAll("Tidak","0"));//tambah chan
                     ttlsetelah_kontak_dengan_lingkungan_pasien=ttlsetelah_kontak_dengan_lingkungan_pasien+setelah_kontak_dengan_lingkungan_pasien;
                     ttlpenilaian=ttlpenilaian+(((sebelum_menyentuh_pasien+sebelum_tehnik_aseptik+setelah_terpapar_cairan_tubuh_pasien+setelah_kontak_dengan_pasien+setelah_kontak_dengan_lingkungan_pasien)/5)*100);
                     tabMode.addRow(new String[]{
@@ -1043,6 +1043,11 @@ public final class DlgAuditCuciTanganMedis extends javax.swing.JDialog {
                         ""+ttlsetelah_kontak_dengan_pasien,""+ttlsetelah_kontak_dengan_lingkungan_pasien,""+(ttlsebelum_menyentuh_pasien+ttlsebelum_tehnik_aseptik+
                         ttlsetelah_terpapar_cairan_tubuh_pasien+ttlsetelah_kontak_dengan_pasien+ttlsetelah_kontak_dengan_lingkungan_pasien)
                     });
+                    tabMode.addRow(new String[]{//tambah chan
+                        "","Tidak Melakukan",":",""+ttlsebelum_menyentuh_pasien,""+ttlsebelum_tehnik_aseptik,""+ttlsetelah_terpapar_cairan_tubuh_pasien,
+                        ""+ttlsetelah_kontak_dengan_pasien,""+ttlsetelah_kontak_dengan_lingkungan_pasien,""+(ttlsebelum_menyentuh_pasien+ttlsebelum_tehnik_aseptik+
+                        ttlsetelah_terpapar_cairan_tubuh_pasien+ttlsetelah_kontak_dengan_pasien+ttlsetelah_kontak_dengan_lingkungan_pasien)
+                    });//batas tambah
                     tabMode.addRow(new String[]{
                         "","Tidak",":",""+(i-ttlsebelum_menyentuh_pasien),""+(i-ttlsebelum_tehnik_aseptik),""+(i-ttlsetelah_terpapar_cairan_tubuh_pasien),
                         ""+(i-ttlsetelah_kontak_dengan_pasien),""+(i-ttlsetelah_kontak_dengan_lingkungan_pasien),""+((i-ttlsebelum_menyentuh_pasien)+(i-ttlsebelum_tehnik_aseptik)+

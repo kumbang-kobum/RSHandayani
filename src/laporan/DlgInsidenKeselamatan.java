@@ -427,7 +427,7 @@ public final class DlgInsidenKeselamatan extends javax.swing.JDialog {
         FormInput.add(jLabel9);
         jLabel9.setBounds(0, 42, 85, 23);
 
-        Jenis.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "KTC", "KNC", "KTD", "Sentinel" }));
+        Jenis.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "KTC", "KNC", "KTD", "KPC", "Sentinel" }));
         Jenis.setName("Jenis"); // NOI18N
         Jenis.addKeyListener(new java.awt.event.KeyAdapter() {
             public void keyPressed(java.awt.event.KeyEvent evt) {
@@ -481,7 +481,7 @@ public final class DlgInsidenKeselamatan extends javax.swing.JDialog {
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
-
+//tambah chan KPC pada insiden keselamtan pasien
     private void KodeKeyPressed(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_KodeKeyPressed
         Valid.pindah(evt,TCari,Nama);
 }//GEN-LAST:event_KodeKeyPressed

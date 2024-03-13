@@ -688,7 +688,7 @@ public final class DlgPengeluaranHarian extends javax.swing.JDialog {
                         if(rs.next()){
                             Sequel.menyimpan("tampjurnal","?,?,?,?",4,new String[]{rs.getString(1),rs.getString(2),Pengeluaran.getText(),"0"});
                             Sequel.menyimpan("tampjurnal","?,?,?,?",4,new String[]{rs.getString(3),rs.getString(4),"0",Pengeluaran.getText()}); 
-                            sukses=jur.simpanJurnal(Nomor.getText(),"U","K072 PENGELUARAN HARIAN"+", OLEH "+akses.getkode());//tambah chan
+                            sukses=jur.simpanJurnal(Nomor.getText(),"U","K072 PENGELUARAN HARIAN"+", Keterangan "+Keterangan.getText()+", OLEH "+akses.getkode());//tambah chan
                         } 
                     } catch (Exception e) {
                         sukses=false;
@@ -772,7 +772,7 @@ public final class DlgPengeluaranHarian extends javax.swing.JDialog {
                             if(rs.next()){
                                 Sequel.menyimpan("tampjurnal","?,?,?,?",4,new String[]{rs.getString(1),rs.getString(2),"0",Pengeluaran.getText()});
                                 Sequel.menyimpan("tampjurnal","?,?,?,?",4,new String[]{rs.getString(3),rs.getString(4),Pengeluaran.getText(),"0"}); 
-                                sukses=jur.simpanJurnal(Nomor.getText(),"U","K073 PEMBATALAN PENGELUARAN HARIAN"+", OLEH "+akses.getkode());//tambah chan
+                                sukses=jur.simpanJurnal(Nomor.getText(),"U","K073 PEMBATALAN PENGELUARAN HARIAN"+", Keterangan "+Keterangan.getText()+", OLEH "+akses.getkode());//tambah chan
                             } 
                         } catch (Exception e) {
                             sukses=false;
